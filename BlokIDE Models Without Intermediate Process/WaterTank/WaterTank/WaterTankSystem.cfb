@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="90e88c40-a358-46bd-bf4c-4df8e018cca9" name="WaterTankSystem" organization="syy-PC" date="2015-08-11" author="syy" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="5d28fd6b-7bd1-4421-9cca-c8ec25fa8ffe">
+      <functionBlockInterface Id="6c4bc67a-e9da-4453-9fd3-9898ad51bd99" name="WaterTankSystem" x="1225" y="437.5" modelType="Composite" />
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+  <functionBlockReferences>
+    <cFBModelHasFBReferences Id="8afc0bb2-edd9-421a-8695-03f2ee7211ad">
+      <functionBlockReference Id="0158b9d8-a745-4bf4-8343-f6da611a152c" name="DigitalController" x="1881.25" y="437.5" creationMode="Resource" referencedFile="DigitalController.fb">
+        <events>
+          <functionBlockHasEvents Id="a7172365-f2a3-4df2-b77e-e767e1becf59">
+            <eventRef Id="125d6cae-10f3-4a13-938a-67da1a049848" name="Update" scope="Input" referencedID="216a66be-91b1-49da-84c3-91f3b731c4cd" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="0fdfce49-1b76-4a91-bf19-b74b4848caac">
+            <eventRef Id="316964d5-1dfe-454e-930e-ed4279471c22" name="TurnOn" scope="Output" referencedID="8a4e1da8-c236-4407-93ad-095558e832a0" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="74b777d6-8ef5-4c62-8463-7d8402245a34">
+            <eventRef Id="749c0594-94c8-4ca3-ae25-198e2eccdc6b" name="TurnOff" scope="Output" referencedID="f6f6a874-8404-4ed4-8da7-4d72472baf5c" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="f9da7244-53ce-4538-9e88-256a76117801">
+            <variableRef Id="011b597f-c506-4c7f-85ee-6d117d789f24" name="x" scope="Input" type="REAL" referencedID="f5bfeccf-4750-4496-a779-46b18f453895" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="8f883642-8de3-4122-a28c-9f2a54f6c1b7">
+            <variableRef Id="4796dde0-021a-4c9a-a06e-b75940dd96c8" name="y" scope="Input" type="REAL" referencedID="36c71492-c8a5-49b6-bbac-48a34ddeb14c" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="e9bd53ab-3966-4bb8-87c1-1913d1d642ba">
+            <inputEventPort Id="ed040912-2b0f-4e80-8eb3-b21c080cb949">
+              <event>
+                <inputEventPortReferencesEvent Id="42edcb3d-78da-48aa-a831-af9b7d126951">
+                  <eventRefMoniker name="/WaterTankSystem/DigitalController/Update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="1b903de1-a16f-485c-95d8-fa886c01ce09">
+            <outputEventPort Id="d9ec7482-25ec-4aec-bee7-8ba0aae023f8">
+              <wireTargetPorts>
+                <wireConnection Id="ce9bf312-1f7b-4c97-9d96-ea342b6dded0" unitDelayed="false">
+                  <inputEventPortMoniker Id="f9cb1bcd-a08a-4c14-95e9-071948c1223a" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="da359d66-1bbf-4ddd-86ab-c8821d6bc16b">
+                  <eventRefMoniker name="/WaterTankSystem/DigitalController/TurnOn" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="719c0847-3bce-4e7c-8d1c-f1835260db70">
+            <outputEventPort Id="bf44610c-3f7e-4226-a87d-eeca6fc43a7e">
+              <wireTargetPorts>
+                <wireConnection Id="243f55c0-044c-4979-bdea-df2b5418d641" unitDelayed="false">
+                  <inputEventPortMoniker Id="d2dc2eb1-35e6-4eba-976d-3b4fa67e372f" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="fbfbc16a-7b0d-4423-9f4a-aa7da0e0723f">
+                  <eventRefMoniker name="/WaterTankSystem/DigitalController/TurnOff" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="7924bbfb-1e5b-4d5a-9350-8e0eb40a5acb">
+            <inputVariablePort Id="223a9dc2-2cc5-4cbf-b5ce-6e6ba98b58fb">
+              <variable>
+                <inputVariablePortReferencesVariable Id="a4939931-9cfd-425e-9197-a5cdf75e0d15">
+                  <variableRefMoniker name="/WaterTankSystem/DigitalController/x" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="c1f9617e-3c50-4d7b-8554-e874a02d06ae">
+            <inputVariablePort Id="525161c6-3fb4-4ff7-9c62-4e02e1ff7528">
+              <variable>
+                <inputVariablePortReferencesVariable Id="baab8813-2f43-4a76-9e52-0cba7d927be0">
+                  <variableRefMoniker name="/WaterTankSystem/DigitalController/y" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="58370821-f66b-4cff-9ffb-9480b2e96d06">
+      <functionBlockReference Id="8c9492ec-0962-425c-a156-6e4e28a1fa04" name="Plant" x="612.5" y="437.5" modelType="Composite" creationMode="Resource" referencedFile="Plant.cfb">
+        <events>
+          <functionBlockHasEvents Id="a5e9c205-d752-4b1d-b1ca-dedf7cee6e8d">
+            <eventRef Id="c78f4d77-4969-4ea4-b899-99fc6e4e2e2f" name="TurnOn" scope="Input" referencedID="dbf33fb6-aae0-45f0-b98c-6a8c68a45b1a" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="0bbcf932-35d2-4ea8-ae1e-51580697f4be">
+            <eventRef Id="73321908-d8c8-473d-9e5e-b9086447ae4c" name="TurnOff" scope="Input" referencedID="ec249a53-f010-4999-8cd2-e72ff2846f79" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="8d9f9dc0-f3ac-4c56-afa5-428a0f5d281d">
+            <eventRef Id="42b97124-37bd-4e4d-af66-ba4b064473b2" name="Update" scope="Output" referencedID="16d0438e-425e-4fdf-9057-3c22f1842c8d" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="b70eb617-fb3e-45c7-a66d-5d92e55d44a1">
+            <variableRef Id="1476a735-efd4-461d-85a1-8b30fee4e552" name="x" scope="Output" type="REAL" referencedID="13ef5ef7-db5c-4a52-9e04-18788d49fa95" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="ae4cc722-e226-49e2-9102-1a62c280d342">
+            <variableRef Id="ea4e70bf-6f66-4d4a-ad88-656a3c55cbe6" name="y" scope="Output" type="REAL" referencedID="8a2f347e-849e-4250-a583-2abe33a2474d" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="d3122f6a-d3b4-417d-9623-e3350b8cf91e">
+            <inputEventPort Id="f9cb1bcd-a08a-4c14-95e9-071948c1223a">
+              <event>
+                <inputEventPortReferencesEvent Id="4927bd25-5791-4046-8d77-6c893ff11462">
+                  <eventRefMoniker name="/WaterTankSystem/Plant/TurnOn" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="706d78a0-b20d-4ac9-af2a-3611c8683e8b">
+            <inputEventPort Id="d2dc2eb1-35e6-4eba-976d-3b4fa67e372f">
+              <event>
+                <inputEventPortReferencesEvent Id="b00c8161-bb27-43a8-82ea-5dcbf6a251fc">
+                  <eventRefMoniker name="/WaterTankSystem/Plant/TurnOff" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="9428cf31-30ce-4208-a49e-8f7d5dc1bda3">
+            <outputEventPort Id="5f9f051e-bfe8-4488-8534-bd8dd17170b4">
+              <wireTargetPorts>
+                <wireConnection Id="387efbab-e0ae-453e-a3df-a7958fde762f" unitDelayed="false">
+                  <inputEventPortMoniker Id="ed040912-2b0f-4e80-8eb3-b21c080cb949" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="a9ec39b4-5c44-44af-ab05-bc8affa2b3a3">
+                  <eventRefMoniker name="/WaterTankSystem/Plant/Update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="cbfd0633-571f-4b96-8a0b-c772024ed366">
+            <outputVariablePort Id="e38ab775-576d-462a-9c35-18060d4a0f24">
+              <wireTargetPorts>
+                <wireConnection Id="6a234eeb-fdc3-4b02-9d3b-db02276b862a" unitDelayed="false">
+                  <inputVariablePortMoniker Id="223a9dc2-2cc5-4cbf-b5ce-6e6ba98b58fb" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="2462501d-cb35-4385-942c-7b54712f747b">
+                  <variableRefMoniker name="/WaterTankSystem/Plant/x" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="e8d4dc29-e5d7-4654-abc5-893381b71254">
+            <outputVariablePort Id="24d0b67a-334b-4cd7-9173-ae3ae9b5bbf8">
+              <wireTargetPorts>
+                <wireConnection Id="f894e395-336a-445d-8f1d-993a089629e2" unitDelayed="false">
+                  <inputVariablePortMoniker Id="525161c6-3fb4-4ff7-9c62-4e02e1ff7528" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="ead26d73-2687-4fc1-9eeb-dffff8e0031d">
+                  <variableRefMoniker name="/WaterTankSystem/Plant/y" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+  </functionBlockReferences>
+</compositeFunctionBlockModel>

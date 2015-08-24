@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="4718eadd-4029-4331-a12d-c8916232173b" name="ytimer2" organization="PC_THEO" date="2015-07-20" author="Théo">
+  <states>
+    <functionBlockModelHasStates Id="1c1e7d60-4761-464e-b8ae-3dbddee09483">
+      <state Id="eec7d388-25fe-40bf-89c4-6c7f023ec80d" name="Start" x="306.25" y="481.25" isInitial="true">
+        <actionSet>
+          <actionLink Id="90ac97b2-5aad-48f4-8045-cb45630d85a2">
+            <actionSetMoniker Id="edb45f08-e135-46c8-b467-37354b057af8" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="11f3de42-2bb6-4438-b710-de88375ce186">
+            <transitionNodeMoniker Id="b8c39494-06f4-45ef-9f1b-d9c8b2416d9b" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="977bf70a-a201-4c1a-83a3-d00e9bcd4953">
+      <state Id="fa9bf593-060d-4f6e-b499-a36bd61bdeef" name="State1" x="1968.75" y="262.5" isInitial="false">
+        <actionSet>
+          <actionLink Id="de0d1c5f-538b-4c70-b222-6016be464c53">
+            <actionSetMoniker Id="3dd8690f-e0e7-4c26-aa5c-02bc58683442" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="9a22a4c1-4d0f-410b-8614-82f669bac102">
+            <transitionNodeMoniker Id="d790c14e-7519-4e12-bf9a-fa86b6907b59" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="dd4dff25-2efe-45dd-8f40-cbf64194bb89">
+            <transitionNodeMoniker Id="250b4a3d-bab0-4820-83f5-f92ac823a05d" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="50d0b77f-593f-485f-a5c3-c5137f9ab31b">
+      <state Id="72ddee05-4abe-4aee-8682-ace0577e15ae" name="State2" x="1954.1667222976685" y="900.52086114883423" isInitial="false">
+        <actionSet>
+          <actionLink Id="440f1b5b-f683-4ddf-80c5-ffe9c0051c90">
+            <actionSetMoniker Id="e48e43c6-563a-4f7e-89d4-e139820a9235" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="e6013fd9-a639-40a8-9d93-cdc9e32c7637">
+            <transitionNodeMoniker Id="62313cf8-3dfe-4919-8225-13c2d861157f" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="9a6365f9-aafa-4219-aeb9-b431c32bed3e">
+      <actionSet Id="edb45f08-e135-46c8-b467-37354b057af8" x="306.25" y="700">
+        <actionItems>
+          <actionSetHasActionItems Id="af7c9a40-c237-433c-bb0e-6e0e561d3f03">
+            <actionAlgorithm Id="22341273-eba0-46d9-abb6-e4a3b4ab4e31">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="baedb2a9-abb6-4d50-a38f-8abd085f23c2">
+                  <algorithmMoniker name="/ytimer2/init" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="80f695b0-a567-41e3-bd4f-5bde2ad26077">
+            <actionEvent Id="7b367ee9-e133-46e6-b1b2-77a3b265f1ab">
+              <event>
+                <actionEventReferencesEvent Id="57c8e35d-faac-4ddc-baad-a8c3e46aec71">
+                  <eventMoniker name="/ytimer2/ytimer2/update" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="127be88e-1818-4890-a90e-dcddd9f0d8dc">
+      <actionSet Id="3dd8690f-e0e7-4c26-aa5c-02bc58683442" x="2318.6018845438957" y="262.5">
+        <actionItems>
+          <actionSetHasActionItems Id="b87c1b1d-3ae2-4132-ab67-5c501c0e8971">
+            <actionAlgorithm Id="e1ba9a16-7b25-4782-8ce9-c80de117a9d1">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="2f4fd1dd-e3c7-4967-906a-c5706cf58cae">
+                  <algorithmMoniker name="/ytimer2/set" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="5e35aa05-5d88-459b-996a-49ab6a153393">
+            <actionEvent Id="3dcba05c-2504-49e7-bc2c-2ed68e5d777d">
+              <event>
+                <actionEventReferencesEvent Id="17daed56-2d5f-4d4d-b2d2-4d9564c73eb8">
+                  <eventMoniker name="/ytimer2/ytimer2/update" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="5852c7da-a639-47d6-9a97-d87dad2b4e06">
+      <actionSet Id="e48e43c6-563a-4f7e-89d4-e139820a9235" x="2304.0186068415642" y="900.52086114883423">
+        <actionItems>
+          <actionSetHasActionItems Id="43548bff-1d07-4743-a860-d3b1e76aedac">
+            <actionAlgorithm Id="4d47ad89-f4ff-4ba7-97bc-a3b400d37065">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="6154d482-6cf1-4974-830c-c1a7b837e4a0">
+                  <algorithmMoniker name="/ytimer2/reset" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="2e8b3aee-a10c-4961-8c26-29271d073192">
+            <actionEvent Id="acfe89ca-ac10-4f70-baa1-4acd82ffbd3a">
+              <event>
+                <actionEventReferencesEvent Id="8868e0d6-3153-424d-84a8-e4dc5ef82669">
+                  <eventMoniker name="/ytimer2/ytimer2/update" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="eead86b7-f4c6-4e2e-b9be-d4c3ffb23075">
+      <algorithm Id="3ea42f4c-30c0-4e40-b889-4f18cddd4fef" name="init" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="5d2d8ce2-83db-47c9-89c3-1114ccc4cf27">
+      <algorithm Id="ce325ea5-df3d-416c-980e-981c12827003" name="set" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="d4fb9ca4-78e0-4de5-8ab7-c5ec53e56452">
+      <algorithm Id="54fe33e5-654e-48dd-b0bc-fd8225520106" name="reset" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="21df3623-9c27-4574-ab54-1b44a3a56ebd">
+      <functionBlockInterface Id="90856a3e-2a17-483a-bade-cfc86f48c9d1" name="ytimer2" x="1400" y="481.25">
+        <events>
+          <functionBlockHasEvents Id="0698a4d9-254d-4034-b388-537e7cb7b466">
+            <event Id="567a7972-8df3-4d6c-88f7-f43e62d18506" name="restart" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="4e8ea5e3-7d9d-49ec-b104-6c6c951481d7">
+            <event Id="c688a21a-217d-4542-8a15-4ff0e32a28ad" name="update" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="9554bc63-a0a1-41e1-b1da-7a9c2821ebfa">
+            <variable Id="1d4e1224-708c-47b8-a414-e23f2455fe1c" name="y2" scope="Output" type="REAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="9b8dcd3f-39c6-42b5-bb85-1bae022b4cca">
+            <variable Id="515b6583-f90f-4541-9341-ece74a7a2332" name="d" scope="Internal" type="REAL" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="55cec4f7-9e56-47f4-800f-ca0558f97962">
+            <inputEventPort Id="ceebccd6-62f1-45cd-b46c-c1f382598b0c">
+              <event>
+                <inputEventPortReferencesEvent Id="57ce198c-a002-497e-a7ba-c74bced932dd">
+                  <eventMoniker name="/ytimer2/ytimer2/restart" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="e3adfe39-6496-481f-8191-2f78d54f37dd">
+            <outputEventPort Id="014ecc6b-55f4-4654-b9df-989c6844eac3">
+              <targetPort>
+                <association Id="be40b682-f654-4721-a89d-bfef16c47d50">
+                  <outputVariablePortMoniker Id="64a15d01-a887-474b-a282-8d0dfa206c1f" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="f895867d-2621-40fc-9fa8-0863ba7de1a3">
+                  <eventMoniker name="/ytimer2/ytimer2/update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="760354c5-bcc4-4360-8335-b85977bfa5ac">
+            <outputVariablePort Id="64a15d01-a887-474b-a282-8d0dfa206c1f">
+              <variable>
+                <outputVariablePortReferencesVariable Id="16f0bc61-72ce-48e4-a1df-c6c56ea79ada">
+                  <variableMoniker name="/ytimer2/ytimer2/y2" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="ab5e1828-4978-4985-9690-34586995d417">
+      <transitionNode Id="b8c39494-06f4-45ef-9f1b-d9c8b2416d9b" x="1362" y="390.74999999999994">
+        <targetState>
+          <transitionNodeConnectsToStates Id="e2fbe200-f36f-464a-ad27-a85e236c6cde">
+            <stateMoniker name="/ytimer2/State1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="eaa4bcdc-8049-46ed-9cdc-a8d127d379ea">
+      <transitionNode Id="d790c14e-7519-4e12-bf9a-fa86b6907b59" x="2143.75" y="568.75" event="restart">
+        <targetState>
+          <transitionNodeConnectsToStates Id="2ed6fef6-1a0c-4ce4-81b1-3813f6290be0">
+            <stateMoniker name="/ytimer2/State2" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="a60f7e74-79aa-4a87-a65d-3d306a295481">
+      <transitionNode Id="62313cf8-3dfe-4919-8225-13c2d861157f" x="1793.75" y="568.75">
+        <targetState>
+          <transitionNodeConnectsToStates Id="617d6bc3-470c-4c87-8ffc-5fc488b70b08">
+            <stateMoniker name="/ytimer2/State1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="25edcc8d-9ce3-42ad-92e3-b2610529bc51">
+      <transitionNode Id="250b4a3d-bab0-4820-83f5-f92ac823a05d" x="1968.75" y="525">
+        <targetState>
+          <transitionNodeConnectsToStates Id="64eda37c-557d-4d5a-a894-57b37b942aaf">
+            <stateMoniker name="/ytimer2/State1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

@@ -1,0 +1,1 @@
+printf("Send signal: pour base. Current pH: %f\n", me->x2);

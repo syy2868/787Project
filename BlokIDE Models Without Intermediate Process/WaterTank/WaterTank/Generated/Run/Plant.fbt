@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="Plant" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="syy-PC" Version="0.1" Author="syy" Date="2015-00-10" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+<EventInputs>
+  <Event Name="TurnOn" Comment="">
+  </Event>
+  <Event Name="TurnOff" Comment="">
+  </Event>
+</EventInputs>
+<EventOutputs>
+  <Event Name="Update" Comment="">
+  </Event>
+</EventOutputs>
+
+<OutputVars>
+  <VarDeclaration Name="x" Type="REAL" Comment="" />
+  <VarDeclaration Name="y" Type="REAL" Comment="" />
+</OutputVars>
+</InterfaceList>
+<FBNetwork>
+  <FB Name="WaterTank" Type="WaterTank" x="1968.75" y="306.25" />
+  <FB Name="GasBurner" Type="GasBurner" x="612.5" y="306.25" />
+  <EventConnections><Connection Source="TurnOn" Destination="GasBurner.TurnOn" />
+<Connection Source="TurnOff" Destination="GasBurner.TurnOff" />
+<Connection Source="WaterTank.Update" Destination="Update" />
+<Connection Source="GasBurner.Update" Destination="Update" />
+<Connection Source="GasBurner.On" Destination="WaterTank.On" />
+<Connection Source="GasBurner.Off" Destination="WaterTank.Off" /></EventConnections>
+  <DataConnections><Connection Source="WaterTank.x" Destination="x" />
+<Connection Source="GasBurner.y" Destination="y" /></DataConnections>
+</FBNetwork>
+</FBType>
