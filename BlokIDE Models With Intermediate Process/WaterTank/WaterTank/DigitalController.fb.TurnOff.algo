@@ -1,0 +1,2 @@
+printf("Signal sent : turn off the burner |  Temperature : %f\n", me->x);
+wait(10);

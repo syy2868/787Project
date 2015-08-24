@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="626472a9-86b1-4cbe-8ff1-0ad9d55e485a" name="Filling_control" organization="PC_THEO" date="2015-07-13" author="Théo">
+  <states>
+    <functionBlockModelHasStates Id="3db410dc-3546-45bd-9389-55a4283ce36b">
+      <state Id="57a37923-03e6-4d3c-b258-f3d7813dbacb" name="Start" x="131.25" y="262.5" isInitial="true">
+        <actionSet>
+          <actionLink Id="c048b491-1b87-49de-8b1f-110d75a9786a">
+            <actionSetMoniker Id="0d523ddc-a9f1-42d0-9098-f8c318bf21fb" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="f0c03bd6-9518-4b53-af5c-cb58a18f5b9f">
+            <transitionNodeMoniker Id="4931cfd5-cac6-45b0-90a8-9c3ca149246c" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="72f9af1b-1cd8-4342-bbf8-55d5c73f90d8">
+      <state Id="b641244b-fd76-4c03-8129-b1cb1377109b" name="setFull" x="1093.75" y="262.5" isInitial="false">
+        <actionSet>
+          <actionLink Id="3b1b2879-ef14-4266-bb32-fcac0d9eea01">
+            <actionSetMoniker Id="7ef260c4-c4dc-4e71-b4b3-a7d728550f74" />
+          </actionLink>
+        </actionSet>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="e516e84f-fe30-47d1-9360-1c04e7fb20f7">
+      <actionSet Id="0d523ddc-a9f1-42d0-9098-f8c318bf21fb" x="448.90889137983328" y="262.5">
+        <actionItems>
+          <actionSetHasActionItems Id="0607be41-c32d-42b4-8de4-164fdfa6d4b3">
+            <actionAlgorithm Id="640df1e2-03be-42d4-bfd9-9bc19a8f465a">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="30fafa31-cea4-41e3-ad51-70710249b9b0">
+                  <algorithmMoniker name="/Filling_control/init" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="8ed8d752-871e-48d6-816c-156675651f45">
+            <actionEvent Id="01be5700-b003-411b-8e5a-bc16522cc1da">
+              <event>
+                <actionEventReferencesEvent Id="d071a69a-3bf8-4edd-a87d-4c27d19c2f3a">
+                  <eventMoniker name="/Filling_control/Filling_control/full" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="23cc645b-5a34-4d14-8531-d903a0661189">
+      <actionSet Id="7ef260c4-c4dc-4e71-b4b3-a7d728550f74" x="1445.631303489208" y="262.5">
+        <actionItems>
+          <actionSetHasActionItems Id="da863571-3561-49d2-af23-6604b52784d5">
+            <actionEvent Id="943a9ab3-a044-402b-bd51-cca7fcf47137">
+              <event>
+                <actionEventReferencesEvent Id="6cc72728-5404-4363-988a-9f8e5c627908">
+                  <eventMoniker name="/Filling_control/Filling_control/full" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="f6828298-324b-42dd-b731-5e6fa650323f">
+      <algorithm Id="e48c0399-bc43-4fc6-b520-06177f0abe74" name="init" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="693bb696-6942-4e9f-8809-38de4fedacdc">
+      <functionBlockInterface Id="cb7bc1d3-61a6-4bce-ba3e-465be30f8880" name="Filling_control" x="1400" y="481.25">
+        <events>
+          <functionBlockHasEvents Id="749dee63-ebc1-4b7d-920f-7cb6e57388aa">
+            <event Id="33cfae08-cba7-4437-aa3c-41e6ec9f91c7" name="update" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="75f6e9bf-4e67-4cc6-8ad4-c639d5ce35f9">
+            <event Id="189ce8e2-cea3-44e3-8667-dd30bd5c8595" name="full" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="55576f01-b3e5-449b-9b22-7e45b81c49f9">
+            <variable Id="fb3275e4-f7b2-4718-a725-a7f1d3cdff2b" name="x1" scope="Input" type="REAL" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="266a824e-a462-4744-83e2-fb65c6a2a496">
+            <inputEventPort Id="db89c5eb-c856-40ba-99eb-52319607672a">
+              <targetPort>
+                <association Id="8f9ae006-f312-4c3a-b2cb-9ec1b9d88d65">
+                  <inputVariablePortMoniker Id="3916ac0e-bbdb-4478-b629-d7ff6800742d" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="b65accf7-0df3-40b0-86a4-bc4bb4de97fc">
+                  <eventMoniker name="/Filling_control/Filling_control/update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="46615636-7d06-4a6a-a2a1-f7db5b836205">
+            <outputEventPort Id="774b0dd3-efde-474b-9f14-9c8f0fd10b74">
+              <event>
+                <outputEventPortReferencesEvent Id="ac31baca-3c27-4710-8464-e6e56e8f3853">
+                  <eventMoniker name="/Filling_control/Filling_control/full" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="21d377d7-e92e-4b05-81ba-060fef0a6ce8">
+            <inputVariablePort Id="3916ac0e-bbdb-4478-b629-d7ff6800742d">
+              <variable>
+                <inputVariablePortReferencesVariable Id="620bc049-29c6-4cf2-8f58-629b41d3576e">
+                  <variableMoniker name="/Filling_control/Filling_control/x1" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="33553690-2780-49c5-888e-e603635b5ec9">
+      <transitionNode Id="4931cfd5-cac6-45b0-90a8-9c3ca149246c" x="612.5" y="525" event="true" expression="x1&gt;=1">
+        <targetState>
+          <transitionNodeConnectsToStates Id="68a577b3-f60c-4ee5-b893-e58a69b31b96">
+            <stateMoniker name="/Filling_control/setFull" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

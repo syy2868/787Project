@@ -1,0 +1,1 @@
+printf("Send signal: add1, Temperature : %f\n",me->x);

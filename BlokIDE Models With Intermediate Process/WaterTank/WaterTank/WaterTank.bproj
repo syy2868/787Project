@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Run</Configuration>
+    <Platform Condition="'$(Platform)' == ''">gnu</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{776CCC40-257E-4ABA-A850-57C572F0CB90}</ProjectGuid>
+    <ProjectType>BlokIDE Project</ProjectType>
+    <ProjectTypeGuids>{92B81AF7-8D03-46D0-9C71-430DAE7A074E}</ProjectTypeGuids>
+    <RootNamespace>BlokIDENamespace</RootNamespace>
+    <AssemblyName>BlokIDEAssemblyName</AssemblyName>
+    <OutputFormat>CCode</OutputFormat>
+    <MaxStringLength>32</MaxStringLength>
+    <Name>WaterTank</Name>
+    <ActivePlatform>gnu</ActivePlatform>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Deploy'">
+    <CompilationMode>Deploy</CompilationMode>
+    <OutputPath>Generated\Run\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <ExecuteMakeScript>false</ExecuteMakeScript>
+    <CompilerParameters>-w</CompilerParameters>
+    <!--Remove warnings from GCC-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Remote'">
+    <CompilationMode>Remote</CompilationMode>
+    <OutputPath>Generated\Simulation\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <ExecuteMakeScript>false</ExecuteMakeScript>
+    <CompilerParameters>-w</CompilerParameters>
+    <!--Remove warnings from GCC-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Run'">
+    <CompilationMode>Run</CompilationMode>
+    <OutputPath>Generated\Run\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <CompilerName>gcc</CompilerName>
+    <ExecuteMakeScript>true</ExecuteMakeScript>
+    <CompilerParameters>-w</CompilerParameters>
+    <!--Remove warnings from GCC-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Simulation'">
+    <CompilationMode>Simulate</CompilationMode>
+    <OutputPath>Generated\Simulation\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <CompilerName>gcc</CompilerName>
+    <ExecuteMakeScript>true</ExecuteMakeScript>
+    <CompilerParameters>-w</CompilerParameters>
+    <!--Remove warnings from GCC-->
+  </PropertyGroup>
+  <PropertyGroup>
+    <TimeMePath Condition="!Exists('$(TimeMePath)\UoA.IEC61499.Compiler.targets')">
+    </TimeMePath>
+    <TimeMePath Condition="$(TimeMePath) == '' And Exists('$(VSInstallDir)\Common7\IDE\Extensions\BlokIDE\UoA.IEC61499.Compiler.targets')">$(localappdata)\Common7\IDE\Extensions\BlokIDE</TimeMePath>
+    <TimeMePath Condition="$(TimeMePath) == '' And Exists('$(localappdata)\Microsoft\VisualStudio\$(VisualStudioVersion)Exp\Extensions\BlokTech\TimeMe\1.0\UoA.IEC61499.Compiler.targets')">$(localappdata)\Microsoft\VisualStudio\$(VisualStudioVersion)Exp\Extensions\BlokTech\TimeMe\1.0</TimeMePath>
+    <TimeMePath Condition="$(TimeMePath) == '' And Exists('$(localappdata)\Microsoft\VisualStudio\$(VisualStudioVersion)\Extensions\BlokTech\TimeMe\1.0\UoA.IEC61499.Compiler.targets')">$(localappdata)\Microsoft\VisualStudio\$(VisualStudioVersion)\Extensions\BlokTech\TimeMe\1.0</TimeMePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="WaterTank.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GasBurner.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plant.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DigitalController.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="WaterTankSystem.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DigitalController.fb.printing.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>DigitalController.fb</DependentUpon>
+      <LinkedIntoProjectAt>printing.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="DigitalController.fb.RandomChoice.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>DigitalController.fb</DependentUpon>
+      <LinkedIntoProjectAt>RandomChoice.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="DigitalController.fb.TurnOff.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>DigitalController.fb</DependentUpon>
+      <LinkedIntoProjectAt>TurnOff.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="DigitalController.fb.TurnOn.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>DigitalController.fb</DependentUpon>
+      <LinkedIntoProjectAt>TurnOn.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="DigitalController.fb.Wait.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>DigitalController.fb</DependentUpon>
+      <LinkedIntoProjectAt>Wait.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="GasBurner.fb.Init.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>GasBurner.fb</DependentUpon>
+      <LinkedIntoProjectAt>Init.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="GasBurner.fb.Reset.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>GasBurner.fb</DependentUpon>
+      <LinkedIntoProjectAt>Reset.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="GasBurner.fb.Timer.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>GasBurner.fb</DependentUpon>
+      <LinkedIntoProjectAt>Timer.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="WaterTank.fb.CoolingDown.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>WaterTank.fb</DependentUpon>
+      <LinkedIntoProjectAt>CoolingDown.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="WaterTank.fb.HeatingUp.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>WaterTank.fb</DependentUpon>
+      <LinkedIntoProjectAt>HeatingUp.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="WaterTank.fb.Init.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>WaterTank.fb</DependentUpon>
+      <LinkedIntoProjectAt>Init.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="WaterTank.fb.InitValueOff.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>WaterTank.fb</DependentUpon>
+      <LinkedIntoProjectAt>InitValueOff.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="WaterTank.fb.InitValueOn.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>WaterTank.fb</DependentUpon>
+      <LinkedIntoProjectAt>InitValueOn.algo</LinkedIntoProjectAt>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(TimeMePath)\UoA.IEC61499.Compiler.targets" />
+</Project>
