@@ -1,0 +1,4 @@
+//me->x = (float) me->C1x*exp(-0.075*me->d*me->k);
+me->x = 20;
+me->k++;
+printf("Temperature : %f\n", me->x);

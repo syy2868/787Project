@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="7c706e54-00dd-40ce-9c9a-7a0929efbb3c" name="carousel_belt" organization="PC_THEO" date="2015-07-16" author="Théo">
+  <states>
+    <functionBlockModelHasStates Id="b480957f-d610-4c3f-85e4-7ce5c5ad9c5b">
+      <state Id="7c812360-bd06-46b6-bdf9-130cb0966474" name="Start" x="481.25" y="393.75" isInitial="true">
+        <actionSet>
+          <actionLink Id="ac0a3836-e674-4bd8-b518-7bd06129edcb">
+            <actionSetMoniker Id="77e5bea5-23ad-413c-948d-9f1449ffd59e" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="c77921eb-f331-4a86-8b6e-4e8f46b8f52b">
+            <transitionNodeMoniker Id="aa031f63-fa16-4de5-abeb-5f9610229362" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="7a3b316f-d878-4b95-a565-a8457e0e4a9d">
+      <state Id="a8fc695e-8703-4ffc-9be4-a7fa817e1ca2" name="State1" x="1618.75" y="393.75" isInitial="false">
+        <actionSet>
+          <actionLink Id="7ef852fb-9077-42d6-a0dd-5ccafafff3ed">
+            <actionSetMoniker Id="509aeb68-f1b9-426e-9b24-fd9e3bdb0915" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="40997ddf-e8fc-48bf-a0e1-d8e9a79354a0">
+            <transitionNodeMoniker Id="4a82442e-6deb-4f50-986f-6344f375dca8" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="a98da522-b7d1-434c-accc-c555e1c5a0d1">
+            <transitionNodeMoniker Id="b4021f83-1620-4c3f-95c2-e3418642ddd9" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="fa2e9244-1e49-4952-a3a9-ff47afb989ea">
+      <actionSet Id="77e5bea5-23ad-413c-948d-9f1449ffd59e" x="175" y="656.25">
+        <actionItems>
+          <actionSetHasActionItems Id="d4bdc758-dd25-4b1e-baac-0710b3fd3022">
+            <actionAlgorithm Id="596a1ac8-e85f-40ad-8a2b-5da39dfeff36">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="1e5a6ab4-efc3-4edc-ac2c-3f1bf30a8944">
+                  <algorithmMoniker name="/carousel_belt/init" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="3c42ad88-248d-4052-9b39-4ab8fddcd415">
+            <actionEvent Id="608f2f7b-f7c8-4226-9248-a82f22df4875">
+              <event>
+                <actionEventReferencesEvent Id="f0c3a939-9751-4ac6-a586-99e637a6f985">
+                  <eventMoniker name="/carousel_belt/carousel_belt/update" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="3cb132a6-ddc1-4efd-8ffa-ece23fe6eb23">
+      <actionSet Id="509aeb68-f1b9-426e-9b24-fd9e3bdb0915" x="1575" y="656.25">
+        <actionItems>
+          <actionSetHasActionItems Id="3270d961-dc73-42b0-9a9e-8aab99008921">
+            <actionAlgorithm Id="e1cf2202-ec71-4235-a1f7-03fe1c3bf654">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="c9e8f749-df48-4857-a507-4c53fc75e304">
+                  <algorithmMoniker name="/carousel_belt/run" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="c52a73e8-22cd-49bf-a1bf-162eead47eac">
+            <actionEvent Id="ea3bc5e0-79f7-4d09-b4ab-efc70aadb8db">
+              <event>
+                <actionEventReferencesEvent Id="11673407-6857-411f-8645-6f64e296f207">
+                  <eventMoniker name="/carousel_belt/carousel_belt/update" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="a15c6ee2-6b33-4004-bad4-abd2318bfd2a">
+      <algorithm Id="90c47177-f286-469e-8c59-f2304367e3a3" name="init" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="3ae9ca0e-5e1b-4417-8808-5443515039a7">
+      <algorithm Id="96231a0e-02e7-494f-9c6f-e1ca97d05d76" name="run" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="307a32c5-b029-49ef-9c5e-8f04274baf39">
+      <functionBlockInterface Id="528ca262-6504-4dde-9f1b-9b7c62d0aee1" name="carousel_belt" x="1268.75" y="568.75">
+        <events>
+          <functionBlockHasEvents Id="29680ed1-5d74-45f9-ba29-a588968d1488">
+            <event Id="5c6f3dea-b1ff-4c16-90cb-dbbcccf3eb71" name="update" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="7d1e8c75-9ce2-434f-b8db-b9e2e8216373">
+            <variable Id="0f061d8d-ca65-46e2-99bc-d2f6e085ab26" name="x" scope="Output" type="REAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="be53ac4c-329e-4636-aae7-541e43b53d55">
+            <variable Id="a9adf60f-a699-4f37-b32e-0a9a3b53f48e" name="beta" scope="Internal" type="REAL" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="27d23bed-5e6f-447d-822f-3d36c5edec76">
+            <outputEventPort Id="d728a344-f643-431f-a481-6b251b0879e0">
+              <targetPort>
+                <association Id="ac13c6c1-025a-4d69-a638-e26cc21d80c6">
+                  <outputVariablePortMoniker Id="0f7d0027-9cba-4fb8-ba03-cf70b08d61dc" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="d1869618-807c-4a59-8ad8-274aeaac4ceb">
+                  <eventMoniker name="/carousel_belt/carousel_belt/update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="7874d64c-d6a9-485e-a52a-fb27f490c004">
+            <outputVariablePort Id="0f7d0027-9cba-4fb8-ba03-cf70b08d61dc">
+              <variable>
+                <outputVariablePortReferencesVariable Id="34618eae-f213-4cc7-b0dc-8c748f9127df">
+                  <variableMoniker name="/carousel_belt/carousel_belt/x" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="ed2c9b40-f535-44ec-8d3c-cc93b7d68ce8">
+      <transitionNode Id="aa031f63-fa16-4de5-abeb-5f9610229362" x="1001" y="393.75">
+        <targetState>
+          <transitionNodeConnectsToStates Id="79132c1b-dcc7-4faf-9b8e-0c1190c9c284">
+            <stateMoniker name="/carousel_belt/State1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="53a99579-9920-420a-a82c-b92a6cc4ad31">
+      <transitionNode Id="b4021f83-1620-4c3f-95c2-e3418642ddd9" x="1662.5" y="175">
+        <targetState>
+          <transitionNodeConnectsToStates Id="42200351-e884-42a5-b5e4-3f60a1f4fd99">
+            <stateMoniker name="/carousel_belt/State1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="0a5e0425-021c-4839-9fa2-dcc75583b0d6">
+      <transitionNode Id="4a82442e-6deb-4f50-986f-6344f375dca8" x="1006.25" y="962.5" expression="x&gt;=beta">
+        <targetState>
+          <transitionNodeConnectsToStates Id="7b58f6bf-0925-4661-9aba-d3f7b4146def">
+            <stateMoniker name="/carousel_belt/Start" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

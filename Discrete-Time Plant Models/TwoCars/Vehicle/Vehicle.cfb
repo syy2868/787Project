@@ -1,0 +1,937 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="22aa49c7-f2b2-464f-b6ec-f9cd1f56476a" name="Vehicle" organization="Jin-PC" date="2015-08-24" author="Jin" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="b2fe3444-cabc-4028-b414-bb2a0ffc8f7c">
+      <functionBlockInterface Id="a26c9330-4545-4b52-bac2-ef718aa421b9" name="Vehicle" x="2100" y="875" modelType="Composite">
+        <events>
+          <functionBlockHasEvents Id="28850392-3566-448c-9f5a-872f9461a247">
+            <event Id="1298c49f-c90f-4d54-8679-9cd0d70a3789" name="POSITION" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="dfd32664-9362-4fa2-8b42-0a8a02b793b9">
+            <event Id="37633ae5-0db6-48dc-9510-ced1161c0fc2" name="SensorReading" scope="Input" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="0b2b91da-9ac6-40eb-ac12-2cd113b104d6">
+            <variable Id="5239bd58-4208-4480-8ff9-1f8878b43426" name="value" scope="Output" type="LREAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="3df3d523-ec2b-4742-a92b-e8d3db6af4bf">
+            <variable Id="cfbe3e91-3e0f-4198-ab55-4c82efb985fb" name="FrontCarPos" scope="Input" type="LREAL" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="dfe65803-90c2-4cb4-b528-c257c1bbb594">
+            <inputEventPort Id="7d9257bb-1e21-4f15-9274-7f232b6f4a1e">
+              <proxyTargetPorts>
+                <proxyConnection Id="494eb4d4-46a8-471e-af1d-b057bf1882f8">
+                  <inputEventPortMoniker Id="3cd8e7a0-74f1-47a1-aa7e-3f630156a861" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <inputEventPortReferencesEvent Id="5fc2b58d-cc2b-4bb2-bd1e-d844e8bb3071">
+                  <eventMoniker name="/Vehicle/Vehicle/SensorReading" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="7be0176e-de6b-4680-8c69-fd70722bf9ae">
+            <outputEventPort Id="2b62d8d9-493c-44d6-873a-c81424914bff">
+              <proxyTargetPorts>
+                <proxyConnection Id="603711be-e43a-425f-a178-4601c9989cfb">
+                  <outputEventPortMoniker Id="95d4b933-ae03-4566-81c2-b2ddead65a5a" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="951c639b-7c54-4461-bc96-347793011e68">
+                  <eventMoniker name="/Vehicle/Vehicle/POSITION" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="7885a553-8be1-4fdd-86c0-e6c6140b558e">
+            <inputVariablePort Id="ff9e1cfe-4116-4210-9f48-0ef5d7353ca9">
+              <proxyTargetPorts>
+                <proxyConnection Id="0f4db378-1814-4c0d-b7ee-8ca79dc265fe">
+                  <inputVariablePortMoniker Id="59508641-bfe5-4951-aa4c-b8b71396fecb" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <inputVariablePortReferencesVariable Id="167c50cf-8069-4b80-92ab-e40150c8ab05">
+                  <variableMoniker name="/Vehicle/Vehicle/FrontCarPos" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="ac140d7f-7e6c-4135-a009-c604f7c7cf50">
+            <outputVariablePort Id="5a71d083-ca4c-4f39-ae69-d7c0b99988e9">
+              <proxyTargetPorts>
+                <proxyConnection Id="fb9432df-1631-4d62-b1da-2941aca0d4b6">
+                  <outputVariablePortMoniker Id="278b64d8-b35b-4dda-9c8e-77895d1b62c7" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="f6e524ee-360f-4781-b29e-94bbf1d99ec3">
+                  <variableMoniker name="/Vehicle/Vehicle/value" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+  <functionBlockReferences>
+    <cFBModelHasFBReferences Id="324c591e-a28a-48c8-aa7f-18b3357d57ff">
+      <functionBlockReference Id="618322e8-6774-4c4d-84d5-1624fa642ea1" name="Reference" x="3237.5" y="1400" creationMode="Resource" referencedFile="CSMA.fb">
+        <events>
+          <functionBlockHasEvents Id="a4d933f3-27e6-4a79-800e-ec9c21d8322a">
+            <eventRef Id="54fe08a2-8bb1-4185-9962-66d8d724b94d" name="SWITCH_CHANNEL" scope="Input" referencedID="6072dcd6-6fb4-454e-94b8-d38fdd432a63" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="acf522cd-7110-4d2e-990a-f62a569be382">
+            <eventRef Id="0cc58c8d-830b-4143-9d94-c5d0e708cc27" name="CCH_REQ" scope="Input" referencedID="cd16162a-72ba-45bc-ad1b-1438c1c87c3a" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="4a2c4caf-ed74-49a7-9b55-1504accd0c17">
+            <eventRef Id="84ac19bf-9923-4a6a-bc2b-ae636c96e2bb" name="SCH_REQ" scope="Input" referencedID="d176264a-37a7-4b3f-82f2-1381fb1e7185" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="140af2c4-1679-49a0-a9dc-dc0cb2b28bfe">
+            <eventRef Id="6bd98ce3-d2b8-4f5e-a1e5-c929caae87d0" name="MAC_WAVE_CCH_RCV" scope="Output" referencedID="9c5227c6-3e21-4c91-afda-bc99ca0eea97" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="a66f8ac8-6f07-45b6-a78f-bcad64103c05">
+            <eventRef Id="15e2275a-eed2-436e-be89-ff64003e6545" name="MAC_WAVE_SCH_RCV" scope="Output" referencedID="078073c6-1037-45a3-9292-91cb39590106" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="4a97fe52-61d2-4ee3-9f01-d5004229e6da">
+            <eventRef Id="19d11592-67b2-4721-9c28-1a7841c929c9" name="CCH_CLR" scope="Output" referencedID="108d8bd9-d5aa-48c6-a268-f8a38c71f4bc" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="e0b490fe-40aa-4391-8ab6-95cb22f9c8f2">
+            <eventRef Id="fa096af6-3340-4eed-8bb5-384e32d52cc4" name="SCH_CLR" scope="Output" referencedID="79272d45-0b8b-4045-beda-2ad452404937" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="139ba7fa-d1a8-4571-bdf7-55b00c78e760">
+            <eventRef Id="2192e520-1089-4e79-a536-1398922f20f8" name="MAC_CH_CCH" scope="Output" referencedID="83c5dbc6-2c82-4cd0-a358-fdbbcace1004" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="fe3ec8da-ea03-4181-999c-f95ed7e61e92">
+            <eventRef Id="f9e1a20b-c801-44a3-b830-c32d6f285cb9" name="MAC_CH_SCH" scope="Output" referencedID="2ba97c1b-dbc8-499e-9fb0-b74e978f0f32" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="38959d1d-a661-440d-8406-e05f781f3ab6">
+            <variableRef Id="afbca98c-ab64-4ae7-82ca-ced97cdd22c8" name="mode" scope="Input" type="INT" referencedID="33f98b66-e12f-4f72-a67a-47c44b3f834c" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="4005329b-42dc-4624-ac3d-ad940b0844ad">
+            <variableRef Id="8eb64fb9-c359-4b8f-ae5f-8a8b56cc9074" name="CCH_PACKET" scope="Output" type="INT" referencedID="155adbaf-251d-4f97-9814-cd7c2754ba8e" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="b56afe0b-03a2-4c88-9b74-e19825fcf7da">
+            <variableRef Id="99a33eeb-9285-4586-ab55-3e3a1826cc48" name="SCH_PACKET" scope="Output" type="INT" referencedID="505f6a35-c2e1-4347-8895-07453bca37b2" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="cfd7a403-41d1-4050-88c1-68c07158883c">
+            <inputEventPort Id="3f3db02f-a8eb-4a3b-977a-120103d8a939">
+              <event>
+                <inputEventPortReferencesEvent Id="cdba422b-0ce0-4d9b-9845-9c75b6925003">
+                  <eventRefMoniker name="/Vehicle/Reference/SWITCH_CHANNEL" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="6173898d-7288-4be5-a2d4-105e3fd3a44c">
+            <inputEventPort Id="cfdc40c1-61ab-4aee-848b-1bc29fd30c31">
+              <event>
+                <inputEventPortReferencesEvent Id="59fd64ea-433f-48f4-a314-d98f9eaf87ce">
+                  <eventRefMoniker name="/Vehicle/Reference/CCH_REQ" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="b5bba58f-e5e4-4087-a52e-14a302f2487e">
+            <inputEventPort Id="1a3b3e0b-c659-41e4-9606-cb65eedc6293">
+              <event>
+                <inputEventPortReferencesEvent Id="2ab27df8-b22f-45c5-a588-af9ae3f62e04">
+                  <eventRefMoniker name="/Vehicle/Reference/SCH_REQ" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="ac0ea3dd-53f5-4011-87a2-693985954318">
+            <outputEventPort Id="4a02b150-a245-4989-8388-0be61cbaaf46">
+              <wireTargetPorts>
+                <wireConnection Id="0a49048c-c890-4fe5-8b46-7e04b5803cbe" unitDelayed="false">
+                  <inputEventPortMoniker Id="5823d9c7-780b-429f-a108-828192ab33a1" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="044c024f-33c3-43e2-b92c-5a273144c38e">
+                  <eventRefMoniker name="/Vehicle/Reference/MAC_WAVE_CCH_RCV" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="85843bac-e486-40b8-ba89-09efe5354859">
+            <outputEventPort Id="cdefd54e-6e1b-4e1f-8761-5ed834ccb974">
+              <wireTargetPorts>
+                <wireConnection Id="2c6de65b-f7a0-4117-b06f-8adc5bec1a56" unitDelayed="false">
+                  <inputEventPortMoniker Id="df1cf0b5-cc7e-4871-8e0a-00b99e8ae69c" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="a46e5b15-5fbe-49d0-bf80-d13fe0673a31">
+                  <eventRefMoniker name="/Vehicle/Reference/MAC_WAVE_SCH_RCV" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="a6a10a44-4234-448f-b97a-6e874e213759">
+            <outputEventPort Id="3e7be104-5c69-4062-b0f4-0ea6d9e28a22">
+              <wireTargetPorts>
+                <wireConnection Id="43475cdf-1059-441a-a72a-f54b042b7c3d" unitDelayed="false">
+                  <inputEventPortMoniker Id="3a0efa8c-0f76-4db9-850b-0bf1453d733c" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="6fd1f2f8-7623-4f34-bc3b-5a052a3a1ba3">
+                  <eventRefMoniker name="/Vehicle/Reference/CCH_CLR" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="355dbd25-1e62-4386-ac38-055d183d9f66">
+            <outputEventPort Id="76b4a3b8-3be2-49cb-a6c2-6813e1ed455b">
+              <wireTargetPorts>
+                <wireConnection Id="7f1de7ea-75ea-41cf-bc7a-e51542185b6d" unitDelayed="false">
+                  <inputEventPortMoniker Id="fcfbfb4a-0c71-4131-a5d3-66354d1f46b2" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="9597fdb5-0ea8-4450-bec1-94e3dba015d1">
+                  <eventRefMoniker name="/Vehicle/Reference/SCH_CLR" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="03b113ac-1dbf-413e-9c80-bb00daeb77ff">
+            <outputEventPort Id="f6bee09e-d9fd-4a85-af17-cc838e0a7ae3">
+              <event>
+                <outputEventPortReferencesEvent Id="83d1fe52-138d-47e4-817e-438e7b1a938d">
+                  <eventRefMoniker name="/Vehicle/Reference/MAC_CH_CCH" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="5d8f2067-16d5-43fa-b4cd-5664a3b3057a">
+            <outputEventPort Id="7667489c-f4bc-4db4-b73b-9c66dde7e629">
+              <event>
+                <outputEventPortReferencesEvent Id="4fa08331-4213-44d5-986a-4010e9e86ece">
+                  <eventRefMoniker name="/Vehicle/Reference/MAC_CH_SCH" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="53b67b1d-1776-4e30-9a6b-47452b6e0376">
+            <inputVariablePort Id="8d4160f2-135c-4e24-b9bf-c2ef45c8e36f">
+              <variable>
+                <inputVariablePortReferencesVariable Id="1a19c428-5ca7-4f38-a282-f62a7e818fe2">
+                  <variableRefMoniker name="/Vehicle/Reference/mode" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="e5d3677d-823a-4154-8da8-caa6b1933cf4">
+            <outputVariablePort Id="bffe105f-36f7-482b-b0a3-3c22b54539b9">
+              <variable>
+                <outputVariablePortReferencesVariable Id="d3ca4495-e904-4bba-b3d0-50ff32ab5ca3">
+                  <variableRefMoniker name="/Vehicle/Reference/CCH_PACKET" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="7fd394f6-ecd4-4da6-9286-eddd41989450">
+            <outputVariablePort Id="2a503abd-7ed9-42cd-9345-13497fad643b">
+              <variable>
+                <outputVariablePortReferencesVariable Id="e4716985-ae32-49ba-8397-6c7248fb49cf">
+                  <variableRefMoniker name="/Vehicle/Reference/SCH_PACKET" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="124698dc-8e9a-433c-8238-0f9076efa1dd">
+      <functionBlockReference Id="f08c933e-c37c-490e-b3d9-62d718f3a2bb" name="Reference1" x="4812.5" y="1400" creationMode="Resource" referencedFile="EDCA.fb">
+        <events>
+          <functionBlockHasEvents Id="f3306be6-2e0b-4b5c-bc41-374e42c0b3d9">
+            <eventRef Id="490a3a92-7dec-4d9b-973d-985001c610d0" name="WAVE_MAC_CCH_TX" scope="Input" referencedID="cea305de-00cb-496d-8674-02931bc5522c" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="3499f995-c779-44a6-9fca-9fc68201f64c">
+            <eventRef Id="e082b0f7-0be9-4a6b-bcd6-df911f395958" name="WAVE_MAC_SCH_TX" scope="Input" referencedID="6d8d92de-50ee-4347-ab3a-42dae59573e5" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="929efb55-2b37-4441-8283-f60cf3a5034a">
+            <eventRef Id="e31a9bf4-920d-4bcd-b462-3743560fb6f6" name="MAC_CCH_CLR" scope="Input" referencedID="8067e4d5-6705-4110-aa0b-6497e396c3cb" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="dc389294-f2bc-45ea-912d-0ed19bfb47f5">
+            <eventRef Id="25bf804f-c318-44c7-b20d-20b04439a94a" name="MAC_SCH_CLR" scope="Input" referencedID="e9fe86da-9eb5-4dc4-a10a-d5325532212f" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="96186038-4fb9-4d8c-8b67-eb81d82b9273">
+            <eventRef Id="1336159e-6460-41c1-9cb8-fb8a34259b3b" name="CCH_REQ" scope="Output" referencedID="c438758a-e822-49c2-bca4-1e0b18b72ccc" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="6da49ff7-a139-4b83-825d-d5184fd97351">
+            <eventRef Id="8113800b-8cb2-44e1-a664-6ede02accf5e" name="SCH_REQ" scope="Output" referencedID="fcb3b40c-b236-4d29-bb43-3920dd60b5eb" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="ec5af581-7e97-428e-912b-7c49aeefde86">
+            <inputEventPort Id="40c937dc-00e1-4ecc-b943-f826fbf176af">
+              <event>
+                <inputEventPortReferencesEvent Id="5d1358d5-7436-4007-901b-7069437e0e99">
+                  <eventRefMoniker name="/Vehicle/Reference1/WAVE_MAC_CCH_TX" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="c68de682-84fe-411e-a30c-98c86a62da43">
+            <inputEventPort Id="60d853fc-aaac-4846-adbe-a042b984986d">
+              <event>
+                <inputEventPortReferencesEvent Id="71163fbe-13b6-4261-8a70-dea2976403a8">
+                  <eventRefMoniker name="/Vehicle/Reference1/WAVE_MAC_SCH_TX" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="08d2040e-5b2d-40cf-8165-fa22b9398d88">
+            <inputEventPort Id="3a0efa8c-0f76-4db9-850b-0bf1453d733c">
+              <event>
+                <inputEventPortReferencesEvent Id="8f77fc25-d9f3-4adb-b4a1-3bec43c8b699">
+                  <eventRefMoniker name="/Vehicle/Reference1/MAC_CCH_CLR" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="529af816-b705-43a4-8a29-2f94a9b7bba3">
+            <inputEventPort Id="fcfbfb4a-0c71-4131-a5d3-66354d1f46b2">
+              <event>
+                <inputEventPortReferencesEvent Id="3ec54b69-e7c0-4b25-9d34-1d271982abca">
+                  <eventRefMoniker name="/Vehicle/Reference1/MAC_SCH_CLR" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="f7e693ee-af3d-4ac4-b1b5-95d9e340e723">
+            <outputEventPort Id="eeb99460-798e-41e4-abe7-aa43a6f4016b">
+              <wireTargetPorts>
+                <wireConnection Id="d7e0213f-77e9-4f33-af4c-d5cb94e83d4b" unitDelayed="false">
+                  <inputEventPortMoniker Id="cfdc40c1-61ab-4aee-848b-1bc29fd30c31" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="ba91603b-e40f-4a85-802b-cef858853f0e">
+                  <eventRefMoniker name="/Vehicle/Reference1/CCH_REQ" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="4c38ff71-ca97-4b3c-9efe-6f7214c606c5">
+            <outputEventPort Id="95b14967-98a4-4c65-af98-78270d8d6e71">
+              <wireTargetPorts>
+                <wireConnection Id="b4e77cfb-cc7b-4ba9-88e2-be57f3b1ecdb" unitDelayed="false">
+                  <inputEventPortMoniker Id="1a3b3e0b-c659-41e4-9606-cb65eedc6293" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="28129de7-2b52-4ee8-8135-e9a8472e65f0">
+                  <eventRefMoniker name="/Vehicle/Reference1/SCH_REQ" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="7f86fde1-ddaa-43e0-8557-6cf334e3b0e8">
+      <functionBlockReference Id="0dc36c3a-59c1-4e5a-8bdd-383c43102d80" name="Reference2" x="3587.5" y="218.75" creationMode="Resource" referencedFile="WAVE.fb">
+        <events>
+          <functionBlockHasEvents Id="19fc03cb-6335-4dab-9e9c-72d96dad702e">
+            <eventRef Id="0f3ababc-f050-4b5c-9858-e2503f03ea11" name="APP_WAVE_CCH_TX" scope="Input" referencedID="2abd3665-b30f-4519-9820-c099aca556b1" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="f132a42a-4c25-4779-aa06-e5254b7a38f5">
+            <eventRef Id="ea8e2b70-0919-42a4-9262-4b3fd7db75b9" name="APP_WAVE_SCH_TX" scope="Input" referencedID="ce400fc1-d6f8-4cb8-b7f4-f4a9fb10ff37" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="3ef27f48-6f74-4801-90f3-0f9d66e4a74e">
+            <eventRef Id="8f0a6335-25f5-4237-9f3f-569aa0847a41" name="SWITCH_CHANNEL" scope="Output" referencedID="c1af7ac0-2dee-42e7-ba99-d92d4aae49cc" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="d81ab943-acbc-4532-a983-456f332144fa">
+            <eventRef Id="9cf79fd0-b8e0-4b7d-be0d-9d235920501c" name="WAVE_MAC_CCH_TX" scope="Output" referencedID="7ea6a428-4fcf-4a06-8110-d3097bf6eb6c" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="2ca3de4c-b563-420f-bf94-3813c7e3818d">
+            <eventRef Id="6850c36c-bcb8-42e2-84b2-ff5812b14960" name="WAVE_MAC_SCH_TX" scope="Output" referencedID="0c2d9983-4d91-45a5-a2c1-7891838dd0a9" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="4763e24b-400c-43cb-b63f-0bad7ae08ee2">
+            <eventRef Id="e1f6636d-90d7-43a0-8343-0b4419689a52" name="MAC_WAVE_CCH_RCV" scope="Input" referencedID="ef9ed2ac-e597-4bdd-a5ae-076b044b3dc6" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="68d497c7-f618-451e-b28a-36654498dc3b">
+            <eventRef Id="eb9483ec-ebf7-4029-bd01-487f13a53c25" name="MAC_WAVE_SCH_RCV" scope="Input" referencedID="4c055f38-e838-472c-bf6f-7a3a29860284" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="f00b3f1a-17ba-4875-94aa-f94335380b47">
+            <eventRef Id="d6ae4eaa-f83d-412b-9f78-d2ae3ebb3f60" name="WAVE_APP_CCH_RCV" scope="Output" referencedID="9d56c120-5f27-423d-992f-93f309c02821" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="b4a3171b-197b-44fd-be35-3684a8e4788b">
+            <eventRef Id="6b4c23ba-f4a5-4f44-8d9d-c46d98f8bbcf" name="WAVE_APP_SCH_RCV" scope="Output" referencedID="1ed09672-f2c3-4a48-a9b4-8f3b13b127a4" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="07daa89a-30cb-4d1f-b48b-a153f733aed7">
+            <variableRef Id="f131d2ce-da2b-40bf-88ba-c86ea903150d" name="mode" scope="Output" type="INT" referencedID="1d6556f2-01db-46ff-a141-4d1b6a315c61" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="82adc366-d819-4636-9c8e-9dd71bb7054d">
+            <variableRef Id="e2530966-f5cf-4779-99eb-d2dc97681011" name="Variable1" scope="Output" type="INT" referencedID="e70b13d9-38ac-4939-adfa-3472f2c705eb" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="23f0c755-6385-47ab-8061-7d5855e879da">
+            <inputEventPort Id="c3c682d0-4758-4c32-bfdc-93ccf1c15c12">
+              <event>
+                <inputEventPortReferencesEvent Id="57dc6c2c-841f-496e-9296-1da25cda5b56">
+                  <eventRefMoniker name="/Vehicle/Reference2/APP_WAVE_CCH_TX" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="ce89b024-bfff-4786-9889-5efb0be7f84b">
+            <inputEventPort Id="ff081ae8-3fdc-45cc-8f46-41a0bd31dc1d">
+              <event>
+                <inputEventPortReferencesEvent Id="c269ab8c-7f54-4df9-9aef-fc1ab5164290">
+                  <eventRefMoniker name="/Vehicle/Reference2/APP_WAVE_SCH_TX" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="d3022436-3f65-4132-8901-f8ceefa4e6ce">
+            <inputEventPort Id="5823d9c7-780b-429f-a108-828192ab33a1">
+              <event>
+                <inputEventPortReferencesEvent Id="440b7323-563f-407d-9bd7-25553028ee54">
+                  <eventRefMoniker name="/Vehicle/Reference2/MAC_WAVE_CCH_RCV" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="e1092b1f-5a23-4e67-a789-29d5755b6a22">
+            <inputEventPort Id="df1cf0b5-cc7e-4871-8e0a-00b99e8ae69c">
+              <event>
+                <inputEventPortReferencesEvent Id="be2fd649-9749-476b-85c0-b4b68c2cf49b">
+                  <eventRefMoniker name="/Vehicle/Reference2/MAC_WAVE_SCH_RCV" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="2ae6a372-cb68-4e1d-9621-073a8a31f0cc">
+            <outputEventPort Id="a0007b9c-c7b0-4cc4-a3a3-510dfaccd3a3">
+              <wireTargetPorts>
+                <wireConnection Id="1de32ecd-5e20-46d1-88db-d0b0e5699386" unitDelayed="false">
+                  <inputEventPortMoniker Id="3f3db02f-a8eb-4a3b-977a-120103d8a939" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="04213e6e-b592-40a1-a15c-e655f2e1df28">
+                  <eventRefMoniker name="/Vehicle/Reference2/SWITCH_CHANNEL" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="c12637aa-9953-4c41-a92e-8f8bb9f3d25f">
+            <outputEventPort Id="0312d2a7-19db-4bf8-bb1e-843850fc8870">
+              <wireTargetPorts>
+                <wireConnection Id="cc9140d7-fd2e-48a8-b17f-56eb565d2bc0" unitDelayed="false">
+                  <inputEventPortMoniker Id="40c937dc-00e1-4ecc-b943-f826fbf176af" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="83735c69-af57-449f-99e3-2d9d70757828">
+                  <eventRefMoniker name="/Vehicle/Reference2/WAVE_MAC_CCH_TX" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="d0c6b5a1-1d3b-48fd-9bc5-468afcb6ae8e">
+            <outputEventPort Id="c8dbad90-2bdf-408f-9d17-aac942513a89">
+              <wireTargetPorts>
+                <wireConnection Id="f4d76f7d-2d66-4fbc-b984-bb4be6369965" unitDelayed="false">
+                  <inputEventPortMoniker Id="60d853fc-aaac-4846-adbe-a042b984986d" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="ddfec2a2-e9aa-422f-992a-93ad9a6e2a4c">
+                  <eventRefMoniker name="/Vehicle/Reference2/WAVE_MAC_SCH_TX" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="d9e95dbe-ff22-4274-89a7-a9901f5e3de7">
+            <outputEventPort Id="872a89c2-af4f-4b39-977c-f1a808cfeddf">
+              <wireTargetPorts>
+                <wireConnection Id="15732c4e-e3e5-4601-bf80-f3628df731d8" unitDelayed="false">
+                  <inputEventPortMoniker Id="45022d16-221a-4780-a7fb-6f4a1567d73f" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="56d5406e-dc6d-4772-b291-9269275a3302">
+                  <eventRefMoniker name="/Vehicle/Reference2/WAVE_APP_CCH_RCV" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="e7622259-57af-4995-b5b3-8f7593bb7842">
+            <outputEventPort Id="c2197ce4-cdf6-4992-aa96-76c663f3d3bd">
+              <wireTargetPorts>
+                <wireConnection Id="18e0f0eb-94bd-4ee6-9f9a-c7d60453070f" unitDelayed="false">
+                  <inputEventPortMoniker Id="0085eb5a-2aac-4ccc-9101-d940d3fc4d76" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="64b97d63-8a7a-47df-ad06-9410b5fadceb">
+                  <eventRefMoniker name="/Vehicle/Reference2/WAVE_APP_SCH_RCV" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="603c348a-acca-4232-8305-df814a61dfff">
+            <outputVariablePort Id="9315a050-f202-4ca4-9ff9-0bcbd7353782">
+              <wireTargetPorts>
+                <wireConnection Id="a1b43a2c-6cf8-4cd9-9946-208792e12b63" unitDelayed="false">
+                  <inputVariablePortMoniker Id="8d4160f2-135c-4e24-b9bf-c2ef45c8e36f" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="89f89f1f-882d-422a-bc71-b6511482c33b">
+                  <variableRefMoniker name="/Vehicle/Reference2/mode" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="8de2d523-e536-49fa-b69d-f4f162ef8cf2">
+            <outputVariablePort Id="b3e44262-2a2a-44f1-81c8-c518fef9f34c">
+              <wireTargetPorts>
+                <wireConnection Id="342d4370-1cf5-4e50-8311-3edb50397d07" unitDelayed="false">
+                  <inputVariablePortMoniker Id="bd1d0382-bd32-4b97-be78-b5c1c28086dd" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="0666d877-7420-4fcd-a408-8f092149bd14">
+                  <variableRefMoniker name="/Vehicle/Reference2/Variable1" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="4f53e32a-9d5b-471a-8d87-17b7c6be2a61">
+      <functionBlockReference Id="e2a45a44-c676-42e9-a636-cfcaa20a7e71" name="Reference3" x="1531.25" y="1137.5" creationMode="Resource" referencedFile="Driver.fb">
+        <events>
+          <functionBlockHasEvents Id="6318ee9f-74c6-48b4-a5ca-9425aa733aa0">
+            <eventRef Id="5777a0dd-c00c-4f81-9d35-2ad04a94da57" name="FRONT_LASER_SENSOR" scope="Input" referencedID="d0e13c63-3bcc-4f2c-8c8c-98d547bdef15" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="2860607b-a946-4b0a-8ed2-0cabc2a991a5">
+            <eventRef Id="b756d0fc-9d6a-4598-ba2a-3fb93985826b" name="POSITION" scope="Output" referencedID="4890b7b7-b3cd-4f7f-ac90-dad6fb667a9d" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="3b18d28d-723d-473c-9ebc-e29fcd430cfc">
+            <eventRef Id="749674e8-9241-41ac-ab91-73613ed0c623" name="Brake" scope="Output" referencedID="572d5584-2fdb-4079-a629-a599b189bf04" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="d48989d7-4b1f-42bd-b46b-37a1ee26df31">
+            <eventRef Id="7af5bcd8-42b1-4ef1-9073-570376b0f512" name="Accel" scope="Output" referencedID="f839f4c7-9048-4b3b-9e37-e1569df5d593" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="eb5d96fb-0bda-4420-9c6d-2e4b3a7a2a6d">
+            <eventRef Id="849bb6a1-3843-4687-a11e-c8f0382faded" name="NETWORK_STOP" scope="Input" referencedID="acc0f44d-c022-4863-86b2-5efa077fa1c0" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="d1f46609-10b8-445f-b30e-facfe158a68b">
+            <eventRef Id="ef344d33-fe7a-4a9d-bebe-81a84791ac76" name="NETWORK_PASS" scope="Input" referencedID="b36ab359-9f57-4a8a-a205-3fd5d48a36f8" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="f0bc938f-8e96-4fb8-b218-9cfd3f7257df">
+            <variableRef Id="ab26cf0c-f452-401b-a275-2ded6e3d8604" name="Distance" scope="Input" type="LREAL" referencedID="21c2a877-7334-472a-a405-60698711a249" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="1ba1156c-e8e2-4a9b-a84d-0bcdca5e4cc8">
+            <variableRef Id="52b81fd2-ba6a-4d61-943e-80d9ef1c741f" name="MyPos" scope="Output" initialValue="0" type="LREAL" referencedID="278a2afa-f5ba-4477-a34b-a42dcf2356b6" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="e37408f2-9837-4c01-9617-280cb5ad59db">
+            <variableRef Id="69b4f273-8cc7-46d5-896c-b876e87d17f2" name="SimStepSize" scope="Input" initialValue="0.01" type="LREAL" referencedID="d75884f7-1978-4caa-ba85-3e3f30082895" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="ffa485b6-72ce-4b47-bf33-29e984253268">
+            <variableRef Id="633c344d-3a22-469f-914e-60ed7a5a0de4" name="Speed" scope="Output" initialValue="13.8" type="LREAL" referencedID="fee6481c-c0bb-4704-b7e6-e29a8eca470a" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="a311cbf5-d4ee-411b-866b-c78a8e4c0444">
+            <inputEventPort Id="11e81acc-3084-4cc1-92a6-11cd865de125">
+              <event>
+                <inputEventPortReferencesEvent Id="a0c85912-a704-48d0-b162-4b5fb123a6aa">
+                  <eventRefMoniker name="/Vehicle/Reference3/FRONT_LASER_SENSOR" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="ae65e458-f0cc-4fd9-ad14-5a4e12d48d20">
+            <inputEventPort Id="d5f970d3-7701-4fed-9136-40cfdb47a2db">
+              <event>
+                <inputEventPortReferencesEvent Id="6ba5c64d-23b1-4d86-9451-63e1dd10b415">
+                  <eventRefMoniker name="/Vehicle/Reference3/NETWORK_STOP" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="a9a91fd9-f4e1-4ce0-ab29-d19e9cf94305">
+            <inputEventPort Id="58183e87-be46-4c14-af39-97120931a961">
+              <event>
+                <inputEventPortReferencesEvent Id="a519f117-a4ec-4cc3-97b8-7e3e6d4ec0cd">
+                  <eventRefMoniker name="/Vehicle/Reference3/NETWORK_PASS" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="dfee8245-ef7b-4de0-bccf-3601a4c3b45b">
+            <outputEventPort Id="95d4b933-ae03-4566-81c2-b2ddead65a5a">
+              <event>
+                <outputEventPortReferencesEvent Id="6071eb6e-777d-4aae-91d5-efc6259db0a2">
+                  <eventRefMoniker name="/Vehicle/Reference3/POSITION" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="73dab39c-1ceb-431f-a095-81bc6092e00b">
+            <outputEventPort Id="ae7c4b66-3967-46f4-8bb0-6c37c8dd69f7">
+              <wireTargetPorts>
+                <wireConnection Id="0062120b-f999-47ef-9b05-60710eaf07bd" unitDelayed="false">
+                  <inputEventPortMoniker Id="954c9694-83e8-4b53-9307-aa8d97bc83a7" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="4bf6a967-58ec-4b44-b780-3640c132452d">
+                  <eventRefMoniker name="/Vehicle/Reference3/Brake" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="ab72a2cf-e5e2-4553-a652-7fa861cd4a45">
+            <outputEventPort Id="6a67e6ef-73b3-4f40-9ada-790340785f1c">
+              <wireTargetPorts>
+                <wireConnection Id="f0c5e36f-437e-4c51-873b-a916abae613f" unitDelayed="false">
+                  <inputEventPortMoniker Id="a534ea6f-0551-4f88-a9bd-c3231e7ea90b" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="d0c87c3a-dd01-445c-bf9e-a72f1eff368b">
+                  <eventRefMoniker name="/Vehicle/Reference3/Accel" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="819e769e-f90b-46d5-968c-be160d9c6ffd">
+            <inputVariablePort Id="2477ed6d-f448-4762-afa9-67225da136f0">
+              <variable>
+                <inputVariablePortReferencesVariable Id="45a48d30-89b0-4667-8e76-335bb3c75522">
+                  <variableRefMoniker name="/Vehicle/Reference3/Distance" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="ca730e5b-fa2c-4c35-ac9f-d2636e7ef689">
+            <inputVariablePort Id="381ef245-c9bb-482c-8316-977ddd0940f8">
+              <variable>
+                <inputVariablePortReferencesVariable Id="1fae9629-5286-4987-810d-7150fb422870">
+                  <variableRefMoniker name="/Vehicle/Reference3/SimStepSize" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="1cfb3167-5472-4ac3-96f1-d235cc011a16">
+            <outputVariablePort Id="278b64d8-b35b-4dda-9c8e-77895d1b62c7">
+              <wireTargetPorts>
+                <wireConnection Id="aa3615e2-399b-4529-81f5-e41fd13e6d25" unitDelayed="false">
+                  <inputVariablePortMoniker Id="c63ba5e6-7cb1-453e-93c6-613a45287f22" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="372c38eb-611a-4616-bb03-772e82c0fb70">
+                  <variableRefMoniker name="/Vehicle/Reference3/MyPos" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="3bc89372-34f0-4ca8-b4c8-f983b4c69871">
+            <outputVariablePort Id="d9b660c8-58e2-4f1a-93fe-a7e0c6ef4635">
+              <variable>
+                <outputVariablePortReferencesVariable Id="a78a5064-1177-4283-bda8-069265a8e203">
+                  <variableRefMoniker name="/Vehicle/Reference3/Speed" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="2c370035-b749-4fc3-b4ae-bd2b70a39203">
+      <functionBlockReference Id="a5a3b136-1686-489f-896f-0ce7ec1a57ca" name="Reference4" x="1662.5" y="218.75" creationMode="Resource" referencedFile="OBDSS.fb">
+        <events>
+          <functionBlockHasEvents Id="fcb12325-79d2-4012-824d-265eae79e53b">
+            <eventRef Id="ef09ec5c-7bee-448c-9a13-516e347f50e4" name="CCH_RCV" scope="Input" referencedID="6f9f49e1-d3e2-40df-a7c0-69c0f525bf51" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="c36f0c6a-6939-44d3-8d3f-c4e0fb08effb">
+            <eventRef Id="bc7f2248-913b-470e-b24f-3bb61251d344" name="SCH_RCV" scope="Input" referencedID="52c0647f-2a32-423f-a8cd-33bd1042bef9" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="73b79668-5a35-4fe5-a0e5-122525cd1c25">
+            <eventRef Id="a23b1137-1f8b-4a62-9eb7-ad66c534f6e6" name="ACROSS" scope="Output" referencedID="f405b077-403f-4f6a-a1ae-adeb2d66ff9d" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="b77c69e6-30cc-42e3-bea5-813a488b7f49">
+            <eventRef Id="91a45874-0d63-4f39-96ea-3593b9e49e70" name="Brake" scope="Input" referencedID="e2f2df97-1366-40c4-b0b7-a1c0d4743018" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="5945e006-b9b5-42a3-af44-d59b5af703cc">
+            <eventRef Id="006053b4-a991-453a-b706-31f1211f02f3" name="Accel" scope="Input" referencedID="e8e4cc12-681d-44a8-981f-f191f26f6755" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="5f58d56b-489a-4f03-8362-e033236ac0d8">
+            <eventRef Id="dfbb9282-ee0a-46da-bdc8-c343adcb3a4d" name="STOP" scope="Output" referencedID="006540db-cd9f-4c8e-abcc-953738ac8b2b" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="0f9e572c-27ca-4710-b4d4-7c105ed3bd2e">
+            <eventRef Id="98b70962-b61e-46b9-96f9-69d415987a79" name="CCH_SEND" scope="Output" referencedID="afe37d8d-78bf-4a58-a4af-5e37fd4956ca" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="913f23fb-693a-49c9-8669-3beb5bb19a9e">
+            <eventRef Id="b4d46da6-9335-4b03-b911-9319054ddf66" name="SCH_SEND" scope="Output" referencedID="bf6687fa-8bb3-45da-bcdf-b10e1c5f8041" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="001c797d-1e9b-4aa4-b3e0-7c0ab2735556">
+            <variableRef Id="3b04f14d-d399-46e6-a926-fad65ce40568" name="WarningType" scope="Input" type="INT" referencedID="fd41dbf5-84cd-434c-8e90-38834ac671c1" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="0664ccf4-e1f5-4152-961e-df13e5ccd051">
+            <variableRef Id="a9ce984b-fa03-4fd6-bf57-3db9f6b94c8d" name="Variable1" scope="Output" referencedID="36e52efd-9b83-42cf-84e2-719d2daf389f" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="56972ee6-53ec-4783-a5f9-54b1965c4f7e">
+            <inputEventPort Id="45022d16-221a-4780-a7fb-6f4a1567d73f">
+              <event>
+                <inputEventPortReferencesEvent Id="97c270db-d37b-45f7-bce3-e32893b091c3">
+                  <eventRefMoniker name="/Vehicle/Reference4/CCH_RCV" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="07ad4df1-3a93-4c4b-a473-516aeba1ff71">
+            <inputEventPort Id="0085eb5a-2aac-4ccc-9101-d940d3fc4d76">
+              <event>
+                <inputEventPortReferencesEvent Id="89f96693-85b1-40b2-adf3-1204fd87290f">
+                  <eventRefMoniker name="/Vehicle/Reference4/SCH_RCV" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="c4e472f8-6d4e-403b-acda-7b8d3db8701c">
+            <inputEventPort Id="954c9694-83e8-4b53-9307-aa8d97bc83a7">
+              <event>
+                <inputEventPortReferencesEvent Id="dd0900a5-0f5e-48bc-99dc-b481ea9342cf">
+                  <eventRefMoniker name="/Vehicle/Reference4/Brake" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="3bf97494-72d6-48f9-ac80-1ead3a0e22ec">
+            <inputEventPort Id="a534ea6f-0551-4f88-a9bd-c3231e7ea90b">
+              <event>
+                <inputEventPortReferencesEvent Id="3f66746b-c3d8-4a9f-8e0c-a08126a8911d">
+                  <eventRefMoniker name="/Vehicle/Reference4/Accel" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="efaa035f-db67-4013-a979-c3d9c27a5430">
+            <outputEventPort Id="c573a3ce-0e47-4590-adab-0661b5bfe930">
+              <wireTargetPorts>
+                <wireConnection Id="9ee14593-78ae-4c03-a7b0-a5f02d380acc" unitDelayed="false">
+                  <inputEventPortMoniker Id="c3c682d0-4758-4c32-bfdc-93ccf1c15c12" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="195991d6-a048-460e-8bdc-51fdf011f492">
+                  <eventRefMoniker name="/Vehicle/Reference4/CCH_SEND" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="003d1635-4696-4fd8-b69d-41f96a762274">
+            <outputEventPort Id="dc62cde5-8bae-4638-8289-861899ed4ca4">
+              <wireTargetPorts>
+                <wireConnection Id="fb372e66-c5e0-44c4-a50e-eeda82953214" unitDelayed="false">
+                  <inputEventPortMoniker Id="ff081ae8-3fdc-45cc-8f46-41a0bd31dc1d" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="31ff5ca1-66ac-497d-b67e-5bdd31646313">
+                  <eventRefMoniker name="/Vehicle/Reference4/SCH_SEND" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="434c3d6d-0b8a-4f3b-8a3f-75a5270df2b0">
+            <outputEventPort Id="bf53d5ca-d987-4241-ab8a-b6f882865f75">
+              <wireTargetPorts>
+                <wireConnection Id="88a17c57-837b-4ddc-bb7f-c5cb6236157f" unitDelayed="false">
+                  <inputEventPortMoniker Id="58183e87-be46-4c14-af39-97120931a961" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="748ed606-b247-4865-973e-1a8e1d82030f">
+                  <eventRefMoniker name="/Vehicle/Reference4/ACROSS" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="48e467cf-3122-4745-bc5d-de03cfb5da99">
+            <outputEventPort Id="f2fea250-9b18-424d-a728-08024610e0d7">
+              <wireTargetPorts>
+                <wireConnection Id="41be9a4b-e7dc-4157-b764-8dc097963327" unitDelayed="false">
+                  <inputEventPortMoniker Id="d5f970d3-7701-4fed-9136-40cfdb47a2db" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="35cdbde2-465d-40a6-9602-63069b0bee22">
+                  <eventRefMoniker name="/Vehicle/Reference4/STOP" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="3ded980a-aa05-44b7-980a-6fb613619937">
+            <inputVariablePort Id="bd1d0382-bd32-4b97-be78-b5c1c28086dd">
+              <variable>
+                <inputVariablePortReferencesVariable Id="3cdfb101-73bd-447b-9da7-89147728b735">
+                  <variableRefMoniker name="/Vehicle/Reference4/WarningType" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="4fee7e60-6b26-4791-ae79-8419ca54f909">
+            <outputVariablePort Id="95b59d8f-adab-4082-81f9-a490f646a12b">
+              <variable>
+                <outputVariablePortReferencesVariable Id="1bf91c61-b0ab-4d04-a09b-31ab0d36f6fc">
+                  <variableRefMoniker name="/Vehicle/Reference4/Variable1" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="5ea12fa0-3507-40ca-8a5f-50d037fda2b4">
+      <functionBlockReference Id="d6739a82-564b-4135-8d59-0c8adeae8947" name="Checked1" x="437.5" y="1225" creationMode="Resource" referencedFile="LaserSensor.fb">
+        <events>
+          <functionBlockHasEvents Id="d8a55014-83af-4e4f-a33f-c829805b4b1f">
+            <eventRef Id="a681040e-512f-4ada-9aa9-427b149fb56b" name="SensorReading" scope="Input" referencedID="a8aca11a-9aea-4059-8466-d96d8a9e3a8d" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="f6b2e5c9-dd0f-4c27-bfa8-c76fa8219497">
+            <eventRef Id="7180637a-7079-4325-8c92-6bdf9873e6a2" name="Output" scope="Output" referencedID="a5fc6d60-d016-4b1a-a26f-f089aa8c8cce" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="e83e217e-751b-458d-bde6-78d274ef47b2">
+            <variableRef Id="f28513c0-675e-42f0-9d7a-82cb11c6e5b6" name="FrontCarPos" scope="Input" type="LREAL" referencedID="a4ec3515-1704-41ae-82d2-88c2d92e8d5e" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="228cda98-ea1e-4c6a-a81a-50f2c18f6d83">
+            <variableRef Id="edbb89b9-1151-4933-b103-440dfc0d35a1" name="Distance" scope="Output" type="LREAL" referencedID="ad76f9e8-a6d0-4eee-bd71-7d41323327ac" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="ae3eaa5e-4c76-44f8-985b-3cbce3196c95">
+            <variableRef Id="65902621-b2be-4f94-a28a-3c3dc475d71c" name="MyPos" scope="Input" type="LREAL" referencedID="a1851bec-66b2-46c5-8944-5ab8bf3f6def" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="0b115ace-d36b-4c74-bdfb-88d3acfb5b38">
+            <inputEventPort Id="3cd8e7a0-74f1-47a1-aa7e-3f630156a861">
+              <event>
+                <inputEventPortReferencesEvent Id="5f8ceb69-c9b3-4824-ab25-976742b7e1e3">
+                  <eventRefMoniker name="/Vehicle/Checked1/SensorReading" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="9327c5a0-a1ff-4b82-8137-bc44902eb722">
+            <outputEventPort Id="78c435d6-c7bf-4d99-a59b-814dda0a6b38">
+              <wireTargetPorts>
+                <wireConnection Id="9864f847-6145-4a90-a66e-ca86c037aa12" unitDelayed="false">
+                  <inputEventPortMoniker Id="11e81acc-3084-4cc1-92a6-11cd865de125" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="7e290183-c4b0-4619-982e-5e4547af03c9">
+                  <eventRefMoniker name="/Vehicle/Checked1/Output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="974b3835-1b38-4e01-8306-e7b9de259e73">
+            <inputVariablePort Id="59508641-bfe5-4951-aa4c-b8b71396fecb">
+              <variable>
+                <inputVariablePortReferencesVariable Id="cd2bfbe5-d8fc-4a24-8ff7-5af44a2feb3d">
+                  <variableRefMoniker name="/Vehicle/Checked1/FrontCarPos" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="0bd55c6f-4030-4ee3-b27a-b139d08f7f6c">
+            <inputVariablePort Id="c63ba5e6-7cb1-453e-93c6-613a45287f22">
+              <variable>
+                <inputVariablePortReferencesVariable Id="ac6ccd48-64b0-40e6-8654-75f92bba5c9e">
+                  <variableRefMoniker name="/Vehicle/Checked1/MyPos" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="c91535f2-851a-414f-8fbc-4dbac408ca59">
+            <outputVariablePort Id="7dd00907-ca3b-4aa6-87bf-0e0397b0bfba">
+              <wireTargetPorts>
+                <wireConnection Id="b7e5dd5d-cc29-4cfe-8fab-8f198087c70d" unitDelayed="false">
+                  <inputVariablePortMoniker Id="2477ed6d-f448-4762-afa9-67225da136f0" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="b4de9108-f96c-4fba-b582-eb6248ea8af6">
+                  <variableRefMoniker name="/Vehicle/Checked1/Distance" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+  </functionBlockReferences>
+</compositeFunctionBlockModel>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="EDCA" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="Jin-PC" Version="0.1" Author="Jin" Date="2015-00-24" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+<EventInputs>
+  <Event Name="WAVE_MAC_CCH_TX" Comment="">
+  </Event>
+  <Event Name="WAVE_MAC_SCH_TX" Comment="">
+  </Event>
+  <Event Name="MAC_CCH_CLR" Comment="">
+  </Event>
+  <Event Name="MAC_SCH_CLR" Comment="">
+  </Event>
+</EventInputs>
+<EventOutputs>
+  <Event Name="CCH_REQ" Comment="">
+  </Event>
+  <Event Name="SCH_REQ" Comment="">
+  </Event>
+</EventOutputs>
+
+
+</InterfaceList>
+<BasicFB><HCECC>
+  <ECC Name="EDCA">
+    <ECState Name="EDCA" Comment="" x="1793.75" y="612.5">
+      <HCECC>
+        <ECC Name="bufferCCH">
+          <ECState Name="CCHempty" Comment="" x="218.75" y="70.0000000000001" />
+          <ECState Name="CCHfull" Comment="" x="218.75" y="420">
+            <ECAction Output="CCH_REQ" />
+          </ECState>
+          <ECTransition Source="CCHempty" Destination="CCHfull" Condition="WAVE_MAC_CCH_TX" x="350" y="350" />
+          <ECTransition Source="CCHfull" Destination="CCHempty" Condition="MAC_CCH_CLR" x="350" y="350" />
+          <ECTransition Source="CCHfull" Destination="CCHfull" Condition="true" x="350" y="442" />
+        </ECC>
+        <ECC Name="bufferSCH">
+          <ECState Name="SCHempty" Comment="" x="350" y="70.0000000000001" />
+          <ECState Name="SCHfull" Comment="" x="350" y="441.875">
+            <ECAction Output="SCH_REQ" />
+          </ECState>
+          <ECTransition Source="SCHempty" Destination="SCHfull" Condition="WAVE_MAC_SCH_TX" x="350" y="350" />
+          <ECTransition Source="SCHfull" Destination="SCHempty" Condition="MAC_SCH_CLR" x="350" y="350" />
+          <ECTransition Source="SCHfull" Destination="SCHfull" Condition="true" x="442" y="524.875" />
+        </ECC>
+      </HCECC>
+    </ECState>
+  </ECC>
+</HCECC></BasicFB>
+</FBType>

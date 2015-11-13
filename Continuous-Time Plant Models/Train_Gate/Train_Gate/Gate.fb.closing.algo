@@ -1,0 +1,7 @@
+me->x = me->C1x*exp(-1.0L/2.0L*me->d*me->k)+10;
+if(me->x<10){
+printf("Gate is closing : %f\n", me->x);
+}else{
+printf("Gate is closed: %f\n", me->x);  
+}
+(me->k)++;

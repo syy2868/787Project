@@ -1,0 +1,8 @@
+if (me->y == me->theta){
+	printf("diverter already in storage2, control error \n");
+	//exit(1);
+	}
+
+
+me->y=me->y+2;
+printf("diverter, %f\n",me->y);

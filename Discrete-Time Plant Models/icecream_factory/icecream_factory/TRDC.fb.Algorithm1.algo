@@ -1,0 +1,2 @@
+//printf("S2\n");
+printf("Send signal: divert to the storage1\n");

@@ -1,0 +1,6 @@
+me->d = 0.01;
+//me->v = 13.8;
+me->speed2 = 13.8;
+me->x = 0;
+me->k = 366;
+me->isInitial = true;

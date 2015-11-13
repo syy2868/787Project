@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="4ed9c5e2-a94b-4eb7-a9b3-dbe1f740c62f" name="WAVE" organization="Jin-PC" date="2015-08-24" author="Jin">
+  <states>
+    <functionBlockModelHasStates Id="0b82a87d-b684-462d-aab5-4f7c2f575a90">
+      <state Id="3cd4025a-9814-453b-a6a3-0b03da09fdff" name="Start" x="1793.75" y="743.75" isInitial="true">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="1c487829-bebd-407b-9354-aa76c62eaa6b">
+            <transitionNodeMoniker Id="83dc5d89-f1d7-4829-a6de-da382767fb1c" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="0991ec2b-c930-47bf-8c25-bcef3245886f">
+      <functionBlockInterface Id="7825a6cd-ffb0-41c6-9503-721867d9898e" name="WAVE" x="1837.5" y="700">
+        <events>
+          <functionBlockHasEvents Id="664f1d38-0a8a-40d1-a014-e888dd303462">
+            <event Id="2abd3665-b30f-4519-9820-c099aca556b1" name="APP_WAVE_CCH_TX" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="13ac18fd-6573-4bec-a48d-3c10f050f1be">
+            <event Id="ce400fc1-d6f8-4cb8-b7f4-f4a9fb10ff37" name="APP_WAVE_SCH_TX" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="aa1b40ac-5bbd-4083-b445-15e88e4d1a87">
+            <event Id="c1af7ac0-2dee-42e7-ba99-d92d4aae49cc" name="SWITCH_CHANNEL" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="c0347cf6-3b56-408b-820d-10aa65615ce2">
+            <event Id="7ea6a428-4fcf-4a06-8110-d3097bf6eb6c" name="WAVE_MAC_CCH_TX" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="76ce1f75-83e5-4ece-ae0d-21c938a3f225">
+            <event Id="0c2d9983-4d91-45a5-a2c1-7891838dd0a9" name="WAVE_MAC_SCH_TX" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="a4d115bb-6f9b-45c2-b621-2677c422ba18">
+            <event Id="ef9ed2ac-e597-4bdd-a5ae-076b044b3dc6" name="MAC_WAVE_CCH_RCV" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="6a5488e2-19fb-4aba-9e5e-17b5062d1f5d">
+            <event Id="4c055f38-e838-472c-bf6f-7a3a29860284" name="MAC_WAVE_SCH_RCV" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="f2ead5d0-98be-4db1-9d36-61cc9b5bd035">
+            <event Id="9d56c120-5f27-423d-992f-93f309c02821" name="WAVE_APP_CCH_RCV" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="dafc7f6e-b8c4-4fc5-858e-2844ff422570">
+            <event Id="1ed09672-f2c3-4a48-a9b4-8f3b13b127a4" name="WAVE_APP_SCH_RCV" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="bd730658-8ccc-4614-b4ae-e7086c5323db">
+            <variable Id="1d6556f2-01db-46ff-a141-4d1b6a315c61" name="mode" scope="Output" type="INT" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="088a8884-2baf-4db8-8652-2db57a6d2795">
+            <variable Id="e70b13d9-38ac-4939-adfa-3472f2c705eb" name="Variable1" scope="Output" type="INT" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="376cca0a-fcd2-4a6d-8fd5-5fc0acbbc075">
+            <inputEventPort Id="b3dc8905-65d1-4fb7-ad1e-46f2bd8e46aa">
+              <event>
+                <inputEventPortReferencesEvent Id="6fe4daa7-f0ab-41d3-abb9-f4ebaf2ba2ff">
+                  <eventMoniker name="/WAVE/WAVE/APP_WAVE_CCH_TX" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="cdecbf5b-193b-4b56-b97f-1a4b0fda7631">
+            <inputEventPort Id="9a8bb65a-c3f1-413d-9847-81c52f74afa2">
+              <event>
+                <inputEventPortReferencesEvent Id="0f306df9-16d0-439e-99fb-5d6a7b46563b">
+                  <eventMoniker name="/WAVE/WAVE/APP_WAVE_SCH_TX" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="9ed1d41e-5de0-48ca-b8d9-6417da045788">
+            <inputEventPort Id="ff956646-277d-4754-8af5-d1b3948edf9b">
+              <event>
+                <inputEventPortReferencesEvent Id="6cb26bd7-ce0a-4a9c-b298-a1d7707ccd39">
+                  <eventMoniker name="/WAVE/WAVE/MAC_WAVE_CCH_RCV" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="aa066809-aa31-4e28-8572-f39aa019ac49">
+            <inputEventPort Id="a1eb1267-d96d-4837-a364-92f3c2717fce">
+              <event>
+                <inputEventPortReferencesEvent Id="2b184300-6e60-449a-8911-366bcdcf383b">
+                  <eventMoniker name="/WAVE/WAVE/MAC_WAVE_SCH_RCV" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="772c0bbc-3fa3-4101-843f-784229500683">
+            <outputEventPort Id="cde644ab-e603-4c85-8d9f-b68119233144">
+              <targetPort>
+                <association Id="16bcddac-4e8a-4812-b139-8df8bfa974eb">
+                  <outputVariablePortMoniker Id="df95d852-a5ed-4868-be91-3015acf9a69c" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="109a3b8a-7116-4949-aab1-19c43090583a">
+                  <eventMoniker name="/WAVE/WAVE/SWITCH_CHANNEL" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="143c0066-e375-4933-8d3b-0bc1a0fa329a">
+            <outputEventPort Id="d691fe33-d439-4c7b-8d80-0d890212bb86">
+              <event>
+                <outputEventPortReferencesEvent Id="1b8796a0-d5b7-4fdd-9f1c-c7bb707e24fd">
+                  <eventMoniker name="/WAVE/WAVE/WAVE_MAC_CCH_TX" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="f990d456-8af5-4ff6-b6be-c4631a56a545">
+            <outputEventPort Id="afbefbee-1a2d-4157-84e7-7e8787db61ae">
+              <event>
+                <outputEventPortReferencesEvent Id="be2b92e2-248a-45a6-9cf8-179fb2af1443">
+                  <eventMoniker name="/WAVE/WAVE/WAVE_MAC_SCH_TX" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="e29af33b-9ba2-4ae3-9796-216eb3b71aad">
+            <outputEventPort Id="e5981b37-d06f-49cf-9e4a-4e7c8cdb6aa4">
+              <event>
+                <outputEventPortReferencesEvent Id="e271208d-48ea-4c7f-838c-5702d2e40e3e">
+                  <eventMoniker name="/WAVE/WAVE/WAVE_APP_CCH_RCV" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="1045dbfe-c508-41ff-8eb9-06ebc951722f">
+            <outputEventPort Id="2ba0ee15-ee48-4131-8483-c9f1ba0e5649">
+              <event>
+                <outputEventPortReferencesEvent Id="a4d94e9e-8619-42d4-bc89-a94dc1a2d05b">
+                  <eventMoniker name="/WAVE/WAVE/WAVE_APP_SCH_RCV" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="a06ac9e4-26c6-4826-ab86-6afbd7d3435e">
+            <outputVariablePort Id="df95d852-a5ed-4868-be91-3015acf9a69c">
+              <variable>
+                <outputVariablePortReferencesVariable Id="62f621d5-b18d-4f86-b498-eac033c07dbd">
+                  <variableMoniker name="/WAVE/WAVE/mode" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="3c55f162-e79f-4594-bb47-d7fc21785a35">
+            <outputVariablePort Id="bf19df0f-102f-4b92-a1c8-b834dfb1b077">
+              <variable>
+                <outputVariablePortReferencesVariable Id="4d1eea10-fd36-4903-aeba-b6870978131f">
+                  <variableMoniker name="/WAVE/WAVE/Variable1" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="6c265be8-4eb1-45bc-af5e-45a92b15c3a3">
+      <transitionNode Id="83dc5d89-f1d7-4829-a6de-da382767fb1c" x="1837.5" y="1006.25">
+        <targetState>
+          <transitionNodeConnectsToStates Id="7ad33493-d9b5-472d-920e-407874d3a209">
+            <stateMoniker name="/WAVE/Start" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

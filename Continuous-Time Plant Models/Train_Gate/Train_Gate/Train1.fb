@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="d1dc4f4d-af08-40ef-b93a-031fa6b5ab10" name="Train1" organization="PC_THEO" date="2015-07-24" author="Théo">
+  <states>
+    <functionBlockModelHasStates Id="059623de-e9e2-471b-bd3d-95cbac37d37d">
+      <state Id="d03e6542-0668-4795-a6a6-b639d7a08e26" name="Start" x="525" y="525" isInitial="true">
+        <actionSet>
+          <actionLink Id="d7ce3df0-92aa-4bcc-93ed-5c423c08a420">
+            <actionSetMoniker Id="583a8a75-7498-40bb-bbc1-7ca7a73a64c4" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="1ce11120-7726-4e72-9b17-e01caf9fa404">
+            <transitionNodeMoniker Id="9d6025af-8a00-4101-ba71-ebbcdd59b072" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="52f5d0f5-e741-44ae-ab02-5cd21caacd84">
+      <state Id="4b480ed9-d04c-41c5-8aa3-881ff184270e" name="State1" x="1706.25" y="350" isInitial="false">
+        <actionSet>
+          <actionLink Id="94dd8ec4-2618-41ac-82c2-f76b90ca99c0">
+            <actionSetMoniker Id="78c2fdc9-f561-4966-918d-8d586ac1cdd9" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="1a118bc2-6dfc-42a2-bc6b-5a73ab8e7565">
+            <transitionNodeMoniker Id="93296a92-b8c2-4c2a-a222-783bf1ae849e" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="b818b625-6dab-43c3-a7f9-60f25f4fb34b">
+            <transitionNodeMoniker Id="345693af-b31f-4864-b82d-ae5924d511e1" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="c7c3d519-c4f0-4aad-aaf6-b56042df46bb">
+      <state Id="c015f6c6-3b27-47c6-9c68-b9144291b4e6" name="State2" x="1782.8125" y="1348.9583611488342" isInitial="false">
+        <actionSet>
+          <actionLink Id="b5ea05d4-9b45-4051-ac28-ff37a296da7d">
+            <actionSetMoniker Id="bf8fa646-2a6b-4439-a245-10f07d104826" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="ba0f05b0-a74c-40b2-a0e6-614c89e08ed8">
+            <transitionNodeMoniker Id="818a1235-6132-4e71-bccf-6261cfe03ad2" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="569c31ee-c6fb-4a94-a403-f6e66362ee08">
+            <transitionNodeMoniker Id="df748833-b056-4fa8-ac59-b3e085a26a42" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="63d506c4-28c5-4fab-935f-c99f90a532f3">
+      <state Id="28851ee6-6f4a-43fa-ad9e-1c4788e027b5" name="State3" x="565.10418057441711" y="1348.9583611488342" isInitial="false">
+        <actionSet>
+          <actionLink Id="0410790c-2f00-4409-9f68-d4d02a9a8a06">
+            <actionSetMoniker Id="19e24215-b229-4a82-86ac-c2da484e1f1a" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="0bf002c7-4e96-4d6d-87cd-3c63daedba5c">
+            <transitionNodeMoniker Id="f2f3aa71-69e7-4b8c-9637-9c5ed1f62ee8" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="4a428fc4-6857-4355-a5e4-dcaef5dada58">
+            <transitionNodeMoniker Id="85424b2c-f1df-479e-a224-80229e618d16" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="1c907b31-6656-4de8-a273-0ce5ea5d4547">
+            <transitionNodeMoniker Id="c0c36928-3832-4d78-9b85-84711c4d2de3" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="d16b3fa7-d096-4238-a9ec-10e4214d166d">
+      <state Id="2a806522-4079-46fb-8e24-c194a88b656c" name="State4" x="1487.5" y="787.5" isInitial="false">
+        <actionSet>
+          <actionLink Id="cf9e0030-0689-412f-a388-e70163d5fa1f">
+            <actionSetMoniker Id="632a352d-2057-4b0f-ba01-bfe76f76cbdd" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="12567612-0ed5-4e17-a11f-da17a6c69326">
+            <transitionNodeMoniker Id="591dd467-7fa8-4714-9c73-7f5dcb16207a" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="0b9f8807-85c5-4350-963d-f55c9d0aa561">
+      <state Id="1e628af3-e20c-499c-b239-77e925617f24" name="State5" x="2318.75" y="962.5" isInitial="false">
+        <actionSet>
+          <actionLink Id="c9b85ae1-3717-4937-bde9-d4167118a317">
+            <actionSetMoniker Id="2ca5bb57-d9c2-4508-b000-8bfc47efdb90" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="88ad5e24-3935-4008-a47a-0763d454e2ca">
+            <transitionNodeMoniker Id="ee41b12f-f6c2-4ba7-b603-f32ddf2a2cf2" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="766c305c-d4aa-466d-9a45-99e01c3845a6">
+      <state Id="881c2721-60e0-4e22-8a86-f6832ea9de28" name="State6" x="1137.5" y="1575" isInitial="false">
+        <actionSet>
+          <actionLink Id="b0d3609e-a155-49c1-bc3e-58e092f517a6">
+            <actionSetMoniker Id="4e2cc4c2-5299-4184-a070-f50bbf60296b" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="f37d1741-7df4-4f37-b63e-a67ffd946b0b">
+            <transitionNodeMoniker Id="d4aee417-858a-4d4d-92fe-88f2928bdbe4" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="e8a3f358-7e56-4241-8da7-f3be01fb6848">
+      <state Id="19eea0cc-258e-406f-874b-0c95355de70d" name="State7" x="1050" y="1050" isInitial="false">
+        <actionSet>
+          <actionLink Id="f9a99876-3e75-4522-b076-611c3e20ea2a">
+            <actionSetMoniker Id="950193e0-0dfd-41a9-8ac8-91c04b3b3394" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="ecdda3b9-56e1-4068-9054-c6d09b2d3c9e">
+            <transitionNodeMoniker Id="0637aa53-a684-41da-a32c-d0d288b58782" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="fca369ed-51bf-4f03-a8d6-8796e6578ea7">
+      <actionSet Id="583a8a75-7498-40bb-bbc1-7ca7a73a64c4" x="350" y="306.25">
+        <actionItems>
+          <actionSetHasActionItems Id="2de2a897-05e5-4928-bedd-896e902736f8">
+            <actionAlgorithm Id="1bc66671-f1e7-478e-af7e-4dd24bd44bb1">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="17c0f48e-7f19-4b5d-bb36-2fc32e532ba4">
+                  <algorithmMoniker name="/Train1/init" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="5b56ed03-cf1f-4141-bdfd-f58682d30841">
+            <actionEvent Id="e610a56b-44b9-4513-bba0-8fbee4e8af68">
+              <event>
+                <actionEventReferencesEvent Id="d5a18419-698c-4253-a6f5-ab3fb27d3280">
+                  <eventMoniker name="/Train1/Train1/update_t1" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="191f559a-20e0-4831-9caa-501f198cba6f">
+      <actionSet Id="78c2fdc9-f561-4966-918d-8d586ac1cdd9" x="2143.75" y="306.25">
+        <actionItems>
+          <actionSetHasActionItems Id="89f9b03b-3942-4549-92c3-c8014bffec6d">
+            <actionAlgorithm Id="d0e3f221-6762-4b83-808b-5ab80373afe6">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="a1aacfb3-efbb-40cb-b784-4a6715434cc5">
+                  <algorithmMoniker name="/Train1/slow_mode" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="67255054-35fd-4f96-bf4d-b5e82165dba5">
+            <actionEvent Id="7848055d-3685-4244-a405-a07545e951a3">
+              <event>
+                <actionEventReferencesEvent Id="bc79bf0d-5778-41bb-abe6-0db5a514d3a4">
+                  <eventMoniker name="/Train1/Train1/update_t1" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="93e9dae3-35ca-414c-b294-dbb4efb8f605">
+      <actionSet Id="bf8fa646-2a6b-4439-a245-10f07d104826" x="2132.6643845438957" y="1348.9583611488342">
+        <actionItems>
+          <actionSetHasActionItems Id="bcd9543e-8c6d-4097-ab25-ca17fb63cd44">
+            <actionAlgorithm Id="2bb6f47a-4050-4f1f-b016-7b1b5f4d5fb4">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="0ce09c25-257a-470b-8141-34fed12daac9">
+                  <algorithmMoniker name="/Train1/fast_mode" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="09a4ff03-fef0-466c-abf0-53403976cd8c">
+            <actionEvent Id="a31adcbd-9d5a-4401-b053-664f5b1b73c3">
+              <event>
+                <actionEventReferencesEvent Id="0ad3e9b5-0608-45c6-b8cb-840a13626160">
+                  <eventMoniker name="/Train1/Train1/update_t1" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="5552ad5f-11dc-4a79-831c-dc2c9f54ff53">
+      <actionSet Id="19e24215-b229-4a82-86ac-c2da484e1f1a" x="175" y="1750">
+        <actionItems>
+          <actionSetHasActionItems Id="1d54e287-e7a3-4ef6-9488-83815dc40cea">
+            <actionAlgorithm Id="8280b0fd-fbd9-4e7f-abb4-78f7c73ff44f">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="8e999097-8a58-4b24-a512-0fad08b61513">
+                  <algorithmMoniker name="/Train1/slow_mode" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="aa855a21-f45d-4aa8-9fa1-66ceff6862de">
+            <actionEvent Id="411cabce-6ea9-4dda-a18f-57418355bf69">
+              <event>
+                <actionEventReferencesEvent Id="29c9920f-1579-4131-9b13-a2e6e848e995">
+                  <eventMoniker name="/Train1/Train1/update_t1" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="2f6abae4-111c-4c19-9fe7-8f2964cb983c">
+      <actionSet Id="632a352d-2057-4b0f-ba01-bfe76f76cbdd" x="1137.5" y="568.75">
+        <actionItems>
+          <actionSetHasActionItems Id="45ae899e-7e39-474a-bbaa-3291bc97d608">
+            <actionAlgorithm Id="adf03f9d-9400-4ef4-aab2-457a149c2bfb">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="259e2f2b-d0ae-4e45-9861-b8ad90065c90">
+                  <algorithmMoniker name="/Train1/emergency_brake" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="4f2bf495-dadf-44ed-8b25-007a2cdf6150">
+            <actionEvent Id="00071a2b-6620-4ff2-af5b-0f9adfb51211">
+              <event>
+                <actionEventReferencesEvent Id="b3a8848b-aa6b-4e5e-96ca-e2fbdf164c1c">
+                  <eventMoniker name="/Train1/Train1/update_t1" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="c0e978bc-e14a-409b-84f2-6921fac69a11">
+      <actionSet Id="2ca5bb57-d9c2-4508-b000-8bfc47efdb90" x="2668.6018845438957" y="962.5">
+        <actionItems>
+          <actionSetHasActionItems Id="4de5a3e9-b561-4b9b-9070-d91473134aba">
+            <actionAlgorithm Id="7c2a3d4f-b756-4b67-b8a3-2704b6045d5c">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="94c7ed68-f1b5-4e8f-94c1-01947c22b532">
+                  <algorithmMoniker name="/Train1/initCond_fast" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="22f467d5-1ec3-446a-b667-4f12f48af46a">
+      <actionSet Id="4e2cc4c2-5299-4184-a070-f50bbf60296b" x="1137.5" y="1706.25">
+        <actionItems>
+          <actionSetHasActionItems Id="afa60fce-d6fe-4663-b71b-c905f6ac6c2d">
+            <actionAlgorithm Id="6a3d1c63-b4b7-499f-a111-cf7508da01b9">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="3f9ba9c7-9f0f-4b47-a6bf-8efec549ec3e">
+                  <algorithmMoniker name="/Train1/initCond_slow" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="7aa06dd2-cf70-47dc-9743-9f51720260a3">
+      <actionSet Id="950193e0-0dfd-41a9-8ac8-91c04b3b3394" x="1399.8518845438955" y="1050">
+        <actionItems>
+          <actionSetHasActionItems Id="cde93c66-2c64-46b4-ba72-382ca602f783">
+            <actionAlgorithm Id="26c33ff5-fbd3-496e-bfd8-fc769ef819d0">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="3393a199-02c8-4d2c-a9af-93933573846d">
+                  <algorithmMoniker name="/Train1/initCond_brake" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="7c11b9fc-697d-4cee-8513-65bdd0ff9171">
+      <algorithm Id="36ce0841-1e2f-472c-8018-bc02cadadd8d" name="init" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="4e49ecab-7934-4bdb-9565-f8c4e1c9f722">
+      <algorithm Id="fca377e3-4930-45d0-9155-4a277bf4d74a" name="slow_mode" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="63292209-3992-450d-8fcd-a5319c14a91c">
+      <algorithm Id="1fe351a6-c705-4257-a56e-00ff35a40235" name="fast_mode" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="cb44fb40-b93a-4e80-9796-9e1c042a3055">
+      <algorithm Id="03596024-25f9-4328-845c-28a8853d7501" name="emergency_brake" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="4433a2a8-518e-4123-8d1d-9e3eb5c4d56d">
+      <algorithm Id="9d53c02c-8f8d-4e11-8026-0af69de2afb8" name="initCond_fast" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="e28f3098-9095-4ee6-94e9-c6a6c31bd3e2">
+      <algorithm Id="ce8752fd-431e-4ac3-92f7-9e9c9649857e" name="initCond_slow" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="cdcbceb3-5014-4f63-b166-8f6728d1b86c">
+      <algorithm Id="13a78e5e-2dff-4100-819c-ee5e483b558d" name="initCond_brake" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="20f7fb15-31e3-4925-ad38-28a3843c28c0">
+      <functionBlockInterface Id="f41da1cd-4b10-4c73-b5f6-ebf44dee6f26" name="Train1" x="1400" y="481.25">
+        <events>
+          <functionBlockHasEvents Id="a7bff639-5663-4f73-bfa9-c5f4d5b0bc4d">
+            <event Id="f5a29497-168d-4f20-ad3d-8e81fe0a2441" name="update_t1" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="29f50e32-fa84-4611-9468-027d042fcddb">
+            <event Id="3989438a-6dd4-47e0-bd24-004fad174030" name="update" scope="Input" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="3db97632-83bc-4516-a1a1-ec0133d3562c">
+            <variable Id="a6174edd-4ef5-4b6d-b44e-e676d27cdf2b" name="y1" scope="Output" type="REAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="ecbe6683-b9a5-4578-902a-b5918fc54eaa">
+            <variable Id="cdec6bac-e063-46fc-b879-5dab64e843a6" name="d" scope="Internal" type="REAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="21095109-f686-4c40-90b5-4142e032a586">
+            <variable Id="7e31476c-b02e-4377-aeb5-dd9625d3226a" name="x" scope="Input" type="REAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="61811bd5-0276-4173-8b5a-648ce80b893a">
+            <variable Id="5ffcca5c-4531-4e15-9666-a7eae289b83a" name="k" scope="Internal" type="INT" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="1db5c289-e293-459b-9336-3796579db2de">
+            <variable Id="c22d2575-2e7a-4df0-a378-fabb5bf3e354" name="C1y1" scope="Internal" type="REAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="dfbeb36e-33ce-4360-88d3-7740030c6577">
+            <variable Id="7cee833c-c635-48b1-8e79-48b554ff1067" name="delta" scope="Internal" type="REAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="a0146a1f-5618-4be7-9fea-4c417d126975">
+            <variable Id="ce251b52-b636-4e32-b579-a1fc1d002b91" name="t1" scope="Output" initialValue="0" type="REAL" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="759aba7c-645f-498e-bda0-d377054dd572">
+            <inputEventPort Id="3c1e914d-3eb6-4c61-bdab-e26b4319a9fa">
+              <targetPort>
+                <association Id="3d8d84c1-c2dd-432d-94da-f5957c9725e0">
+                  <inputVariablePortMoniker Id="6e9a7896-f12c-4d27-a75f-73fa240fad34" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="ab984543-02dd-4c29-bb50-e94febea1b2e">
+                  <eventMoniker name="/Train1/Train1/update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="819bf276-bab3-491c-a7fe-8d29c4718a1a">
+            <outputEventPort Id="b51c3595-c8ba-4304-a6cb-b5e16ce4a740">
+              <targetPort>
+                <association Id="6bb5f269-c179-4219-8b6c-b53572e8b514">
+                  <outputVariablePortMoniker Id="100b8978-a885-4275-8a11-cac483803a74" />
+                </association>
+                <association Id="cd9afbca-4220-4de4-9ad9-9f092a5f7a16">
+                  <outputVariablePortMoniker Id="a6ff79bd-6683-4e50-8af8-a885ba9507e7" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="ac9cf70f-4197-436c-bb7a-8c61e869054d">
+                  <eventMoniker name="/Train1/Train1/update_t1" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="45a58ab3-f18b-4315-b40e-97521720d735">
+            <inputVariablePort Id="6e9a7896-f12c-4d27-a75f-73fa240fad34">
+              <variable>
+                <inputVariablePortReferencesVariable Id="6c709498-cf42-4e49-99f4-923f239dc624">
+                  <variableMoniker name="/Train1/Train1/x" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="eac2b09d-fc99-48d5-9120-1b38bdd3af7c">
+            <outputVariablePort Id="100b8978-a885-4275-8a11-cac483803a74">
+              <variable>
+                <outputVariablePortReferencesVariable Id="49010a84-47c1-44ce-b8b8-1e6f3a122d33">
+                  <variableMoniker name="/Train1/Train1/y1" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="562f3a93-1d27-4fde-b51a-f900c43eaac5">
+            <outputVariablePort Id="a6ff79bd-6683-4e50-8af8-a885ba9507e7">
+              <variable>
+                <outputVariablePortReferencesVariable Id="51acc67a-f2f4-4dd8-8467-d7bc3d691b48">
+                  <variableMoniker name="/Train1/Train1/t1" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="6759bc89-f8f8-4e51-b6f8-347177114023">
+      <transitionNode Id="9d6025af-8a00-4101-ba71-ebbcdd59b072" x="1093.75" y="393.75">
+        <targetState>
+          <transitionNodeConnectsToStates Id="0a21da7c-436c-41ed-927b-6ad4fdfe1552">
+            <stateMoniker name="/Train1/State1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="546cf741-ae04-4174-8d0b-1054f087a740">
+      <transitionNode Id="93296a92-b8c2-4c2a-a222-783bf1ae849e" x="2362.5" y="568.75" expression="y1&gt;=5">
+        <targetState>
+          <transitionNodeConnectsToStates Id="07a7a5aa-2986-4321-883e-9c0b4492a2d5">
+            <stateMoniker name="/Train1/State5" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="f9f7d932-5e2c-410e-be3b-4a4fd42eeb77">
+      <transitionNode Id="345693af-b31f-4864-b82d-ae5924d511e1" x="1706.25" y="175">
+        <targetState>
+          <transitionNodeConnectsToStates Id="db919029-d9c9-4a3b-9413-2b69594f3ae2">
+            <stateMoniker name="/Train1/State1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="01de7a17-adc0-4199-838d-ec4cd630f8ad">
+      <transitionNode Id="df748833-b056-4fa8-ac59-b3e085a26a42" x="1837.5" y="1575">
+        <targetState>
+          <transitionNodeConnectsToStates Id="4fc378f8-78c7-4bb8-a58b-36e4421c21ab">
+            <stateMoniker name="/Train1/State2" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="74fe4522-0f62-4fc5-ae3d-82314ebe71a6">
+      <transitionNode Id="818a1235-6132-4e71-bccf-6261cfe03ad2" x="1531.25" y="1487.5" expression="y1&gt;=15">
+        <targetState>
+          <transitionNodeConnectsToStates Id="3e5b1596-52db-41e7-9ade-d4508a67d613">
+            <stateMoniker name="/Train1/State6" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="28166e6d-d71f-4af1-985d-82b7c4d67aa3">
+      <transitionNode Id="85424b2c-f1df-479e-a224-80229e618d16" x="546.05209028720856" y="880.97918057441711" expression="y1&gt;=25">
+        <targetState>
+          <transitionNodeConnectsToStates Id="0e1d2ed2-e880-4e78-afad-f71f97ee4703">
+            <stateMoniker name="/Train1/Start" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="6a8bae6f-d69f-4b9c-bb89-4b6f1ce157db">
+      <transitionNode Id="c0c36928-3832-4d78-9b85-84711c4d2de3" x="525" y="1618.75">
+        <targetState>
+          <transitionNodeConnectsToStates Id="c6a59d37-228c-4d85-a46b-aaeb2c2aa184">
+            <stateMoniker name="/Train1/State3" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="14ce0a5f-83f7-43c2-938a-7b176a357534">
+      <transitionNode Id="f2f3aa71-69e7-4b8c-9637-9c5ed1f62ee8" x="700" y="1181.25" expression="y1&gt;=20 &amp;&amp; x&lt;10-delta">
+        <targetState>
+          <transitionNodeConnectsToStates Id="04ce56ab-3b7d-470b-b8c7-a605ba77f6cd">
+            <stateMoniker name="/Train1/State7" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="d2475e84-f07f-41db-b12b-37a2757e5372">
+      <transitionNode Id="591dd467-7fa8-4714-9c73-7f5dcb16207a" x="1050" y="743.75">
+        <targetState>
+          <transitionNodeConnectsToStates Id="ef7c4458-66ff-4f92-8179-fae3cc3a118f">
+            <stateMoniker name="/Train1/State4" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="d3523410-a930-4f4b-bf93-441c1163b523">
+      <transitionNode Id="ee41b12f-f6c2-4ba7-b603-f32ddf2a2cf2" x="2091.78125" y="1160.7291805744171">
+        <targetState>
+          <transitionNodeConnectsToStates Id="74369a0b-3ad8-4761-912e-b9cb139f3cb1">
+            <stateMoniker name="/Train1/State2" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="9d90dfdd-5611-48b1-9ff5-89322c614c5b">
+      <transitionNode Id="d4aee417-858a-4d4d-92fe-88f2928bdbe4" x="875" y="1487.5">
+        <targetState>
+          <transitionNodeConnectsToStates Id="d6e9aab1-5526-404b-9a6a-0d2bc8a6dc0b">
+            <stateMoniker name="/Train1/State3" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="9d3b200f-891b-4e75-b530-8f9678b6a20e">
+      <transitionNode Id="0637aa53-a684-41da-a32c-d0d288b58782" x="1268.75" y="918.75">
+        <targetState>
+          <transitionNodeConnectsToStates Id="98b6c14a-fa3f-4aef-8c26-b0f7b776b4be">
+            <stateMoniker name="/Train1/State4" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="0f848d01-cb10-4a30-b23b-eaf0667a7469" name="reactor" organization="PC_THEO" date="2015-07-13" author="Théo" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="baf7e306-aacc-4256-b558-9c3d16144949">
+      <functionBlockInterface Id="88169d55-de3f-415a-b5bd-58a48de9716d" name="reactor" x="918.75" y="393.75" modelType="Composite" />
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+  <functionBlockReferences>
+    <cFBModelHasFBReferences Id="cb48755b-6f2d-4539-984c-12c6b22ae7de">
+      <functionBlockReference Id="e2bd9f70-c2b4-4dc9-8421-da92355d407f" name="controller" x="1925" y="481.25" creationMode="Resource" referencedFile="controller.fb">
+        <events>
+          <functionBlockHasEvents Id="a197789e-f800-4617-be4e-648cd6dbe1dd">
+            <eventRef Id="1236ad0e-d90a-4017-a68a-67db31ad1590" name="clock" scope="Input" referencedID="e06a6fa6-8ca9-4ac7-b5ec-9450374fbb85" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="7bd0a00b-94ff-49a9-af7f-f3d93ff80638">
+            <eventRef Id="a4c19ffd-924c-4631-8707-ef47bb147962" name="add1" scope="Output" referencedID="d0d63a05-bc7e-4ce5-9626-21c22a5a60b8" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="08080393-33ee-4312-b81d-41b1339b3bbe">
+            <eventRef Id="0a955206-d57e-4ea5-98c4-1c25f72e662e" name="add2" scope="Output" referencedID="724c8dae-9ea8-41b0-a57f-e705c173b827" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="5220244f-5ba9-4f88-bae6-ed3e12af1cc6">
+            <eventRef Id="bdb12146-aaa8-4593-807c-b65d97819918" name="remove1" scope="Output" referencedID="80c4af33-a786-4997-ac29-32d66652099a" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="05fc06db-e1cf-44ab-b615-70a60ccc9159">
+            <eventRef Id="9c048b96-383b-4497-b844-b29cdcf78e25" name="remove2" scope="Output" referencedID="b1bc818e-31d3-44dd-8903-84859ce15f42" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="f5b8f4d5-3d68-4ec3-a046-b8a3bce11387">
+            <eventRef Id="a8f7317a-32a3-4087-a51a-389c3d57bbaf" name="refresh1" scope="Output" referencedID="48789fe0-7d73-49c9-bd02-4e6ad99a24f4" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="3cea3917-0f40-456b-beeb-454cebcf5dfd">
+            <eventRef Id="a5dd41f1-147e-4330-84a5-032fc1fdfdbd" name="refresh2" scope="Output" referencedID="27d4f377-0b8c-4ca3-a510-c7a5371bfd0e" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="20e8c571-7f72-49d6-b7e5-3fa2e1139607">
+            <variableRef Id="578b681e-f7f6-40a9-8601-8fa5bc52cfa1" name="x" scope="Input" type="REAL" referencedID="56d2fb23-d1ad-4239-b61d-1208e25b0e15" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="15cf5fc4-dc94-4dbf-b2ff-a03b5ff2147a">
+            <variableRef Id="a49fcc84-2907-4a72-abc2-e292a119b115" name="timer1" scope="Input" type="INT" referencedID="3942f14d-8c9e-4304-8778-8664d702134c" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="6bb54346-f8e8-4d54-85e9-b1db867edd43">
+            <variableRef Id="a818ec3a-5a72-41e9-81ec-896999729e11" name="timer2" scope="Input" type="INT" referencedID="38629f97-2e3b-424b-98f5-2dc535babcfc" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="31b03d62-a2b2-48be-9fc4-d79437471b50">
+            <inputEventPort Id="b07fd8d5-2a02-4ee6-9c9e-def812f273a6">
+              <event>
+                <inputEventPortReferencesEvent Id="1e23c53e-902a-4286-bf8f-0ebf04421afb">
+                  <eventRefMoniker name="/reactor/controller/clock" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="87bef53b-4174-48c0-8c24-55ad8b8aa9a5">
+            <outputEventPort Id="4da6b2cd-ec4e-4dbf-a219-5743eaf4ab18">
+              <wireTargetPorts>
+                <wireConnection Id="6fa1c014-d657-4166-915b-0c6869ad5491" unitDelayed="false">
+                  <inputEventPortMoniker Id="32422012-3fe5-481f-bd62-5531149a9fe0" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="d0f9c3cf-2f6d-4b9e-b33c-d8b6e974b76c">
+                  <eventRefMoniker name="/reactor/controller/add1" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="1d658bd6-c9af-4756-b436-da3827fb7e31">
+            <outputEventPort Id="dcd13a6a-7c67-4552-b992-71b943010159">
+              <wireTargetPorts>
+                <wireConnection Id="c1d64788-05e5-416d-b5bf-cea0d8a7ace1" unitDelayed="false">
+                  <inputEventPortMoniker Id="e29044e0-43ff-4d55-add8-7f539dae8c7e" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="5f513b03-9c88-40a9-82f4-30cc338e4f09">
+                  <eventRefMoniker name="/reactor/controller/add2" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="ba029b1c-abaf-47e6-b621-648c6485f4d1">
+            <outputEventPort Id="5a26fca7-1d5e-4c45-ae15-cfb5aec6c0b7">
+              <wireTargetPorts>
+                <wireConnection Id="840ed96e-cbe1-48cd-88d1-24a156f906ef" unitDelayed="false">
+                  <inputEventPortMoniker Id="8db0ef9b-68c0-4666-a671-4aeded77bda9" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="7c4a2d3f-b0f7-4bc6-b7f0-3d3211ee6332">
+                  <eventRefMoniker name="/reactor/controller/remove1" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="cc9c6e76-81d2-45d7-bca5-e8eba856fdaf">
+            <outputEventPort Id="12ea51ac-de1e-464a-ac96-59ba08992300">
+              <wireTargetPorts>
+                <wireConnection Id="6e884566-7d9d-45db-9786-583b58851080" unitDelayed="false">
+                  <inputEventPortMoniker Id="baaeb809-79b6-4d07-bdc5-92ca577d9e6a" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="0f03b21a-49e4-4aac-9304-43c0864e9b6b">
+                  <eventRefMoniker name="/reactor/controller/remove2" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="7aac67a3-bf72-4bdd-9698-004593c9a02a">
+            <outputEventPort Id="809a716d-3bc7-40b3-8c81-ef41855ef804">
+              <wireTargetPorts>
+                <wireConnection Id="af5188a0-5ecc-4bbf-ad6f-dc820090db8d" unitDelayed="false">
+                  <inputEventPortMoniker Id="f361032f-da98-4c48-a1f7-49486ccedb57" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="57eeea8d-adac-41ca-8c2c-8cebbe9362fd">
+                  <eventRefMoniker name="/reactor/controller/refresh1" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="9d59e561-5f3b-4433-a0fb-40865e2472ad">
+            <outputEventPort Id="cf60207d-79b3-46f8-bde7-56f7d920dc0e">
+              <wireTargetPorts>
+                <wireConnection Id="fa29c0dd-731b-44bd-af4c-1fb1c1577dca" unitDelayed="false">
+                  <inputEventPortMoniker Id="70f80f3c-a87f-4a9d-b7bc-fce5c7bcb8e1" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="8aa1b24f-a864-4380-a0b5-f22d1bf9ab1b">
+                  <eventRefMoniker name="/reactor/controller/refresh2" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="33d95ace-f585-452d-9b2e-1bf5a4c5ecdb">
+            <inputVariablePort Id="06e20958-aea8-424c-9a46-65c77fdba1b9">
+              <variable>
+                <inputVariablePortReferencesVariable Id="0cb6089a-4002-4441-a725-f8ed307e1176">
+                  <variableRefMoniker name="/reactor/controller/x" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="1bed2690-f9f6-4716-8ca1-ba3a4e06a616">
+            <inputVariablePort Id="0ac455ef-b777-4594-8db6-e8f832558428">
+              <variable>
+                <inputVariablePortReferencesVariable Id="7e27f46f-999b-4829-8554-32b8380a7bbd">
+                  <variableRefMoniker name="/reactor/controller/timer1" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="f4f7b17d-c193-4ba0-89fd-38eb44bec9eb">
+            <inputVariablePort Id="589193d4-89c7-4f0f-99b4-2edb0f21c05a">
+              <variable>
+                <inputVariablePortReferencesVariable Id="ad7596cb-635d-4c28-adc8-83e63c677fc0">
+                  <variableRefMoniker name="/reactor/controller/timer2" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="370272e5-fe6d-40ba-8479-62bf8a0f236b">
+      <functionBlockReference Id="3e836010-7e0c-4f91-a5b1-127fbaab310d" name="plant" x="612.5" y="481.25" creationMode="Resource" referencedFile="plant.fb">
+        <events>
+          <functionBlockHasEvents Id="90e8d36d-a451-490b-8d1a-721b6da718f6">
+            <eventRef Id="0be4449f-8f88-45ff-81cc-f92ea890e016" name="update" scope="Output" referencedID="2f329226-5eff-40ea-b0fd-cdc045776ea9" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="c79df8ad-0f3a-492c-bdeb-3f37161a2bec">
+            <eventRef Id="63ba1a67-08ef-40da-b7ee-1fb4bbc1ce6f" name="add1" scope="Input" referencedID="c52a5ce3-01c0-48ed-9184-073bac17b83c" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="3f341a57-363f-40ef-93c8-143357ebf4ff">
+            <eventRef Id="f5dad631-3611-41fa-b764-6cd9ab070430" name="add2" scope="Input" referencedID="dabeb1ae-4938-40b2-9e41-19d88365a685" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="17e47616-e548-49a2-a31a-7aa2e10877cf">
+            <eventRef Id="39f6bf90-8c10-40b3-890f-8aaede01941d" name="remove1" scope="Input" referencedID="cdc88ac3-752b-4830-b6da-6ec996cfeef4" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="0b5f8877-b204-48e4-a45d-46f1d2268cc2">
+            <eventRef Id="15b420e5-4c90-46f6-8d2a-67bb845fc284" name="remove2" scope="Input" referencedID="a5d20b91-3687-4cf0-bcc5-04af536e9256" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="28c4e430-3122-41c6-9425-0a623cb87f0d">
+            <variableRef Id="dde4c308-f9f3-483e-9682-552472dbef89" name="x" scope="Output" type="REAL" referencedID="a7f3332d-a2a5-4f12-8339-69efb92a26a2" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="d43dc329-eea0-4616-bdaf-6267296a4538">
+            <inputEventPort Id="32422012-3fe5-481f-bd62-5531149a9fe0">
+              <event>
+                <inputEventPortReferencesEvent Id="581d0c53-f93e-4864-ac0a-572bc6f6d553">
+                  <eventRefMoniker name="/reactor/plant/add1" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="6be66d95-7417-439c-b27d-0b6e1d044381">
+            <inputEventPort Id="e29044e0-43ff-4d55-add8-7f539dae8c7e">
+              <event>
+                <inputEventPortReferencesEvent Id="f28b4c48-e6e6-4be5-bb1b-8445311e4f4b">
+                  <eventRefMoniker name="/reactor/plant/add2" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="b4bec971-1e68-44e8-8f3e-272045a030b6">
+            <inputEventPort Id="8db0ef9b-68c0-4666-a671-4aeded77bda9">
+              <event>
+                <inputEventPortReferencesEvent Id="02754c6c-de37-46e2-932e-2241cfe4b154">
+                  <eventRefMoniker name="/reactor/plant/remove1" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="8bae27fa-14ec-4fd1-bed2-b2faaa77dfdb">
+            <inputEventPort Id="baaeb809-79b6-4d07-bdc5-92ca577d9e6a">
+              <event>
+                <inputEventPortReferencesEvent Id="67f208d3-45e6-40bc-af52-51882602c60b">
+                  <eventRefMoniker name="/reactor/plant/remove2" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="22276212-f6fa-4765-9278-c7276bfee681">
+            <outputEventPort Id="00f216f6-eac4-4b8b-804c-b17d20e47c1a">
+              <wireTargetPorts>
+                <wireConnection Id="a68a3fd6-9453-4fef-b890-33ac0a7029f2" unitDelayed="false">
+                  <inputEventPortMoniker Id="b07fd8d5-2a02-4ee6-9c9e-def812f273a6" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="f2fd44ff-ec7f-4ab2-b8af-edcc42dfadf4">
+                  <eventRefMoniker name="/reactor/plant/update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="583d1947-e7c0-41fc-a79d-c65fe0ddfb0a">
+            <outputVariablePort Id="3b547918-3c51-473c-8fa4-3d2021a20433">
+              <wireTargetPorts>
+                <wireConnection Id="c6211db7-1d6d-40a6-9d3e-a03159cc812c" unitDelayed="false">
+                  <inputVariablePortMoniker Id="06e20958-aea8-424c-9a46-65c77fdba1b9" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="e2fdcbc6-fce5-4686-9278-b13079d9971a">
+                  <variableRefMoniker name="/reactor/plant/x" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="4f78c386-b766-439a-bc06-d957a7e617ab">
+      <functionBlockReference Id="a5a61b0d-5ab5-42de-b5d6-bb686eb75a7c" name="ytimer1" x="3193.75" y="525" creationMode="Resource" referencedFile="ytimer1.fb">
+        <events>
+          <functionBlockHasEvents Id="6636501c-ec1d-4063-af68-514391912114">
+            <eventRef Id="f146f23d-4566-47f1-9697-f871a76ed1b0" name="restart" scope="Input" referencedID="a73fcbd6-f3ac-433b-b4a0-15da75abc6dd" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="02e35d45-a29e-4786-b3cf-24182c529f8f">
+            <eventRef Id="c42d9943-a625-4d22-8ff7-3322bbcab093" name="update" scope="Output" referencedID="3b66761a-ffbb-470e-8fa9-e010b1e409b1" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="6df63b5f-a2fe-49f1-87b1-adf2131c05cb">
+            <variableRef Id="f6e6638f-58a7-41eb-ba37-62627d778fcd" name="y1" scope="Output" type="INT" referencedID="839a15ee-4189-4adf-804c-be80afb55c90" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="f4e7803d-e916-4cb8-a3f1-39750b747682">
+            <inputEventPort Id="f361032f-da98-4c48-a1f7-49486ccedb57">
+              <event>
+                <inputEventPortReferencesEvent Id="4b8c9b52-e9df-40f4-bf72-5cd11b9a91f6">
+                  <eventRefMoniker name="/reactor/ytimer1/restart" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="8ed6998e-0669-447e-883e-83b9884fbd5a">
+            <outputEventPort Id="ffdb3da6-5ef1-423c-b510-5c02ac3aa4b4">
+              <wireTargetPorts>
+                <wireConnection Id="1cde9980-5455-47df-b3fd-d8ce0bdafd35" unitDelayed="false">
+                  <inputEventPortMoniker Id="b07fd8d5-2a02-4ee6-9c9e-def812f273a6" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="ce2d9114-c273-4eb1-a11c-27f0df17b163">
+                  <eventRefMoniker name="/reactor/ytimer1/update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="4b7d6d62-d848-4aec-a99d-3eba43853b37">
+            <outputVariablePort Id="debe0058-6ae5-4d68-a135-19c46f503b1f">
+              <wireTargetPorts>
+                <wireConnection Id="8e7314a5-2ee2-43a4-bb7e-16bc77945e74" unitDelayed="false">
+                  <inputVariablePortMoniker Id="0ac455ef-b777-4594-8db6-e8f832558428" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="a76db5c4-5f45-4941-9ce7-486e9587d7d0">
+                  <variableRefMoniker name="/reactor/ytimer1/y1" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="eab6d4cb-9fd8-4cab-afd2-4330f0330bd8">
+      <functionBlockReference Id="68638b57-6319-4a75-8c4a-d323dfcd5cd7" name="Reference" x="3193.75" y="1093.75" creationMode="Resource" referencedFile="ytimer2.fb">
+        <events>
+          <functionBlockHasEvents Id="d4622d37-c36b-42d5-af8b-e044d7522957">
+            <eventRef Id="66050117-6f44-4425-82a7-bf40e0dc3eaf" name="restart" scope="Input" referencedID="567a7972-8df3-4d6c-88f7-f43e62d18506" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="e05e0a9a-2e1e-4403-9cb3-8ccf6f014267">
+            <eventRef Id="81760996-ea27-4fc0-a9d6-79ea4dc46ddb" name="update" scope="Output" referencedID="c688a21a-217d-4542-8a15-4ff0e32a28ad" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="def91e25-aa22-48ee-ab5f-956a71b918b9">
+            <variableRef Id="f7120890-022f-427d-b611-b811422009e5" name="y2" scope="Output" type="INT" referencedID="1d4e1224-708c-47b8-a414-e23f2455fe1c" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="853c4716-4deb-40ac-a824-6988b0d0f964">
+            <inputEventPort Id="70f80f3c-a87f-4a9d-b7bc-fce5c7bcb8e1">
+              <event>
+                <inputEventPortReferencesEvent Id="5757e250-7bc7-4b1b-83b3-27900f66d3ca">
+                  <eventRefMoniker name="/reactor/Reference/restart" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="6c0c6855-7839-4a7c-8126-720e84bf2702">
+            <outputEventPort Id="19dbf5bd-c609-4990-9405-798eb617349e">
+              <wireTargetPorts>
+                <wireConnection Id="dded0d07-e6a0-45f5-9762-11db8f97921a" unitDelayed="false">
+                  <inputEventPortMoniker Id="b07fd8d5-2a02-4ee6-9c9e-def812f273a6" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="c409f648-5dae-466f-999e-afc8bbadfd42">
+                  <eventRefMoniker name="/reactor/Reference/update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="7522ee21-5273-4ca5-8807-0101277df938">
+            <outputVariablePort Id="d08b13dd-4d3a-4966-b6f8-4bed157a5f5d">
+              <wireTargetPorts>
+                <wireConnection Id="fa98189e-7d56-44fc-9f74-575fedd11c1d" unitDelayed="false">
+                  <inputVariablePortMoniker Id="589193d4-89c7-4f0f-99b4-2edb0f21c05a" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="010f8ee1-36e0-440f-a51d-93df760e6e57">
+                  <variableRefMoniker name="/reactor/Reference/y2" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+  </functionBlockReferences>
+</compositeFunctionBlockModel>

@@ -1,0 +1,8 @@
+me->y2=0;
+me->delta=0.0001;
+me->k=1;
+me->C1y2=0;
+me->d=0.01;
+if(me->t==0){
+printf("train 2 position : %f\n", me->y2);
+}

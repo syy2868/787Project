@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Run</Configuration>
+    <Platform Condition="'$(Platform)' == ''">gnu</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{776CCC40-257E-4ABA-A850-57C572F0CB90}</ProjectGuid>
+    <ProjectType>BlokIDE Project</ProjectType>
+    <ProjectTypeGuids>{92B81AF7-8D03-46D0-9C71-430DAE7A074E}</ProjectTypeGuids>
+    <RootNamespace>BlokIDENamespace</RootNamespace>
+    <AssemblyName>BlokIDEAssemblyName</AssemblyName>
+    <OutputFormat>CCode</OutputFormat>
+    <MaxStringLength>32</MaxStringLength>
+    <Name>Vehicle</Name>
+    <ActivePlatform>gnu</ActivePlatform>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Deploy'">
+    <CompilationMode>Deploy</CompilationMode>
+    <OutputPath>Generated\Run\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <ExecuteMakeScript>false</ExecuteMakeScript>
+    <CompilerParameters>-w</CompilerParameters>
+    <!--Remove warnings from GCC-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Remote'">
+    <CompilationMode>Remote</CompilationMode>
+    <OutputPath>Generated\Simulation\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <ExecuteMakeScript>false</ExecuteMakeScript>
+    <CompilerParameters>-w</CompilerParameters>
+    <!--Remove warnings from GCC-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Run'">
+    <CompilationMode>Run</CompilationMode>
+    <OutputPath>Generated\Run\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <CompilerName>gcc</CompilerName>
+    <ExecuteMakeScript>true</ExecuteMakeScript>
+    <CompilerParameters>-w</CompilerParameters>
+    <!--Remove warnings from GCC-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Simulation'">
+    <CompilationMode>Simulate</CompilationMode>
+    <OutputPath>Generated\Simulation\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <CompilerName>gcc</CompilerName>
+    <ExecuteMakeScript>true</ExecuteMakeScript>
+    <CompilerParameters>-w</CompilerParameters>
+    <CompilerLocation />
+    <AdditionalLibraryPath />
+    <AdditionalIncludePath />
+    <LinkerParameters>-lm</LinkerParameters>
+    <!--Remove warnings from GCC-->
+  </PropertyGroup>
+  <PropertyGroup>
+    <TimeMePath Condition="!Exists('$(TimeMePath)\UoA.IEC61499.Compiler.targets')">
+    </TimeMePath>
+    <TimeMePath Condition="$(TimeMePath) == '' And Exists('$(VSInstallDir)\Common7\IDE\Extensions\BlokIDE\UoA.IEC61499.Compiler.targets')">$(localappdata)\Common7\IDE\Extensions\BlokIDE</TimeMePath>
+    <TimeMePath Condition="$(TimeMePath) == '' And Exists('$(localappdata)\Microsoft\VisualStudio\$(VisualStudioVersion)Exp\Extensions\BlokTech\TimeMe\1.0\UoA.IEC61499.Compiler.targets')">$(localappdata)\Microsoft\VisualStudio\$(VisualStudioVersion)Exp\Extensions\BlokTech\TimeMe\1.0</TimeMePath>
+    <TimeMePath Condition="$(TimeMePath) == '' And Exists('$(localappdata)\Microsoft\VisualStudio\$(VisualStudioVersion)\Extensions\BlokTech\TimeMe\1.0\UoA.IEC61499.Compiler.targets')">$(localappdata)\Microsoft\VisualStudio\$(VisualStudioVersion)\Extensions\BlokTech\TimeMe\1.0</TimeMePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="EDCA.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CSMA.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FollowingCar.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Vehicle.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="WAVE.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OBDSS.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LaserSensor.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dynamics.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LeadingCar.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Controller.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="Controller.fb.ACC.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Controller.fb</DependentUpon>
+      <LinkedIntoProjectAt>ACC.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Controller.fb.AdjustSetPoint.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Controller.fb</DependentUpon>
+      <LinkedIntoProjectAt>Test.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Controller.fb.DEC.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Controller.fb</DependentUpon>
+      <LinkedIntoProjectAt>DEC.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="FollowingCar.fb.Accelerate.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>FollowingCar.fb</DependentUpon>
+      <LinkedIntoProjectAt>Accelerate.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="FollowingCar.fb.Decelerate.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>FollowingCar.fb</DependentUpon>
+      <LinkedIntoProjectAt>Decelerate.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="FollowingCar.fb.Init.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>FollowingCar.fb</DependentUpon>
+      <LinkedIntoProjectAt>Init.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="FollowingCar.fb.Init_Acc.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>FollowingCar.fb</DependentUpon>
+      <LinkedIntoProjectAt>Init_Acc.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="FollowingCar.fb.Init_Dec.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>FollowingCar.fb</DependentUpon>
+      <LinkedIntoProjectAt>Init_Dec.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="FollowingCar.fb.Reset.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>FollowingCar.fb</DependentUpon>
+      <LinkedIntoProjectAt>Reset.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="LeadingCar.fb.Accelerate.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>LeadingCar.fb</DependentUpon>
+      <LinkedIntoProjectAt>Accelerate.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="LeadingCar.fb.MaxSpeed.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>LeadingCar.fb</DependentUpon>
+      <LinkedIntoProjectAt>Constant_Speed1.algo</LinkedIntoProjectAt>
+    </Content>
+    <Compile Include="TwoCars.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="LaserSensor.fb.ReadSensor.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>LaserSensor.fb</DependentUpon>
+      <LinkedIntoProjectAt>ReadSensor.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="LeadingCar.fb.Decelerate.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>LeadingCar.fb</DependentUpon>
+      <LinkedIntoProjectAt>Decelerate.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="LeadingCar.fb.Init.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>LeadingCar.fb</DependentUpon>
+      <LinkedIntoProjectAt>Init.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="LeadingCar.fb.StopTime.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>LeadingCar.fb</DependentUpon>
+      <LinkedIntoProjectAt>Random_Time.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="LeadingCar.fb.MaxSpeedTime.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>LeadingCar.fb</DependentUpon>
+      <LinkedIntoProjectAt>Random_Time2.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="LeadingCar.fb.Stop.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>LeadingCar.fb</DependentUpon>
+      <LinkedIntoProjectAt>Stop.algo</LinkedIntoProjectAt>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(TimeMePath)\UoA.IEC61499.Compiler.targets" />
+</Project>

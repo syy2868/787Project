@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="Vehicle" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="Jin-PC" Version="0.1" Author="Jin" Date="2015-00-24" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+<EventInputs>
+  <Event Name="SensorReading" Comment="">
+  </Event>
+</EventInputs>
+<EventOutputs>
+  <Event Name="POSITION" Comment="">
+  </Event>
+</EventOutputs>
+<InputVars>
+  <VarDeclaration Name="FrontCarPos" Type="LREAL" Comment="" />
+</InputVars>
+<OutputVars>
+  <VarDeclaration Name="value" Type="LREAL" Comment="" />
+</OutputVars>
+</InterfaceList>
+<FBNetwork>
+  <FB Name="Reference" Type="CSMA" x="3237.5" y="1400" />
+  <FB Name="Reference1" Type="EDCA" x="4812.5" y="1400" />
+  <FB Name="Reference2" Type="WAVE" x="3587.5" y="218.75" />
+  <FB Name="Reference3" Type="Driver" x="1531.25" y="1137.5" />
+  <FB Name="Reference4" Type="OBDSS" x="1662.5" y="218.75" />
+  <FB Name="Checked1" Type="LaserSensor" x="437.5" y="1225" />
+  <EventConnections><Connection Source="SensorReading" Destination="Checked1.SensorReading" />
+<Connection Source="Reference3.POSITION" Destination="POSITION" />
+<Connection Source="Reference.MAC_WAVE_CCH_RCV" Destination="Reference2.MAC_WAVE_CCH_RCV" />
+<Connection Source="Reference.MAC_WAVE_SCH_RCV" Destination="Reference2.MAC_WAVE_SCH_RCV" />
+<Connection Source="Reference.CCH_CLR" Destination="Reference1.MAC_CCH_CLR" />
+<Connection Source="Reference.SCH_CLR" Destination="Reference1.MAC_SCH_CLR" />
+<Connection Source="Reference1.CCH_REQ" Destination="Reference.CCH_REQ" />
+<Connection Source="Reference1.SCH_REQ" Destination="Reference.SCH_REQ" />
+<Connection Source="Reference2.SWITCH_CHANNEL" Destination="Reference.SWITCH_CHANNEL" />
+<Connection Source="Reference2.WAVE_MAC_CCH_TX" Destination="Reference1.WAVE_MAC_CCH_TX" />
+<Connection Source="Reference2.WAVE_MAC_SCH_TX" Destination="Reference1.WAVE_MAC_SCH_TX" />
+<Connection Source="Reference2.WAVE_APP_CCH_RCV" Destination="Reference4.CCH_RCV" />
+<Connection Source="Reference2.WAVE_APP_SCH_RCV" Destination="Reference4.SCH_RCV" />
+<Connection Source="Reference3.Brake" Destination="Reference4.Brake" />
+<Connection Source="Reference3.Accel" Destination="Reference4.Accel" />
+<Connection Source="Reference4.CCH_SEND" Destination="Reference2.APP_WAVE_CCH_TX" />
+<Connection Source="Reference4.SCH_SEND" Destination="Reference2.APP_WAVE_SCH_TX" />
+<Connection Source="Reference4.ACROSS" Destination="Reference3.NETWORK_PASS" />
+<Connection Source="Reference4.STOP" Destination="Reference3.NETWORK_STOP" />
+<Connection Source="Checked1.Output" Destination="Reference3.FRONT_LASER_SENSOR" /></EventConnections>
+  <DataConnections><Connection Source="FrontCarPos" Destination="Checked1.FrontCarPos" />
+<Connection Source="Reference3.MyPos" Destination="value" />
+<Connection Source="Reference2.mode" Destination="Reference.mode" />
+<Connection Source="Reference2.Variable1" Destination="Reference4.WarningType" />
+<Connection Source="Reference3.MyPos" Destination="Checked1.MyPos" />
+<Connection Source="Checked1.Distance" Destination="Reference3.Distance" /></DataConnections>
+</FBNetwork>
+</FBType>

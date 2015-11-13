@@ -1,0 +1,4 @@
+me->y1=me->d*me->k+me->C1y1;
+me->t1=me->t1+me->d;
+printf("train 1 position : %f\n", me->y1);
+(me->k)++;

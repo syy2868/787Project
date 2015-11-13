@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="Dynamics" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="Jin-PC" Version="0.1" Author="Jin" Date="2015-00-24" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+<EventInputs>
+  <Event Name="Event1" Comment="">
+  </Event>
+</EventInputs>
+<EventOutputs>
+  <Event Name="Event2" Comment="">
+  </Event>
+</EventOutputs>
+<InputVars>
+  <VarDeclaration Name="Variable2" Type="BOOL" Comment="" />
+</InputVars>
+<OutputVars>
+  <VarDeclaration Name="Variable1" Type="BOOL" Comment="" />
+</OutputVars>
+</InterfaceList>
+<BasicFB><ECC>
+  <ECState Name="Start" Comment="" x="1487.5" y="656.25">
+  </ECState>
+</ECC></BasicFB>
+</FBType>

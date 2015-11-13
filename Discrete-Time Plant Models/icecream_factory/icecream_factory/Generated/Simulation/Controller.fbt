@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="Controller" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="PC_THEO" Version="0,1" Author="Th?o" Date="2015-00-16" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+<EventInputs>
+  <Event Name="update" Comment="">
+  </Event>
+</EventInputs>
+<EventOutputs>
+  <Event Name="S2" Comment="">
+  </Event>
+  <Event Name="S3" Comment="">
+  </Event>
+</EventOutputs>
+<InputVars>
+  <VarDeclaration Name="x" Type="REAL" Comment="" />
+  <VarDeclaration Name="y" Type="REAL" Comment="" />
+</InputVars>
+
+</InterfaceList>
+<FBNetwork>
+  <FB Name="detection" Type="detection" x="525" y="743,75" />
+  <FB Name="TRDC" Type="TRDC" x="1575" y="743,75" />
+  <EventConnections><Connection Source="update" Destination="detection.update" />
+<Connection Source="update" Destination="TRDC.update" />
+<Connection Source="TRDC.S2" Destination="S2" />
+<Connection Source="TRDC.S3" Destination="S3" />
+<Connection Source="detection.S1" Destination="TRDC.S1" /></EventConnections>
+  <DataConnections><Connection Source="x" Destination="detection.x" />
+<Connection Source="y" Destination="TRDC.y" /></DataConnections>
+</FBNetwork>
+</FBType>

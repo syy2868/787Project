@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="3eab05ae-6e24-4d0b-b253-eac2e360eebe" name="Controller" organization="PC_THEO" date="2015-07-21" author="Théo" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="55db3813-339b-4f08-9d30-df3b1f70d1cd">
+      <functionBlockInterface Id="01d9889e-d0ef-4e47-8464-282131c04f90" name="Controller" x="1093.75" y="437.5" modelType="Composite">
+        <events>
+          <functionBlockHasEvents Id="821b42ed-108d-45cd-869a-8b687339da7e">
+            <event Id="d914b36c-a3c0-4f0d-a84b-e6561eafeb01" name="pbase" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="16ae1ab9-9997-40b9-9c26-59eaa2985889">
+            <event Id="c5b15f1b-9f06-454f-b290-9f86d0e01368" name="pneutral" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="58cbf925-3d43-45d1-bbc0-c944af6f9b15">
+            <event Id="767e958f-44f9-4882-a7d6-d3adf9021879" name="pacid" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="655dda28-f8df-4752-a110-356769d82158">
+            <event Id="c5b6725f-57cc-49b8-a288-ac5878aec14a" name="update" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="addfe8a9-a540-4f13-a179-c638044d1854">
+            <event Id="f3cae174-dff8-4501-ac01-f1df466e9934" name="full" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="d21b6dd3-2665-4c66-938e-0c098425bc40">
+            <variable Id="38c67f99-e6c2-48e8-8b98-77f316fbe921" name="x1" scope="Input" type="REAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="590ed386-53a9-433e-b7ef-540c39daec2e">
+            <variable Id="6b1ecc66-b338-4074-9a7d-371f09d9df64" name="x2" scope="Input" type="REAL" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="fbff9fea-cc47-4cf7-821f-935850eb757a">
+            <inputEventPort Id="4c9c39e6-3314-43ef-9cbd-ae407e3ae5ae">
+              <proxyTargetPorts>
+                <proxyConnection Id="874a21db-127b-42f9-89af-57c8171477f5">
+                  <inputEventPortMoniker Id="415e672d-228b-4a25-8693-ec7fb0b7eb5b" />
+                </proxyConnection>
+                <proxyConnection Id="39a77467-9b03-4126-9b47-d652b28bf8f7">
+                  <inputEventPortMoniker Id="fee19580-a6c5-4f11-bd52-634448e685ee" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <inputEventPortReferencesEvent Id="e7b487c3-1b24-4637-a037-a3d03d987702">
+                  <eventMoniker name="/Controller/Controller/update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="58b2865a-cb38-4be2-91c7-7aa1291bb56f">
+            <outputEventPort Id="6bfb0e1d-5364-4a4f-aec9-9f1e44033f13">
+              <proxyTargetPorts>
+                <proxyConnection Id="80a647ba-4539-4dbd-8996-869af2849a89">
+                  <outputEventPortMoniker Id="9bec532c-3eb1-4ddf-9e3a-3439f4a4d9a8" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="772a4746-0506-4f79-8a9b-43d7436f9ddb">
+                  <eventMoniker name="/Controller/Controller/pbase" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="d773b369-1865-4445-b5ca-33a74fb89afa">
+            <outputEventPort Id="282dad2d-69a0-4b32-853b-804561a8059b">
+              <proxyTargetPorts>
+                <proxyConnection Id="2f1f9bf7-9000-4f8b-ad35-db6ad5cd929e">
+                  <outputEventPortMoniker Id="e4a02c92-6c7f-4cfb-a5fa-39f9b92bf499" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="81404ab9-582b-4e52-be87-94d25775727e">
+                  <eventMoniker name="/Controller/Controller/pneutral" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="aec7300f-d5cd-42c8-804b-6285a8ad7fd5">
+            <outputEventPort Id="61d75c75-cb62-43f3-820a-3cb2c8bab8f3">
+              <proxyTargetPorts>
+                <proxyConnection Id="fb64ece9-8bd1-4237-a589-e1c23f17e8a0">
+                  <outputEventPortMoniker Id="bd26096a-73af-4350-95a3-5e8fb120ba27" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="03c90055-e38f-4ee1-8434-0b1abd6f3f27">
+                  <eventMoniker name="/Controller/Controller/pacid" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="492226de-5666-449f-8b2c-04b136bba03b">
+            <outputEventPort Id="ebf8dbe7-7854-45e2-8990-e1af0e22bf4c">
+              <proxyTargetPorts>
+                <proxyConnection Id="c42b9346-1232-4fbd-abe8-422c854cf0f7">
+                  <outputEventPortMoniker Id="27c49529-80c9-4e79-be01-9ef6ab7e98b9" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="04e76914-eb6d-488a-aeaf-00c0b197fe50">
+                  <eventMoniker name="/Controller/Controller/full" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="c5d71279-a289-4335-83db-c6739597de94">
+            <inputVariablePort Id="d8ff1bd3-aff5-4a1c-abef-91fa38ea105f">
+              <proxyTargetPorts>
+                <proxyConnection Id="beb55adc-dea9-4e8e-b62d-5fedf0004fe3">
+                  <inputVariablePortMoniker Id="4922cfba-3561-4d74-8d4d-cd0cb6a2ef3a" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <inputVariablePortReferencesVariable Id="5c140f5a-c5b6-4956-b524-5e7e35e19b6f">
+                  <variableMoniker name="/Controller/Controller/x1" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="a9bfcf82-6fde-4d0e-826a-d7ca21c8bf25">
+            <inputVariablePort Id="ec291c14-22fa-475d-a9d8-0811598ae450">
+              <proxyTargetPorts>
+                <proxyConnection Id="d4f62089-5521-46d8-9d6c-6292113bbae4">
+                  <inputVariablePortMoniker Id="ce67b97f-4121-4671-85f9-addd79924718" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <inputVariablePortReferencesVariable Id="28e10785-2f6c-4a09-b81a-a171f70d763a">
+                  <variableMoniker name="/Controller/Controller/x2" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockInterface>
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+  <functionBlockReferences>
+    <cFBModelHasFBReferences Id="5d7f2f2b-4d32-4539-8756-18f4d95b70b7">
+      <functionBlockReference Id="2b090079-a079-44cb-a809-0a81597833da" name="Reference" x="525" y="262.5" creationMode="Resource" referencedFile="Filling_control.fb">
+        <events>
+          <functionBlockHasEvents Id="05adc25a-766f-4549-a236-b7d1b440a248">
+            <eventRef Id="52322674-69a2-48b4-8d39-22083976be01" name="update" scope="Input" referencedID="33cfae08-cba7-4437-aa3c-41e6ec9f91c7" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="679bd06d-47e6-4ab1-a16c-5d2e8edebe4f">
+            <eventRef Id="e082dc9b-cd8e-4df5-8310-a5dd1a56917a" name="full" scope="Output" referencedID="189ce8e2-cea3-44e3-8667-dd30bd5c8595" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="8669091b-d04f-4e81-974f-1aabf0eefa4d">
+            <variableRef Id="22365092-3699-4142-a2b8-99071f48fda9" name="x1" scope="Input" type="REAL" referencedID="fb3275e4-f7b2-4718-a725-a7f1d3cdff2b" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="9b8124bf-7c26-4cc4-b75f-46cc262525f8">
+            <inputEventPort Id="415e672d-228b-4a25-8693-ec7fb0b7eb5b">
+              <event>
+                <inputEventPortReferencesEvent Id="0ae8bd33-26ec-4b0c-a316-e452ba58c9de">
+                  <eventRefMoniker name="/Controller/Reference/update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="4b0f7619-b8b5-4a21-b623-3f5321c0a59a">
+            <outputEventPort Id="27c49529-80c9-4e79-be01-9ef6ab7e98b9">
+              <event>
+                <outputEventPortReferencesEvent Id="f38ac560-bcea-4926-9b2c-70cafe3cdda4">
+                  <eventRefMoniker name="/Controller/Reference/full" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="935e49cc-ebc7-4e41-8b69-406d1b3b6935">
+            <inputVariablePort Id="4922cfba-3561-4d74-8d4d-cd0cb6a2ef3a">
+              <variable>
+                <inputVariablePortReferencesVariable Id="d107ee17-2cf5-47ef-a410-7746925d052d">
+                  <variableRefMoniker name="/Controller/Reference/x1" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="6e6882cb-be2c-47a4-8b1d-4b1094050686">
+      <functionBlockReference Id="b8b1a97f-12c1-4b7d-a306-3466036fcaf1" name="Reference1" x="1750" y="218.75" creationMode="Resource" referencedFile="pH_control.fb">
+        <events>
+          <functionBlockHasEvents Id="8bf62ed9-31e8-4474-8fb6-cf022eab42b7">
+            <eventRef Id="4b9d9ee2-6e62-4e6b-bdae-b392ac6bfc73" name="update" scope="Input" referencedID="5dbfd55d-794a-4e3b-b297-87c9c690dbd1" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="44b27cfe-552a-432f-b037-ef118519b9d5">
+            <eventRef Id="9ab306ca-4de3-4374-b1cb-9a5ab6d3fb89" name="pacid" scope="Output" referencedID="79b0a5b5-c6a9-4d52-90b0-313e3d441dfa" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="24dfb83d-6f97-42a7-b3cd-8fc4af6f7f3d">
+            <eventRef Id="84378787-2d4c-4596-96aa-46eefbdf6b98" name="pbase" scope="Output" referencedID="c4ef7387-f410-4877-9a4f-8ec9777f5a47" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="ac513aa6-646a-47fd-a305-8a5b2c0889d2">
+            <eventRef Id="db1de7b7-8c6b-44bd-8398-d69780f6c3b3" name="pneutral" scope="Output" referencedID="367a3727-ebc3-4322-ace1-317f6824d3f9" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="f0b09b88-7b49-474a-9ed9-a6b9dbb48d8c">
+            <variableRef Id="346f38d6-bdac-436e-b3dc-bbfe2daad59c" name="x2" scope="Input" type="REAL" referencedID="2950b28f-0480-4624-bdad-e9832f1d3e95" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="924cda8b-36da-40ab-a87b-c6c669de3bf3">
+            <inputEventPort Id="fee19580-a6c5-4f11-bd52-634448e685ee">
+              <event>
+                <inputEventPortReferencesEvent Id="0256a13b-b225-4a12-b59e-e7708c815dd0">
+                  <eventRefMoniker name="/Controller/Reference1/update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="ee37ec0a-f053-45d6-895c-47c5e6fdfbd2">
+            <outputEventPort Id="bd26096a-73af-4350-95a3-5e8fb120ba27">
+              <event>
+                <outputEventPortReferencesEvent Id="f28a3791-cac3-42e4-8b9f-29c79c3bd995">
+                  <eventRefMoniker name="/Controller/Reference1/pacid" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="a53adff0-ca70-4fd6-a3ff-29d47d7ff367">
+            <outputEventPort Id="9bec532c-3eb1-4ddf-9e3a-3439f4a4d9a8">
+              <event>
+                <outputEventPortReferencesEvent Id="34114527-5867-4016-8eac-7513bb8f96cc">
+                  <eventRefMoniker name="/Controller/Reference1/pbase" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="fe93e4bf-df79-4d84-b98d-6f786f2b669b">
+            <outputEventPort Id="e4a02c92-6c7f-4cfb-a5fa-39f9b92bf499">
+              <event>
+                <outputEventPortReferencesEvent Id="90f84c6f-a9a1-40f3-b936-0a1e31c58956">
+                  <eventRefMoniker name="/Controller/Reference1/pneutral" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="69e88e65-85f3-46ef-a929-740638f2aa56">
+            <inputVariablePort Id="ce67b97f-4121-4671-85f9-addd79924718">
+              <variable>
+                <inputVariablePortReferencesVariable Id="2a63bfea-f1b1-4cc9-992c-b1e0237fff3e">
+                  <variableRefMoniker name="/Controller/Reference1/x2" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+  </functionBlockReferences>
+</compositeFunctionBlockModel>

@@ -1,0 +1,11 @@
+me->x = me->pos1; 
+me->v = me->speed1;
+me->k = me->k + 1;
+//me->pos1 = me->x + me->d * me->v;
+me->pos1 = me->pos1 + 29.18;
+printf("Leading car (Position: %3.8f, Speed: %3.8f)\n", me->pos1, me->speed1);
+
+if(me->k*me->d==me->random_t){
+  me->k = 1;
+  me->t = me->random_t;
+}

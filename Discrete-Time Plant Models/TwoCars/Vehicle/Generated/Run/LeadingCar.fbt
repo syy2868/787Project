@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="LeadingCar" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="SYY-PC" Version="0.1" Author="SYY" Date="2015-00-08" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+
+<EventOutputs>
+  <Event Name="Update" Comment="">
+    <With Var="pos1" />
+    <With Var="speed1" />
+  </Event>
+</EventOutputs>
+
+<OutputVars>
+  <VarDeclaration Name="pos1" Type="LREAL" InitialValue="100" Comment="" />
+  <VarDeclaration Name="speed1" Type="LREAL" InitialValue="1" Comment="" />
+</OutputVars>
+</InterfaceList>
+<BasicFB><InternalVars>
+  <VarDeclaration Name="v" Type="REAL" Comment="" />
+  <VarDeclaration Name="x" Type="LREAL" Comment="" />
+  <VarDeclaration Name="d" Type="LREAL" Comment="" />
+  <VarDeclaration Name="k" Type="INT" Comment="" />
+  <VarDeclaration Name="t" Type="INT" InitialValue="0" Comment="" />
+  <VarDeclaration Name="random_t" Type="INT" Comment="" />
+</InternalVars><ECC>
+  <ECState Name="Start" Comment="" x="481.25" y="700">
+    <ECAction Algorithm="Init" Output="Update" />
+  </ECState>
+  <ECState Name="State1" Comment="" x="1093.75" y="700">
+    <ECAction Algorithm="Decelerate" Output="Update" />
+  </ECState>
+  <ECState Name="State3" Comment="" x="2187.5" y="393.75">
+    <ECAction Algorithm="Stop" Output="Update" />
+  </ECState>
+  <ECState Name="State4" Comment="" x="2765.375" y="748.625">
+    <ECAction Algorithm="Accelerate" Output="Update" />
+  </ECState>
+  <ECState Name="State6" Comment="" x="1531.25" y="1093.75">
+    <ECAction Algorithm="MaxSpeed" Output="Update" />
+  </ECState>
+  <ECState Name="State2" Comment="" x="1575" y="393.75">
+    <ECAction Algorithm="StopTime" />
+  </ECState>
+  <ECState Name="State5" Comment="" x="2231.25" y="1093.75">
+    <ECAction Algorithm="MaxSpeedTime" />
+  </ECState>
+  <ECTransition Source="Start" Destination="State1" Condition="true" x="787.5" y="700" />
+  <ECTransition Source="State1" Destination="State2" Condition="speed1=0" x="1312.5" y="525" />
+  <ECTransition Source="State3" Destination="State4" Condition="true" x="2493.75" y="568.75" />
+  <ECTransition Source="State4" Destination="State5" Condition="speed1=14.66" x="2450" y="918.75" />
+  <ECTransition Source="State4" Destination="State4" Condition="true" x="2843.75" y="525" />
+  <ECTransition Source="State6" Destination="State1" Condition="true" x="1312.5" y="918.75" />
+  <ECTransition Source="State2" Destination="State3" Condition="true" x="1910.25" y="393.75" />
+  <ECTransition Source="State5" Destination="State6" Condition="true" x="1925" y="1093.75" />
+</ECC><Algorithm Name="Init" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;d = 0.01;&#xD;&#xA;me-&gt;speed1 = 1;&#xD;&#xA;me-&gt;pos1 = 32.5;&#xD;&#xA;me-&gt;k = 37;&#xD;&#xA;" />
+</Algorithm>
+<Algorithm Name="Decelerate" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;v = me-&gt;speed1;&#xD;&#xA;me-&gt;x = me-&gt;pos1;   &#xD;&#xA;//me-&gt;speed1 = -0.0097*me-&gt;k*me-&gt;k - 0.0105*me-&gt;k + 14.707; &#xD;&#xA;me-&gt;speed1 = 0;&#xD;&#xA;//me-&gt;pos1 = me-&gt;x + me-&gt;d * me-&gt;v;&#xD;&#xA;me-&gt;pos1 = me-&gt;pos1 + 3.81;&#xD;&#xA;me-&gt;k = me-&gt;k + 1;&#xD;&#xA;&#xD;&#xA;if(me-&gt;speed1&lt;=0){&#xD;&#xA;  me-&gt;speed1 = 0;&#xD;&#xA;  me-&gt;k = 0;&#xD;&#xA;  me-&gt;t = 0;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;printf(&quot;Leading car decelerates (Position: %3.8f, Speed: %3.8f)\n&quot;, me-&gt;pos1, me-&gt;speed1);&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" />
+</Algorithm>
+<Algorithm Name="Accelerate" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;v = me-&gt;speed1;&#xD;&#xA;me-&gt;x = me-&gt;pos1;  &#xD;&#xA;me-&gt;k = me-&gt;k + 1; &#xD;&#xA;//me-&gt;speed1 = 0.0097*me-&gt;k*me-&gt;k + 0.0112*me-&gt;k - 0.0482; &#xD;&#xA;me-&gt;speed1 = 14.66;&#xD;&#xA;//me-&gt;pos1 = me-&gt;x + me-&gt;d * me-&gt;v;&#xD;&#xA;me-&gt;pos1 = me-&gt;pos1 + 2.05;&#xD;&#xA;&#xD;&#xA;if(me-&gt;speed1&gt;=14.66){&#xD;&#xA;  me-&gt;speed1 = 14.66;&#xD;&#xA;  me-&gt;k = 0;&#xD;&#xA;  me-&gt;t = 0;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;printf(&quot;Leading car accelerates (Position: %3.8f, Speed: %3.8f)\n&quot;, me-&gt;pos1, me-&gt;speed1);" />
+</Algorithm>
+<Algorithm Name="MaxSpeed" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;x = me-&gt;pos1; &#xD;&#xA;me-&gt;v = me-&gt;speed1;&#xD;&#xA;me-&gt;k = me-&gt;k + 1;&#xD;&#xA;//me-&gt;pos1 = me-&gt;x + me-&gt;d * me-&gt;v;&#xD;&#xA;me-&gt;pos1 = me-&gt;pos1 + 29.18;&#xD;&#xA;printf(&quot;Leading car (Position: %3.8f, Speed: %3.8f)\n&quot;, me-&gt;pos1, me-&gt;speed1);&#xD;&#xA;&#xD;&#xA;if(me-&gt;k*me-&gt;d==me-&gt;random_t){&#xD;&#xA;  me-&gt;k = 1;&#xD;&#xA;  me-&gt;t = me-&gt;random_t;&#xD;&#xA;}&#xD;&#xA;" />
+</Algorithm>
+<Algorithm Name="Stop" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;x = me-&gt;pos1; &#xD;&#xA;me-&gt;v = me-&gt;speed1;&#xD;&#xA;me-&gt;k = me-&gt;k + 1;&#xD;&#xA;//me-&gt;pos1 = me-&gt;x + me-&gt;d * me-&gt;v;&#xD;&#xA;printf(&quot;Leading car (Position: %3.8f, Speed: %3.8f)\n&quot;, me-&gt;pos1, me-&gt;speed1);&#xD;&#xA;&#xD;&#xA;if(me-&gt;k*me-&gt;d==me-&gt;random_t){&#xD;&#xA;  me-&gt;k = 1;&#xD;&#xA;  me-&gt;t = me-&gt;random_t;&#xD;&#xA;}&#xD;&#xA;" />
+</Algorithm>
+<Algorithm Name="StopTime" Comment="">
+  <Other Language="C" Prototype="" Text="//srand(time(NULL));&#xD;&#xA;//int temp=rand()%2;&#xD;&#xA;//if (temp==1){&#xD;&#xA;//me-&gt;random_t=9;&#xD;&#xA;//}else if(temp==0){&#xD;&#xA;//me-&gt;random_t=6;&#xD;&#xA;//}&#xD;&#xA;me-&gt;random_t=6;" />
+</Algorithm>
+<Algorithm Name="MaxSpeedTime" Comment="">
+  <Other Language="C" Prototype="" Text="//srand(time(NULL));&#xD;&#xA;//int temp=rand()%2;&#xD;&#xA;//if (temp==1){&#xD;&#xA;//me-&gt;random_t=1;&#xD;&#xA;//}else if(temp==0){&#xD;&#xA;//me-&gt;random_t=3;&#xD;&#xA;//}&#xD;&#xA;me-&gt;random_t=2;" />
+</Algorithm></BasicFB>
+</FBType>

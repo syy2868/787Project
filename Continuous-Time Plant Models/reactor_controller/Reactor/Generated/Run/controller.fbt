@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="controller" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="PC_THEO" Version="0.1" Author="Th?o" Date="2015-00-13" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+<EventInputs>
+  <Event Name="clock" Comment="">
+    <With Var="x" />
+    <With Var="timer1" />
+    <With Var="timer2" />
+  </Event>
+</EventInputs>
+<EventOutputs>
+  <Event Name="add1" Comment="">
+  </Event>
+  <Event Name="add2" Comment="">
+  </Event>
+  <Event Name="remove1" Comment="">
+  </Event>
+  <Event Name="remove2" Comment="">
+  </Event>
+  <Event Name="refresh1" Comment="">
+  </Event>
+  <Event Name="refresh2" Comment="">
+  </Event>
+</EventOutputs>
+<InputVars>
+  <VarDeclaration Name="x" Type="REAL" Comment="" />
+  <VarDeclaration Name="timer1" Type="REAL" Comment="" />
+  <VarDeclaration Name="timer2" Type="REAL" Comment="" />
+</InputVars>
+
+</InterfaceList>
+<BasicFB><InternalVars>
+  <VarDeclaration Name="y1" Type="REAL" Comment="" />
+  <VarDeclaration Name="y2" Type="REAL" Comment="" />
+  <VarDeclaration Name="c" Type="REAL" Comment="" />
+</InternalVars><ECC>
+  <ECState Name="Start" Comment="" x="218.75" y="568.75">
+    <ECAction Algorithm="init" />
+  </ECState>
+  <ECState Name="State1" Comment="" x="896.875" y="572.395819425583">
+  </ECState>
+  <ECState Name="State2" Comment="" x="2581.25" y="393.75">
+    <ECAction Algorithm="signal_add1" Output="add1" />
+  </ECState>
+  <ECState Name="State3" Comment="" x="2581.25" y="787.5">
+    <ECAction Algorithm="signal_add2" Output="add2" />
+  </ECState>
+  <ECState Name="State4" Comment="" x="3631.25" y="393.75">
+    <ECAction Algorithm="signal_remove1" Output="remove1" />
+    <ECAction Output="refresh1" />
+  </ECState>
+  <ECState Name="State5" Comment="" x="3675" y="787.5">
+    <ECAction Algorithm="signal_remove2" Output="remove2" />
+    <ECAction Output="refresh2" />
+  </ECState>
+  <ECTransition Source="Start" Destination="State1" Condition="true" x="656.25" y="568.75" />
+  <ECTransition Source="State1" Destination="State3" Condition="x&gt;=550 AND timer2&gt;=c" x="1443.75" y="962.5" />
+  <ECTransition Source="State1" Destination="State2" Condition="x&gt;=550 AND timer1&gt;=c AND timer2&lt;=c" x="1400" y="350" />
+  <ECTransition Source="State2" Destination="State4" Condition="x&lt;=510" x="2975" y="393.75" />
+  <ECTransition Source="State3" Destination="State5" Condition="x&lt;=510" x="3018.75" y="787.5" />
+  <ECTransition Source="State4" Destination="State1" Condition="true" x="1093.75" y="175" />
+  <ECTransition Source="State5" Destination="State1" Condition="true" x="1006.25" y="1137.5" />
+</ECC><Algorithm Name="init" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;x=510;&#xD;&#xA;me-&gt;c=20;&#xD;&#xA;" />
+</Algorithm>
+<Algorithm Name="signal_add1" Comment="">
+  <Other Language="C" Prototype="" Text="printf(&quot;Send signal: add1, Temperature : %f\n&quot;,me-&gt;x);" />
+</Algorithm>
+<Algorithm Name="signal_add2" Comment="">
+  <Other Language="C" Prototype="" Text="printf(&quot;Send signal: add2, Temperature : %f\n&quot;,me-&gt;x);" />
+</Algorithm>
+<Algorithm Name="signal_remove1" Comment="">
+  <Other Language="C" Prototype="" Text="printf(&quot;Send signal: remove1, Temperature : %f\n&quot;,me-&gt;x);" />
+</Algorithm>
+<Algorithm Name="signal_remove2" Comment="">
+  <Other Language="C" Prototype="" Text="printf(&quot;Send signal: remove2, Temperature : %f\n&quot;,me-&gt;x);" />
+</Algorithm></BasicFB>
+</FBType>

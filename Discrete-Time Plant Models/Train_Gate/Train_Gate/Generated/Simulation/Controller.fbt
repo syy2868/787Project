@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="Controller" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="PC_THEO" Version="0,1" Author="Th?o" Date="2015-00-14" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+<EventInputs>
+  <Event Name="update" Comment="">
+    <With Var="y1" />
+    <With Var="y2" />
+  </Event>
+</EventInputs>
+<EventOutputs>
+  <Event Name="UP" Comment="">
+  </Event>
+  <Event Name="DOWN" Comment="">
+  </Event>
+</EventOutputs>
+<InputVars>
+  <VarDeclaration Name="y1" Type="REAL" Comment="" />
+  <VarDeclaration Name="y2" Type="REAL" Comment="" />
+</InputVars>
+
+</InterfaceList>
+<BasicFB><ECC>
+  <ECState Name="Start" Comment="" x="262,5" y="525">
+    <ECAction Algorithm="init" />
+  </ECState>
+  <ECState Name="State1" Comment="" x="831,25" y="525">
+  </ECState>
+  <ECState Name="State2" Comment="" x="1575" y="175">
+    <ECAction Output="DOWN" />
+  </ECState>
+  <ECState Name="State3" Comment="" x="1575" y="962,5">
+    <ECAction Output="UP" />
+  </ECState>
+  <ECTransition Source="Start" Destination="State1" Condition="true" x="568,75" y="350" />
+  <ECTransition Source="State1" Destination="State3" Condition="true AND (y1=5 OR y2=5)" x="1006,25" y="831,25" />
+  <ECTransition Source="State2" Destination="State1" Condition="true" x="1205,125" y="350" />
+  <ECTransition Source="State3" Destination="State2" Condition="true AND ((y1&gt;=15 OR y1&lt;5) AND (y2 &gt;=15 OR y2&lt;5))" x="1531,25" y="568,75" />
+</ECC><Algorithm Name="init" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;y1=0;&#xD;&#xA;me-&gt;y2=0;" />
+</Algorithm></BasicFB>
+</FBType>

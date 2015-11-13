@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="f74bea64-73c4-421b-a6f6-65398d65e28d" name="LaserSensor" organization="SYY-PC" date="2015-11-08" author="SYY">
+  <states>
+    <functionBlockModelHasStates Id="caf02243-0a0a-42d9-b0b7-42ce1d9d220a">
+      <state Id="b94c7d7e-036a-4de1-ae48-ed1b11a365f6" name="Detect" x="1925" y="831.25" isInitial="true">
+        <actionSet>
+          <actionLink Id="5b610349-af65-4219-b47b-c02d4e82784f">
+            <actionSetMoniker Id="251e6411-b48d-4a32-8858-1ec964516bf8" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="3ebd8848-d470-4996-afda-bf3216cfe2d2">
+            <transitionNodeMoniker Id="f8ffa844-ade7-4ec7-a4c8-55b7cf2c8239" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="2719c4eb-bc6e-4e16-b6de-3aedb0f8170d">
+      <actionSet Id="251e6411-b48d-4a32-8858-1ec964516bf8" x="2279.6584030985832" y="831.25">
+        <actionItems>
+          <actionSetHasActionItems Id="b3935ee1-e906-4a5e-a820-a34b09815480">
+            <actionAlgorithm Id="4a227223-09a1-4e8c-9136-dc3f95719dd2">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="da769d64-2106-4f45-9285-559fc468136b">
+                  <algorithmMoniker name="/LaserSensor/ReadSensor" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="d614f87a-7785-49bb-9e1f-37e121326a13">
+            <actionEvent Id="cfd0427d-90fe-48a0-bd06-d6d1a4bb336a">
+              <event>
+                <actionEventReferencesEvent Id="071606cf-2846-4e3b-a343-fbb8e56df0a4">
+                  <eventMoniker name="/LaserSensor/LaserSensor/Output" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="047805f8-e18d-4326-b7e3-0b991db0642c">
+      <algorithm Id="75e871e6-ab65-42c4-8b9c-1e07faa2b223" name="ReadSensor" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="e788fcab-8bc0-460c-b339-3402ffd5691e">
+      <functionBlockInterface Id="40dbab35-4016-41ff-8813-99f4a37c730d" name="LaserSensor" x="1837.5" y="700">
+        <events>
+          <functionBlockHasEvents Id="1f3a2673-cb0b-4580-bc72-e6ea8ee3b573">
+            <event Id="a8aca11a-9aea-4059-8466-d96d8a9e3a8d" name="SensorReading" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="3b83300c-ace0-4f50-98a9-f7fd04057ab3">
+            <event Id="a5fc6d60-d016-4b1a-a26f-f089aa8c8cce" name="Output" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="6cd525be-ae37-4157-9f96-0945efff0f8d">
+            <variable Id="a4ec3515-1704-41ae-82d2-88c2d92e8d5e" name="pos1" scope="Input" type="LREAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="bf159b3c-ac0d-44d1-a459-69f076da9a03">
+            <variable Id="ad76f9e8-a6d0-4eee-bd71-7d41323327ac" name="distance" scope="Output" type="LREAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="cc3dbaca-b3b7-4917-8209-8b33259e0cde">
+            <variable Id="a1851bec-66b2-46c5-8944-5ab8bf3f6def" name="pos2" scope="Input" type="LREAL" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="1f44023b-b3c5-4144-95c7-14d3aaa6ecb0">
+            <inputEventPort Id="ce35a949-2de8-4ac6-b267-8b4f6f8157e8">
+              <targetPort>
+                <association Id="a138f7a3-02d7-4728-a599-3287558a99e9">
+                  <inputVariablePortMoniker Id="b5bd9d92-106d-4dfb-9687-ca5ce71f3084" />
+                </association>
+                <association Id="799771df-04bc-47b0-b9e8-93ff98c9718d">
+                  <inputVariablePortMoniker Id="f31a0441-c652-4208-a34a-236840a75153" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="e7a17c6f-fa50-4902-a466-d0c5112fd8a7">
+                  <eventMoniker name="/LaserSensor/LaserSensor/SensorReading" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="51f441b3-afad-440f-a38f-5627a25af2f4">
+            <outputEventPort Id="77174331-c00d-482a-a354-3a0b4a8b0127">
+              <targetPort>
+                <association Id="6dc446c3-1415-4cb0-89a8-99cbdcf66a8a">
+                  <outputVariablePortMoniker Id="bafb92c3-3131-4e02-9268-cef1462cb182" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="1ad4cd52-ebc1-43d5-a4ca-8745bf375f9a">
+                  <eventMoniker name="/LaserSensor/LaserSensor/Output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="0b6112ca-b332-4142-83d3-1ac7ca0a2a72">
+            <inputVariablePort Id="b5bd9d92-106d-4dfb-9687-ca5ce71f3084">
+              <variable>
+                <inputVariablePortReferencesVariable Id="eabd25fc-0605-44e6-b4e7-14f133f4651e">
+                  <variableMoniker name="/LaserSensor/LaserSensor/pos1" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="b1094e15-4164-4c94-936b-015b274dbdb6">
+            <inputVariablePort Id="f31a0441-c652-4208-a34a-236840a75153">
+              <variable>
+                <inputVariablePortReferencesVariable Id="1335b088-9393-4919-bac9-8f0b13d003c9">
+                  <variableMoniker name="/LaserSensor/LaserSensor/pos2" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="14b5279a-177d-433c-8100-a5ae6bfa108f">
+            <outputVariablePort Id="bafb92c3-3131-4e02-9268-cef1462cb182">
+              <variable>
+                <outputVariablePortReferencesVariable Id="ee1e4cf2-c74e-4edc-8128-70af402687a9">
+                  <variableMoniker name="/LaserSensor/LaserSensor/distance" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="719621ef-ebc5-4fe2-acad-d8f62c591637">
+      <transitionNode Id="f8ffa844-ade7-4ec7-a4c8-55b7cf2c8239" x="1837.5" y="568.75" event="SensorReading">
+        <targetState>
+          <transitionNodeConnectsToStates Id="1103447a-7700-4240-afb2-13ff3db0fdff">
+            <stateMoniker name="/LaserSensor/Detect" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

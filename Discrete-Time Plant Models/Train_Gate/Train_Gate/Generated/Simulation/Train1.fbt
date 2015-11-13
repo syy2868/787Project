@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="Train1" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="PC_THEO" Version="0,1" Author="Th?o" Date="2015-00-24" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+<EventInputs>
+  <Event Name="update" Comment="">
+  </Event>
+</EventInputs>
+<EventOutputs>
+  <Event Name="update_t1" Comment="">
+  </Event>
+</EventOutputs>
+<InputVars>
+  <VarDeclaration Name="x" Type="REAL" Comment="" />
+</InputVars>
+<OutputVars>
+  <VarDeclaration Name="y1" Type="REAL" Comment="" />
+</OutputVars>
+</InterfaceList>
+<BasicFB><InternalVars>
+  <VarDeclaration Name="d" Type="REAL" Comment="" />
+  <VarDeclaration Name="k" Type="INT" Comment="" />
+  <VarDeclaration Name="C1y1" Type="REAL" Comment="" />
+  <VarDeclaration Name="delta" Type="REAL" Comment="" />
+</InternalVars><ECC>
+  <ECState Name="Start" Comment="" x="525" y="525">
+    <ECAction Algorithm="init" Output="update_t1" />
+  </ECState>
+  <ECState Name="State1" Comment="" x="1647,91672229767" y="535,9375">
+    <ECAction Algorithm="slow_mode" Output="update_t1" />
+  </ECState>
+  <ECState Name="State2" Comment="" x="1782,8125" y="1348,95836114883">
+    <ECAction Algorithm="fast_mode" Output="update_t1" />
+  </ECState>
+  <ECState Name="State3" Comment="" x="565,104180574417" y="1348,95836114883">
+    <ECAction Algorithm="slow_mode" Output="update_t1" />
+  </ECState>
+  <ECState Name="State4" Comment="" x="1093,75" y="918,75">
+    <ECAction Algorithm="emergency_brake" Output="update_t1" />
+  </ECState>
+  <ECState Name="State5" Comment="" x="2318,75" y="962,5">
+    <ECAction Algorithm="initCond_fast" />
+  </ECState>
+  <ECState Name="State6" Comment="" x="1181,25" y="1706,25">
+    <ECAction Algorithm="initCond_slow" />
+  </ECState>
+  <ECState Name="State7" Comment="" x="1487,5" y="1093,75">
+    <ECAction Algorithm="initCond_brake" />
+  </ECState>
+  <ECTransition Source="Start" Destination="State1" Condition="true" x="1035,45836114883" y="530,46875" />
+  <ECTransition Source="State1" Destination="State5" Condition="y1&gt;=5" x="1719,36461114883" y="935,447930574417" />
+  <ECTransition Source="State1" Destination="State1" Condition="true" x="1570,91672229767" y="471,9375" />
+  <ECTransition Source="State2" Destination="State6" Condition="y1&gt;=15" x="1245,95834028721" y="1348,95836114883" />
+  <ECTransition Source="State2" Destination="State2" Condition="true" x="1782,8125" y="1293,95836114883" />
+  <ECTransition Source="State3" Destination="State7" Condition="y1&gt;=20 AND x&gt;1+delta" x="779,427090287209" y="1122,85418057442" />
+  <ECTransition Source="State3" Destination="Start" Condition="y1&gt;=25" x="546,052090287209" y="880,979180574417" />
+  <ECTransition Source="State3" Destination="State3" Condition="true" x="543,104180574417" y="1386,95836114883" />
+  <ECTransition Source="State4" Destination="State4" Condition="true" x="1158,75" y="897,75" />
+  <ECTransition Source="State5" Destination="State2" Condition="true" x="2091,78125" y="1160,72918057442" />
+  <ECTransition Source="State6" Destination="State3" Condition="true" x="828,177090287209" y="1518,60418057442" />
+  <ECTransition Source="State7" Destination="State4" Condition="true" x="1310,625" y="1003,25" />
+</ECC><Algorithm Name="init" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;y1=0;&#xD;&#xA;me-&gt;delta=0.0001;&#xD;&#xA;me-&gt;k=1;&#xD;&#xA;me-&gt;C1y1=-1;" />
+</Algorithm>
+<Algorithm Name="slow_mode" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;y1=me-&gt;C1y1*exp(-1.0L/2.0L*me-&gt;d*me-&gt;k)+1;&#xD;&#xA;(me-&gt;k)++;" />
+</Algorithm>
+<Algorithm Name="fast_mode" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;y1=me-&gt;C1y1*exp(-1*me-&gt;d*me-&gt;k)+2;&#xD;&#xA;(me-&gt;k)++;" />
+</Algorithm>
+<Algorithm Name="emergency_brake" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;y1=me-&gt;C1y1*exp(-1.0L/10.0L*me-&gt;d*me-&gt;k);&#xD;&#xA;(me-&gt;k)++;&#xD;&#xA;&#xD;&#xA;if (me-&gt;y1 &lt;= me-&gt;delta) {&#xD;&#xA;	printf (&quot;Emergency brake : Train stopped at y1 = %f and x = %f\n&quot;,me-&gt;y1, me-&gt;x);&#xD;&#xA;	exit(1);&#xD;&#xA;	}" />
+</Algorithm>
+<Algorithm Name="initCond_fast" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;k=1;&#xD;&#xA;me-&gt;C1y1=me-&gt;x-2;&#xD;&#xA;printf(&quot;fast mode on\n&quot;);" />
+</Algorithm>
+<Algorithm Name="initCond_slow" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;k=1;&#xD;&#xA;me-&gt;C1y1=me-&gt;x-1;&#xD;&#xA;printf(&quot;slow mode on\n&quot;);" />
+</Algorithm>
+<Algorithm Name="initCond_brake" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;k=1;&#xD;&#xA;me-&gt;C1y1=me-&gt;x-10;&#xD;&#xA;printf(&quot;Emergency brake !!!\n&quot;);" />
+</Algorithm></BasicFB>
+</FBType>

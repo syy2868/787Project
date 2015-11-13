@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="ce469a8e-b835-4958-b311-2d18533c47a4" name="OBDSS" organization="Jin-PC" date="2015-08-24" author="Jin">
+  <states>
+    <functionBlockModelHasStates Id="4e145b46-5105-4c75-8a16-1c16ff1adb18">
+      <state Id="e9e46006-c42f-4a56-9f7d-4ec5c31b49f4" name="WarningSystem" x="700" y="700" isInitial="true">
+        <regions>
+          <stateHasRegions Id="4803f0db-68b2-45b9-823e-a9a9025c5017">
+            <region Id="d638caed-615d-403e-bb0f-bfe9641e3d2b" name="Brake" date="">
+              <states>
+                <functionBlockModelHasStates Id="0de31cce-defc-432d-b817-241ba5710521">
+                  <state Id="6a1c1cd9-5494-4081-a1c6-3b71c44a4e69" name="WaitBrake" x="218.75" y="70.000000000000057" isInitial="true">
+                    <fromTransitionNodes>
+                      <stateConnectsToTransitionNodes Id="05ac52a3-0174-4162-aa66-25396d6eb383">
+                        <transitionNodeMoniker Id="75c95ef7-c116-4b4f-93a0-45ca10edec87" />
+                      </stateConnectsToTransitionNodes>
+                    </fromTransitionNodes>
+                  </state>
+                </functionBlockModelHasStates>
+                <functionBlockModelHasStates Id="b1447c71-424f-437a-9087-624fef6b1cc3">
+                  <state Id="9488dd14-6d35-499c-9aa2-47671a0a2226" name="BrakeWarning" x="131.25" y="463.75000000000006" isInitial="false">
+                    <actionSet>
+                      <actionLink Id="c8bdbece-3ab7-41c4-bfe0-644236e16d2f">
+                        <actionSetMoniker Id="136cd8bb-478c-464d-9394-1de0df04c79d" />
+                      </actionLink>
+                    </actionSet>
+                    <fromTransitionNodes>
+                      <stateConnectsToTransitionNodes Id="f1a19ff5-ffc2-4734-9fb0-bd67444bac85">
+                        <transitionNodeMoniker Id="6fb7b6ef-8e32-40cb-b96f-aecd405aa0d8" />
+                      </stateConnectsToTransitionNodes>
+                      <stateConnectsToTransitionNodes Id="e8135d98-a552-42cd-8d30-d94d2a337a90">
+                        <transitionNodeMoniker Id="cf8e4674-48c3-44f1-bd3c-51674b226c63" />
+                      </stateConnectsToTransitionNodes>
+                    </fromTransitionNodes>
+                  </state>
+                </functionBlockModelHasStates>
+              </states>
+              <actionSets>
+                <functionBlockModelHasActionSets Id="11da0115-8359-49a5-aa1e-8643d4bb206c">
+                  <actionSet Id="136cd8bb-478c-464d-9394-1de0df04c79d" x="635.33771395683277" y="463.75000000000006">
+                    <actionItems>
+                      <actionSetHasActionItems Id="5cbb8826-2a72-4b24-9526-74e17a2b7fcc">
+                        <actionEvent Id="211a638f-cbb6-4a4c-9e84-687f0724c291">
+                          <event>
+                            <actionEventReferencesEvent Id="c792bfb2-d61c-46c8-ba39-32fc7310b551">
+                              <eventMoniker name="/OBDSS/OBDSS/CCH_SEND" />
+                            </actionEventReferencesEvent>
+                          </event>
+                        </actionEvent>
+                      </actionSetHasActionItems>
+                      <actionSetHasActionItems Id="a5b08e93-2a74-4a88-89e1-ceda73456d6f">
+                        <actionAlgorithm Id="7102484b-b41c-4450-861a-e456b15a6959">
+                          <algorithm>
+                            <actionAlgorithmReferencesAlgorithm Id="d67e43c5-646f-4200-bcc0-7d919db0baf0">
+                              <algorithmMoniker name="/OBDSS/InputMultiplex" />
+                            </actionAlgorithmReferencesAlgorithm>
+                          </algorithm>
+                        </actionAlgorithm>
+                      </actionSetHasActionItems>
+                    </actionItems>
+                  </actionSet>
+                </functionBlockModelHasActionSets>
+              </actionSets>
+              <transitionNodes>
+                <functionBlockModelHasTransitionNodes Id="cad28376-6615-4271-aade-ada58604f762">
+                  <transitionNode Id="75c95ef7-c116-4b4f-93a0-45ca10edec87" x="87.5" y="288.75000000000006" event="Brake">
+                    <targetState>
+                      <transitionNodeConnectsToStates Id="fe5fdc0f-bac2-4648-baa3-78695e2a20d0">
+                        <stateMoniker name="/OBDSS/WarningSystem/Brake/BrakeWarning" />
+                      </transitionNodeConnectsToStates>
+                    </targetState>
+                  </transitionNode>
+                </functionBlockModelHasTransitionNodes>
+                <functionBlockModelHasTransitionNodes Id="c6961701-46f7-4898-9018-b3ebe61cae8e">
+                  <transitionNode Id="cf8e4674-48c3-44f1-bd3c-51674b226c63" x="350" y="288.75000000000006">
+                    <targetState>
+                      <transitionNodeConnectsToStates Id="8f38f073-4ca7-409a-8dc6-7c7c78537255">
+                        <stateMoniker name="/OBDSS/WarningSystem/Brake/WaitBrake" />
+                      </transitionNodeConnectsToStates>
+                    </targetState>
+                  </transitionNode>
+                </functionBlockModelHasTransitionNodes>
+                <functionBlockModelHasTransitionNodes Id="ef8f4083-ffe9-462b-a363-2de12a098e25">
+                  <transitionNode Id="6fb7b6ef-8e32-40cb-b96f-aecd405aa0d8" x="350" y="488.75" event="Brake">
+                    <targetState>
+                      <transitionNodeConnectsToStates Id="45cb94db-b611-4a8a-9e2a-ad2f6d5cfe4e">
+                        <stateMoniker name="/OBDSS/WarningSystem/Brake/BrakeWarning" />
+                      </transitionNodeConnectsToStates>
+                    </targetState>
+                  </transitionNode>
+                </functionBlockModelHasTransitionNodes>
+              </transitionNodes>
+            </region>
+          </stateHasRegions>
+          <stateHasRegions Id="96545c0d-b9ba-4d9e-a3b3-441a26298ba2">
+            <region Id="109d35da-9b69-4fda-a624-4df99653b0e7" name="Acceleration" date="">
+              <states>
+                <functionBlockModelHasStates Id="d0547ab4-847e-4d83-bb63-e3393c1077cb">
+                  <state Id="2dc881b3-ca88-40a7-95ae-9ccb90455293" name="WaitAccel" x="248.52194935083389" y="70.000000000000057" isInitial="true">
+                    <fromTransitionNodes>
+                      <stateConnectsToTransitionNodes Id="bd66123c-998b-47dc-8547-8654c8744a15">
+                        <transitionNodeMoniker Id="c5b42ce9-8b93-4002-b3b3-33b6e0c2e1d5" />
+                      </stateConnectsToTransitionNodes>
+                    </fromTransitionNodes>
+                  </state>
+                </functionBlockModelHasStates>
+                <functionBlockModelHasStates Id="608970ba-13a6-49d7-a36d-80899958cf2d">
+                  <state Id="bc6e32cd-9e87-4c47-b904-c64806c5fa60" name="AccelWarning" x="202.91483908891667" y="463.75000000000006" isInitial="false">
+                    <actionSet>
+                      <actionLink Id="75a56817-8646-41ef-84af-c876ffed7039">
+                        <actionSetMoniker Id="05357a7f-7d0e-4ed9-9443-9c608149b717" />
+                      </actionLink>
+                    </actionSet>
+                    <fromTransitionNodes>
+                      <stateConnectsToTransitionNodes Id="681d3d82-967a-4ceb-adfe-7f7c729eebb6">
+                        <transitionNodeMoniker Id="76c2531a-1261-4507-976b-9725b91c690a" />
+                      </stateConnectsToTransitionNodes>
+                      <stateConnectsToTransitionNodes Id="bb9b93ae-df18-4cfa-aa55-928faacaf5ee">
+                        <transitionNodeMoniker Id="56852579-6c0d-4f13-93ee-e616effbfeec" />
+                      </stateConnectsToTransitionNodes>
+                    </fromTransitionNodes>
+                  </state>
+                </functionBlockModelHasStates>
+              </states>
+              <actionSets>
+                <functionBlockModelHasActionSets Id="44f81023-e1eb-4854-b772-df50326ad0be">
+                  <actionSet Id="05357a7f-7d0e-4ed9-9443-9c608149b717" x="701.79015070199978" y="463.75000000000006">
+                    <actionItems>
+                      <actionSetHasActionItems Id="55a2e15e-470a-4d85-a428-8ab0387ea4c2">
+                        <actionEvent Id="609b350b-c6f4-4dd4-810e-ecf8eeb92b93">
+                          <event>
+                            <actionEventReferencesEvent Id="3894448e-c2f1-4ae3-b5ec-6448fe68aed5">
+                              <eventMoniker name="/OBDSS/OBDSS/CCH_SEND" />
+                            </actionEventReferencesEvent>
+                          </event>
+                        </actionEvent>
+                      </actionSetHasActionItems>
+                      <actionSetHasActionItems Id="4b505077-b5fa-4b05-bfcd-ae43fc349598">
+                        <actionAlgorithm Id="7458e81c-e2f0-4c79-a33c-b5832cbafdc0">
+                          <algorithm>
+                            <actionAlgorithmReferencesAlgorithm Id="f31a302e-a6ee-429e-a8da-d48499fafc1f">
+                              <algorithmMoniker name="/OBDSS/InputMultiplex" />
+                            </actionAlgorithmReferencesAlgorithm>
+                          </algorithm>
+                        </actionAlgorithm>
+                      </actionSetHasActionItems>
+                    </actionItems>
+                  </actionSet>
+                </functionBlockModelHasActionSets>
+              </actionSets>
+              <transitionNodes>
+                <functionBlockModelHasTransitionNodes Id="1719371a-4a47-4471-bed4-7a496cab8eae">
+                  <transitionNode Id="c5b42ce9-8b93-4002-b3b3-33b6e0c2e1d5" x="465.41483908891666" y="288.75000000000006" event="Accel">
+                    <targetState>
+                      <transitionNodeConnectsToStates Id="a6573edf-24d2-487f-ae55-dbf24d8b4890">
+                        <stateMoniker name="/OBDSS/WarningSystem/Acceleration/AccelWarning" />
+                      </transitionNodeConnectsToStates>
+                    </targetState>
+                  </transitionNode>
+                </functionBlockModelHasTransitionNodes>
+                <functionBlockModelHasTransitionNodes Id="1280c811-02ad-4afe-92ef-1e9e55ea920d">
+                  <transitionNode Id="56852579-6c0d-4f13-93ee-e616effbfeec" x="159.16483908891667" y="288.75000000000006">
+                    <targetState>
+                      <transitionNodeConnectsToStates Id="e83635b5-8eb2-4485-8fb8-f67afb2b5179">
+                        <stateMoniker name="/OBDSS/WarningSystem/Acceleration/WaitAccel" />
+                      </transitionNodeConnectsToStates>
+                    </targetState>
+                  </transitionNode>
+                </functionBlockModelHasTransitionNodes>
+                <functionBlockModelHasTransitionNodes Id="a80fe77d-5597-42aa-8b7a-91acd4ee5385">
+                  <transitionNode Id="76c2531a-1261-4507-976b-9725b91c690a" x="350" y="379.75" event="Accel">
+                    <targetState>
+                      <transitionNodeConnectsToStates Id="0c2acc5b-d41b-41e4-91fc-6b339c405b3c">
+                        <stateMoniker name="/OBDSS/WarningSystem/Acceleration/AccelWarning" />
+                      </transitionNodeConnectsToStates>
+                    </targetState>
+                  </transitionNode>
+                </functionBlockModelHasTransitionNodes>
+              </transitionNodes>
+            </region>
+          </stateHasRegions>
+          <stateHasRegions Id="10789dc9-a7ae-4ca2-9a07-6f0ea2746622">
+            <region Id="e56976db-8b6a-4451-84df-5fac803ac467" name="TrafficLight" date="">
+              <states>
+                <functionBlockModelHasStates Id="4ab9a7a3-28f2-4390-b267-3dd822cd7bc8">
+                  <state Id="68855710-8b73-4dca-bf4d-372f62210404" name="WaitLight" x="656.25000000000125" y="78.749999999999872" isInitial="true">
+                    <fromTransitionNodes>
+                      <stateConnectsToTransitionNodes Id="49416ab6-8685-4e42-81be-0773b10c1369">
+                        <transitionNodeMoniker Id="fa6dca33-1a42-4fcf-b3d3-e4a18f7df1d7" />
+                      </stateConnectsToTransitionNodes>
+                    </fromTransitionNodes>
+                  </state>
+                </functionBlockModelHasStates>
+                <functionBlockModelHasStates Id="20e0a8dd-1787-4d79-8d83-ab7b378b3381">
+                  <state Id="11d2ef2f-91f1-47b5-8e55-d28b62b7c1ab" name="Across" x="525.00000000000125" y="472.49999999999989" isInitial="false">
+                    <actionSet>
+                      <actionLink Id="8a471e36-4182-4441-bab8-92123e3be931">
+                        <actionSetMoniker Id="406fe3c6-b9e3-4c11-9b3f-516eba6a51a7" />
+                      </actionLink>
+                    </actionSet>
+                    <fromTransitionNodes>
+                      <stateConnectsToTransitionNodes Id="5659b6fb-0ffe-4146-9f3a-224954bfc177">
+                        <transitionNodeMoniker Id="e407f3fe-3927-4ea2-a2ec-02be86a3ef98" />
+                      </stateConnectsToTransitionNodes>
+                    </fromTransitionNodes>
+                  </state>
+                </functionBlockModelHasStates>
+              </states>
+              <actionSets>
+                <functionBlockModelHasActionSets Id="9a646a2c-cc5a-4946-bed3-d1065b25bacc">
+                  <actionSet Id="406fe3c6-b9e3-4c11-9b3f-516eba6a51a7" x="904.75492209196113" y="507.50000000000006">
+                    <actionItems>
+                      <actionSetHasActionItems Id="cc9b62dd-19f7-4a92-bdfc-4b43d6b679fd">
+                        <actionEvent Id="e9ecb2aa-77c2-4ed1-8b56-df8d185396b7">
+                          <event>
+                            <actionEventReferencesEvent Id="36a8f6ce-c3d6-4b7d-b5b9-bc7aab889a75">
+                              <eventMoniker name="/OBDSS/OBDSS/ACROSS" />
+                            </actionEventReferencesEvent>
+                          </event>
+                        </actionEvent>
+                      </actionSetHasActionItems>
+                    </actionItems>
+                  </actionSet>
+                </functionBlockModelHasActionSets>
+              </actionSets>
+              <transitionNodes>
+                <functionBlockModelHasTransitionNodes Id="743b54ad-b579-4c77-907b-6fa279d36827">
+                  <transitionNode Id="fa6dca33-1a42-4fcf-b3d3-e4a18f7df1d7" x="131.25000000000125" y="253.74999999999989" event="CCH_RCV" expression="WarningType == 1">
+                    <targetState>
+                      <transitionNodeConnectsToStates Id="bf527528-0254-4b71-a3b0-8fd21270e03c">
+                        <stateMoniker name="/OBDSS/WarningSystem/TrafficLight/Across" />
+                      </transitionNodeConnectsToStates>
+                    </targetState>
+                  </transitionNode>
+                </functionBlockModelHasTransitionNodes>
+                <functionBlockModelHasTransitionNodes Id="fa28cb65-542c-44e9-aa33-ceca970531d4">
+                  <transitionNode Id="e407f3fe-3927-4ea2-a2ec-02be86a3ef98" x="1050.0000000000011" y="253.74999999999989">
+                    <targetState>
+                      <transitionNodeConnectsToStates Id="668aaf28-16ab-4bc4-902c-3159aa33366e">
+                        <stateMoniker name="/OBDSS/WarningSystem/TrafficLight/WaitLight" />
+                      </transitionNodeConnectsToStates>
+                    </targetState>
+                  </transitionNode>
+                </functionBlockModelHasTransitionNodes>
+              </transitionNodes>
+            </region>
+          </stateHasRegions>
+          <stateHasRegions Id="3cc1d497-5a5a-43d3-93f6-5eff1f28a0df">
+            <region Id="3ac5bac6-c3df-4b3d-b0a4-27dd2a5c4dfc" name="Accidents" date="">
+              <states>
+                <functionBlockModelHasStates Id="7097f3c6-843d-4c46-96ef-0502a181728a">
+                  <state Id="463e7090-69a7-477c-8f45-46498fda2cf7" name="WaitEmergency" x="685.8738338947295" y="78.749999999999872" isInitial="true">
+                    <fromTransitionNodes>
+                      <stateConnectsToTransitionNodes Id="fd622a66-5e13-4021-988b-6fabea4b58f6">
+                        <transitionNodeMoniker Id="966c6004-5657-414a-ba1b-cab8289ab11f" />
+                      </stateConnectsToTransitionNodes>
+                    </fromTransitionNodes>
+                  </state>
+                </functionBlockModelHasStates>
+                <functionBlockModelHasStates Id="ca254e3e-2e64-46f1-956e-bf40622ee08d">
+                  <state Id="9b445741-222b-4119-bd6b-464797cd8e92" name="Stop" x="598.3738338947295" y="472.49999999999989" isInitial="false">
+                    <actionSet>
+                      <actionLink Id="1fa726f0-dcd9-40be-a63c-e0dbacc75640">
+                        <actionSetMoniker Id="3813eab0-053d-45b6-b43a-2c468dbcca43" />
+                      </actionLink>
+                    </actionSet>
+                    <fromTransitionNodes>
+                      <stateConnectsToTransitionNodes Id="3f9ae03c-77fe-4cc5-bdcf-e400375209fd">
+                        <transitionNodeMoniker Id="8de0c89e-b1a9-4c0e-9c3f-f8049c99d769" />
+                      </stateConnectsToTransitionNodes>
+                    </fromTransitionNodes>
+                  </state>
+                </functionBlockModelHasStates>
+              </states>
+              <actionSets>
+                <functionBlockModelHasActionSets Id="a6b9d27e-e995-4890-84ae-99e3df41e667">
+                  <actionSet Id="3813eab0-053d-45b6-b43a-2c468dbcca43" x="915.07142156362568" y="472.49999999999989">
+                    <actionItems>
+                      <actionSetHasActionItems Id="1c885ff1-cb5e-4297-8160-e2db5bd6fdf7">
+                        <actionEvent Id="5135291a-e20c-4494-9aef-4d887c6e1023">
+                          <event>
+                            <actionEventReferencesEvent Id="ef524b2d-d9ab-4c02-8228-81c3f2715f3b">
+                              <eventMoniker name="/OBDSS/OBDSS/STOP" />
+                            </actionEventReferencesEvent>
+                          </event>
+                        </actionEvent>
+                      </actionSetHasActionItems>
+                    </actionItems>
+                  </actionSet>
+                </functionBlockModelHasActionSets>
+              </actionSets>
+              <transitionNodes>
+                <functionBlockModelHasTransitionNodes Id="02f54b8f-dba1-49b2-8577-9c5dbc6b20c3">
+                  <transitionNode Id="966c6004-5657-414a-ba1b-cab8289ab11f" x="160.8738338947295" y="253.74999999999989" event="CCH_RCV" expression="WarningType == 0">
+                    <targetState>
+                      <transitionNodeConnectsToStates Id="ec1ddd4e-70d8-443b-afb1-cc759fc0f04c">
+                        <stateMoniker name="/OBDSS/WarningSystem/Accidents/Stop" />
+                      </transitionNodeConnectsToStates>
+                    </targetState>
+                  </transitionNode>
+                </functionBlockModelHasTransitionNodes>
+                <functionBlockModelHasTransitionNodes Id="c5192f76-3d36-4626-8d38-063de281805e">
+                  <transitionNode Id="8de0c89e-b1a9-4c0e-9c3f-f8049c99d769" x="1035.8738338947294" y="253.74999999999989">
+                    <targetState>
+                      <transitionNodeConnectsToStates Id="4ab10620-80f6-4ac5-bd52-376519b5fd3c">
+                        <stateMoniker name="/OBDSS/WarningSystem/Accidents/WaitEmergency" />
+                      </transitionNodeConnectsToStates>
+                    </targetState>
+                  </transitionNode>
+                </functionBlockModelHasTransitionNodes>
+              </transitionNodes>
+            </region>
+          </stateHasRegions>
+          <stateHasRegions Id="a2ca1ecc-6449-4661-861b-6b04e955d0d1">
+            <region Id="fea170df-5ef4-4e01-9dfa-0abeb83d6cb6" name="Region1" date="">
+              <states>
+                <functionBlockModelHasStates Id="21f773fe-84bb-40b5-b7fd-222c5da4e99c">
+                  <state Id="9a8e395d-3189-44d4-ae28-b4c7d1fb6851" name="State1" x="244.9786794185639" y="201.25000000000037" isInitial="true">
+                    <fromTransitionNodes>
+                      <stateConnectsToTransitionNodes Id="bc5b427e-593f-4cfb-8026-3ff4b3a3e0d8">
+                        <transitionNodeMoniker Id="c8d4bb1d-1a32-482d-a4cb-87ce166ce8e9" />
+                      </stateConnectsToTransitionNodes>
+                      <stateConnectsToTransitionNodes Id="89914d0f-df0d-4e6b-9b0f-ae3b8700a224">
+                        <transitionNodeMoniker Id="0b86db7c-9b8c-49c3-8c96-6d541d9e7c99" />
+                      </stateConnectsToTransitionNodes>
+                    </fromTransitionNodes>
+                  </state>
+                </functionBlockModelHasStates>
+                <functionBlockModelHasStates Id="a7485323-33e3-4a06-9658-6d1322441f09">
+                  <state Id="77aa74d2-0660-4e8e-9a0b-558e099fe2ce" name="State2" x="988.728679418564" y="201.25000000000037" isInitial="false" />
+                </functionBlockModelHasStates>
+              </states>
+              <transitionNodes>
+                <functionBlockModelHasTransitionNodes Id="355fb191-09e7-42de-ae3a-09c1f092a586">
+                  <transitionNode Id="c8d4bb1d-1a32-482d-a4cb-87ce166ce8e9" x="332.4786794185639" y="420.0000000000004">
+                    <targetState>
+                      <transitionNodeConnectsToStates Id="dca31d85-d6df-422b-b124-c636876d331a">
+                        <stateMoniker name="/OBDSS/WarningSystem/Region1/State1" />
+                      </transitionNodeConnectsToStates>
+                    </targetState>
+                  </transitionNode>
+                </functionBlockModelHasTransitionNodes>
+                <functionBlockModelHasTransitionNodes Id="1a196a6e-6779-4bac-92be-4459a233bb73">
+                  <transitionNode Id="0b86db7c-9b8c-49c3-8c96-6d541d9e7c99" x="649.853679418564" y="350">
+                    <targetState>
+                      <transitionNodeConnectsToStates Id="05539edc-216f-431f-bed4-1387f1130079">
+                        <stateMoniker name="/OBDSS/WarningSystem/Region1/State2" />
+                      </transitionNodeConnectsToStates>
+                    </targetState>
+                  </transitionNode>
+                </functionBlockModelHasTransitionNodes>
+              </transitionNodes>
+            </region>
+          </stateHasRegions>
+        </regions>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="e4fd9576-4f0d-479d-8c2a-55b3429902b8">
+      <algorithm Id="020a146f-6109-4df3-892c-4f88439fd83e" name="InputMultiplex" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="127ff16c-b51b-48f2-8ef4-1f343c56245e">
+      <functionBlockInterface Id="922ee3c8-6c39-4769-98cb-244127aec1ed" name="OBDSS" x="1837.5" y="700">
+        <events>
+          <functionBlockHasEvents Id="fcfdc24a-f84a-4385-a037-da951a945cab">
+            <event Id="6f9f49e1-d3e2-40df-a7c0-69c0f525bf51" name="CCH_RCV" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="0c03b82c-0007-4847-80e8-8c476e67ee89">
+            <event Id="52c0647f-2a32-423f-a8cd-33bd1042bef9" name="SCH_RCV" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="83c7408f-67f1-479c-a759-d741fc21e103">
+            <event Id="f405b077-403f-4f6a-a1ae-adeb2d66ff9d" name="ACROSS" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="9400cbd1-d07e-4559-b1cf-3e07df742e31">
+            <event Id="e2f2df97-1366-40c4-b0b7-a1c0d4743018" name="Brake" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="36d97ab6-cd25-4d87-ac00-9f581ff71f91">
+            <event Id="e8e4cc12-681d-44a8-981f-f191f26f6755" name="Accel" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="da833772-f8a6-48b9-a9c4-a26f401ca2bc">
+            <event Id="006540db-cd9f-4c8e-abcc-953738ac8b2b" name="STOP" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="4bf7a8e8-e620-4c1e-8495-7e0e837c75fa">
+            <event Id="afe37d8d-78bf-4a58-a4af-5e37fd4956ca" name="CCH_SEND" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="ef5d2d70-12e0-4b8b-a8b9-202cc44b6169">
+            <event Id="bf6687fa-8bb3-45da-bcdf-b10e1c5f8041" name="SCH_SEND" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="7ab7f0f0-b19e-4bc8-a385-2527b69f771e">
+            <variable Id="fd41dbf5-84cd-434c-8e90-38834ac671c1" name="WarningType" scope="Input" type="INT" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="aa2fe10c-d0aa-485f-b12c-f0012cd1fe12">
+            <variable Id="36e52efd-9b83-42cf-84e2-719d2daf389f" name="Variable1" scope="Output" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="5da748bb-0fb6-48a6-9ecc-38c847a6dfea">
+            <inputEventPort Id="033e7c84-08b6-4f24-b631-bed0589dc8c2">
+              <targetPort>
+                <association Id="4826c3cc-6af2-4b8f-9b45-79aa36c0e2b6">
+                  <inputVariablePortMoniker Id="ed105d3a-ea2c-4a06-9b51-c5d3f85d1520" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="55a4359b-9d56-4414-a274-04bfdd8c723b">
+                  <eventMoniker name="/OBDSS/OBDSS/CCH_RCV" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="d71400d7-c95d-43d8-9441-9ed7e11ea506">
+            <inputEventPort Id="52bc70cd-b6ff-4810-9fc6-8aac7d28b223">
+              <event>
+                <inputEventPortReferencesEvent Id="99b33442-3f1e-4953-83b7-0dbf3efd48c8">
+                  <eventMoniker name="/OBDSS/OBDSS/SCH_RCV" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="d87cb18f-cdf5-4738-96d6-b0095bd8afe9">
+            <inputEventPort Id="30d65926-e475-4fee-922e-928fee7554eb">
+              <event>
+                <inputEventPortReferencesEvent Id="e75b8dae-6c9b-45ea-b3a2-b1cf97cbd09a">
+                  <eventMoniker name="/OBDSS/OBDSS/Brake" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="1a540f76-d160-4bb9-884f-9ac98e950fc5">
+            <inputEventPort Id="d7845396-95b7-4625-80e3-ea645c24854e">
+              <event>
+                <inputEventPortReferencesEvent Id="3c284dfe-55b0-431c-b72a-9ec1c0610413">
+                  <eventMoniker name="/OBDSS/OBDSS/Accel" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="baab9e65-848c-4611-b04f-55a8bbc5a430">
+            <outputEventPort Id="f7ed0c68-ff04-49d1-8c7b-8e2d45da286e">
+              <event>
+                <outputEventPortReferencesEvent Id="20a10302-3e09-4ac1-a4ce-dcf87e4975e4">
+                  <eventMoniker name="/OBDSS/OBDSS/CCH_SEND" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="8fa500c3-c931-4ce8-8b02-e48b07a12276">
+            <outputEventPort Id="ed6666ed-7754-4445-a7b2-f4f5f8564bc4">
+              <event>
+                <outputEventPortReferencesEvent Id="21776a2e-211a-4bc6-ab2a-545f1239bf9b">
+                  <eventMoniker name="/OBDSS/OBDSS/SCH_SEND" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="a132de09-168b-4ea9-968b-ea07f1600924">
+            <outputEventPort Id="c9d8734b-1e95-4217-ba97-fb63f5475386">
+              <event>
+                <outputEventPortReferencesEvent Id="0fa49120-1aa5-45c4-9974-9093251acd67">
+                  <eventMoniker name="/OBDSS/OBDSS/ACROSS" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="feafaf45-3e60-42f0-bd5e-22eed41fd94b">
+            <outputEventPort Id="14b5ad45-27d3-4b31-b5dd-44bc602b702f">
+              <event>
+                <outputEventPortReferencesEvent Id="aad56bdf-101c-4dd1-b136-92a477555a9b">
+                  <eventMoniker name="/OBDSS/OBDSS/STOP" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="7edcf1c6-bf78-42ee-9f2f-a9a12b40bee1">
+            <inputVariablePort Id="ed105d3a-ea2c-4a06-9b51-c5d3f85d1520">
+              <variable>
+                <inputVariablePortReferencesVariable Id="e9c31f71-b729-4d6d-96b4-bf82c09dbebc">
+                  <variableMoniker name="/OBDSS/OBDSS/WarningType" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="141ac5a9-960d-45aa-80f1-9d74047d8865">
+            <outputVariablePort Id="c85254b3-f20d-436e-9f33-3380a581a761">
+              <variable>
+                <outputVariablePortReferencesVariable Id="71b8168e-7a4a-4cfe-85f1-8994694bd591">
+                  <variableMoniker name="/OBDSS/OBDSS/Variable1" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+</functionBlockModel>

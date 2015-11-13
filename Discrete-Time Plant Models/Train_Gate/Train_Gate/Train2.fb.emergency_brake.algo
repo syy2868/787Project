@@ -1,0 +1,9 @@
+float temp = me->y2;
+me->y2 = me->C1y2*exp(-10*me->d*me->k)+23;
+(me->k)++;
+
+
+if (me->y2 - temp <= me->delta) {
+	printf ("Emergency brake : Train stopped at y2 = %f and x = %f\n",me->y2, me->x);
+	exit(1);
+	}

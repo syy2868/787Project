@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="42558dc0-ed03-40d0-a59e-fbaa9b424227" name="TwoCars" organization="SYY-PC" date="2015-11-08" author="SYY" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="6307d662-74d1-453b-b219-6da67523b8b9">
+      <functionBlockInterface Id="23eca717-be65-49f5-a5e3-97cd02a8d192" name="TwoCars" x="1575" y="568.75" modelType="Composite">
+        <variables>
+          <functionBlockHasVariables Id="a8deecb7-1dc6-470b-bab9-6455cb9d6530">
+            <variable Id="0d71c906-3498-4d94-8def-fcae17033684" name="Car1Pos" scope="Output" type="LREAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="6222c0f9-6739-4125-b52d-7a6d00709d26">
+            <variable Id="fc5542e5-604b-4279-be89-a57e4d2ab86d" name="Car2Pos" scope="Output" type="LREAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="617ed9ca-88dc-48e3-87f7-7af5ee06c425">
+            <variable Id="fe81a05e-b249-413a-a807-375f7ebde9b6" name="Car1Speed" scope="Output" type="LREAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="639444db-80e8-4298-8033-3284aa5fe9b9">
+            <variable Id="c2e233cc-397e-4a48-8049-d6d379f52063" name="Car2Speed" scope="Output" type="LREAL" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="790bcda6-8200-4915-bd21-172b23a9594e">
+            <outputVariablePort Id="36b3149c-33ef-4346-8c4b-dc37d793528a">
+              <proxyTargetPorts>
+                <proxyConnection Id="31675205-74b6-4850-86d6-76ec585aa6b5">
+                  <outputVariablePortMoniker Id="00597a1e-5c64-4cbb-962e-e47aa541878c" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="cf51b276-0d57-4a53-b3c5-930d438f60f8">
+                  <variableMoniker name="/TwoCars/TwoCars/Car1Pos" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="a8f5856f-372e-47ee-b752-72aba7af9cd9">
+            <outputVariablePort Id="dd5328b0-3052-4257-aa8c-fb7d107431db">
+              <proxyTargetPorts>
+                <proxyConnection Id="783f48d7-73b1-4e9b-9cca-cd78df359c78">
+                  <outputVariablePortMoniker Id="1b05f00d-ac14-4a84-a3a6-342be1c15da3" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="a81fa4fb-d116-4dc5-a617-da91df7fd9d3">
+                  <variableMoniker name="/TwoCars/TwoCars/Car2Pos" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="82bc7153-5472-4775-ba7f-73d0b05b4354">
+            <outputVariablePort Id="d2f82fa9-74c4-437b-868c-5017a8d2dfae">
+              <proxyTargetPorts>
+                <proxyConnection Id="19d1d093-cd92-4ea7-9a43-d0db3f3128c9">
+                  <outputVariablePortMoniker Id="bb2d1847-64fc-4641-a6db-6dd76a43392f" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="596ecf6e-3a5a-4535-b810-4d0562e394ca">
+                  <variableMoniker name="/TwoCars/TwoCars/Car1Speed" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="22fea335-7c1f-41cd-8d19-09d3b1bbbac7">
+            <outputVariablePort Id="4c9bf65f-7cb8-4523-811a-09fdf370d17b">
+              <proxyTargetPorts>
+                <proxyConnection Id="0428a7fa-b5c6-424d-9816-3057bbab1889">
+                  <outputVariablePortMoniker Id="da0e1274-8c84-4d15-aee7-30f499fcd258" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="c2aede06-bfa0-419d-af26-c6156252d721">
+                  <variableMoniker name="/TwoCars/TwoCars/Car2Speed" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+  <functionBlockReferences>
+    <cFBModelHasFBReferences Id="15c87a7b-e4d9-4efb-b738-4b1f75ce6df0">
+      <functionBlockReference Id="8a283170-0cf3-4a50-bf86-aef4d0bbad3a" name="LeadingCar" x="612.5" y="525" creationMode="Resource" referencedFile="LeadingCar.fb">
+        <events>
+          <functionBlockHasEvents Id="bcd7473a-f1e2-4ac8-a50f-909917d2e77a">
+            <eventRef Id="e6df5ceb-f920-49d4-ad36-9599893e0b66" name="Update" scope="Output" referencedID="67c82873-2f76-49ff-ab55-9080c6758359" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="a3bea1dd-ae45-46f9-a0af-fb18abe51612">
+            <variableRef Id="ece0b5b5-4ca8-4ebf-bf08-60044ed8def2" name="pos1" scope="Output" initialValue="100" type="LREAL" referencedID="d0032235-a3e1-4e0f-a688-3eea0dd77863" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="a6f25e26-421a-4eac-b17c-243e9bb11465">
+            <variableRef Id="cd224d3a-714e-40bb-9cf4-4aa16fed72b6" name="speed1" scope="Output" initialValue="1" type="LREAL" referencedID="09e7666b-c175-418f-8629-94f8d55f5aa8" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="3afb5a44-c24e-459c-98e4-3f164c1461e0">
+            <outputEventPort Id="e3e196fb-6e0c-4b29-8125-e21a208b3940">
+              <wireTargetPorts>
+                <wireConnection Id="25c23981-6d3e-4c13-856c-0fe859abd775" unitDelayed="false">
+                  <inputEventPortMoniker Id="9f7e24a8-f6c0-4a75-b9c5-6e7d04c0b941" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="146e131b-1fb6-4d9a-8d43-d8985b393661">
+                  <eventRefMoniker name="/TwoCars/LeadingCar/Update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="df415ec8-e583-4d37-b2fe-8bc5be161f04">
+            <outputVariablePort Id="00597a1e-5c64-4cbb-962e-e47aa541878c">
+              <wireTargetPorts>
+                <wireConnection Id="4df37545-f218-483a-bd5d-f7d3811ce406" unitDelayed="false">
+                  <inputVariablePortMoniker Id="f696983c-7537-426a-a35a-96daccf9d358" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="67584ac8-4060-446c-9436-b8e09fd63556">
+                  <variableRefMoniker name="/TwoCars/LeadingCar/pos1" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="f155f6ca-22ee-45a4-8c7e-3d23e510d58d">
+            <outputVariablePort Id="bb2d1847-64fc-4641-a6db-6dd76a43392f">
+              <wireTargetPorts>
+                <wireConnection Id="74254d2f-0abe-4110-aae7-a22e1c3d7978" unitDelayed="false">
+                  <inputVariablePortMoniker Id="28c62444-2c8c-4bbe-9fc1-ed158a49cee0" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="4b9b67c3-1417-40ea-8ef3-970267f30582">
+                  <variableRefMoniker name="/TwoCars/LeadingCar/speed1" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="981aa666-7994-4b90-a33c-5b6658131763">
+      <functionBlockReference Id="e871ef4a-9019-43c3-9b6e-17bca7bb0297" name="FollowingCar" x="2231.25" y="437.5" creationMode="Resource" referencedFile="FollowingCar.fb">
+        <events>
+          <functionBlockHasEvents Id="01b0bb21-ed86-40f9-807e-b2a14acdc778">
+            <eventRef Id="50bc0085-25e9-46ba-8f29-7f8ffa72e229" name="FrontLaserSensor" scope="Input" referencedID="d0e13c63-3bcc-4f2c-8c8c-98d547bdef15" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="2249a673-f8ec-45ca-911b-9b94baaf3b71">
+            <eventRef Id="96b282a2-b743-4e70-becb-d6118b693397" name="Update" scope="Output" referencedID="4890b7b7-b3cd-4f7f-ac90-dad6fb667a9d" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="ce1deb58-c2e1-4fb8-adde-533389021e14">
+            <eventRef Id="de844e01-2665-4727-a68e-ceef3021d604" name="ACC" scope="Input" referencedID="7542f342-ce3d-4ee8-8335-89fef4090f39" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="4765134f-0a75-401c-86d4-d2b781422766">
+            <eventRef Id="78dce5ca-db10-41ee-93bc-0a82d51229ce" name="DEC" scope="Input" referencedID="427c8b58-9505-4dca-a364-b04a27495df4" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="853d501d-9987-4b41-90fa-9872c2dfc3c1">
+            <variableRef Id="f664e1b4-cea0-49e8-8640-742c6147b164" name="distance" scope="Input" type="LREAL" referencedID="21c2a877-7334-472a-a405-60698711a249" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="612704b5-97e1-4577-83eb-1a92315ae743">
+            <variableRef Id="29ac585e-4503-49bd-a286-99c415bb06a9" name="pos2" scope="Output" initialValue="0" type="LREAL" referencedID="278a2afa-f5ba-4477-a34b-a42dcf2356b6" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="b6f1e923-fda6-49c5-ac05-b8d55723bea0">
+            <variableRef Id="615b2236-7ba2-4055-898f-4a656c8eee6e" name="speed2" scope="Output" initialValue="13.8" type="LREAL" referencedID="fee6481c-c0bb-4704-b7e6-e29a8eca470a" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="573a5987-d9b6-48ec-8a41-cc4e5cc984d4">
+            <inputEventPort Id="e74d0556-1d1f-45d2-98e9-502df9d1eb31">
+              <event>
+                <inputEventPortReferencesEvent Id="af4d6b65-f102-4e49-8989-ad9235dcdc37">
+                  <eventRefMoniker name="/TwoCars/FollowingCar/FrontLaserSensor" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="fa3a4087-9d43-452e-b605-4ca634f278d6">
+            <inputEventPort Id="c6eac0d8-1fae-4208-8120-cf09dd866fbf">
+              <event>
+                <inputEventPortReferencesEvent Id="a90230df-892e-417a-8ce9-3253649418ee">
+                  <eventRefMoniker name="/TwoCars/FollowingCar/ACC" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="287bf38d-6943-424a-8187-bf29ea36871a">
+            <inputEventPort Id="a986d6ba-6675-4660-8a31-2def1d10a791">
+              <event>
+                <inputEventPortReferencesEvent Id="96e36da7-44e6-4b9f-acc3-3b763337b8e6">
+                  <eventRefMoniker name="/TwoCars/FollowingCar/DEC" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="563b53d3-c412-41ac-afec-a061a353e709">
+            <outputEventPort Id="3553dca6-ae41-4279-9ad9-0f6f3bf617f9">
+              <wireTargetPorts>
+                <wireConnection Id="f617c6b1-6eda-4440-8c2f-fa52e1353198" unitDelayed="false">
+                  <inputEventPortMoniker Id="9f7e24a8-f6c0-4a75-b9c5-6e7d04c0b941" />
+                </wireConnection>
+                <wireConnection Id="95951b35-8c16-47dd-84a6-ae616238ea01" unitDelayed="false">
+                  <inputEventPortMoniker Id="a066c5c2-4cb0-4afa-b668-ff62a13f8252" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="b1417795-70d5-4cfa-9999-65f92fef3bb9">
+                  <eventRefMoniker name="/TwoCars/FollowingCar/Update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="dbeb0708-940f-48b6-bb7a-04122482d122">
+            <inputVariablePort Id="380f7a95-2fd4-4000-ad87-eeff3ecca39a">
+              <variable>
+                <inputVariablePortReferencesVariable Id="f6b96d5a-cc71-4f68-bee1-3dc677268d1e">
+                  <variableRefMoniker name="/TwoCars/FollowingCar/distance" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="ca04ab82-3c3a-4ac0-9318-7c92e7c25a45">
+            <outputVariablePort Id="1b05f00d-ac14-4a84-a3a6-342be1c15da3">
+              <wireTargetPorts>
+                <wireConnection Id="31fd0594-b685-40a3-ae93-284066e8e0f4" unitDelayed="false">
+                  <inputVariablePortMoniker Id="75ec18b4-db15-433c-bd09-535e8bd4cc6d" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="f2e2d5d2-b290-4a67-9d2b-31a0f872206a">
+                  <variableRefMoniker name="/TwoCars/FollowingCar/pos2" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="e6640156-7c3e-4a2d-aa8a-f0cbf93dc3ec">
+            <outputVariablePort Id="da0e1274-8c84-4d15-aee7-30f499fcd258">
+              <wireTargetPorts>
+                <wireConnection Id="739facb2-eac5-4aef-8771-9c7fee85d2d3" unitDelayed="false">
+                  <inputVariablePortMoniker Id="dee824b8-0a45-4978-8cce-50a2af1ee0d2" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="f594ecdd-070e-416b-9a02-e45f83618ac8">
+                  <variableRefMoniker name="/TwoCars/FollowingCar/speed2" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="1bf75f79-2185-4285-8fb3-5a994c7b78f9">
+      <functionBlockReference Id="442e8230-d24a-4f4a-b370-e68221b2a9e3" name="LaserSensor" x="1400" y="1312.5" creationMode="Resource" referencedFile="LaserSensor.fb">
+        <events>
+          <functionBlockHasEvents Id="76a8a85a-7ef4-44f2-ada0-7c33fd037758">
+            <eventRef Id="42072996-4cb5-4283-b5d8-ed87bc601bd1" name="SensorReading" scope="Input" referencedID="a8aca11a-9aea-4059-8466-d96d8a9e3a8d" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="295b4076-7430-4b3a-a107-cdc07629532f">
+            <eventRef Id="72c8291a-18d5-412e-8bce-ccc0f4a8c6ed" name="Output" scope="Output" referencedID="a5fc6d60-d016-4b1a-a26f-f089aa8c8cce" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="717a308f-2114-45e9-8f07-c03817b87ada">
+            <variableRef Id="a9b3481c-9e02-42a9-88c3-77dec89a20de" name="pos1" scope="Input" type="LREAL" referencedID="a4ec3515-1704-41ae-82d2-88c2d92e8d5e" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="c258dea2-7ded-4eca-a9a4-c4c23c11843e">
+            <variableRef Id="3b688a73-b2fb-4bac-9360-321a6203a86f" name="pos2" scope="Input" type="LREAL" referencedID="a1851bec-66b2-46c5-8944-5ab8bf3f6def" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="89b0f902-d7c1-48f0-bfbc-1b337c05e604">
+            <variableRef Id="df1d3ae3-21a9-4709-b580-532d09cc4ee7" name="distance" scope="Output" type="LREAL" referencedID="ad76f9e8-a6d0-4eee-bd71-7d41323327ac" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="d0df9ef6-0548-4917-b49f-5b5bf3b85da2">
+            <inputEventPort Id="9f7e24a8-f6c0-4a75-b9c5-6e7d04c0b941">
+              <event>
+                <inputEventPortReferencesEvent Id="3f2aa7b1-4b7c-460c-9430-95fcb1425db9">
+                  <eventRefMoniker name="/TwoCars/LaserSensor/SensorReading" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="5fb28ea1-9d59-4bcc-b0ea-8985bf3adf3c">
+            <outputEventPort Id="ee87d4f6-2726-4f1e-b7c5-4f5ef1d87e40">
+              <wireTargetPorts>
+                <wireConnection Id="46372b2a-5086-4bd5-b134-78aefefebb46" unitDelayed="false">
+                  <inputEventPortMoniker Id="e74d0556-1d1f-45d2-98e9-502df9d1eb31" />
+                </wireConnection>
+                <wireConnection Id="c9adc273-d829-4c13-875a-2cef754160fd" unitDelayed="false">
+                  <inputEventPortMoniker Id="a066c5c2-4cb0-4afa-b668-ff62a13f8252" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="c32daa6d-db35-4cbd-b152-74ff32a469d6">
+                  <eventRefMoniker name="/TwoCars/LaserSensor/Output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="7865c806-38fb-42e9-87ad-2e59af0a43a1">
+            <inputVariablePort Id="f696983c-7537-426a-a35a-96daccf9d358">
+              <variable>
+                <inputVariablePortReferencesVariable Id="bca5e232-66f7-4859-ae02-a824d2615b28">
+                  <variableRefMoniker name="/TwoCars/LaserSensor/pos1" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="e0db3fef-3d7e-4576-b392-cb494efe1873">
+            <inputVariablePort Id="75ec18b4-db15-433c-bd09-535e8bd4cc6d">
+              <variable>
+                <inputVariablePortReferencesVariable Id="52dad2fb-f1ac-4da7-aeb6-373c08203b77">
+                  <variableRefMoniker name="/TwoCars/LaserSensor/pos2" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="ada6ee40-7dea-4d36-9ba3-d40762418f7b">
+            <outputVariablePort Id="07465f42-b1ed-490f-b5b3-388e7373806f">
+              <wireTargetPorts>
+                <wireConnection Id="d4f4855a-aeae-4188-ba00-db836252bfe4" unitDelayed="false">
+                  <inputVariablePortMoniker Id="380f7a95-2fd4-4000-ad87-eeff3ecca39a" />
+                </wireConnection>
+                <wireConnection Id="970c80ed-dc22-4ee8-834b-598112eac7d0" unitDelayed="false">
+                  <inputVariablePortMoniker Id="987d22e0-1224-4814-b827-48104ed135ad" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="65853088-507d-46da-be21-d52b88869c30">
+                  <variableRefMoniker name="/TwoCars/LaserSensor/distance" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="c040aa56-27f4-4f8a-9b09-a9e37bf4b800">
+      <functionBlockReference Id="f66566cc-9d76-48e6-a7de-86d6b432d216" name="Controller" x="1531.25" y="437.5" creationMode="Resource" referencedFile="Controller.fb">
+        <events>
+          <functionBlockHasEvents Id="15645e09-f651-46bc-933c-b96436c2849e">
+            <eventRef Id="a6280763-b495-4a00-b265-49fd2205fa47" name="Update" scope="Input" referencedID="12e9a924-a9e1-4c4f-8ada-bd4f1331868f" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="5e3b3a5d-babd-4c23-a4f9-c7faaf2e8bf0">
+            <eventRef Id="45de3585-791e-44bc-adbe-5073ef2d9f20" name="ACC" scope="Output" referencedID="be4edda0-0d81-42f2-852f-569fcee87fa8" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="ada5d1c2-d530-4756-9886-c70a16e0c898">
+            <eventRef Id="9c1182fa-703d-4482-b175-2996caa36e0b" name="DEC" scope="Output" referencedID="ec1ffa6f-a0f0-486b-852e-8805b6495c1e" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="0d991ef1-edc5-4c82-bd4d-7f7e8f2d442a">
+            <variableRef Id="29483bd3-e24c-401d-82b4-c175f3a22794" name="speed2" scope="Input" type="LREAL" referencedID="23554bd9-e495-4259-9208-9fdce7cbec65" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="e9a4a583-4c97-4973-853e-1cac94d92991">
+            <variableRef Id="c2a798ce-ca31-4120-8fae-6a0c9b8e8ca7" name="distance" scope="Input" type="LREAL" referencedID="76edbd8b-db4e-460d-af3b-76e8a315259b" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="9a4f7afa-d728-47c4-99d3-3b7987e9ec46">
+            <variableRef Id="4af99173-402e-4ced-a2c5-fb1fcc01334f" name="speed1" scope="Input" type="LREAL" referencedID="1223ee4b-6a43-426a-9c50-1465282bca5e" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="16149876-b059-4d0e-a913-990d39ee2345">
+            <inputEventPort Id="a066c5c2-4cb0-4afa-b668-ff62a13f8252">
+              <event>
+                <inputEventPortReferencesEvent Id="b4b4e359-b68b-42f3-8f50-a93005476a47">
+                  <eventRefMoniker name="/TwoCars/Controller/Update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="8ede37ec-0303-4edf-971e-23cec762bfff">
+            <outputEventPort Id="26cc2793-c8f5-484b-940e-682c7bb9d691">
+              <wireTargetPorts>
+                <wireConnection Id="3dd7553f-85a2-4a83-a811-a3319be8d6d2" unitDelayed="false">
+                  <inputEventPortMoniker Id="c6eac0d8-1fae-4208-8120-cf09dd866fbf" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="7db27413-7c18-4b1c-a75a-b09a860cb39c">
+                  <eventRefMoniker name="/TwoCars/Controller/ACC" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="30ea8771-558b-474e-aa7f-7b4568ee6eda">
+            <outputEventPort Id="b3045cfb-5655-4a96-a5ee-832af4f9453e">
+              <wireTargetPorts>
+                <wireConnection Id="94273aa9-f71f-4791-91ea-80871f25d909" unitDelayed="false">
+                  <inputEventPortMoniker Id="a986d6ba-6675-4660-8a31-2def1d10a791" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="fcee855b-0b92-486c-8a06-07d8d905dc25">
+                  <eventRefMoniker name="/TwoCars/Controller/DEC" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="0a945474-61ac-413b-bef4-d740070442c2">
+            <inputVariablePort Id="dee824b8-0a45-4978-8cce-50a2af1ee0d2">
+              <variable>
+                <inputVariablePortReferencesVariable Id="61141d6e-31fb-4869-b217-580f4d70e877">
+                  <variableRefMoniker name="/TwoCars/Controller/speed2" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="442ac83b-5c4f-4154-848e-337fe4b54cb3">
+            <inputVariablePort Id="987d22e0-1224-4814-b827-48104ed135ad">
+              <variable>
+                <inputVariablePortReferencesVariable Id="6281afeb-b315-4f00-bb50-08ed941150e1">
+                  <variableRefMoniker name="/TwoCars/Controller/distance" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="13d1cd8e-dc14-4f8f-8325-b53b29922026">
+            <inputVariablePort Id="28c62444-2c8c-4bbe-9fc1-ed158a49cee0">
+              <variable>
+                <inputVariablePortReferencesVariable Id="3ba08ae1-dfe0-46f6-85ac-1e5de1cc38fc">
+                  <variableRefMoniker name="/TwoCars/Controller/speed1" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+  </functionBlockReferences>
+</compositeFunctionBlockModel>

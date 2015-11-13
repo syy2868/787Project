@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="TwoCars" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="SYY-PC" Version="0.1" Author="SYY" Date="2015-00-08" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+
+
+
+<OutputVars>
+  <VarDeclaration Name="Car1Pos" Type="LREAL" Comment="" />
+  <VarDeclaration Name="Car2Pos" Type="LREAL" Comment="" />
+  <VarDeclaration Name="Car1Speed" Type="LREAL" Comment="" />
+  <VarDeclaration Name="Car2Speed" Type="LREAL" Comment="" />
+</OutputVars>
+</InterfaceList>
+<FBNetwork>
+  <FB Name="LeadingCar" Type="LeadingCar" x="612.5" y="525" />
+  <FB Name="FollowingCar" Type="FollowingCar" x="2231.25" y="437.5" />
+  <FB Name="LaserSensor" Type="LaserSensor" x="1400" y="1312.5" />
+  <FB Name="Controller" Type="Controller" x="1531.25" y="437.5" />
+  <EventConnections><Connection Source="LeadingCar.Update" Destination="LaserSensor.SensorReading" />
+<Connection Source="FollowingCar.Update" Destination="LaserSensor.SensorReading" />
+<Connection Source="FollowingCar.Update" Destination="Controller.Update" />
+<Connection Source="LaserSensor.Output" Destination="FollowingCar.FrontLaserSensor" />
+<Connection Source="LaserSensor.Output" Destination="Controller.Update" />
+<Connection Source="Controller.ACC" Destination="FollowingCar.ACC" />
+<Connection Source="Controller.DEC" Destination="FollowingCar.DEC" /></EventConnections>
+  <DataConnections><Connection Source="LeadingCar.pos1" Destination="Car1Pos" />
+<Connection Source="FollowingCar.pos2" Destination="Car2Pos" />
+<Connection Source="LeadingCar.speed1" Destination="Car1Speed" />
+<Connection Source="FollowingCar.speed2" Destination="Car2Speed" />
+<Connection Source="LeadingCar.pos1" Destination="LaserSensor.pos1" />
+<Connection Source="LeadingCar.speed1" Destination="Controller.speed1" />
+<Connection Source="FollowingCar.pos2" Destination="LaserSensor.pos2" />
+<Connection Source="FollowingCar.speed2" Destination="Controller.speed2" />
+<Connection Source="LaserSensor.distance" Destination="FollowingCar.distance" />
+<Connection Source="LaserSensor.distance" Destination="Controller.distance" /></DataConnections>
+</FBNetwork>
+</FBType>

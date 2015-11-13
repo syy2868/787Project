@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="3b846f1e-e681-4c4c-a032-8316483e4d1f" name="GasBurner" organization="syy-PC" date="2015-08-10" author="syy">
+  <states>
+    <functionBlockModelHasStates Id="a559525c-06df-4fe3-88f0-76500e2f8a5b">
+      <state Id="593d8e0a-c3c5-4f0b-bb96-95d4a6c6d8aa" name="Start" x="262.5" y="700" isInitial="true">
+        <actionSet>
+          <actionLink Id="95821218-9849-4a69-a222-be64b5a694ec">
+            <actionSetMoniker Id="48558958-7bbb-4c0d-a040-f868728ca9cc" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="011a8377-36f2-4e1a-bccd-bb889d87cc34">
+            <transitionNodeMoniker Id="0349acfb-5054-4516-8b7a-08ae0d132912" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="09de0d48-6bb8-4aed-93b6-16dc6d8f6367">
+            <transitionNodeMoniker Id="e6844ddf-d5a6-4a40-afc4-07372f23dd4c" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="66d8ec71-6055-4192-8caf-304cc9cf0de6">
+      <state Id="8b65cbd5-70f7-4dea-ad81-c96736bae223" name="State1" x="1006.25" y="350" isInitial="false">
+        <actionSet>
+          <actionLink Id="b7dae59b-f030-40f9-a82f-54665361518b">
+            <actionSetMoniker Id="a812a761-6bea-4bd4-9051-248fbecb3995" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="c66641c5-b4f8-435c-ba69-0d87c9145373">
+            <transitionNodeMoniker Id="69fbe5f3-f2b6-4e78-8843-4f75abe27ea3" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="b5ee3c98-ed16-45ed-95a9-5ad831d3fb35">
+            <transitionNodeMoniker Id="64f2adc8-632d-441d-b6bd-816e493ac942" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="71db7e80-e8f9-4592-85e2-39c125688f01">
+      <state Id="2cc49736-2826-4927-912b-1ea26558029c" name="State2" x="1837.5" y="350" isInitial="false">
+        <actionSet>
+          <actionLink Id="c33cac96-3359-4629-8cc9-83214ac17f09">
+            <actionSetMoniker Id="b2c50e9f-0ca1-4206-ad42-32930b221604" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="36a8d197-a508-423f-8bfe-c9184877c92f">
+            <transitionNodeMoniker Id="66d64f31-ef22-4c1e-8855-176d3911f2d8" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="87e1c2e1-f908-45df-8e29-efb31c8ee281">
+      <state Id="781a3a30-97fd-4848-8a42-e93bd0154ada" name="State3" x="1006.25" y="1137.5" isInitial="false">
+        <actionSet>
+          <actionLink Id="aceeb1cf-e585-46fc-aca3-fdffc33a6582">
+            <actionSetMoniker Id="4836f7a7-4f38-435e-af5e-7317d964c392" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="42244b5c-2ebc-44ee-a8d2-22f5d69d36ae">
+            <transitionNodeMoniker Id="c3242b1f-3b51-4d89-8bcb-262c85c9aa30" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="5fd0b54e-c0e1-419b-a2a7-608e685f8ef3">
+            <transitionNodeMoniker Id="8e2327f2-d9b3-4455-8da4-0f76762b5d57" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="5738c926-6606-48f0-914d-7b5a8a1cecf5">
+      <state Id="1e6de099-02dd-430b-bd6a-c2358e81bd2c" name="State4" x="1881.25" y="1137.5" isInitial="false">
+        <actionSet>
+          <actionLink Id="b10421e6-8d17-4c8a-927c-b645b9f586cd">
+            <actionSetMoniker Id="dc1ea86d-d181-4ba1-afc3-e36c7230652b" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="957be230-67ff-4168-8fd5-511b6e7e4871">
+            <transitionNodeMoniker Id="caa2a5e7-5956-426d-9b0b-30d3b4ed11f4" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="1d197741-8c03-405a-b07c-ce66d4987016">
+      <actionSet Id="48558958-7bbb-4c0d-a040-f868728ca9cc" x="175" y="962.5">
+        <actionItems>
+          <actionSetHasActionItems Id="56ca4992-702b-43d5-b3c3-25adafbb7ee1">
+            <actionAlgorithm Id="d5d48c25-d9c5-44d0-855a-beba83f06901">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="26a6c417-03bb-45cd-af46-5715d3d8eab7">
+                  <algorithmMoniker name="/GasBurner/Init" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="157aff50-6b12-4b96-9403-e9afa4651dc8">
+      <actionSet Id="a812a761-6bea-4bd4-9051-248fbecb3995" x="875" y="568.75">
+        <actionItems>
+          <actionSetHasActionItems Id="d758f7ab-4dce-4a47-b87b-4cc45ba4d4f3">
+            <actionAlgorithm Id="7241638e-6f8a-4783-b40d-48516a294dab">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="6598b5e9-034b-41fc-acb4-e7dde0f865cd">
+                  <algorithmMoniker name="/GasBurner/Timer" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="36731783-d3fd-42dc-b445-d2fb389bb580">
+      <actionSet Id="b2c50e9f-0ca1-4206-ad42-32930b221604" x="2187.3518845438957" y="350">
+        <actionItems>
+          <actionSetHasActionItems Id="d630367b-26f2-4a11-8be8-ba5ea3a22604">
+            <actionAlgorithm Id="4255bd27-14d5-4509-9ce1-ca6b6cfd1ad5">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="96fe71d1-1913-45e9-abaa-8d46fdf76e78">
+                  <algorithmMoniker name="/GasBurner/Reset" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="daa284a9-7de5-48c5-aa22-d61a2fe02363">
+            <actionEvent Id="53d3713f-4d49-48ef-be0b-89aa1a86e3ee">
+              <event>
+                <actionEventReferencesEvent Id="856025b8-3aa0-4431-9ddc-b56b100ce495">
+                  <eventMoniker name="/GasBurner/GasBurner/On" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="1db07a28-e344-4f9e-a2aa-f14628b92bb8">
+      <actionSet Id="dc1ea86d-d181-4ba1-afc3-e36c7230652b" x="2231.1018845438957" y="1137.5">
+        <actionItems>
+          <actionSetHasActionItems Id="7cf4cddc-0546-45f4-a01d-a0fff9c0258c">
+            <actionAlgorithm Id="713e07b5-885f-41b9-a75d-824ffc8c5f8c">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="e4185d3f-b58c-4c68-9785-5bb891ff35e0">
+                  <algorithmMoniker name="/GasBurner/Reset" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="888117a6-910e-4655-8f42-3f0650ef527c">
+            <actionEvent Id="83e3c8ee-3222-45c7-93ac-d9ce21ed3721">
+              <event>
+                <actionEventReferencesEvent Id="46c0c109-c430-48c8-b839-f8f379653dea">
+                  <eventMoniker name="/GasBurner/GasBurner/Off" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="dfec015a-9229-40b6-bd51-4784796ee278">
+      <actionSet Id="4836f7a7-4f38-435e-af5e-7317d964c392" x="875" y="1312.5">
+        <actionItems>
+          <actionSetHasActionItems Id="8120a256-1c9a-46d8-9276-37b6ee2a6072">
+            <actionAlgorithm Id="f37a8d92-4c41-437b-83a3-c07fecb66389">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="c5cd5299-0ff1-45ba-b3cf-40f914eae5fa">
+                  <algorithmMoniker name="/GasBurner/Timer" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="510ef63e-9aed-4cdd-b551-b85aa81fba86">
+      <algorithm Id="aed1778e-330c-42e1-9dae-2d9df90446e1" name="Init" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="065bedd5-8315-47ae-a968-f05fd2b6b08a">
+      <algorithm Id="52bec842-4603-4c49-bf9b-b7f31fb47c02" name="Timer" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="2f2d8859-9810-4d6e-992b-5fb4c10d99a4">
+      <algorithm Id="80b0a681-38cf-4e29-a3f1-80d86cc8a384" name="Reset" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="b16ec7a6-829a-4c45-b65d-7864cdae875c">
+      <functionBlockInterface Id="72dd84d8-b650-4baa-b274-81720fcc8569" name="GasBurner" x="1400" y="481.25">
+        <events>
+          <functionBlockHasEvents Id="b7d31e71-7438-4eaa-966e-1277368ed185">
+            <event Id="5aabc9d3-d965-4eb2-9efd-4249f174a103" name="TurnOn" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="ced14cf4-9b0e-4ecd-9110-86485cbed38b">
+            <event Id="2660bf48-742d-4ab1-a81b-79d993c78e17" name="TurnOff" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="033a257a-661b-4ecd-b98b-7aa1210c510f">
+            <event Id="fed22ec0-ae9e-427f-9b82-e2b40b604ca7" name="On" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="3a606f56-e934-4f3e-94a2-e21b2a515e02">
+            <event Id="7bd7de7f-846b-45db-a342-cffd1417e1fe" name="Off" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="a4bcf374-4f22-4207-abb5-c8467abf6ffc">
+            <event Id="47a45a44-0437-471d-b96f-01b1817d9c6c" name="Update" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="a53b5d70-c7ec-4c6f-9090-69cab8744bd8">
+            <variable Id="277eed8e-6881-417a-9fc0-6a4e7ae04647" name="y" scope="Output" type="REAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="03ba0eaf-2829-43b7-9fbf-e7438f19b134">
+            <variable Id="236fbc3b-431f-41be-9e5e-6ead407497af" name="d" scope="Internal" type="REAL" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="b78a9d8f-9446-41b8-bd44-3f9293c8231c">
+            <inputEventPort Id="24d69ab7-a8c0-46f4-9cac-533811a09568">
+              <event>
+                <inputEventPortReferencesEvent Id="1c8db5c5-9285-40e2-8f25-73d74ff80aa0">
+                  <eventMoniker name="/GasBurner/GasBurner/TurnOn" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="7c5747cb-8262-4f39-a213-a3d017177e23">
+            <inputEventPort Id="aed4cfde-3fb2-4e92-81eb-a173d3c3e281">
+              <event>
+                <inputEventPortReferencesEvent Id="9c5fc3e5-0a8f-47e3-8a78-665607477b86">
+                  <eventMoniker name="/GasBurner/GasBurner/TurnOff" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="39cf44aa-99be-4f19-b70f-fe8e70cf01c5">
+            <outputEventPort Id="3192650c-657a-4370-a6cd-dc5dfb8febe0">
+              <event>
+                <outputEventPortReferencesEvent Id="e9b10a87-2b31-4558-8511-0eebee183086">
+                  <eventMoniker name="/GasBurner/GasBurner/On" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="579ab273-a791-479f-8970-8a6edf666d59">
+            <outputEventPort Id="c513017a-0ae7-4bef-abc9-9fe1593ef28a">
+              <event>
+                <outputEventPortReferencesEvent Id="781c4588-ea16-4baf-b428-b385f4ca49bc">
+                  <eventMoniker name="/GasBurner/GasBurner/Off" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="f2c71a0a-5712-4e23-9180-31a4c4388081">
+            <outputEventPort Id="083bd2c4-5d9f-4a72-80d8-b1f3f72f531a">
+              <targetPort>
+                <association Id="f56ef44b-2916-4624-a6bb-a71cced4d81c">
+                  <outputVariablePortMoniker Id="91f33dbf-e555-4bb0-83e3-91e7c778f83e" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="3a8bce22-3518-4b7a-94b0-9b1f39d4443d">
+                  <eventMoniker name="/GasBurner/GasBurner/Update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="03645030-5562-4021-b68f-e25b591fa6a2">
+            <outputVariablePort Id="91f33dbf-e555-4bb0-83e3-91e7c778f83e">
+              <variable>
+                <outputVariablePortReferencesVariable Id="4ffd15fe-6613-4436-bb86-8535f5c86fe5">
+                  <variableMoniker name="/GasBurner/GasBurner/y" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="3dc9274d-2eb2-46b0-a78d-12eee3f8d254">
+      <transitionNode Id="0349acfb-5054-4516-8b7a-08ae0d132912" x="525" y="393.75" event="TurnOn">
+        <targetState>
+          <transitionNodeConnectsToStates Id="e376df67-492a-4f4c-8786-9f6d6de3dd27">
+            <stateMoniker name="/GasBurner/State1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="4a7c2e70-1862-4e5e-91d4-24b68b84508e">
+      <transitionNode Id="69fbe5f3-f2b6-4e78-8843-4f75abe27ea3" x="1400" y="350" expression="y&gt;=0.1">
+        <targetState>
+          <transitionNodeConnectsToStates Id="0c701f09-c79e-4e1d-bde5-08db5d52e333">
+            <stateMoniker name="/GasBurner/State2" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="5c2bbba8-4d1a-4e90-9011-8d480aa287e8">
+      <transitionNode Id="64f2adc8-632d-441d-b6bd-816e493ac942" x="1006.25" y="175">
+        <targetState>
+          <transitionNodeConnectsToStates Id="dd94ab63-cc90-4171-a36a-d435a5d9e41d">
+            <stateMoniker name="/GasBurner/State1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="11168ff9-9d08-46c6-9a82-4cb909dd1de5">
+      <transitionNode Id="e6844ddf-d5a6-4a40-afc4-07372f23dd4c" x="602.25" y="951.75" event="TurnOff">
+        <targetState>
+          <transitionNodeConnectsToStates Id="44ad90e6-aede-447c-b923-a98a75174a33">
+            <stateMoniker name="/GasBurner/State3" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="8e87197f-f7da-4c8a-9c1c-691479305c30">
+      <transitionNode Id="c3242b1f-3b51-4d89-8bcb-262c85c9aa30" x="1365.875" y="1137.5" expression="y&gt;=0.1">
+        <targetState>
+          <transitionNodeConnectsToStates Id="0f7fe647-839e-4f69-bd51-415da87b7864">
+            <stateMoniker name="/GasBurner/State4" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="ecdd2cd7-2d5d-4e33-b5ea-d212e6c012d5">
+      <transitionNode Id="8e2327f2-d9b3-4455-8da4-0f76762b5d57" x="1012.2500000000001" y="1043.5">
+        <targetState>
+          <transitionNodeConnectsToStates Id="b7acba25-8b94-426a-a955-a3ae8dd304ae">
+            <stateMoniker name="/GasBurner/State3" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="6d87d099-4085-45f6-b2f2-ae308c36fa76">
+      <transitionNode Id="66d64f31-ef22-4c1e-8855-176d3911f2d8" x="1357.875" y="752.75" event="TurnOff">
+        <targetState>
+          <transitionNodeConnectsToStates Id="125b0d8b-f73d-43b3-9bf0-64ccbbb9d495">
+            <stateMoniker name="/GasBurner/State3" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="58215414-9c88-4200-aeab-c00ba2f4bbca">
+      <transitionNode Id="caa2a5e7-5956-426d-9b0b-30d3b4ed11f4" x="1506.75" y="803.74999999999989" event="TurnOn">
+        <targetState>
+          <transitionNodeConnectsToStates Id="e0d3e196-167f-49f2-acdc-780268100b00">
+            <stateMoniker name="/GasBurner/State1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

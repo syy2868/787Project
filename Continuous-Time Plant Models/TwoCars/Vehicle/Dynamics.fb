@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="9dc29940-6dea-4ce5-bfe9-593af2c64853" name="Dynamics" organization="Jin-PC" date="2015-08-24" author="Jin">
+  <states>
+    <functionBlockModelHasStates Id="33f978ce-799c-431c-bb8b-797a0b82c528">
+      <state Id="522e7ab0-6e23-4b25-8d79-2a5e534b0305" name="Start" x="1487.5" y="656.25" isInitial="true" />
+    </functionBlockModelHasStates>
+  </states>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="4ab4aef0-7a01-4599-8e5a-cc982721363a">
+      <functionBlockInterface Id="ee93b638-e196-40f5-b29a-6256f5184334" name="Dynamics" x="1837.5" y="700">
+        <events>
+          <functionBlockHasEvents Id="8c949dc1-cc2e-4035-aeca-95ed1d12fb4b">
+            <event Id="9a20f8fd-933b-4350-a7a4-9441b6b6603d" name="Event1" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="44d5b7da-dc46-4c35-9950-c68dc27f2d6e">
+            <event Id="a831240b-f18a-498e-bbfc-b30f18b7cdb8" name="Event2" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="2da27d8d-6a8b-40ee-a0e2-dd9170a4df31">
+            <variable Id="4df5a369-1e60-4b29-a9bc-cc18245c068c" name="Variable1" scope="Output" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="63c53670-6c83-4703-9588-0e41b4617674">
+            <variable Id="1fbde6af-b37a-4027-a3e3-6fbf1ced2b16" name="Variable2" scope="Input" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="7c4976af-d32c-458b-b7d5-d4cf4bd613ec">
+            <inputEventPort Id="3bbc8f7e-d84b-46c7-9545-4027cd83d82a">
+              <event>
+                <inputEventPortReferencesEvent Id="2d1c6959-4a27-4cf1-948e-1d70f7be1cfc">
+                  <eventMoniker name="/Dynamics/Dynamics/Event1" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="7d31881c-4115-4159-a90e-63d80f65cf5f">
+            <outputEventPort Id="50a04ee3-0eeb-435e-9db3-d7eb4c95e411">
+              <event>
+                <outputEventPortReferencesEvent Id="39f101e7-2b0d-41b6-89a1-b08414911eb9">
+                  <eventMoniker name="/Dynamics/Dynamics/Event2" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="5ccbc5d7-6619-41ef-a282-6e569763f59f">
+            <inputVariablePort Id="1dbcf7c5-2f3a-4ebd-83da-b6390b274fca">
+              <variable>
+                <inputVariablePortReferencesVariable Id="d2dbd0b4-0fc5-4ce7-ab77-41739e1e05a9">
+                  <variableMoniker name="/Dynamics/Dynamics/Variable2" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="1b63183f-5952-4f09-9fa0-d40626bb1b55">
+            <outputVariablePort Id="b8598500-0d7e-4688-8711-43a81fa4ed20">
+              <variable>
+                <outputVariablePortReferencesVariable Id="e422c044-95af-40ac-adc3-4669ee4f6cc0">
+                  <variableMoniker name="/Dynamics/Dynamics/Variable1" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+</functionBlockModel>

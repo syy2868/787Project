@@ -1,0 +1,2 @@
+//printf("signal transfered\n");
+me->y=0;

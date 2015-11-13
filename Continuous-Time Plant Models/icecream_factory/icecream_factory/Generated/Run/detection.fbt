@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="detection" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="PC_THEO" Version="0.1" Author="Th?o" Date="2015-00-16" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+<EventInputs>
+  <Event Name="update" Comment="">
+    <With Var="x" />
+  </Event>
+</EventInputs>
+<EventOutputs>
+  <Event Name="S1" Comment="">
+  </Event>
+</EventOutputs>
+<InputVars>
+  <VarDeclaration Name="x" Type="REAL" Comment="" />
+</InputVars>
+
+</InterfaceList>
+<BasicFB><InternalVars>
+  <VarDeclaration Name="alpha" Type="REAL" Comment="" />
+</InternalVars><ECC>
+  <ECState Name="Start" Comment="" x="568.75" y="437.5">
+    <ECAction Algorithm="init" />
+  </ECState>
+  <ECState Name="State1" Comment="" x="1706.25" y="437.5">
+    <ECAction Output="S1" />
+  </ECState>
+  <ECTransition Source="Start" Destination="State1" Condition="x&gt;=alpha" x="1058.75" y="437.5" />
+  <ECTransition Source="State1" Destination="State1" Condition="x = alpha" x="1575" y="787.5" />
+</ECC><Algorithm Name="init" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;x=0;&#xD;&#xA;me-&gt;alpha=3;" />
+</Algorithm></BasicFB>
+</FBType>

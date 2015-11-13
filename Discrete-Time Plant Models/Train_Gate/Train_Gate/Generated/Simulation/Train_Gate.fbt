@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="Train_Gate" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="PC_THEO" Version="0,1" Author="Th?o" Date="2015-00-14" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+
+
+
+
+</InterfaceList>
+<FBNetwork>
+  <FB Name="Plant" Type="Plant" x="437,5" y="700" />
+  <FB Name="Controller" Type="Controller" x="1837,5" y="743,75" />
+  <EventConnections><Connection Source="Plant.update" Destination="Controller.update" />
+<Connection Source="Controller.UP" Destination="Plant.UP" />
+<Connection Source="Controller.DOWN" Destination="Plant.DOWN" /></EventConnections>
+  <DataConnections><Connection Source="Plant.y1" Destination="Controller.y1" />
+<Connection Source="Plant.y2" Destination="Controller.y2" /></DataConnections>
+</FBNetwork>
+</FBType>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="CSMA" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="Jin-PC" Version="0.1" Author="Jin" Date="2015-00-24" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+<EventInputs>
+  <Event Name="SWITCH_CHANNEL" Comment="">
+    <With Var="mode" />
+  </Event>
+  <Event Name="CCH_REQ" Comment="">
+  </Event>
+  <Event Name="SCH_REQ" Comment="">
+  </Event>
+</EventInputs>
+<EventOutputs>
+  <Event Name="MAC_WAVE_CCH_RCV" Comment="">
+  </Event>
+  <Event Name="MAC_WAVE_SCH_RCV" Comment="">
+  </Event>
+  <Event Name="CCH_CLR" Comment="">
+  </Event>
+  <Event Name="SCH_CLR" Comment="">
+  </Event>
+  <Event Name="MAC_CH_CCH" Comment="">
+    <With Var="CCH_PACKET" />
+  </Event>
+  <Event Name="MAC_CH_SCH" Comment="">
+    <With Var="SCH_PACKET" />
+  </Event>
+</EventOutputs>
+<InputVars>
+  <VarDeclaration Name="mode" Type="INT" Comment="" />
+</InputVars>
+<OutputVars>
+  <VarDeclaration Name="CCH_PACKET" Type="INT" Comment="" />
+  <VarDeclaration Name="SCH_PACKET" Type="INT" Comment="" />
+</OutputVars>
+</InterfaceList>
+<BasicFB><ECC>
+  <ECState Name="Idle" Comment="" x="1356.25" y="918.75">
+  </ECState>
+  <ECState Name="Active" Comment="" x="2143.75" y="918.75">
+  </ECState>
+  <ECTransition Source="Idle" Destination="Active" Condition="SWITCH_CHANNEL AND (mode &gt;= 0)" x="1443.75" y="700" />
+</ECC></BasicFB>
+</FBType>

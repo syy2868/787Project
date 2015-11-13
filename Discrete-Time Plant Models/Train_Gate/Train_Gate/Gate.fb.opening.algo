@@ -1,0 +1,8 @@
+//me->x = me->C1x*exp(-1.0L/2.0L*me->d*me->k) + 1;
+me->x = 1;
+if(me->x>1){
+printf("Gate is opening : %f\n", me->x);
+}else{
+printf("Gate is open: %f\n", me->x);  
+}
+(me->k)++;

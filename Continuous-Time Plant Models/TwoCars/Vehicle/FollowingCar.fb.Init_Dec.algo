@@ -1,0 +1,4 @@
+me->min=false;
+if(me->isInitial==false){
+me->k = 38;
+}

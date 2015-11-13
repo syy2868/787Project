@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="WAVE" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="Jin-PC" Version="0.1" Author="Jin" Date="2015-00-24" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+<EventInputs>
+  <Event Name="APP_WAVE_CCH_TX" Comment="">
+  </Event>
+  <Event Name="APP_WAVE_SCH_TX" Comment="">
+  </Event>
+  <Event Name="MAC_WAVE_CCH_RCV" Comment="">
+  </Event>
+  <Event Name="MAC_WAVE_SCH_RCV" Comment="">
+  </Event>
+</EventInputs>
+<EventOutputs>
+  <Event Name="SWITCH_CHANNEL" Comment="">
+    <With Var="mode" />
+  </Event>
+  <Event Name="WAVE_MAC_CCH_TX" Comment="">
+  </Event>
+  <Event Name="WAVE_MAC_SCH_TX" Comment="">
+  </Event>
+  <Event Name="WAVE_APP_CCH_RCV" Comment="">
+  </Event>
+  <Event Name="WAVE_APP_SCH_RCV" Comment="">
+  </Event>
+</EventOutputs>
+
+<OutputVars>
+  <VarDeclaration Name="mode" Type="INT" Comment="" />
+  <VarDeclaration Name="Variable1" Type="INT" Comment="" />
+</OutputVars>
+</InterfaceList>
+<BasicFB><ECC>
+  <ECState Name="Start" Comment="" x="1793.75" y="743.75">
+  </ECState>
+  <ECTransition Source="Start" Destination="Start" Condition="true" x="1837.5" y="1006.25" />
+</ECC></BasicFB>
+</FBType>

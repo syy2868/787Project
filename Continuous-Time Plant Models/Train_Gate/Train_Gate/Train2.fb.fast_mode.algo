@@ -1,0 +1,4 @@
+me->y2=3*me->d*me->k+me->C1y2;
+me->t2=me->t2+me->d;
+(me->k)++;
+printf("y2 : %f\n", me->y2);

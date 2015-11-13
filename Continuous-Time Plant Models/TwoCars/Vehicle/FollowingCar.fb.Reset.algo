@@ -1,0 +1,3 @@
+if(!me->isInitial){
+  me->k = 1;
+}

@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="fe49c3a2-f9cf-4040-a02b-760e351e0bb8" name="FollowingCar" organization="SYY-PC" date="2015-11-08" author="SYY">
+  <states>
+    <functionBlockModelHasStates Id="7a92b5e5-7162-4610-a1f7-61d1ed8b20c0">
+      <state Id="a6f9bc82-86e2-4481-aec9-06a0b2f955b6" name="Start" x="1093.75" y="656.25" isInitial="true">
+        <actionSet>
+          <actionLink Id="833ad61e-ace3-4e8d-a80d-244ae25556a0">
+            <actionSetMoniker Id="dc4a880d-c4a6-4604-aac1-c91b9baa81c2" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="c945dc24-1aea-4805-9981-587fdb46ecda">
+            <transitionNodeMoniker Id="a6b24161-e3ab-436b-9e03-2908c4119c63" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="6fa6c780-cf93-4d48-ad19-6299fe68f8bf">
+      <state Id="91d52786-d742-4d2c-817c-fc87cffb342f" name="State3" x="2756.25" y="1006.25" isInitial="false">
+        <actionSet>
+          <actionLink Id="ba3d528b-c832-4130-b951-31dffb84b7bb">
+            <actionSetMoniker Id="ffc46e5c-3b8a-4786-8223-6718b663d0d5" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="7af097c0-8390-4e27-9ea3-75f8c5fd2940">
+            <transitionNodeMoniker Id="58bae969-8c01-4004-9a59-5868d37eade3" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="1a457772-81aa-44f7-b12e-f35b323a52a3">
+      <state Id="acd8127a-c787-49da-a63a-aeb9b903c7fb" name="State2" x="2756.25" y="350" isInitial="false">
+        <actionSet>
+          <actionLink Id="d44e8415-706a-431a-9be9-ef01e50a9e28">
+            <actionSetMoniker Id="9846a192-ec09-4295-bd12-5568ee9f0faf" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="d9a53048-d3ee-4c6b-8d01-8b94bfa89604">
+            <transitionNodeMoniker Id="958a338a-d2a2-4f01-866e-bd0d68126d1b" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="1ab57b03-c7ad-464c-a6cd-cb09faed965f">
+      <state Id="e17b38e7-9266-421b-a521-cfdff2def40f" name="State1" x="1750" y="656.25" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="69504972-93e7-430e-b467-9f593e30c374">
+            <transitionNodeMoniker Id="4d68bfc0-ea24-41de-a194-14e6b3ea9610" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="af0aabb1-d09c-491c-9224-b552a0c4de61">
+            <transitionNodeMoniker Id="f9bcf1e1-a272-45ae-a649-89cee0de2210" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="49a280c7-df97-4509-a4b5-1b31ca560e73">
+      <actionSet Id="dc4a880d-c4a6-4604-aac1-c91b9baa81c2" x="918.75" y="831.25">
+        <actionItems>
+          <actionSetHasActionItems Id="b5e3efaf-ea88-46c0-923d-192ab75b999c">
+            <actionAlgorithm Id="01f63d29-67ea-44b5-8fdf-f4ad0b6fd420">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="1c6c3449-2e63-4023-8856-334a2d219066">
+                  <algorithmMoniker name="/FollowingCar/Init" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="70a0637e-73e8-4b75-92fa-4c563e92e212">
+      <actionSet Id="9846a192-ec09-4295-bd12-5568ee9f0faf" x="2581.25" y="175">
+        <actionItems>
+          <actionSetHasActionItems Id="69bf3024-de8f-423f-b081-3189358ec933">
+            <actionAlgorithm Id="61d392f8-04c8-45d0-b072-5fd66b401786">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="acacf239-0204-4dd9-b121-29d52b8bab79">
+                  <algorithmMoniker name="/FollowingCar/Decelerate" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="871d4edd-58a3-43e4-a82f-d8882698b2d1">
+            <actionEvent Id="2bd7ba67-9901-4ed0-9281-99d5e0768152">
+              <event>
+                <actionEventReferencesEvent Id="5df19e0c-2f20-4489-9b98-fa968d82ff5a">
+                  <eventMoniker name="/FollowingCar/FollowingCar/Update" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="3f8891ea-ebce-44c8-92fc-64655de99260">
+      <actionSet Id="ffc46e5c-3b8a-4786-8223-6718b663d0d5" x="2581.25" y="1181.25">
+        <actionItems>
+          <actionSetHasActionItems Id="d7ac1521-0f0c-4cd7-80da-ba1accf4c643">
+            <actionAlgorithm Id="97f46eb1-374f-4331-b6b1-29fcb14a04c2">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="a33f541c-038a-480b-83ad-b32b678513e7">
+                  <algorithmMoniker name="/FollowingCar/Accelerate" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="f353cb86-92e4-41fe-869b-96d505c90e42">
+            <actionEvent Id="cb55abda-89ea-4cb9-bd2e-86719bfacab8">
+              <event>
+                <actionEventReferencesEvent Id="e178e8a8-66e8-42e5-a3b2-7e76a570b8f3">
+                  <eventMoniker name="/FollowingCar/FollowingCar/Update" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="b7765393-56aa-4985-87ea-57db81da1bf7">
+      <algorithm Id="de28f35b-27cd-4ea7-936a-2509548e8f33" name="Init" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="7d617932-3de9-4b2f-a69b-274cc8c405c6">
+      <algorithm Id="2b96ced5-3c4d-46ff-b1aa-26de283c7ec5" name="Decelerate" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="57ab6d74-1bca-48b7-be7a-3bed2df9ebd6">
+      <algorithm Id="2221d4c4-4aa3-4acb-a3a7-3bb1dec595ac" name="Accelerate" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="aac3f0bf-ad2d-4bc9-9aa7-b080534e8530">
+      <algorithm Id="2b1f3022-3c29-4f18-8834-6e963bc36330" name="Reset" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="4b76a7c5-14a6-4504-bb98-928d21a6a4e8">
+      <algorithm Id="312b38a1-b5e0-41a3-b377-bfe2eff3375f" name="Init_Acc" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="2793d897-0e17-459d-a6ed-12d5b8d8528a">
+      <algorithm Id="db6da882-98aa-4c7e-b28a-219309d0fa4c" name="Init_Dec" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="9f9cb99e-2002-4792-a405-f0b4099f2e93">
+      <functionBlockInterface Id="78b34331-ecbd-46bc-afce-195faf9ee0e2" name="FollowingCar" x="1837.5" y="700">
+        <events>
+          <functionBlockHasEvents Id="b000b49f-f5b1-4c79-8eef-500d8d6f4d74">
+            <event Id="d0e13c63-3bcc-4f2c-8c8c-98d547bdef15" name="FrontLaserSensor" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="3c3cfa6f-23f4-4a39-9e74-0e78e00267ac">
+            <event Id="4890b7b7-b3cd-4f7f-ac90-dad6fb667a9d" name="Update" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="092cc102-1453-4164-928f-64cf1b6bf2ed">
+            <event Id="7542f342-ce3d-4ee8-8335-89fef4090f39" name="ACC" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="c2c828d3-8dde-4082-a7da-66d9102746a7">
+            <event Id="427c8b58-9505-4dca-a364-b04a27495df4" name="DEC" scope="Input" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="288534d2-7109-4ee7-99b9-9730b82b820b">
+            <variable Id="21c2a877-7334-472a-a405-60698711a249" name="distance" scope="Input" type="LREAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="96f6d95e-7f4d-487d-9c37-7d89b9a0280d">
+            <variable Id="278a2afa-f5ba-4477-a34b-a42dcf2356b6" name="pos2" scope="Output" initialValue="0" type="LREAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="82e29518-6c47-4896-8429-77be878b6579">
+            <variable Id="fee6481c-c0bb-4704-b7e6-e29a8eca470a" name="speed2" scope="Output" initialValue="13.8" type="LREAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="1e7961e9-9abe-40f6-b669-7b8e41a75625">
+            <variable Id="dff272f4-9e0c-4eaa-9519-7a6beacdf815" name="x" scope="Internal" type="LREAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="ba02f0d5-2744-4429-b647-8ea8fd2efc02">
+            <variable Id="eefbc212-3fb4-4374-befd-a8e8c7201e24" name="v" scope="Internal" type="LREAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="7f4aa0df-2021-4cb8-a17a-0916036bd6dc">
+            <variable Id="8e5b7b4b-2461-4b6c-a08c-2278d78421b2" name="d" scope="Internal" type="LREAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="fcf1a999-f487-46f2-bc64-76553f16396b">
+            <variable Id="ba4136a0-43cb-450a-9f65-6e15eb87bd91" name="k" scope="Internal" type="INT" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="55c8d113-ee03-46cc-930c-35f7479ee48b">
+            <variable Id="05ddc439-9a2f-4a39-be10-cb01d793e725" name="isInitial" scope="Internal" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="e564aede-1045-4e89-a330-42664a6aef63">
+            <variable Id="f9fe26a2-00f9-4938-bac5-03fcf737cb97" name="max" scope="Internal" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="e1ec71b2-0f99-4ca9-9404-2b6fd42f7ccb">
+            <variable Id="1f5a7dca-f39d-4896-9a12-c1ac4c94acc3" name="min" scope="Internal" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="8abd712c-a3fd-4a81-8216-ddfa3ddab529">
+            <inputEventPort Id="ef9e6799-efde-4710-839f-2c4bcb9fc60c">
+              <targetPort>
+                <association Id="812ab07d-7758-46c7-bc65-d5fc32078c45">
+                  <inputVariablePortMoniker Id="f2c96d40-8951-4720-bcbb-3f1d57246a98" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="f622617a-c1c8-4e6b-b8c6-041dd514292f">
+                  <eventMoniker name="/FollowingCar/FollowingCar/FrontLaserSensor" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="b3acae12-957c-467d-860e-cb8187b9e9b3">
+            <inputEventPort Id="d13d32cd-1918-444c-b16f-c3fa8874b97a">
+              <event>
+                <inputEventPortReferencesEvent Id="9e25dbec-5dae-426b-a3d1-b690a9116197">
+                  <eventMoniker name="/FollowingCar/FollowingCar/ACC" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="8f818639-6b44-4128-867e-cd168e4bfae9">
+            <inputEventPort Id="24b11289-4999-40fb-b0bb-060dca5510b5">
+              <event>
+                <inputEventPortReferencesEvent Id="ce98f3be-9b6b-4dfe-a077-a390eef2b14f">
+                  <eventMoniker name="/FollowingCar/FollowingCar/DEC" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="ec5e186b-5dd4-49bf-871c-fe8f58ecf06e">
+            <outputEventPort Id="af254560-a8a0-4f99-8eed-1d2cc3a062a4">
+              <targetPort>
+                <association Id="e767abfd-650a-47ef-be9f-6368f6ea1bf4">
+                  <outputVariablePortMoniker Id="ac28f1d5-a858-4520-a6ba-6cc7c5eecff4" />
+                </association>
+                <association Id="98003709-f6a0-424d-afd3-8eb10588d3eb">
+                  <outputVariablePortMoniker Id="205c4c0a-1fae-4909-94d8-7540cd84b193" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="60daecd8-fe68-4564-8479-8d1bc88a9138">
+                  <eventMoniker name="/FollowingCar/FollowingCar/Update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="e514c71b-4f17-44dd-a88f-75be62e3d591">
+            <inputVariablePort Id="f2c96d40-8951-4720-bcbb-3f1d57246a98">
+              <variable>
+                <inputVariablePortReferencesVariable Id="55514344-4b41-4004-8c77-6566248ef9c7">
+                  <variableMoniker name="/FollowingCar/FollowingCar/distance" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="0398d252-5af0-4765-be29-58fe2c808244">
+            <outputVariablePort Id="ac28f1d5-a858-4520-a6ba-6cc7c5eecff4">
+              <variable>
+                <outputVariablePortReferencesVariable Id="b5aa74ed-832a-4d9f-9941-4f049e1a01e5">
+                  <variableMoniker name="/FollowingCar/FollowingCar/pos2" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="ba077eca-ef6b-48c2-9609-f061e9bcc703">
+            <outputVariablePort Id="205c4c0a-1fae-4909-94d8-7540cd84b193">
+              <variable>
+                <outputVariablePortReferencesVariable Id="3bc7ef57-4aa0-460a-831b-4f36eeebd44e">
+                  <variableMoniker name="/FollowingCar/FollowingCar/speed2" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="3818a7e9-2a1e-4bce-a6a1-386a547b2d59">
+      <transitionNode Id="a6b24161-e3ab-436b-9e03-2908c4119c63" x="1400" y="656.25">
+        <targetState>
+          <transitionNodeConnectsToStates Id="cc6de362-3deb-4d48-8c64-5c2eb1bfcf6d">
+            <stateMoniker name="/FollowingCar/State1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="e0316369-80a3-402c-a848-c3e9f59cb2a1">
+      <transitionNode Id="4d68bfc0-ea24-41de-a194-14e6b3ea9610" x="2187.5" y="437.5" event="DEC">
+        <targetState>
+          <transitionNodeConnectsToStates Id="569d993d-e400-4878-883c-644a5f7ae2d0">
+            <stateMoniker name="/FollowingCar/State2" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="bb17beaf-6412-46a2-afea-77c6d00563f1">
+      <transitionNode Id="f9bcf1e1-a272-45ae-a649-89cee0de2210" x="2187.5" y="875" event="ACC">
+        <targetState>
+          <transitionNodeConnectsToStates Id="42c7041c-b331-4c23-8e4e-46ca6856503c">
+            <stateMoniker name="/FollowingCar/State3" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="2a325687-4d7f-4911-afd7-d7d58f9b00cc">
+      <transitionNode Id="958a338a-d2a2-4f01-866e-bd0d68126d1b" x="3150" y="656.25" event="ACC">
+        <targetState>
+          <transitionNodeConnectsToStates Id="9443b75b-0a55-4d53-a85c-bc4ccd9dafdb">
+            <stateMoniker name="/FollowingCar/State3" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="5c309320-f83b-4c84-a381-a2afc0928a32">
+      <transitionNode Id="58bae969-8c01-4004-9a59-5868d37eade3" x="2406.25" y="656.25" event="DEC">
+        <targetState>
+          <transitionNodeConnectsToStates Id="3a5ef5d9-5548-477e-93ed-c7a613a5924a">
+            <stateMoniker name="/FollowingCar/State2" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

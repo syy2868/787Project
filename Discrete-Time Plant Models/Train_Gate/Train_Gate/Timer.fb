@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="37f80ca7-26ee-4a9e-9540-d503cf890040" name="Timer" organization="SYY-PC" date="2015-10-04" author="SYY">
+  <states>
+    <functionBlockModelHasStates Id="6e81e974-87eb-4a45-9b24-9a02b49b0554">
+      <state Id="796adbdd-d6e1-4b22-968d-c0b75769f670" name="Start" x="1268.75" y="481.25" isInitial="true">
+        <actionSet>
+          <actionLink Id="9b9db145-2faa-4660-a329-eedbbaa4a244">
+            <actionSetMoniker Id="d08f3dad-44bf-46ac-805f-746ba11e6467" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="3858f626-39f2-4d60-8711-23f3be0e2ad4">
+            <transitionNodeMoniker Id="7a55df47-d2ca-4525-a17f-c7ebd2ae82e1" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="caa8befa-9f3f-43d8-9c5b-934f29514d7a">
+      <actionSet Id="d08f3dad-44bf-46ac-805f-746ba11e6467" x="1586.408891379833" y="481.25">
+        <actionItems>
+          <actionSetHasActionItems Id="7de7f99a-c840-4a08-b66a-2d830ad51dc9">
+            <actionAlgorithm Id="d5fce67c-7d56-4243-9bf3-5bdb7ee47cb8">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="77548363-f621-433b-ae1d-a25c2e3a5948">
+                  <algorithmMoniker name="/Timer/count" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="22f0a248-071f-4f58-bbac-1a068e7b2dfb">
+            <actionEvent Id="0c769b17-674f-4515-afdb-847fe25ccb3f">
+              <event>
+                <actionEventReferencesEvent Id="d407cc9d-bd84-49ef-a74e-bf2829515621">
+                  <eventMoniker name="/Timer/Timer/count" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="be6525d8-2399-4eb0-986d-09a4f2f0a65c">
+      <algorithm Id="d94cb1ca-e42c-4d9c-aefd-c660c1dd9128" name="count" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="6339b6a3-5ff3-471d-9e9e-97b8835eddb4">
+      <functionBlockInterface Id="5a105841-8dce-4003-8968-079420bb091a" name="Timer" x="1400" y="481.25">
+        <events>
+          <functionBlockHasEvents Id="a6479be7-2380-4d16-b806-f05d5934733a">
+            <event Id="5210e233-b3aa-4828-a15f-e086f30782be" name="count" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="f6f9b66a-2880-42df-8a75-579c39437baf">
+            <variable Id="7efc2372-e92d-465a-8766-9e21b88103f8" name="c" scope="Output" initialValue="0" type="LINT" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="2323356c-ce15-4f81-b9d6-28cf18a3b1b1">
+            <outputEventPort Id="c7fd99f4-c94c-4497-bdf7-5b42a1fc5889">
+              <targetPort>
+                <association Id="e794d860-9fda-4f59-89d3-e3b0e4342c6f">
+                  <outputVariablePortMoniker Id="bcb7f840-44b3-4c32-90ba-573523ddb6be" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="e25047d6-c875-48c9-988c-1bae3490f068">
+                  <eventMoniker name="/Timer/Timer/count" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="1a6cc307-cc3d-45e1-a8bd-7409ac553081">
+            <outputVariablePort Id="bcb7f840-44b3-4c32-90ba-573523ddb6be">
+              <variable>
+                <outputVariablePortReferencesVariable Id="4b3017de-35ac-4fb9-97c5-4cf743483bca">
+                  <variableMoniker name="/Timer/Timer/c" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="c6870d52-d272-4169-ab4a-697e1e785ed5">
+      <transitionNode Id="7a55df47-d2ca-4525-a17f-c7ebd2ae82e1" x="1230.75" y="430.25">
+        <targetState>
+          <transitionNodeConnectsToStates Id="ff07b882-f28e-4b3e-878c-f9a741039651">
+            <stateMoniker name="/Timer/Start" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

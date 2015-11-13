@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="6b046275-9c74-431e-bd82-5b5ee7069fc7" name="TrafficControl" organization="SYY-PC" date="2015-09-03" author="SYY">
+  <states>
+    <functionBlockModelHasStates Id="62710bd5-e441-47ce-819a-d5dda4f997b2">
+      <state Id="27204ec6-cd7c-4e41-9bb2-236a1ed02471" name="Start" x="1487.5" y="656.25" isInitial="true" />
+    </functionBlockModelHasStates>
+  </states>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="40ab4e11-0be8-4c12-a7b9-070ce67ac5fd">
+      <functionBlockInterface Id="060b17d9-d5a6-4f69-ae2f-a5295449bfdd" name="TrafficControl" x="1837.5" y="525">
+        <events>
+          <functionBlockHasEvents Id="d847b3d1-f25e-4943-993b-9dfb929b1418">
+            <event Id="78bc56b4-555d-430e-940c-e3e8113d76a0" name="Accelerate" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="cc6b0a60-0c70-452e-95de-b2915b8521c3">
+            <event Id="3399012d-8407-408e-ab7e-dbe0a498f073" name="Decelerate" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="95ccf2fd-c44e-4ae9-a9dc-584b80631740">
+            <event Id="93e5b3e2-2a64-484c-956e-ccbadf834001" name="Brake" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="dbed7f7d-8e1f-4347-b1f8-149414d97443">
+            <outputEventPort Id="a3a8ac62-73f4-4766-93a0-33bc56db8657">
+              <event>
+                <outputEventPortReferencesEvent Id="6c59af56-7175-46e6-bb90-98a54ed9dbd6">
+                  <eventMoniker name="/TrafficControl/TrafficControl/Accelerate" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="c218c0c1-98b5-46f2-8847-47d1e34c95f7">
+            <outputEventPort Id="b07b273b-7aed-46d5-a71c-2d041085260e">
+              <event>
+                <outputEventPortReferencesEvent Id="d80c3821-9a90-440d-8e79-93ccde122422">
+                  <eventMoniker name="/TrafficControl/TrafficControl/Decelerate" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="f6948722-00e9-4965-aaa0-2e0b0594bad6">
+            <outputEventPort Id="e33ef83c-6655-411d-b608-881f4b943157">
+              <event>
+                <outputEventPortReferencesEvent Id="528a8b8f-bcf9-4686-a719-8d07b8ccd874">
+                  <eventMoniker name="/TrafficControl/TrafficControl/Brake" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+</functionBlockModel>

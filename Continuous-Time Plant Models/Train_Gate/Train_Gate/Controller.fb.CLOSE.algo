@@ -1,0 +1,5 @@
+if(me->t1>me->t2){
+printf("signal sent : close the gate, y1 : %f, y2 : %f, time : %f\n", me->y1, me->y2, me->t1);
+}else{
+printf("signal sent : close the gate, y1 : %f, y2 : %f, time : %f\n", me->y1, me->y2, me->t2);
+}

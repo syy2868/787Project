@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="Gate" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="PC_THEO" Version="0,1" Author="Th?o" Date="2015-00-15" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+<EventInputs>
+  <Event Name="UP" Comment="">
+  </Event>
+  <Event Name="DOWN" Comment="">
+  </Event>
+</EventInputs>
+<EventOutputs>
+  <Event Name="update_g" Comment="">
+    <With Var="x" />
+  </Event>
+</EventOutputs>
+
+<OutputVars>
+  <VarDeclaration Name="x" Type="REAL" Comment="" />
+</OutputVars>
+</InterfaceList>
+<BasicFB><InternalVars>
+  <VarDeclaration Name="C1x" Type="REAL" Comment="" />
+  <VarDeclaration Name="d" Type="REAL" Comment="" />
+  <VarDeclaration Name="k" Type="INT" Comment="" />
+</InternalVars><ECC>
+  <ECState Name="Start" Comment="" x="393,75" y="568,75">
+    <ECAction Algorithm="init" Output="update_g" />
+  </ECState>
+  <ECState Name="State1" Comment="" x="1487,5" y="218,75">
+    <ECAction Algorithm="closing" Output="update_g" />
+  </ECState>
+  <ECState Name="State2" Comment="" x="1487,5" y="962,5">
+    <ECAction Algorithm="opening" Output="update_g" />
+  </ECState>
+  <ECState Name="State3" Comment="" x="1793,75" y="612,5">
+    <ECAction Algorithm="initial_condition1" Output="update_g" />
+  </ECState>
+  <ECState Name="State4" Comment="" x="1137,5" y="612,5">
+    <ECAction Algorithm="initial_condition10" Output="update_g" />
+  </ECState>
+  <ECTransition Source="Start" Destination="State1" Condition="true" x="831,25" y="262,5" />
+  <ECTransition Source="State1" Destination="State3" Condition="DOWN" x="1750" y="393,75" />
+  <ECTransition Source="State1" Destination="State1" Condition="true" x="1487,5" y="437,5" />
+  <ECTransition Source="State2" Destination="State4" Condition="UP" x="1268,75" y="787,5" />
+  <ECTransition Source="State2" Destination="State2" Condition="true" x="1531,25" y="1225" />
+  <ECTransition Source="State3" Destination="State2" Condition="true" x="1750" y="787,5" />
+  <ECTransition Source="State4" Destination="State1" Condition="true" x="1268,75" y="393,75" />
+</ECC><Algorithm Name="opening" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;x = me-&gt;C1x*exp(-1.0L/2.0L*me-&gt;d*me-&gt;k) + 1;&#xD;&#xA;//printf(&quot;Gate opening : %f, tick : %d\n&quot;, me-&gt;x, me-&gt;k);&#xD;&#xA;(me-&gt;k)++;" />
+</Algorithm>
+<Algorithm Name="closing" Comment="">
+  <Other Language="C" Prototype="" Text=" me-&gt;x = me-&gt;C1x*exp(-1.0L/2.0L*me-&gt;d*me-&gt;k)+10;&#xD;&#xA; //printf(&quot;Gate closing : %f, tick : %d\n&quot;, me-&gt;x, me-&gt;k);&#xD;&#xA; (me-&gt;k)++;" />
+</Algorithm>
+<Algorithm Name="init" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;x=10;&#xD;&#xA;me-&gt;k=0;&#xD;&#xA;me-&gt;d=0.1;&#xD;&#xA;me-&gt;C1x=0;" />
+</Algorithm>
+<Algorithm Name="initial_condition10" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;k=0;&#xD;&#xA;me-&gt;C1x=me-&gt;x-10;&#xD;&#xA;printf(&quot;Gate starts opening\n&quot;);" />
+</Algorithm>
+<Algorithm Name="initial_condition1" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;k=0;&#xD;&#xA;me-&gt;C1x=me-&gt;x-1;&#xD;&#xA;printf(&quot;Gate starts closing\n&quot;);" />
+</Algorithm></BasicFB>
+</FBType>

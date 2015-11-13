@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="3c74ef06-57ed-4c29-aed8-b4930021d610" name="DigitalController" organization="syy-PC" date="2015-08-11" author="syy">
+  <states>
+    <functionBlockModelHasStates Id="9daabdd2-ead2-409f-8618-965b4383c88c">
+      <state Id="4c35ff1c-7023-49c2-a886-667e35cd36b3" name="Start" x="656.25" y="393.75" isInitial="true">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="f86c59c1-1efb-4de2-95c4-e944ff10d9ed">
+            <transitionNodeMoniker Id="581eff98-4b0b-4029-87fe-ca9c14616e7f" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="368a33d5-3380-468f-9ec0-291551e1079f">
+            <transitionNodeMoniker Id="5a9508dc-e5d8-4544-8946-1a403248c766" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="2b435998-0f62-428e-a9b8-51cd7ec6f6d7">
+      <state Id="a63eac71-15f2-44e1-8cec-8f0f2d0934e7" name="State2" x="2143.75" y="568.75" isInitial="false">
+        <actionSet>
+          <actionLink Id="68bf9512-6506-4089-97e2-319d015a5322">
+            <actionSetMoniker Id="337a8925-1cce-40b4-90b2-6fa527c9eb3f" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="df7bfb7c-5f49-49f7-be29-63073b8329d9">
+            <transitionNodeMoniker Id="d3d8b3d1-2f44-4a5a-8a1b-d795ccfbb4d7" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="250d8670-f6e1-4d26-b617-6db972c1174f">
+      <state Id="b562ac27-0fb5-4a40-8264-3d48b77f1cfc" name="State3" x="2187.5" y="1093.75" isInitial="false">
+        <actionSet>
+          <actionLink Id="5a4208a2-0008-46b0-9fc5-527384efe9ce">
+            <actionSetMoniker Id="de92e65b-9689-41aa-aee9-73d14dc3239a" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="ba8a8f49-b050-4385-880e-bd0f61b16fe2">
+            <transitionNodeMoniker Id="f6a875ee-2967-46b3-b1bd-84d5cf04777f" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="2e74dcac-3f58-43cb-88ca-befe1934e809">
+      <actionSet Id="337a8925-1cce-40b4-90b2-6fa527c9eb3f" x="2187.5" y="350">
+        <actionItems>
+          <actionSetHasActionItems Id="011a9182-0106-44c0-9a3b-175c1cf70b82">
+            <actionAlgorithm Id="4fd2d7a0-4f24-4e12-823a-f211e1dee452">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="8418cd6a-f519-4160-bba0-a1621911620f">
+                  <algorithmMoniker name="/DigitalController/TurnOn" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="813dd7c5-36c6-4469-a46c-a6dafb1ab9ab">
+            <actionEvent Id="1349a414-383d-4abc-9fc3-e42a1a009561">
+              <event>
+                <actionEventReferencesEvent Id="a3a728ae-b619-452f-ab4f-bf8751099276">
+                  <eventMoniker name="/DigitalController/DigitalController/TurnOn" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="5795101a-967a-49c5-b8d5-138e1a51a03a">
+      <actionSet Id="de92e65b-9689-41aa-aee9-73d14dc3239a" x="2100" y="1268.75">
+        <actionItems>
+          <actionSetHasActionItems Id="ae30336c-3d1e-44a8-951f-364011623e48">
+            <actionAlgorithm Id="05acdf76-5012-423a-8517-7edefe1c07c9">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="8931f7f2-8c0a-4b13-81a4-7e0ab6ae98ef">
+                  <algorithmMoniker name="/DigitalController/TurnOff" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="36263280-a96b-468f-b269-20bbdfd8748e">
+            <actionEvent Id="bcabf0d2-b7a7-478b-9c79-030c710d3c3f">
+              <event>
+                <actionEventReferencesEvent Id="c1bf9b94-9f91-44d4-82eb-360944a3f884">
+                  <eventMoniker name="/DigitalController/DigitalController/TurnOff" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="4622ebcc-00fa-481c-b85e-c487763ac94e">
+      <algorithm Id="453c884c-ef9a-407a-a7a9-e7d64d09d97e" name="RandomChoice" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="3fb05d73-48d5-480b-a783-a84005c10167">
+      <algorithm Id="d1bc6997-37db-4ee5-a454-c1886832cf58" name="Wait" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="f5c53d14-96c8-449e-ac11-10941e32f5e3">
+      <algorithm Id="d841e636-9cbb-4289-85a3-1947d285d479" name="TurnOn" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="3dc77a0a-49bf-4533-b728-a7786f6d1de1">
+      <algorithm Id="c669f122-838f-4816-9a03-f098f5c24022" name="TurnOff" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="8468768b-fae6-460b-844b-2ba1172dfb6c">
+      <algorithm Id="08a2c449-d601-4af1-b8bf-2b3a8752c7b4" name="printing" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="023e96be-8cbd-4e0e-833c-6e04bbd3ff98">
+      <functionBlockInterface Id="213d7d61-e045-44e5-a9a4-5864ded64089" name="DigitalController" x="1487.5" y="525">
+        <events>
+          <functionBlockHasEvents Id="caceb8eb-bf1e-4afd-9868-a15e0c7baf51">
+            <event Id="216a66be-91b1-49da-84c3-91f3b731c4cd" name="Update" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="8ce4c60d-5c32-4c5e-9819-7274de31c77a">
+            <event Id="8a4e1da8-c236-4407-93ad-095558e832a0" name="TurnOn" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="b3d8ba28-1ff9-4c7c-bdd2-0e7748b97993">
+            <event Id="f6f6a874-8404-4ed4-8da7-4d72472baf5c" name="TurnOff" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="c371610e-db6f-425e-81ff-925d04d50c65">
+            <variable Id="f5bfeccf-4750-4496-a779-46b18f453895" name="x" scope="Input" type="REAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="6982042f-acc6-4376-882f-b9c058608270">
+            <variable Id="36c71492-c8a5-49b6-bbac-48a34ddeb14c" name="y" scope="Input" type="REAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="c749e729-3dee-4466-b3ed-97f34086f1a1">
+            <variable Id="6fce61c4-3de2-473d-b073-974bc3a44d11" name="control" scope="Internal" type="REAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="4aa422c5-aa9d-4158-a80e-511d46c7af69">
+            <variable Id="052bdf49-3c6a-4626-bd3e-18998e0f9292" name="timer" scope="Internal" type="REAL" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="010c165f-b614-4db4-934f-e30f8282da3e">
+            <inputEventPort Id="fe6000a9-6642-4d1b-84ef-abc9b6ac3dd3">
+              <targetPort>
+                <association Id="53cc4d0c-f6cc-4e4c-ac35-d6b1502c1b60">
+                  <inputVariablePortMoniker Id="57ee2f25-3f55-4d07-bb45-f898e2cc4358" />
+                </association>
+                <association Id="ce362499-0f62-418f-8773-15837508d2b6">
+                  <inputVariablePortMoniker Id="ed7c34fd-2a5a-45e0-a597-e7cc7c91bde7" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="cab15c85-6a1a-46bd-9f40-368f224e3b42">
+                  <eventMoniker name="/DigitalController/DigitalController/Update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="0f2ba5a6-551e-4493-9aad-cf79968faa24">
+            <outputEventPort Id="2e72dc28-b136-45e3-b617-8490c4f4a36f">
+              <event>
+                <outputEventPortReferencesEvent Id="7b2a04bc-7899-4266-bbfc-e0ff3b359a8f">
+                  <eventMoniker name="/DigitalController/DigitalController/TurnOn" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="ce1ce99d-91d5-43ca-8c54-7cd2d06bc9d1">
+            <outputEventPort Id="b36d84d7-e4a7-4595-b2b9-942056abd181">
+              <event>
+                <outputEventPortReferencesEvent Id="cd7fc819-63d6-481e-8431-7c9e3c415678">
+                  <eventMoniker name="/DigitalController/DigitalController/TurnOff" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="ada8918d-5270-44c8-a767-60923c8673e8">
+            <inputVariablePort Id="57ee2f25-3f55-4d07-bb45-f898e2cc4358">
+              <variable>
+                <inputVariablePortReferencesVariable Id="663533f0-cf2e-4e9c-a58f-475ce9443b3c">
+                  <variableMoniker name="/DigitalController/DigitalController/x" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="b5af1d7f-a30e-436a-8db3-8725e586aa51">
+            <inputVariablePort Id="ed7c34fd-2a5a-45e0-a597-e7cc7c91bde7">
+              <variable>
+                <inputVariablePortReferencesVariable Id="37004b31-3648-4922-a88f-c63c3d2fc004">
+                  <variableMoniker name="/DigitalController/DigitalController/y" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="19570662-58d8-4f8c-aa41-7bf1c6511e78">
+      <transitionNode Id="d3d8b3d1-2f44-4a5a-8a1b-d795ccfbb4d7" x="1487.5" y="262.5">
+        <targetState>
+          <transitionNodeConnectsToStates Id="73cfcd5b-583b-4d16-8886-78a03f7fba10">
+            <stateMoniker name="/DigitalController/Start" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="84ce3392-98c9-425c-bf23-cf5d4220d289">
+      <transitionNode Id="f6a875ee-2967-46b3-b1bd-84d5cf04777f" x="1312.5" y="787.5">
+        <targetState>
+          <transitionNodeConnectsToStates Id="6ff0c364-8e15-456b-8c9c-bf430f1df8e9">
+            <stateMoniker name="/DigitalController/Start" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="9f892e0c-c12b-4f04-873b-63a836cdd1c3">
+      <transitionNode Id="581eff98-4b0b-4029-87fe-ca9c14616e7f" x="1487.5" y="568.75" expression="x&lt;=20">
+        <targetState>
+          <transitionNodeConnectsToStates Id="65cc46fa-aa46-43df-8f43-cdf7c3f83798">
+            <stateMoniker name="/DigitalController/State2" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="f1624121-e312-418c-b35b-c3308973d104">
+      <transitionNode Id="5a9508dc-e5d8-4544-8946-1a403248c766" x="1426.27734375" y="683.75" expression="x&gt;=100">
+        <targetState>
+          <transitionNodeConnectsToStates Id="cf1f05a9-cadd-47a8-a2bf-68d5c20834c6">
+            <stateMoniker name="/DigitalController/State3" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

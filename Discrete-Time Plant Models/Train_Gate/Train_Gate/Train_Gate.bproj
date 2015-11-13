@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Run</Configuration>
+    <Platform Condition="'$(Platform)' == ''">gnu</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{776CCC40-257E-4ABA-A850-57C572F0CB90}</ProjectGuid>
+    <ProjectType>BlokIDE Project</ProjectType>
+    <ProjectTypeGuids>{92B81AF7-8D03-46D0-9C71-430DAE7A074E}</ProjectTypeGuids>
+    <RootNamespace>BlokIDENamespace</RootNamespace>
+    <AssemblyName>BlokIDEAssemblyName</AssemblyName>
+    <OutputFormat>CCode</OutputFormat>
+    <MaxStringLength>32</MaxStringLength>
+    <Name>Train_Gate</Name>
+    <ActivePlatform>gnu</ActivePlatform>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Deploy'">
+    <CompilationMode>Deploy</CompilationMode>
+    <OutputPath>Generated\Run\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <ExecuteMakeScript>false</ExecuteMakeScript>
+    <CompilerParameters>-w</CompilerParameters>
+    <MaxStringLength>32</MaxStringLength>
+    <AddtionalFBCParameters>--altsim</AddtionalFBCParameters>
+    <!--Remove warnings from GCC-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Remote'">
+    <CompilationMode>Remote</CompilationMode>
+    <OutputPath>Generated\Simulation\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <ExecuteMakeScript>false</ExecuteMakeScript>
+    <CompilerParameters>-w</CompilerParameters>
+    <MaxStringLength>32</MaxStringLength>
+    <AddtionalFBCParameters>--altsim</AddtionalFBCParameters>
+    <!--Remove warnings from GCC-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Run'">
+    <CompilationMode>Run</CompilationMode>
+    <OutputPath>Generated\Run\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <CompilerName>gcc</CompilerName>
+    <ExecuteMakeScript>true</ExecuteMakeScript>
+    <CompilerParameters>-w</CompilerParameters>
+    <MaxStringLength>32</MaxStringLength>
+    <AddtionalFBCParameters>--altsim</AddtionalFBCParameters>
+    <!--Remove warnings from GCC-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Simulation'">
+    <CompilationMode>Simulate</CompilationMode>
+    <OutputPath>Generated\Simulation\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <CompilerName>gcc</CompilerName>
+    <ExecuteMakeScript>true</ExecuteMakeScript>
+    <CompilerParameters>-w -D___ALTSIM___</CompilerParameters>
+    <MaxStringLength>32</MaxStringLength>
+    <AddtionalFBCParameters>--altsim</AddtionalFBCParameters>
+    <CompilerLocation>C:\cygwin\bin</CompilerLocation>
+    <AdditionalLibraryPath />
+    <AdditionalIncludePath />
+    <LinkerParameters />
+    <!--Remove warnings from GCC-->
+  </PropertyGroup>
+  <PropertyGroup>
+    <TimeMePath Condition="!Exists('$(TimeMePath)\UoA.IEC61499.Compiler.targets')">
+    </TimeMePath>
+    <TimeMePath Condition="$(TimeMePath) == '' And Exists('$(VSInstallDir)\Common7\IDE\Extensions\BlokIDE\UoA.IEC61499.Compiler.targets')">$(localappdata)\Common7\IDE\Extensions\BlokIDE</TimeMePath>
+    <TimeMePath Condition="$(TimeMePath) == '' And Exists('$(localappdata)\Microsoft\VisualStudio\$(VisualStudioVersion)Exp\Extensions\BlokTech\TimeMe\1.0\UoA.IEC61499.Compiler.targets')">$(localappdata)\Microsoft\VisualStudio\$(VisualStudioVersion)Exp\Extensions\BlokTech\TimeMe\1.0</TimeMePath>
+    <TimeMePath Condition="$(TimeMePath) == '' And Exists('$(localappdata)\Microsoft\VisualStudio\$(VisualStudioVersion)\Extensions\BlokTech\TimeMe\1.0\UoA.IEC61499.Compiler.targets')">$(localappdata)\Microsoft\VisualStudio\$(VisualStudioVersion)\Extensions\BlokTech\TimeMe\1.0</TimeMePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Train_Gate.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plant.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Gate.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Train1.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Train2.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Timer.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="Controller.fb.CLOSE.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Controller.fb</DependentUpon>
+      <LinkedIntoProjectAt>CLOSE.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Controller.fb.init.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Controller.fb</DependentUpon>
+      <LinkedIntoProjectAt>init.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Controller.fb.OPEN.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Controller.fb</DependentUpon>
+      <LinkedIntoProjectAt>OPEN.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Gate.fb.closing.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Gate.fb</DependentUpon>
+      <LinkedIntoProjectAt>closing.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Gate.fb.init.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Gate.fb</DependentUpon>
+      <LinkedIntoProjectAt>init.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Gate.fb.initial_condition1.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Gate.fb</DependentUpon>
+      <LinkedIntoProjectAt>initial_condition1.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Gate.fb.initial_condition10.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Gate.fb</DependentUpon>
+      <LinkedIntoProjectAt>initial_condition.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Gate.fb.opening.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Gate.fb</DependentUpon>
+      <LinkedIntoProjectAt>opening.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Timer.fb.count.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Timer.fb</DependentUpon>
+      <LinkedIntoProjectAt>count.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Train1.fb.emergency_brake.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Train1.fb</DependentUpon>
+      <LinkedIntoProjectAt>emergency_brake.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Train1.fb.fast_mode.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Train1.fb</DependentUpon>
+      <LinkedIntoProjectAt>fast_mode.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Train1.fb.init.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Train1.fb</DependentUpon>
+      <LinkedIntoProjectAt>init.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Train1.fb.initCond_brake.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Train1.fb</DependentUpon>
+      <LinkedIntoProjectAt>initCond_brake.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Train1.fb.initCond_fast.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Train1.fb</DependentUpon>
+      <LinkedIntoProjectAt>initCond_fast.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Train1.fb.initCond_slow.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Train1.fb</DependentUpon>
+      <LinkedIntoProjectAt>initCond_slow.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Train1.fb.slow_mode1.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Train1.fb</DependentUpon>
+      <LinkedIntoProjectAt>slow_mode.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Train1.fb.slow_mode2.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Train1.fb</DependentUpon>
+      <LinkedIntoProjectAt>slow_mode2.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Train1.fb.slow_mode_1_1.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Train1.fb</DependentUpon>
+      <LinkedIntoProjectAt>slow_mode_1_1.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Train2.fb.emergency_brake.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Train2.fb</DependentUpon>
+      <LinkedIntoProjectAt>emergency_brake.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Train2.fb.fast_mode.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Train2.fb</DependentUpon>
+      <LinkedIntoProjectAt>fast_mode.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Train2.fb.init.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Train2.fb</DependentUpon>
+      <LinkedIntoProjectAt>init.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Train2.fb.initCond_brake.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Train2.fb</DependentUpon>
+      <LinkedIntoProjectAt>initCond_brake.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Train2.fb.initCond_fast.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Train2.fb</DependentUpon>
+      <LinkedIntoProjectAt>initCond_fast.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Train2.fb.initCond_slow.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Train2.fb</DependentUpon>
+      <LinkedIntoProjectAt>initCond_slow.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Train2.fb.slow_mode1.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Train2.fb</DependentUpon>
+      <LinkedIntoProjectAt>slow_mode.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Train2.fb.slow_mode2.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Train2.fb</DependentUpon>
+      <LinkedIntoProjectAt>slow_mode2.algo</LinkedIntoProjectAt>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(TimeMePath)\UoA.IEC61499.Compiler.targets" />
+</Project>

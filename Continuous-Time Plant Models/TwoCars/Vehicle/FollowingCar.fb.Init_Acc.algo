@@ -1,0 +1,4 @@
+me->max=false;
+if(me->isInitial==false){
+me->k = 0;
+}

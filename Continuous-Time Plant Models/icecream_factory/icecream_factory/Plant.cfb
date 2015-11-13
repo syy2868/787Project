@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="efddfdd3-fde0-45d9-98e1-16c6b7db9a77" name="Plant" organization="PC_THEO" date="2015-07-16" author="Théo" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="522b848c-7751-454a-89bf-48da445afa19">
+      <functionBlockInterface Id="774dd55d-f0af-4dbc-b804-06fca6feb0e5" name="Plant" x="1137.5" y="568.75" modelType="Composite">
+        <events>
+          <functionBlockHasEvents Id="54b1d443-95cf-41af-88f1-046e189457e3">
+            <event Id="3829c5fe-ddc8-453c-a6e4-54a309726f32" name="S2" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="45187c85-f9e0-47b1-a6d9-ed2ca378ef1c">
+            <event Id="753e57ca-32fb-4426-8909-e00b1ea95d64" name="S3" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="834d288f-75f5-4a36-9a6d-6dfc9e4c70ca">
+            <event Id="57dc573d-053f-45e9-95bf-3b4448711da6" name="update" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="bbcd1601-438c-4d32-a681-5930d2abbb6c">
+            <variable Id="ee40d38e-1891-4f81-acc2-1ae0ab628424" name="x" scope="Output" type="REAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="cc950a58-08f3-43f7-9888-7bc954186f6a">
+            <variable Id="1e2dfb9e-d3e4-4232-bfe2-3c8cdbc078bd" name="y" scope="Output" type="REAL" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="542e3127-b743-46c8-b6ec-689ddd8a1ea5">
+            <inputEventPort Id="50ef9280-cb3c-407d-839a-2eebd5cb3530">
+              <proxyTargetPorts>
+                <proxyConnection Id="1e22456c-3a48-45d7-a532-155b6b7baa30">
+                  <inputEventPortMoniker Id="155e9ebe-70a5-40c5-856b-5e6c3e6d8d42" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <inputEventPortReferencesEvent Id="4a2fc99b-2c2e-44d6-a021-e0c8d8dcf40b">
+                  <eventMoniker name="/Plant/Plant/S2" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="d1223079-d53a-4021-a599-a82dfa8edb50">
+            <inputEventPort Id="e78d20cf-6724-4765-a7b1-ee611c5efdc0">
+              <proxyTargetPorts>
+                <proxyConnection Id="67232230-c516-41f2-8aa7-e7b0eca56199">
+                  <inputEventPortMoniker Id="68dc8b48-ac63-4b0d-9682-3e11b7106afd" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <inputEventPortReferencesEvent Id="c19fe497-2b5b-459d-a087-e26ab6fc98f4">
+                  <eventMoniker name="/Plant/Plant/S3" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="ad52942e-9c7e-4a22-bdda-74d94c0210ab">
+            <outputEventPort Id="80252064-b2b3-4d7e-a29d-27c6db7c7463">
+              <proxyTargetPorts>
+                <proxyConnection Id="0b059cda-6bb5-421a-8b6b-ec8b5a32067e">
+                  <outputEventPortMoniker Id="d4fb1a4c-9039-4abb-8289-e77d0839e1c6" />
+                </proxyConnection>
+                <proxyConnection Id="d95f5c03-b218-4b53-a44c-a09f7dbe52db">
+                  <outputEventPortMoniker Id="c5fba9a1-ea6e-4da5-b9cc-325b88634773" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="af9163e1-8cb7-44ad-97e5-0c632d06b69b">
+                  <eventMoniker name="/Plant/Plant/update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="24155101-d9ea-4ace-bc69-3ba12114e95c">
+            <outputVariablePort Id="b43eb2e2-bebe-4be9-810a-59616e6a349f">
+              <proxyTargetPorts>
+                <proxyConnection Id="305ffe03-c79f-49a3-80dc-679f98b7b1c4">
+                  <outputVariablePortMoniker Id="6775935b-9f44-4310-b58a-47878ef6b066" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="87fbe0f5-e1c9-4f1c-b1e4-2130590ef1bd">
+                  <variableMoniker name="/Plant/Plant/x" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="99dc6e6b-b543-44d0-9adf-bd3e4d9b2462">
+            <outputVariablePort Id="420fee91-5f8c-4e55-bd44-390d5ee6f638">
+              <proxyTargetPorts>
+                <proxyConnection Id="fd9d0a28-1d1c-447b-a8b1-161b983f7387">
+                  <outputVariablePortMoniker Id="9e2ece6a-a6fb-4cfe-816a-39e7f80da3f1" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="ff367f78-d193-435b-9340-7c4ae7de3fce">
+                  <variableMoniker name="/Plant/Plant/y" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+  <functionBlockReferences>
+    <cFBModelHasFBReferences Id="a058f5ee-d250-4911-8d7b-87c04edbb171">
+      <functionBlockReference Id="43cb9474-0f0f-4801-86cf-441ff9c471ee" name="carousel_belt" x="787.5" y="481.25" creationMode="Resource" referencedFile="carousel_belt.fb">
+        <events>
+          <functionBlockHasEvents Id="97ba9866-29fc-4802-a253-a7b3c2e1a8fd">
+            <eventRef Id="be3c4128-7809-414c-8e81-97241323eaab" name="update" scope="Output" referencedID="5c6f3dea-b1ff-4c16-90cb-dbbcccf3eb71" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="45b8d39c-077e-4d61-a873-5b1599e01874">
+            <variableRef Id="3fa876f0-e91a-4f0a-96ad-7999d34fecc7" name="x" scope="Output" type="REAL" referencedID="0f061d8d-ca65-46e2-99bc-d2f6e085ab26" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="27241c30-c9da-4856-bd10-beb0ac2832ea">
+            <outputEventPort Id="d4fb1a4c-9039-4abb-8289-e77d0839e1c6">
+              <event>
+                <outputEventPortReferencesEvent Id="75223ec3-9ce3-446c-828f-960127125778">
+                  <eventRefMoniker name="/Plant/carousel_belt/update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="bafd9735-9c2d-4846-b6f7-6710976faf53">
+            <outputVariablePort Id="6775935b-9f44-4310-b58a-47878ef6b066">
+              <variable>
+                <outputVariablePortReferencesVariable Id="f76d4244-3f9a-4667-ba89-0b3edd670fcb">
+                  <variableRefMoniker name="/Plant/carousel_belt/x" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="b9915752-71c5-4855-8528-56c10962183b">
+      <functionBlockReference Id="eefa8282-a9e4-4ae0-bfb8-3e6481d492e7" name="diverter" x="1837.5" y="437.5" creationMode="Resource" referencedFile="diverter.fb">
+        <events>
+          <functionBlockHasEvents Id="11db775f-9761-4572-81ad-d4488564ff15">
+            <eventRef Id="3b9ad9bd-89a9-42d9-8462-1da9b0bfae4d" name="S2" scope="Input" referencedID="dc3adc79-3032-41b5-a346-4bd7c3e8f3f5" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="a70fd09b-58fc-488a-88a2-b3d97e978c51">
+            <eventRef Id="c0b26161-6698-41a5-bc4c-7038bbd61678" name="S3" scope="Input" referencedID="3a5bfa8e-4830-4061-9349-bebdf2af55fe" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="82b71459-37d2-434e-a7fc-1ed5d936ee4c">
+            <eventRef Id="0739e21b-0cf7-45b9-a962-298c37d89fb1" name="update" scope="Output" referencedID="55043b61-c30b-4c5c-aafe-6d1be28379ec" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="b1178bbe-48c5-47f6-94b7-dd2c368c046a">
+            <variableRef Id="6764fbb0-53bc-4c70-a7a2-b52209614bb1" name="y" scope="Output" type="REAL" referencedID="756a7e41-4903-4a21-a2f2-7eebac7e50e1" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="bb336436-faa1-4430-bf28-890b41b09931">
+            <inputEventPort Id="155e9ebe-70a5-40c5-856b-5e6c3e6d8d42">
+              <event>
+                <inputEventPortReferencesEvent Id="4c3804e5-5a27-4c23-aba5-7d162e79f33d">
+                  <eventRefMoniker name="/Plant/diverter/S2" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="324146fb-8231-4ad6-963b-23f83198cc8f">
+            <inputEventPort Id="68dc8b48-ac63-4b0d-9682-3e11b7106afd">
+              <event>
+                <inputEventPortReferencesEvent Id="32f76c2a-c5ac-49ad-b12e-b2bda652c39d">
+                  <eventRefMoniker name="/Plant/diverter/S3" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="33cf47f6-d58c-452b-bb48-f04b7956d68b">
+            <outputEventPort Id="c5fba9a1-ea6e-4da5-b9cc-325b88634773">
+              <event>
+                <outputEventPortReferencesEvent Id="0afd033d-5eb3-45b9-9749-db3ca1978aaf">
+                  <eventRefMoniker name="/Plant/diverter/update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="5775c263-ea8a-41ee-85a1-3dc8e82bba35">
+            <outputVariablePort Id="9e2ece6a-a6fb-4cfe-816a-39e7f80da3f1">
+              <variable>
+                <outputVariablePortReferencesVariable Id="5f972c1d-0e32-4353-870c-1a9766225874">
+                  <variableRefMoniker name="/Plant/diverter/y" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+  </functionBlockReferences>
+</compositeFunctionBlockModel>

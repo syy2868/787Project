@@ -1,0 +1,7 @@
+//me->y1=2*me->d*me->k+me->C1y1;
+me->y1=15;
+(me->k)++;
+printf("y1 : %f\n", me->y1);
+me->t=me->c;
+me->t1=me->t/(float)3;
+//printf("train1 time : %d\n", me->t);

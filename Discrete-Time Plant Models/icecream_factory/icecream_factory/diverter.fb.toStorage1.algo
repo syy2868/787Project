@@ -1,0 +1,8 @@
+if (me->y == 0){
+	printf("diverter already in storage1, control error \n");
+	//exit(1);
+	}
+
+//me->y=me->y-2;
+me->y=0;
+printf("diverter, %f\n",me->y);

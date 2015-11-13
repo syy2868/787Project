@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="560ef9cd-ab87-4aa9-b0e5-81a865d41178" name="detection" organization="PC_THEO" date="2015-07-16" author="Théo">
+  <states>
+    <functionBlockModelHasStates Id="4febc8b3-4093-4297-8f98-290531dd0a67">
+      <state Id="8bec18d5-14f5-43cb-ac1d-65fdde23abc4" name="Start" x="568.75" y="437.5" isInitial="true">
+        <actionSet>
+          <actionLink Id="43de55d6-2465-496f-8647-3d72ad0222d2">
+            <actionSetMoniker Id="ea684f0b-b9a7-4067-9557-a8b50796051f" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="66c2c46f-4327-4bc7-a8c1-33609e3fcc30">
+            <transitionNodeMoniker Id="871fcd51-228e-4f3f-b813-443f8cbcdb7c" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="341f35de-c943-4d5b-89df-30a56f57c2a0">
+      <state Id="3cc3e12d-caeb-4d21-80bd-28c235ce77e6" name="State1" x="1706.25" y="437.5" isInitial="false">
+        <actionSet>
+          <actionLink Id="6f33e1f9-59fe-447a-b2b5-fb8ad36584aa">
+            <actionSetMoniker Id="aa4d1f44-1e5e-406b-82a1-e457ed55877f" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="a4dde0bc-73ff-4b3e-952f-cbf18ee7ce18">
+            <transitionNodeMoniker Id="17ee3831-863d-4983-819f-e4ced3f7e525" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="a2008281-855b-442b-bd5d-1cc7c9dcec97">
+      <actionSet Id="ea684f0b-b9a7-4067-9557-a8b50796051f" x="568.75" y="568.75">
+        <actionItems>
+          <actionSetHasActionItems Id="ef8e1d0a-81d3-4984-964b-c725cd0cfdec">
+            <actionAlgorithm Id="ed63c0ff-1aaa-42af-b01c-4b3b6b94124e">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="b8e575c6-0c87-4f2c-b4c8-0196bade2ed7">
+                  <algorithmMoniker name="/detection/init" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="84d8c504-3898-4c42-8ce7-1f45956e5fc5">
+      <actionSet Id="aa4d1f44-1e5e-406b-82a1-e457ed55877f" x="2056.1018845438957" y="437.5">
+        <actionItems>
+          <actionSetHasActionItems Id="7798f7f6-55dd-4bba-a544-4709a0c8e58b">
+            <actionEvent Id="88cf82c3-7d9d-402f-bff9-55dfe53417db">
+              <event>
+                <actionEventReferencesEvent Id="8ccc27d9-9908-4ce6-836b-022a046bed16">
+                  <eventMoniker name="/detection/detection/S1" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="e77c5e58-e93e-47d9-902b-79cc4f66469f">
+      <algorithm Id="bebd0e7b-5442-48fe-82a5-9807339a31d1" name="init" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="69e8fa59-d9eb-495f-ba72-2ebc66acf966">
+      <functionBlockInterface Id="d10b9099-1b6a-40bb-b946-f85d1e458794" name="detection" x="1225" y="568.75">
+        <events>
+          <functionBlockHasEvents Id="e9349f70-386b-42d8-975e-c91731294407">
+            <event Id="bca1c987-362c-4712-b8eb-3a764f5e91ac" name="S1" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="78962610-f916-4630-b39d-042a04acd386">
+            <event Id="9104084b-3de8-4758-a834-e58d0dfa541f" name="update" scope="Input" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="6ecc0df6-112b-4ff6-bb82-55a6ab81bd18">
+            <variable Id="bb19f19a-2004-448c-9782-042e2a665b87" name="x" scope="Input" type="REAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="009ec3ff-d285-4618-b238-6cd6e2188442">
+            <variable Id="467177ac-6718-48b2-aef3-315b0abc17a9" name="alpha" scope="Internal" type="REAL" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="0e43dcb1-8b96-4498-ac23-adf2f08070a7">
+            <inputEventPort Id="94c50f1f-8063-4dfd-ab90-4acc8c426263">
+              <targetPort>
+                <association Id="b7c20b5d-0ba8-45f6-9825-a1933693f155">
+                  <inputVariablePortMoniker Id="dd40a212-e08a-4d35-a9a7-5aff18384561" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="dbc13115-aa4b-4603-8015-fdb61acabcb9">
+                  <eventMoniker name="/detection/detection/update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="f20fde32-757c-4352-994d-cfe8cc30e340">
+            <outputEventPort Id="273526dd-9914-4ad1-98cf-c50830bef779">
+              <event>
+                <outputEventPortReferencesEvent Id="19f2500a-ac16-4ec7-a801-4d9af3f2be2b">
+                  <eventMoniker name="/detection/detection/S1" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="65a363db-4e51-4629-82b1-4b0f396870b3">
+            <inputVariablePort Id="dd40a212-e08a-4d35-a9a7-5aff18384561">
+              <variable>
+                <inputVariablePortReferencesVariable Id="3fedd336-6a66-4dd1-b39a-a670d946eda3">
+                  <variableMoniker name="/detection/detection/x" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="3dc51946-6bf9-4f4e-9dcc-5b63fe6c5c05">
+      <transitionNode Id="871fcd51-228e-4f3f-b813-443f8cbcdb7c" x="1058.75" y="437.5" expression="x&gt;=alpha">
+        <targetState>
+          <transitionNodeConnectsToStates Id="e1254c5d-c5a9-42cf-af17-4edb5d68121f">
+            <stateMoniker name="/detection/State1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="1da80c70-c23f-44d1-97f0-21119641b0ee">
+      <transitionNode Id="17ee3831-863d-4983-819f-e4ced3f7e525" x="1575" y="787.5" expression="x == alpha">
+        <targetState>
+          <transitionNodeConnectsToStates Id="ad097473-2cbd-4f9a-a55a-f38bbfa43e41">
+            <stateMoniker name="/detection/State1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

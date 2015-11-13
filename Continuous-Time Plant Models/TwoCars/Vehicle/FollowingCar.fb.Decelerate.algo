@@ -1,0 +1,8 @@
+me->v = me->speed2;
+me->x = me->pos2;
+
+//me->v = CarFollow_ode_1(C1v, d, k, s, x);
+me->speed2 = me->v + me->d * 0.85 * (6.75 + 7.91 * tanh(0.13 * (me->distance - 5) - 1.57) - me->v);
+me->pos2 = me->x + me->d * me->v;
+
+printf("Following car decelerates (Position: %3.8f, Speed: %3.8f, Distance: %3.8f)\n", me->pos2, me->speed2, me->distance);

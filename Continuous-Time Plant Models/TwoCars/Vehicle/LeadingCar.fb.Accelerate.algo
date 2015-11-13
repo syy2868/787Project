@@ -1,0 +1,13 @@
+me->v = me->speed1;
+me->x = me->pos1;  
+me->k = me->k + 1; 
+me->speed1 = 0.0097*me->k*me->k + 0.0112*me->k - 0.0482; 
+me->pos1 = me->x + me->d * me->v;
+
+if(me->speed1>=14.66){
+  me->speed1 = 14.66;
+  me->k = 0;
+  me->t = 0;
+}
+
+printf("Leading car accelerates (Position: %3.8f, Speed: %3.8f)\n", me->pos1, me->speed1);

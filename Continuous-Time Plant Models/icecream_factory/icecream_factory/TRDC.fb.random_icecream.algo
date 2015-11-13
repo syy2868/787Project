@@ -1,0 +1,6 @@
+/* Intializes random number generator */
+srand(time(NULL));
+
+me->ice_id = rand() % 2 ;
+
+//printf("%d, %f\n", me->ice_id, me->y);

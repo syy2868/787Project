@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="OBDSS" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="Jin-PC" Version="0.1" Author="Jin" Date="2015-00-24" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+<EventInputs>
+  <Event Name="CCH_RCV" Comment="">
+    <With Var="WarningType" />
+  </Event>
+  <Event Name="SCH_RCV" Comment="">
+  </Event>
+  <Event Name="Brake" Comment="">
+  </Event>
+  <Event Name="Accel" Comment="">
+  </Event>
+</EventInputs>
+<EventOutputs>
+  <Event Name="ACROSS" Comment="">
+  </Event>
+  <Event Name="STOP" Comment="">
+  </Event>
+  <Event Name="CCH_SEND" Comment="">
+  </Event>
+  <Event Name="SCH_SEND" Comment="">
+  </Event>
+</EventOutputs>
+<InputVars>
+  <VarDeclaration Name="WarningType" Type="INT" Comment="" />
+</InputVars>
+<OutputVars>
+  <VarDeclaration Name="Variable1" Type="BOOL" Comment="" />
+</OutputVars>
+</InterfaceList>
+<BasicFB><HCECC>
+  <ECC Name="OBDSS">
+    <ECState Name="WarningSystem" Comment="" x="700" y="700">
+      <HCECC>
+        <ECC Name="Brake">
+          <ECState Name="WaitBrake" Comment="" x="218.75" y="70.0000000000001" />
+          <ECState Name="BrakeWarning" Comment="" x="131.25" y="463.75">
+            <ECAction Algorithm="InputMultiplex" Output="CCH_SEND" />
+          </ECState>
+          <ECTransition Source="WaitBrake" Destination="BrakeWarning" Condition="Brake" x="87.5" y="288.75" />
+          <ECTransition Source="BrakeWarning" Destination="BrakeWarning" Condition="Brake" x="350" y="488.75" />
+          <ECTransition Source="BrakeWarning" Destination="WaitBrake" Condition="true" x="350" y="288.75" />
+        </ECC>
+        <ECC Name="Acceleration">
+          <ECState Name="WaitAccel" Comment="" x="248.521949350834" y="70.0000000000001" />
+          <ECState Name="AccelWarning" Comment="" x="202.914839088917" y="463.75">
+            <ECAction Algorithm="InputMultiplex" Output="CCH_SEND" />
+          </ECState>
+          <ECTransition Source="WaitAccel" Destination="AccelWarning" Condition="Accel" x="465.414839088917" y="288.75" />
+          <ECTransition Source="AccelWarning" Destination="AccelWarning" Condition="Accel" x="350" y="379.75" />
+          <ECTransition Source="AccelWarning" Destination="WaitAccel" Condition="true" x="159.164839088917" y="288.75" />
+        </ECC>
+        <ECC Name="TrafficLight">
+          <ECState Name="WaitLight" Comment="" x="656.250000000001" y="78.7499999999999" />
+          <ECState Name="Across" Comment="" x="525.000000000001" y="472.5">
+            <ECAction Output="ACROSS" />
+          </ECState>
+          <ECTransition Source="WaitLight" Destination="Across" Condition="CCH_RCV AND (WarningType = 1)" x="131.250000000001" y="253.75" />
+          <ECTransition Source="Across" Destination="WaitLight" Condition="true" x="1050" y="253.75" />
+        </ECC>
+        <ECC Name="Accidents">
+          <ECState Name="WaitEmergency" Comment="" x="685.87383389473" y="78.7499999999999" />
+          <ECState Name="Stop" Comment="" x="598.37383389473" y="472.5">
+            <ECAction Output="STOP" />
+          </ECState>
+          <ECTransition Source="WaitEmergency" Destination="Stop" Condition="CCH_RCV AND (WarningType = 0)" x="160.87383389473" y="253.75" />
+          <ECTransition Source="Stop" Destination="WaitEmergency" Condition="true" x="1035.87383389473" y="253.75" />
+        </ECC>
+        <ECC Name="Region1">
+          <ECState Name="State1" Comment="" x="244.978679418564" y="201.25" />
+          <ECState Name="State2" Comment="" x="988.728679418564" y="201.25" />
+          <ECTransition Source="State1" Destination="State1" Condition="true" x="332.478679418564" y="420" />
+          <ECTransition Source="State1" Destination="State2" Condition="true" x="649.853679418564" y="350" />
+        </ECC>
+      </HCECC>
+    </ECState>
+  </ECC>
+</HCECC><Algorithm Name="InputMultiplex" Comment="">
+  <Other Language="C" Prototype="" Text="" />
+</Algorithm></BasicFB>
+</FBType>

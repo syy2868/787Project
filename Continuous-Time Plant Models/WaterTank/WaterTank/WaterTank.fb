@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="6282e3a8-2f7d-429a-9580-4468e66dd034" name="WaterTank" organization="syy-PC" date="2015-08-10" author="syy">
+  <states>
+    <functionBlockModelHasStates Id="97b7b3ae-29e4-4b80-a2c1-9846602febb0">
+      <state Id="e96be15e-79af-44e8-86e3-3fbbcd9f36c5" name="Start" x="612.5" y="875" isInitial="true">
+        <actionSet>
+          <actionLink Id="e64bf52e-7b24-43e2-ab7f-a6f9ba35cfc8">
+            <actionSetMoniker Id="8fac8f7d-0402-4e85-ac6d-21bf2b5b107b" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="29b9bdee-938e-4a22-8e70-dc147950ea5a">
+            <transitionNodeMoniker Id="ffe576da-f0a1-46fd-bfc4-ec408a1ed1f8" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="966a9473-d0bd-4463-949b-39770fc4bf19">
+            <transitionNodeMoniker Id="5f42bcc5-09cd-423b-9584-d06a50b0c1ec" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="8e42358f-7826-42cb-bb3f-a47f1ca3eefb">
+      <state Id="932ac3d5-f36c-4c40-ab3f-a79cce719c48" name="State1" x="2625" y="437.5" isInitial="false">
+        <actionSet>
+          <actionLink Id="9963fd1f-adf3-4d38-9e19-488bf783bf50">
+            <actionSetMoniker Id="40d482b5-a792-4234-8a64-ca86a2cb20be" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="1570d693-aec8-40a3-afae-0c07ec9557cf">
+            <transitionNodeMoniker Id="c1ba964b-c24f-4dfd-b4fe-5a64617c7204" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="135c3248-d297-443c-96d4-5098bf8321a8">
+            <transitionNodeMoniker Id="c2a450d9-53e9-4b18-b640-0a6d2d0ff365" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="6e95de54-42e1-47b0-b953-7c400714074e">
+      <state Id="dc04344d-dd09-44d7-883b-15475dbbd600" name="State2" x="1925" y="787.5" isInitial="false">
+        <actionSet>
+          <actionLink Id="d1c60892-daa2-4b28-88d7-56bbab8f2809">
+            <actionSetMoniker Id="2251c993-4894-4b02-a123-93fc6843e922" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="69702caf-e684-44f1-b9af-c5fece95de1a">
+            <transitionNodeMoniker Id="f42e3a3b-9d1a-4224-afeb-c5c5be12e32b" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="b91fb890-05f9-4bd2-beee-001820a1c49b">
+      <state Id="60e2cf28-e2e9-48c3-ab17-813dd629b4b3" name="State3" x="1706.25" y="1618.75" isInitial="false">
+        <actionSet>
+          <actionLink Id="64ca871a-1074-4df8-8d23-a82b97eefbf4">
+            <actionSetMoniker Id="0a5eac9f-b38d-4b42-a38b-43562bceee24" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="a2028166-e528-4630-b7ca-d54f3d5bec8a">
+            <transitionNodeMoniker Id="dad80e60-feba-496e-bb8d-eff7e47805b9" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="bebfaf11-3f6c-48b8-9057-2f1ed06a2c98">
+            <transitionNodeMoniker Id="dcddbc6f-d74a-43ea-83c4-690fdf62ac5a" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="ecc98f96-176b-4b71-b8a3-e91e41ad183f">
+      <state Id="11a5fd82-7d77-4221-8940-40458294a6b9" name="State4" x="2143.75" y="1312.5" isInitial="false">
+        <actionSet>
+          <actionLink Id="da0df4d2-f4dc-41d5-80da-f30c09911d6e">
+            <actionSetMoniker Id="a5940434-1f16-49c3-930c-8efd256c1e03" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="1ff66761-c94e-48b7-9070-39497bae3d87">
+            <transitionNodeMoniker Id="8873d392-2174-418c-bc95-df57bb010a34" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="895535b7-3e38-44a3-b177-670d6d4abbb1">
+      <actionSet Id="8fac8f7d-0402-4e85-ac6d-21bf2b5b107b" x="175" y="743.75">
+        <actionItems>
+          <actionSetHasActionItems Id="287934b1-a954-44d5-b313-c593313875e8">
+            <actionAlgorithm Id="f23e68cf-cf3a-436b-9562-e372dd6ee3d7">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="f8b39101-8c70-4863-ba1d-1a383122a574">
+                  <algorithmMoniker name="/WaterTank/Init" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="c095a432-e973-4461-806d-12e9de1365b5">
+            <actionEvent Id="d98f3373-2a32-4ef0-b9f9-aad4e7edbdda">
+              <event>
+                <actionEventReferencesEvent Id="1babb70e-fd91-497c-b20c-382cade963b4">
+                  <eventMoniker name="/WaterTank/WaterTank/Update" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="9354951f-9aa7-4af6-abdb-0526c05ce849">
+      <actionSet Id="40d482b5-a792-4234-8a64-ca86a2cb20be" x="2143.75" y="393.75">
+        <actionItems>
+          <actionSetHasActionItems Id="61b31736-a43c-4a82-ba2d-69d46310864a">
+            <actionAlgorithm Id="50213472-fc08-4faf-b9ff-ccf1d70d5f2d">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="cb2857de-c652-42b6-8d7e-a7151133bfa0">
+                  <algorithmMoniker name="/WaterTank/HeatingUp" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="2363c5d2-ecf8-4827-aab5-4736ebb42848">
+            <actionEvent Id="8897de77-d97f-4893-a631-7a8227406620">
+              <event>
+                <actionEventReferencesEvent Id="ec2473e2-144b-4fd7-8f2a-4958c8761d4f">
+                  <eventMoniker name="/WaterTank/WaterTank/Update" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="5acee3e2-e21e-4f96-ab1e-dd3ad1383d32">
+      <actionSet Id="2251c993-4894-4b02-a123-93fc6843e922" x="2887.5" y="1225">
+        <actionItems>
+          <actionSetHasActionItems Id="59792ae3-9d8e-4603-b0f3-6dab723cb3cb">
+            <actionAlgorithm Id="8a5b00b1-4706-4ae3-9ac3-6108ef798b8f">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="f715894b-45a7-4bf1-93af-04c0549a62bc">
+                  <algorithmMoniker name="/WaterTank/InitValueOff" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="8198d1f7-0e68-494d-8bd4-cd66d3bcc6de">
+            <actionEvent Id="ade8c573-5a87-4550-b003-fb929f165d2c">
+              <event>
+                <actionEventReferencesEvent Id="29ebb62e-551c-4861-9214-204d235f44c3">
+                  <eventMoniker name="/WaterTank/WaterTank/Update" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="b5a9ff4e-9784-4cdf-bf7f-77e955ee9790">
+      <actionSet Id="0a5eac9f-b38d-4b42-a38b-43562bceee24" x="2187.5" y="1531.25">
+        <actionItems>
+          <actionSetHasActionItems Id="efa320a1-e76e-4437-a245-1b28c0b0da66">
+            <actionAlgorithm Id="6a8bd696-61bf-413f-bb6e-2601ea984893">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="968bcc66-71df-4c41-beb7-6c0b731466c0">
+                  <algorithmMoniker name="/WaterTank/CoolingDown" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="d145223c-b31c-4160-84ef-b384d6544fa7">
+            <actionEvent Id="e6765dfd-b5e6-41a6-b8f6-0fd52fe9dd74">
+              <event>
+                <actionEventReferencesEvent Id="24cbeb18-55d8-409a-94b5-ff08923743f3">
+                  <eventMoniker name="/WaterTank/WaterTank/Update" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="26bba500-d3ff-4e05-b749-3ca7ab612bf2">
+      <actionSet Id="a5940434-1f16-49c3-930c-8efd256c1e03" x="1750" y="962.5">
+        <actionItems>
+          <actionSetHasActionItems Id="b23124b6-3120-4eff-9692-b13ae67db41e">
+            <actionAlgorithm Id="6914b042-35b2-40e0-918a-d612047ed88f">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="b8ef4bc4-f9c7-4841-9c67-db42a6db17f9">
+                  <algorithmMoniker name="/WaterTank/InitValueOn" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="25c1edb5-2dab-48f1-9bee-553de4993ced">
+            <actionEvent Id="0813d70b-4cd6-4b7b-81ba-613173819176">
+              <event>
+                <actionEventReferencesEvent Id="d5d4e2ed-8605-478b-b1b1-ae0818b3a86b">
+                  <eventMoniker name="/WaterTank/WaterTank/Update" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="b0cd4fe7-e855-4685-9958-5a39160d0e8b">
+      <algorithm Id="4daace0e-28b3-485e-a310-8ba46be30339" name="Init" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="2e2ae5f1-6556-4585-82b1-bd4a92a2f002">
+      <algorithm Id="24787a2c-fa6c-4ec1-9756-adc78cedb0f8" name="HeatingUp" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="18fa5cde-27c2-40cc-af62-f413b9f027e7">
+      <algorithm Id="5b0cebac-3dc6-4232-985d-0021d9ad4ada" name="InitValueOff" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="5c1095f3-921a-4a48-b795-2176024a7da1">
+      <algorithm Id="b01dbefe-ba39-4131-8163-d180ad5bd33f" name="CoolingDown" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="b07c7563-f760-4bde-958b-6f790510bdd7">
+      <algorithm Id="f55819c1-915c-42ea-a2a8-5f4fc95796b8" name="InitValueOn" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="f66edb14-f829-42af-aeeb-ddbeae603b88">
+      <functionBlockInterface Id="031b1702-4ddd-4bd9-91a4-e79a723a01a5" name="WaterTank" x="1400" y="481.25">
+        <events>
+          <functionBlockHasEvents Id="1b95058e-2e89-4f10-89db-d2a7b20a6be0">
+            <event Id="a2d33eda-8838-446e-81dd-5f213424822b" name="On" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="b201bc0c-d8f2-4fd5-9370-8cce1ec273b4">
+            <event Id="d3aba15b-3ec3-41bc-bc74-0fb8286962cd" name="Off" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="6012488b-6b6a-43ab-a51e-9f9f4a442db5">
+            <event Id="19e13ae0-d9ec-4bf9-957c-0f657dda8e54" name="Update" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="5d4df457-7648-4419-8bd3-935537446278">
+            <variable Id="95de8d40-e9ba-45b3-8165-ed8eabe1393d" name="x" scope="Output" type="REAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="36855eaf-c535-43a9-8322-f29d412c88ff">
+            <variable Id="3afde486-b207-4a0c-8932-7797f109de12" name="C1x" scope="Internal" type="REAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="f4101851-7857-4aa6-b0e7-8ee909dacfbc">
+            <variable Id="27e156ee-3bfb-45a9-a8b0-37b4db85b0ba" name="k" scope="Internal" type="REAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="487ab8c5-a7f8-46b2-87ae-9e3ce80e2bed">
+            <variable Id="51d99785-ba95-4936-a9fc-fcd6b1cf5808" name="d" scope="Internal" type="REAL" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="c778efc9-ba66-43d6-a081-095dd8ffa12e">
+            <inputEventPort Id="106b360d-8c9f-4b29-8422-ac7917876fd0">
+              <event>
+                <inputEventPortReferencesEvent Id="d2845cb8-7296-4577-acf3-ffaf339cdeb1">
+                  <eventMoniker name="/WaterTank/WaterTank/On" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="52593630-03c5-4c88-ab15-2971dee7b9e2">
+            <inputEventPort Id="de08b02e-19bf-4d8d-8272-1f98495a3b99">
+              <event>
+                <inputEventPortReferencesEvent Id="b0c40483-d9cb-410a-b044-a4b9cd249557">
+                  <eventMoniker name="/WaterTank/WaterTank/Off" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="a95f82b7-6678-436c-b6da-5d70d6ec346a">
+            <outputEventPort Id="4ffdd91a-32c9-4bf5-8a5e-20e1bca69073">
+              <targetPort>
+                <association Id="0e97f0d2-a541-4159-a9b4-c013406634fe">
+                  <outputVariablePortMoniker Id="5ffa3002-cffc-467d-a96e-36ef7d264049" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="e4d6f1d8-148d-4bb5-bc39-81d45e076de2">
+                  <eventMoniker name="/WaterTank/WaterTank/Update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="f55ae7ad-81de-4367-ad91-4935319446b7">
+            <outputVariablePort Id="5ffa3002-cffc-467d-a96e-36ef7d264049">
+              <variable>
+                <outputVariablePortReferencesVariable Id="93677fa4-7ffe-4e97-93bf-a956eab6fa85">
+                  <variableMoniker name="/WaterTank/WaterTank/x" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="a9520bd0-2ef6-4290-9f0e-de9aa9e3f532">
+      <transitionNode Id="c1ba964b-c24f-4dfd-b4fe-5a64617c7204" x="2362.5" y="612.5" event="Off">
+        <targetState>
+          <transitionNodeConnectsToStates Id="8b34a517-3c48-48b9-896d-b129acfb6d53">
+            <stateMoniker name="/WaterTank/State2" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="acddcd0d-42a9-42fa-b190-51afd852ad12">
+      <transitionNode Id="c2a450d9-53e9-4b18-b640-0a6d2d0ff365" x="2712.5" y="175">
+        <targetState>
+          <transitionNodeConnectsToStates Id="a0631ecf-3f78-44df-b3fb-93b02cac1528">
+            <stateMoniker name="/WaterTank/State1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="633c7746-2db7-4064-8f5a-a9a348b912d3">
+      <transitionNode Id="f42e3a3b-9d1a-4224-afeb-c5c5be12e32b" x="1312.5" y="1181.25">
+        <targetState>
+          <transitionNodeConnectsToStates Id="5e4d0722-33fe-4467-a355-129377fdedac">
+            <stateMoniker name="/WaterTank/State3" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="3af87457-a56d-43f1-a45c-4c8e9a987a01">
+      <transitionNode Id="dad80e60-feba-496e-bb8d-eff7e47805b9" x="1530.5" y="1463.5" event="On">
+        <targetState>
+          <transitionNodeConnectsToStates Id="792ab3aa-f156-41f6-86f9-8ce5ee8646c5">
+            <stateMoniker name="/WaterTank/State4" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="6dc05e43-6195-4493-8c61-b7af6e6fc65e">
+      <transitionNode Id="8873d392-2174-418c-bc95-df57bb010a34" x="2450" y="918.75">
+        <targetState>
+          <transitionNodeConnectsToStates Id="a408b0e5-0424-475c-8412-2bb640c91e50">
+            <stateMoniker name="/WaterTank/State1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="beda7bf7-cc4b-49b8-9d72-d0a08b3c3983">
+      <transitionNode Id="dcddbc6f-d74a-43ea-83c4-690fdf62ac5a" x="1225" y="1925">
+        <targetState>
+          <transitionNodeConnectsToStates Id="cf65c1c3-796b-46de-afa8-510a023ac41c">
+            <stateMoniker name="/WaterTank/State3" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="d3cd3141-0e09-4346-9357-e44e7a416711">
+      <transitionNode Id="ffe576da-f0a1-46fd-bfc4-ec408a1ed1f8" x="1449.25" y="462.37500000000006" event="On">
+        <targetState>
+          <transitionNodeConnectsToStates Id="513adb75-e061-4cd6-8b2a-5ca99ed3e9a1">
+            <stateMoniker name="/WaterTank/State1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="1edf1ee3-06f1-47d9-b9d6-53a7e1260aee">
+      <transitionNode Id="5f42bcc5-09cd-423b-9584-d06a50b0c1ec" x="1158.375" y="1216.875" event="Off">
+        <targetState>
+          <transitionNodeConnectsToStates Id="f2b7152a-8651-4373-a478-2a3e1ca2a29b">
+            <stateMoniker name="/WaterTank/State3" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

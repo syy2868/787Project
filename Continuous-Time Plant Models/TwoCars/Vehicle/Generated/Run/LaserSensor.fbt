@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="LaserSensor" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="SYY-PC" Version="0.1" Author="SYY" Date="2015-00-08" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+<EventInputs>
+  <Event Name="SensorReading" Comment="">
+    <With Var="pos1" />
+    <With Var="pos2" />
+  </Event>
+</EventInputs>
+<EventOutputs>
+  <Event Name="Output" Comment="">
+    <With Var="distance" />
+  </Event>
+</EventOutputs>
+<InputVars>
+  <VarDeclaration Name="pos1" Type="LREAL" Comment="" />
+  <VarDeclaration Name="pos2" Type="LREAL" Comment="" />
+</InputVars>
+<OutputVars>
+  <VarDeclaration Name="distance" Type="LREAL" Comment="" />
+</OutputVars>
+</InterfaceList>
+<BasicFB><ECC>
+  <ECState Name="Detect" Comment="" x="1925" y="831.25">
+    <ECAction Algorithm="ReadSensor" Output="Output" />
+  </ECState>
+  <ECTransition Source="Detect" Destination="Detect" Condition="SensorReading" x="1837.5" y="568.75" />
+</ECC><Algorithm Name="ReadSensor" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;distance = me-&gt;pos1 - me-&gt;pos2;&#xD;&#xA;if(me-&gt;distance==0){&#xD;&#xA;me-&gt;distance = 100;&#xD;&#xA;}" />
+</Algorithm></BasicFB>
+</FBType>

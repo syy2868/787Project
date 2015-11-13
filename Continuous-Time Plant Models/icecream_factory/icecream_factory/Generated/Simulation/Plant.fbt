@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="Plant" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="PC_THEO" Version="0,1" Author="Th?o" Date="2015-00-16" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+<EventInputs>
+  <Event Name="S2" Comment="">
+  </Event>
+  <Event Name="S3" Comment="">
+  </Event>
+</EventInputs>
+<EventOutputs>
+  <Event Name="update" Comment="">
+  </Event>
+</EventOutputs>
+
+<OutputVars>
+  <VarDeclaration Name="x" Type="REAL" Comment="" />
+  <VarDeclaration Name="y" Type="REAL" Comment="" />
+</OutputVars>
+</InterfaceList>
+<FBNetwork>
+  <FB Name="carousel_belt" Type="carousel_belt" x="787,5" y="481,25" />
+  <FB Name="diverter" Type="diverter" x="1837,5" y="437,5" />
+  <EventConnections><Connection Source="S2" Destination="diverter.S2" />
+<Connection Source="S3" Destination="diverter.S3" />
+<Connection Source="carousel_belt.update" Destination="update" />
+<Connection Source="diverter.update" Destination="update" /></EventConnections>
+  <DataConnections><Connection Source="carousel_belt.x" Destination="x" />
+<Connection Source="diverter.y" Destination="y" /></DataConnections>
+</FBNetwork>
+</FBType>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="Timer" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="SYY-PC" Version="0.1" Author="SYY" Date="2015-00-04" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+
+<EventOutputs>
+  <Event Name="count" Comment="">
+    <With Var="c" />
+  </Event>
+</EventOutputs>
+
+<OutputVars>
+  <VarDeclaration Name="c" Type="LINT" InitialValue="0" Comment="" />
+</OutputVars>
+</InterfaceList>
+<BasicFB><ECC>
+  <ECState Name="Start" Comment="" x="1268.75" y="481.25">
+    <ECAction Algorithm="count" Output="count" />
+  </ECState>
+  <ECTransition Source="Start" Destination="Start" Condition="true" x="1230.75" y="430.25" />
+</ECC><Algorithm Name="count" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;c=me-&gt;c+1;" />
+</Algorithm></BasicFB>
+</FBType>

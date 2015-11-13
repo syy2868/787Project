@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="TRDC" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="PC_THEO" Version="0,1" Author="Th?o" Date="2015-00-16" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+<EventInputs>
+  <Event Name="S1" Comment="">
+  </Event>
+  <Event Name="update" Comment="">
+    <With Var="y" />
+  </Event>
+</EventInputs>
+<EventOutputs>
+  <Event Name="S2" Comment="">
+  </Event>
+  <Event Name="S3" Comment="">
+  </Event>
+</EventOutputs>
+<InputVars>
+  <VarDeclaration Name="y" Type="REAL" Comment="" />
+</InputVars>
+
+</InterfaceList>
+<BasicFB><InternalVars>
+  <VarDeclaration Name="ice_id" Type="INT" Comment="" />
+</InternalVars><ECC>
+  <ECState Name="Start" Comment="" x="306,25" y="612,5">
+    <ECAction Algorithm="init" />
+  </ECState>
+  <ECState Name="State1" Comment="" x="1181,25" y="612,5">
+    <ECAction Algorithm="random_icecream" />
+  </ECState>
+  <ECState Name="State2" Comment="" x="1968,75" y="350">
+    <ECAction Output="S2" />
+  </ECState>
+  <ECState Name="State3" Comment="" x="1925" y="962,5">
+    <ECAction Output="S3" />
+  </ECState>
+  <ECTransition Source="Start" Destination="State1" Condition="true" x="743,75" y="656,25" />
+  <ECTransition Source="State1" Destination="State2" Condition="S1 AND (ice_id=1 AND y=6)" x="1225" y="262,5" />
+  <ECTransition Source="State1" Destination="State3" Condition="S1 AND (ice_id=0 AND y=0)" x="1181,25" y="918,75" />
+  <ECTransition Source="State2" Destination="State1" Condition="true" x="1618,75" y="568,75" />
+  <ECTransition Source="State3" Destination="State1" Condition="true" x="1618,75" y="656,25" />
+</ECC><Algorithm Name="init" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;ice_id=2;" />
+</Algorithm>
+<Algorithm Name="random_icecream" Comment="">
+  <Other Language="C" Prototype="" Text="/* Intializes random number generator */&#xD;&#xA;srand(time(NULL));&#xD;&#xA;&#xD;&#xA;me-&gt;ice_id = rand() % 2 ;&#xD;&#xA;&#xD;&#xA;printf(&quot;%d\n&quot;, me-&gt;ice_id);" />
+</Algorithm></BasicFB>
+</FBType>

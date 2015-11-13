@@ -1,0 +1,4 @@
+me->distance = me->pos1 - me->pos2;
+if(me->distance==0){
+me->distance = 100;
+}

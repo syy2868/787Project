@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="carousel_belt" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="PC_THEO" Version="0,1" Author="Th?o" Date="2015-00-16" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+
+<EventOutputs>
+  <Event Name="update" Comment="">
+    <With Var="x" />
+  </Event>
+</EventOutputs>
+
+<OutputVars>
+  <VarDeclaration Name="x" Type="REAL" Comment="" />
+</OutputVars>
+</InterfaceList>
+<BasicFB><InternalVars>
+  <VarDeclaration Name="beta" Type="REAL" Comment="" />
+</InternalVars><ECC>
+  <ECState Name="Start" Comment="" x="481,25" y="393,75">
+    <ECAction Algorithm="init" Output="update" />
+  </ECState>
+  <ECState Name="State1" Comment="" x="1618,75" y="393,75">
+    <ECAction Algorithm="run" Output="update" />
+  </ECState>
+  <ECTransition Source="Start" Destination="State1" Condition="true" x="1001" y="393,75" />
+  <ECTransition Source="State1" Destination="Start" Condition="x&gt;=beta" x="979" y="393,75" />
+  <ECTransition Source="State1" Destination="State1" Condition="true" x="1555,75" y="460,75" />
+</ECC><Algorithm Name="init" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;x=0;&#xD;&#xA;me-&gt;beta=10;" />
+</Algorithm>
+<Algorithm Name="run" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;x=me-&gt;x+1;&#xD;&#xA;//printf(&quot;icecream, %f\n&quot;, me-&gt;x);" />
+</Algorithm></BasicFB>
+</FBType>

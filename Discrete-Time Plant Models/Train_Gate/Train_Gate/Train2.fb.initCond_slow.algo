@@ -1,0 +1,3 @@
+me->k=1;
+me->C1y2=me->y2;
+//printf("Train 2 is going into slow mode \n");

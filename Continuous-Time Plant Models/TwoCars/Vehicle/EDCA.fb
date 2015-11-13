@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="3fda9f49-49d3-4bdf-aabb-2895f428c894" name="EDCA" organization="Jin-PC" date="2015-08-24" author="Jin">
+  <states>
+    <functionBlockModelHasStates Id="fc45827c-c598-4d5d-8fd5-8878b54a5e5e">
+      <state Id="b61c6c55-f4c8-4fb2-b53c-ce69b702301d" name="EDCA" x="1793.75" y="612.5" isInitial="true">
+        <regions>
+          <stateHasRegions Id="cf0f769a-d380-432a-b4b0-5eeecc819b64">
+            <region Id="51301307-3ce9-408a-9709-74314d73195d" name="bufferCCH" date="">
+              <states>
+                <functionBlockModelHasStates Id="c873e44e-a3eb-4293-8023-a0ff220528a7">
+                  <state Id="976c6d19-da74-412c-a965-279a71cb9d20" name="CCHempty" x="218.75" y="70.000000000000057" isInitial="true">
+                    <fromTransitionNodes>
+                      <stateConnectsToTransitionNodes Id="b10d8702-bc9f-4928-b2ec-6e8d8da00233">
+                        <transitionNodeMoniker Id="d172c588-b59d-4e48-93b9-c43bbf55d452" />
+                      </stateConnectsToTransitionNodes>
+                    </fromTransitionNodes>
+                  </state>
+                </functionBlockModelHasStates>
+                <functionBlockModelHasStates Id="1a89f072-2b57-4ad5-ab18-c1fa408bd875">
+                  <state Id="9697b2f8-0ea5-483f-898d-0041af8654f0" name="CCHfull" x="218.75" y="420.00000000000006" isInitial="false">
+                    <actionSet>
+                      <actionLink Id="6a9cc699-091e-451b-a670-511df95a8be8">
+                        <actionSetMoniker Id="af97cd3d-10b3-47f1-bc66-59a98423676b" />
+                      </actionLink>
+                    </actionSet>
+                    <fromTransitionNodes>
+                      <stateConnectsToTransitionNodes Id="c791e8fa-4f7b-4bd9-a4ee-ff6f4bbfe9b0">
+                        <transitionNodeMoniker Id="6f1b4678-1669-41ea-b9b2-8b33e866cd94" />
+                      </stateConnectsToTransitionNodes>
+                      <stateConnectsToTransitionNodes Id="6106d121-08da-4b94-96c8-f429ca9106f1">
+                        <transitionNodeMoniker Id="6b5fdea8-0275-48a3-a8d0-d4423aae54c0" />
+                      </stateConnectsToTransitionNodes>
+                    </fromTransitionNodes>
+                  </state>
+                </functionBlockModelHasStates>
+              </states>
+              <actionSets>
+                <functionBlockModelHasActionSets Id="95a0db0c-3268-48b3-866f-24f14200b4eb">
+                  <actionSet Id="af97cd3d-10b3-47f1-bc66-59a98423676b" x="743.75" y="595.00000000000011">
+                    <actionItems>
+                      <actionSetHasActionItems Id="88003c50-1493-463a-a445-6880251484cd">
+                        <actionEvent Id="99cb3888-4f35-458b-bd3e-b1398970cf5b">
+                          <event>
+                            <actionEventReferencesEvent Id="5382e2a0-e34e-4efb-a3da-5085fcc120cf">
+                              <eventMoniker name="/EDCA/EDCA/CCH_REQ" />
+                            </actionEventReferencesEvent>
+                          </event>
+                        </actionEvent>
+                      </actionSetHasActionItems>
+                    </actionItems>
+                  </actionSet>
+                </functionBlockModelHasActionSets>
+              </actionSets>
+              <transitionNodes>
+                <functionBlockModelHasTransitionNodes Id="40df1797-33c8-4e8d-bb64-f5f656cb5078">
+                  <transitionNode Id="d172c588-b59d-4e48-93b9-c43bbf55d452" x="350" y="350" event="WAVE_MAC_CCH_TX">
+                    <targetState>
+                      <transitionNodeConnectsToStates Id="0ff8e473-6f73-4492-99b0-ecd54541077b">
+                        <stateMoniker name="/EDCA/EDCA/bufferCCH/CCHfull" />
+                      </transitionNodeConnectsToStates>
+                    </targetState>
+                  </transitionNode>
+                </functionBlockModelHasTransitionNodes>
+                <functionBlockModelHasTransitionNodes Id="f3978dbf-8041-4289-acce-ce7997d3d40b">
+                  <transitionNode Id="6f1b4678-1669-41ea-b9b2-8b33e866cd94" x="350" y="350" event="MAC_CCH_CLR">
+                    <targetState>
+                      <transitionNodeConnectsToStates Id="154d5e1d-f38d-4d56-916d-a0f70558888d">
+                        <stateMoniker name="/EDCA/EDCA/bufferCCH/CCHempty" />
+                      </transitionNodeConnectsToStates>
+                    </targetState>
+                  </transitionNode>
+                </functionBlockModelHasTransitionNodes>
+                <functionBlockModelHasTransitionNodes Id="9b08bbd0-a16f-4210-8c48-da1699240efe">
+                  <transitionNode Id="6b5fdea8-0275-48a3-a8d0-d4423aae54c0" x="350" y="442.00000000000017">
+                    <targetState>
+                      <transitionNodeConnectsToStates Id="8cd7876d-a646-4da9-b714-00c283052691">
+                        <stateMoniker name="/EDCA/EDCA/bufferCCH/CCHfull" />
+                      </transitionNodeConnectsToStates>
+                    </targetState>
+                  </transitionNode>
+                </functionBlockModelHasTransitionNodes>
+              </transitionNodes>
+            </region>
+          </stateHasRegions>
+          <stateHasRegions Id="5bdc328f-f5db-435e-86f7-43ec0113058a">
+            <region Id="91d56a3b-a00a-4f0d-8d4e-7670bede2342" name="bufferSCH" date="">
+              <states>
+                <functionBlockModelHasStates Id="da6fa0de-530b-4c54-83d7-a3ea51913c93">
+                  <state Id="9eb094ce-8ffa-446b-960f-b4bb3644ef4e" name="SCHempty" x="350" y="70.000000000000057" isInitial="true">
+                    <fromTransitionNodes>
+                      <stateConnectsToTransitionNodes Id="e909944d-4d10-425a-ab88-0daf72ceb5fc">
+                        <transitionNodeMoniker Id="a597b17c-f0f8-4868-a56b-a2ad27581fec" />
+                      </stateConnectsToTransitionNodes>
+                    </fromTransitionNodes>
+                  </state>
+                </functionBlockModelHasStates>
+                <functionBlockModelHasStates Id="3b61a283-f5e5-48e4-b065-366e78e628d0">
+                  <state Id="f9427260-cc48-4ffa-946d-ffdbe8fdd67c" name="SCHfull" x="350" y="441.87500000000006" isInitial="false">
+                    <actionSet>
+                      <actionLink Id="ec83b17b-a814-4051-863c-6c557650a492">
+                        <actionSetMoniker Id="ac595b75-050e-4c18-b2b7-09cd1e2f50f4" />
+                      </actionLink>
+                    </actionSet>
+                    <fromTransitionNodes>
+                      <stateConnectsToTransitionNodes Id="128c16a1-0a7f-4e7c-a809-8133cfbee20b">
+                        <transitionNodeMoniker Id="ad475dba-9a7a-47d4-bf19-8cff4fbf6987" />
+                      </stateConnectsToTransitionNodes>
+                      <stateConnectsToTransitionNodes Id="f9e3ddf5-776a-4412-b4f0-161b69e28de0">
+                        <transitionNodeMoniker Id="a6a8be8e-5b51-41fa-9695-2f91b9d0114e" />
+                      </stateConnectsToTransitionNodes>
+                    </fromTransitionNodes>
+                  </state>
+                </functionBlockModelHasStates>
+              </states>
+              <actionSets>
+                <functionBlockModelHasActionSets Id="1ba85b1f-0631-4333-9bde-824e2743b017">
+                  <actionSet Id="ac595b75-050e-4c18-b2b7-09cd1e2f50f4" x="727.91483908891666" y="595.00000000000011">
+                    <actionItems>
+                      <actionSetHasActionItems Id="e650262c-9c8d-46a2-b8d5-c7a56e73d333">
+                        <actionEvent Id="15b4283c-0f30-4d5b-8544-4722655e76b2">
+                          <event>
+                            <actionEventReferencesEvent Id="415b8c70-f793-4192-bbf3-d50b269a3e6e">
+                              <eventMoniker name="/EDCA/EDCA/SCH_REQ" />
+                            </actionEventReferencesEvent>
+                          </event>
+                        </actionEvent>
+                      </actionSetHasActionItems>
+                    </actionItems>
+                  </actionSet>
+                </functionBlockModelHasActionSets>
+              </actionSets>
+              <transitionNodes>
+                <functionBlockModelHasTransitionNodes Id="d047cd8d-5c74-472b-9bce-dcbcf82b628e">
+                  <transitionNode Id="a597b17c-f0f8-4868-a56b-a2ad27581fec" x="350" y="350" event="WAVE_MAC_SCH_TX">
+                    <targetState>
+                      <transitionNodeConnectsToStates Id="66199745-4202-4fc4-b937-bdfcc0001219">
+                        <stateMoniker name="/EDCA/EDCA/bufferSCH/SCHfull" />
+                      </transitionNodeConnectsToStates>
+                    </targetState>
+                  </transitionNode>
+                </functionBlockModelHasTransitionNodes>
+                <functionBlockModelHasTransitionNodes Id="458ec12f-d0bd-4ce9-bfd1-afad05657044">
+                  <transitionNode Id="ad475dba-9a7a-47d4-bf19-8cff4fbf6987" x="350" y="350" event="MAC_SCH_CLR">
+                    <targetState>
+                      <transitionNodeConnectsToStates Id="493b2a73-cd5a-439d-9e28-02655a7be6e9">
+                        <stateMoniker name="/EDCA/EDCA/bufferSCH/SCHempty" />
+                      </transitionNodeConnectsToStates>
+                    </targetState>
+                  </transitionNode>
+                </functionBlockModelHasTransitionNodes>
+                <functionBlockModelHasTransitionNodes Id="e16a19e9-94c0-4ad7-a361-2a82a313bfe7">
+                  <transitionNode Id="a6a8be8e-5b51-41fa-9695-2f91b9d0114e" x="442.00000000000017" y="524.87499999999989">
+                    <targetState>
+                      <transitionNodeConnectsToStates Id="285a6a3f-5da4-40f8-a53e-8ac34bc7162d">
+                        <stateMoniker name="/EDCA/EDCA/bufferSCH/SCHfull" />
+                      </transitionNodeConnectsToStates>
+                    </targetState>
+                  </transitionNode>
+                </functionBlockModelHasTransitionNodes>
+              </transitionNodes>
+            </region>
+          </stateHasRegions>
+        </regions>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="6e560e45-e8e2-4f8b-82cb-2289b9231678">
+      <functionBlockInterface Id="295d171a-a763-412c-8991-ddc8a0f29a98" name="EDCA" x="1837.5" y="700">
+        <events>
+          <functionBlockHasEvents Id="d88a79b9-edcb-4d6a-a6c7-f3da94288bee">
+            <event Id="cea305de-00cb-496d-8674-02931bc5522c" name="WAVE_MAC_CCH_TX" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="a4174fd6-be4c-44e7-a34f-9e6102f455c1">
+            <event Id="6d8d92de-50ee-4347-ab3a-42dae59573e5" name="WAVE_MAC_SCH_TX" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="76a550cd-d46f-4d2d-ac98-b53a404c5a5d">
+            <event Id="c438758a-e822-49c2-bca4-1e0b18b72ccc" name="CCH_REQ" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="780e336a-fad9-47a4-99b6-3a7a5968da77">
+            <event Id="fcb3b40c-b236-4d29-bb43-3920dd60b5eb" name="SCH_REQ" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="17bb0e8c-20af-43f6-a3af-71087c749f70">
+            <event Id="8067e4d5-6705-4110-aa0b-6497e396c3cb" name="MAC_CCH_CLR" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="5f4e54ff-1bb9-4479-ab15-ed4f67534bd2">
+            <event Id="e9fe86da-9eb5-4dc4-a10a-d5325532212f" name="MAC_SCH_CLR" scope="Input" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="76b6ae0e-3663-4359-b0e2-f4112fc13214">
+            <inputEventPort Id="e5f688b8-e726-4d34-89c8-e8d034cc4fff">
+              <event>
+                <inputEventPortReferencesEvent Id="41a5c7c3-cbe4-4a84-a8cc-cfb4d367579e">
+                  <eventMoniker name="/EDCA/EDCA/WAVE_MAC_CCH_TX" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="c15c697b-2afb-4630-a2ea-de401d73f318">
+            <inputEventPort Id="13e16a05-b895-4c69-8537-5b43c9b4a3a1">
+              <event>
+                <inputEventPortReferencesEvent Id="e60ab10b-3983-4b20-a96d-c6d923429b7b">
+                  <eventMoniker name="/EDCA/EDCA/WAVE_MAC_SCH_TX" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="2fc658da-edc6-41ae-a176-0a09f5eb614b">
+            <inputEventPort Id="f69ee373-f959-4123-a15d-aaebbd77c07e">
+              <event>
+                <inputEventPortReferencesEvent Id="84f1bc98-ee19-415f-8832-f876c677cef4">
+                  <eventMoniker name="/EDCA/EDCA/MAC_CCH_CLR" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="52d8290f-8541-4bfa-9fbe-e649fa35ca57">
+            <inputEventPort Id="f2fbda41-ae06-4694-842d-ae51a9fb956b">
+              <event>
+                <inputEventPortReferencesEvent Id="356a61a8-8100-46c2-b9f9-ce42da13cb33">
+                  <eventMoniker name="/EDCA/EDCA/MAC_SCH_CLR" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="be6fc8dc-8f6c-490e-95a7-2f28b608e01a">
+            <outputEventPort Id="2cb7a287-7816-429c-a756-f88e6877ba81">
+              <event>
+                <outputEventPortReferencesEvent Id="aa4a4bf0-3538-4f65-a27b-15bf852e1ee8">
+                  <eventMoniker name="/EDCA/EDCA/CCH_REQ" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="28ae105a-5981-452a-a201-652ad20b49dc">
+            <outputEventPort Id="12ec8eb9-8194-48ea-a5bc-4c3fac54d859">
+              <event>
+                <outputEventPortReferencesEvent Id="40d99468-4cba-45ea-bbcf-608e69492dc6">
+                  <eventMoniker name="/EDCA/EDCA/SCH_REQ" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+</functionBlockModel>

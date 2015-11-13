@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="Plant" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="PC_THEO" Version="0,1" Author="Th?o" Date="2015-00-15" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+<EventInputs>
+  <Event Name="UP" Comment="">
+  </Event>
+  <Event Name="DOWN" Comment="">
+  </Event>
+</EventInputs>
+<EventOutputs>
+  <Event Name="update" Comment="">
+  </Event>
+</EventOutputs>
+
+<OutputVars>
+  <VarDeclaration Name="x" Type="REAL" Comment="" />
+  <VarDeclaration Name="y1" Type="REAL" Comment="" />
+  <VarDeclaration Name="y2" Type="REAL" Comment="" />
+</OutputVars>
+</InterfaceList>
+<FBNetwork>
+  <FB Name="Gate" Type="Gate" x="3018,75" y="350" />
+  <FB Name="Reference" Type="Train1" x="525" y="175" />
+  <FB Name="Reference1" Type="Train2" x="1618,75" y="175" />
+  <FB Name="Reference2" Type="Gate" x="1225" y="962,5" />
+  <EventConnections><Connection Source="UP" Destination="Gate.UP" />
+<Connection Source="UP" Destination="Reference2.UP" />
+<Connection Source="DOWN" Destination="Gate.DOWN" />
+<Connection Source="DOWN" Destination="Reference2.DOWN" />
+<Connection Source="Gate.update_g" Destination="update" />
+<Connection Source="Reference.update_t1" Destination="update" />
+<Connection Source="Reference1.update_t2" Destination="update" />
+<Connection Source="Reference2.update_g" Destination="update" />
+<Connection Source="Reference2.update_g" Destination="Reference1.update" />
+<Connection Source="Reference2.update_g" Destination="Reference.update" /></EventConnections>
+  <DataConnections><Connection Source="Gate.x" Destination="x" />
+<Connection Source="Reference.y1" Destination="y1" />
+<Connection Source="Reference1.y2" Destination="y2" />
+<Connection Source="Reference2.x" Destination="Reference.x" />
+<Connection Source="Reference2.x" Destination="Reference1.x" /></DataConnections>
+</FBNetwork>
+</FBType>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="954d0eba-894f-44ff-ac4f-c5c8fd3ba770" name="LeadingCarControl" organization="SYY-PC" date="2015-09-03" author="SYY" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="2bd6dab8-0762-4525-9388-6586b2e018a4">
+      <functionBlockInterface Id="2f1be8ff-5c21-443f-869a-3f6dbf60e6a7" name="LeadingCarControl" x="1400" y="481.25" modelType="Composite" />
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+</compositeFunctionBlockModel>

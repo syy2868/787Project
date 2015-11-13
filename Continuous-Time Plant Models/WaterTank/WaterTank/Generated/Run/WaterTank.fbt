@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="WaterTank" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="syy-PC" Version="0.1" Author="syy" Date="2015-00-10" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+<EventInputs>
+  <Event Name="On" Comment="">
+  </Event>
+  <Event Name="Off" Comment="">
+  </Event>
+</EventInputs>
+<EventOutputs>
+  <Event Name="Update" Comment="">
+    <With Var="x" />
+  </Event>
+</EventOutputs>
+
+<OutputVars>
+  <VarDeclaration Name="x" Type="REAL" Comment="" />
+</OutputVars>
+</InterfaceList>
+<BasicFB><InternalVars>
+  <VarDeclaration Name="C1x" Type="REAL" Comment="" />
+  <VarDeclaration Name="k" Type="REAL" Comment="" />
+  <VarDeclaration Name="d" Type="REAL" Comment="" />
+</InternalVars><ECC>
+  <ECState Name="Start" Comment="" x="612.5" y="875">
+    <ECAction Algorithm="Init" Output="Update" />
+  </ECState>
+  <ECState Name="State1" Comment="" x="2625" y="437.5">
+    <ECAction Algorithm="HeatingUp" Output="Update" />
+  </ECState>
+  <ECState Name="State2" Comment="" x="1925" y="787.5">
+    <ECAction Algorithm="InitValueOff" Output="Update" />
+  </ECState>
+  <ECState Name="State3" Comment="" x="1706.25" y="1618.75">
+    <ECAction Algorithm="CoolingDown" Output="Update" />
+  </ECState>
+  <ECState Name="State4" Comment="" x="2143.75" y="1312.5">
+    <ECAction Algorithm="InitValueOn" Output="Update" />
+  </ECState>
+  <ECTransition Source="Start" Destination="State1" Condition="On" x="1449.25" y="462.375" />
+  <ECTransition Source="Start" Destination="State3" Condition="Off" x="1158.375" y="1216.875" />
+  <ECTransition Source="State1" Destination="State2" Condition="Off" x="2362.5" y="612.5" />
+  <ECTransition Source="State1" Destination="State1" Condition="true" x="2712.5" y="175" />
+  <ECTransition Source="State2" Destination="State3" Condition="true" x="1312.5" y="1181.25" />
+  <ECTransition Source="State3" Destination="State4" Condition="On" x="1530.5" y="1463.5" />
+  <ECTransition Source="State3" Destination="State3" Condition="true" x="1225" y="1925" />
+  <ECTransition Source="State4" Destination="State1" Condition="true" x="2450" y="918.75" />
+</ECC><Algorithm Name="Init" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;x = 20;&#xD;&#xA;me-&gt;C1x = -130;&#xD;&#xA;me-&gt;d = 0.01;&#xD;&#xA;me-&gt;k = 1;" />
+</Algorithm>
+<Algorithm Name="HeatingUp" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;x = (float) me-&gt;C1x*exp(-0.075*me-&gt;d*me-&gt;k) + 150.0;&#xD;&#xA;me-&gt;k++;&#xD;&#xA;printf(&quot;Temperature : %f\n&quot;, me-&gt;x);" />
+</Algorithm>
+<Algorithm Name="InitValueOff" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;k=0;&#xD;&#xA;me-&gt;C1x=me-&gt;x;" />
+</Algorithm>
+<Algorithm Name="CoolingDown" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;x = (float) me-&gt;C1x*exp(-0.075*me-&gt;d*me-&gt;k);&#xD;&#xA;me-&gt;k++;&#xD;&#xA;printf(&quot;Temperature : %f\n&quot;, me-&gt;x);" />
+</Algorithm>
+<Algorithm Name="InitValueOn" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;k=0;&#xD;&#xA;me-&gt;C1x=me-&gt;x-150;" />
+</Algorithm></BasicFB>
+</FBType>

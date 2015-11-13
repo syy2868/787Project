@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="89ed21fb-0b1b-4bc0-987b-03d13c47bdff" name="icecream_factory" organization="PC_THEO" date="2015-07-16" author="Théo" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="e7239908-8022-49cc-8c2c-593c1ee3ee7c">
+      <functionBlockInterface Id="fc981d35-d566-4f40-a85c-758e603266ae" name="icecream_factory" x="1268.75" y="612.5" modelType="Composite" />
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+  <functionBlockReferences>
+    <cFBModelHasFBReferences Id="94cfd8e2-78ef-4110-ab2c-7e21e0a2c40e">
+      <functionBlockReference Id="efcf6333-dc5b-40f5-b396-2abce4398618" name="Controller" x="1968.75" y="525" modelType="Composite" creationMode="Resource" referencedFile="Controller.cfb">
+        <events>
+          <functionBlockHasEvents Id="3f3e08c3-2b20-4323-91db-ef72a90e2cb4">
+            <eventRef Id="5f961991-5b92-41fd-9a21-1031872c55ca" name="S2" scope="Output" referencedID="672cbc40-28ba-406a-ae6e-27b37d170171" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="360580fc-aa0e-4e22-9974-51bd96dcbeff">
+            <eventRef Id="4c567a3f-f580-4bab-ae8c-3dd09c6f3baf" name="S3" scope="Output" referencedID="0eff0bc2-aaf5-4f13-81cd-d72764637360" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="cbad0f10-1056-4fbc-ac1e-abc2c2ed1c99">
+            <eventRef Id="4a978b48-8334-49b5-a60a-b25b9c9f8632" name="update" scope="Input" referencedID="93857e52-5faf-4aec-be0e-0046a3aef8cf" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="c59e3636-4d8a-49f0-8efc-8acb1d15152a">
+            <variableRef Id="84fcba55-f9b3-4bc9-823e-e500f2ca141d" name="x" scope="Input" type="REAL" referencedID="7d5aba54-2a4f-4677-a2c7-8d0bcf2f56c2" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="98f28c2a-8644-4964-82b9-1b4eeda55f00">
+            <variableRef Id="6592fbcc-3909-4717-b61d-59c3ca2527a5" name="y" scope="Input" type="REAL" referencedID="d150ac53-bd8d-4ed6-a01b-f7fa9c67f4df" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="d5f08978-3430-44a6-9a7e-5a7a08f6c602">
+            <inputEventPort Id="28075965-64b2-4b75-914b-f4e9f9b57363">
+              <event>
+                <inputEventPortReferencesEvent Id="7913f703-e754-406a-9cd9-e8b54b8dda31">
+                  <eventRefMoniker name="/icecream_factory/Controller/update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="0feafeab-04e6-4654-a53d-79c623cf98fd">
+            <outputEventPort Id="5989f81f-7962-4e13-9fd2-01a0abe60557">
+              <wireTargetPorts>
+                <wireConnection Id="870bdb4b-8541-4131-a068-34879444f1c3" unitDelayed="false">
+                  <inputEventPortMoniker Id="76bf0a8d-3793-43a3-846c-db783ca77a6e" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="136700ce-0877-4075-b3d7-6159b9070ce2">
+                  <eventRefMoniker name="/icecream_factory/Controller/S2" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="ec0cb8b5-e907-4737-ae59-24be6c780943">
+            <outputEventPort Id="97a83044-532b-43c1-8024-39ed024ceaed">
+              <wireTargetPorts>
+                <wireConnection Id="cd273168-c1be-46aa-9952-a7cb680dbc6a" unitDelayed="false">
+                  <inputEventPortMoniker Id="1537fe3f-9bc3-4fe8-900a-4050cef91cbd" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="15dd49f9-126c-48ec-a536-79f659e3e529">
+                  <eventRefMoniker name="/icecream_factory/Controller/S3" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="793d9a07-854a-4b11-8a45-9f08454ebe82">
+            <inputVariablePort Id="35a5fa10-b39f-462c-b344-d881096578cc">
+              <variable>
+                <inputVariablePortReferencesVariable Id="718c945e-8813-49eb-9f8c-31a78d8a2667">
+                  <variableRefMoniker name="/icecream_factory/Controller/x" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="d315327e-a2f6-4650-92cf-16c36eeed63d">
+            <inputVariablePort Id="fb919162-7c00-4c1c-933a-d25d2ac51318">
+              <variable>
+                <inputVariablePortReferencesVariable Id="6ab80d8f-1e8b-4c86-bda9-850041f85c40">
+                  <variableRefMoniker name="/icecream_factory/Controller/y" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="e5826108-f5a5-483e-ac0e-7c17600c3101">
+      <functionBlockReference Id="9ad15181-d66e-44d7-9d7c-c3f17c855952" name="Plant" x="787.5" y="525" modelType="Composite" creationMode="Resource" referencedFile="Plant.cfb">
+        <events>
+          <functionBlockHasEvents Id="40a120f6-ffd0-44e7-9ec2-10faf9fd416b">
+            <eventRef Id="23d4a87b-3ef0-4829-9c50-0eedff381fa2" name="S2" scope="Input" referencedID="3829c5fe-ddc8-453c-a6e4-54a309726f32" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="a589f88d-3e31-4fa6-8251-79ea5c486151">
+            <eventRef Id="545fef20-c19c-4563-9116-0839b294bb1b" name="S3" scope="Input" referencedID="753e57ca-32fb-4426-8909-e00b1ea95d64" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="b23f99f2-d4b1-47cf-af2e-d9c514914d5d">
+            <eventRef Id="3f084e4b-a1e7-48b3-8476-c29a197b04d2" name="update" scope="Output" referencedID="57dc573d-053f-45e9-95bf-3b4448711da6" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="187a15f7-3662-436d-9098-ad0f3673d1c4">
+            <variableRef Id="457d3867-9e36-4912-90cb-76c1c6223a64" name="x" scope="Output" type="REAL" referencedID="ee40d38e-1891-4f81-acc2-1ae0ab628424" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="81f3d3a1-ec06-495c-b48c-a1d8161274a7">
+            <variableRef Id="ba125451-e0da-4ee6-9ff7-768e760dad45" name="y" scope="Output" type="REAL" referencedID="1e2dfb9e-d3e4-4232-bfe2-3c8cdbc078bd" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="5074c358-cd08-40ab-b932-c600c4d5ea05">
+            <inputEventPort Id="76bf0a8d-3793-43a3-846c-db783ca77a6e">
+              <event>
+                <inputEventPortReferencesEvent Id="c8b34975-57b9-43b7-b802-dbebd871888e">
+                  <eventRefMoniker name="/icecream_factory/Plant/S2" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="a2db8297-28eb-472c-b694-5cddddeb3df3">
+            <inputEventPort Id="1537fe3f-9bc3-4fe8-900a-4050cef91cbd">
+              <event>
+                <inputEventPortReferencesEvent Id="e5d4decf-3f8c-42f4-a897-081cf099fc96">
+                  <eventRefMoniker name="/icecream_factory/Plant/S3" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="25fe1de4-5071-4a2f-b1a6-c58102c0fc6c">
+            <outputEventPort Id="66ea2a5d-1e1d-4f38-b440-f8175d72eb0f">
+              <wireTargetPorts>
+                <wireConnection Id="ede3ebc5-5b57-4633-9352-b73a5562e722" unitDelayed="false">
+                  <inputEventPortMoniker Id="28075965-64b2-4b75-914b-f4e9f9b57363" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="39a5c478-f153-41dc-b293-1c79e31fb2ac">
+                  <eventRefMoniker name="/icecream_factory/Plant/update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="427795a5-e18d-4383-8506-3a1866a289c8">
+            <outputVariablePort Id="b0ba2623-3fbf-45cf-96cf-4d54fc6db797">
+              <wireTargetPorts>
+                <wireConnection Id="48218506-605a-4561-a74c-a182a9c816dd" unitDelayed="false">
+                  <inputVariablePortMoniker Id="35a5fa10-b39f-462c-b344-d881096578cc" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="2c94e643-6dd3-4fd9-aa14-ee2ad75f148a">
+                  <variableRefMoniker name="/icecream_factory/Plant/x" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="b767e2f7-5315-4894-9f47-514774aafc80">
+            <outputVariablePort Id="5b64fd55-b8b5-4425-8bc3-cc1cbdbecefe">
+              <wireTargetPorts>
+                <wireConnection Id="9d4775b0-0a9d-41c1-9eda-1a1f3851ab8f" unitDelayed="false">
+                  <inputVariablePortMoniker Id="fb919162-7c00-4c1c-933a-d25d2ac51318" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="5f382d3a-2f4d-462f-a878-11493a5c4fac">
+                  <variableRefMoniker name="/icecream_factory/Plant/y" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+  </functionBlockReferences>
+</compositeFunctionBlockModel>

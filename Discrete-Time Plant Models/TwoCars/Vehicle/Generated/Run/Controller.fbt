@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="Controller" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="SYY-PC" Version="0.1" Author="SYY" Date="2015-00-08" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+<EventInputs>
+  <Event Name="Update" Comment="">
+    <With Var="speed2" />
+    <With Var="distance" />
+    <With Var="speed1" />
+  </Event>
+</EventInputs>
+<EventOutputs>
+  <Event Name="ACC" Comment="">
+  </Event>
+  <Event Name="DEC" Comment="">
+  </Event>
+</EventOutputs>
+<InputVars>
+  <VarDeclaration Name="speed2" Type="LREAL" Comment="" />
+  <VarDeclaration Name="distance" Type="LREAL" Comment="" />
+  <VarDeclaration Name="speed1" Type="LREAL" Comment="" />
+</InputVars>
+
+</InterfaceList>
+<BasicFB><InternalVars>
+  <VarDeclaration Name="sp" Type="LREAL" Comment="" />
+</InternalVars><ECC>
+  <ECState Name="Start" Comment="" x="787.5" y="481.25">
+  </ECState>
+  <ECState Name="State1" Comment="" x="1400" y="481.25">
+    <ECAction Algorithm="ACC" Output="ACC" />
+  </ECState>
+  <ECState Name="State2" Comment="" x="2450" y="175">
+    <ECAction Algorithm="DEC" Output="DEC" />
+  </ECState>
+  <ECState Name="State3" Comment="" x="2450" y="875">
+    <ECAction Algorithm="ACC" Output="ACC" />
+  </ECState>
+  <ECTransition Source="Start" Destination="State1" Condition="true" x="1107.75" y="481.25" />
+  <ECTransition Source="State1" Destination="State2" Condition="speed2&gt;=11.62 AND speed1=0" x="1531.25" y="262.5" />
+  <ECTransition Source="State1" Destination="State3" Condition="speed2&lt;=3.37 AND speed1=14.66" x="1487.5" y="743.75" />
+  <ECTransition Source="State2" Destination="State3" Condition="speed2&lt;=3.37 AND speed1=14.66" x="2712.5" y="481.25" />
+  <ECTransition Source="State3" Destination="State2" Condition="speed2&gt;=11.62 AND speed1=0" x="1750" y="481.25" />
+</ECC><Algorithm Name="AdjustSetPoint" Comment="">
+  <Other Language="C" Prototype="" Text="//me-&gt;sp = 6.75 + 7.91 * tanh(0.13 * (me-&gt;distance - 5) - 1.57);&#xD;&#xA;&#xD;&#xA;" />
+</Algorithm>
+<Algorithm Name="DEC" Comment="">
+  <Other Language="C" Prototype="" Text="//printf(&quot;Signal sent : the following car decelerates |  Speed1: %3.8f, Speed2: %3.8f, Distance: %3.8f\n&quot;, me-&gt;speed1, me-&gt;speed2, me-&gt;distance);&#xD;&#xA;//printf(&quot;decelerate Speed1 %3.8f Speed2 %3.8f Distance %3.8f\n&quot;, me-&gt;speed1, me-&gt;speed2, me-&gt;distance);" />
+</Algorithm>
+<Algorithm Name="ACC" Comment="">
+  <Other Language="C" Prototype="" Text="//printf(&quot;Signal sent : the following car accelerates |  Speed1: %3.8f, Speed2: %3.8f, Distance: %3.8f\n&quot;, me-&gt;speed1, me-&gt;speed2, me-&gt;distance);&#xD;&#xA;//printf(&quot;accelerate Speed1 %3.8f Speed2 %3.8f Distance %3.8f\n&quot;, me-&gt;speed1, me-&gt;speed2, me-&gt;distance);" />
+</Algorithm></BasicFB>
+</FBType>

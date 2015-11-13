@@ -1,0 +1,2 @@
+//printf("Signal sent : the following car decelerates |  Speed1: %3.8f, Speed2: %3.8f, Distance: %3.8f\n", me->speed1, me->speed2, me->distance);
+//printf("decelerate Speed1 %3.8f Speed2 %3.8f Distance %3.8f\n", me->speed1, me->speed2, me->distance);

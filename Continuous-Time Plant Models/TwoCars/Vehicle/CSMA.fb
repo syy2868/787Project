@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="bda753f1-5a8a-4ce9-8e92-89b7421d9261" name="CSMA" organization="Jin-PC" date="2015-08-24" author="Jin">
+  <states>
+    <functionBlockModelHasStates Id="1d158884-7bd3-4a92-acaa-09b9dc6cb5eb">
+      <state Id="9f8a9a06-7202-40f2-8e8f-4275a19a8171" name="Idle" x="1356.25" y="918.75" isInitial="true">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="7ecd810f-bcbe-4a7c-91f8-0b9f6d6b0e10">
+            <transitionNodeMoniker Id="2d29bc07-cf5b-4f7c-9e30-8e998e2bb3e5" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="39480407-2614-422e-b1df-e5ae357ac0bc">
+      <state Id="ede2eba1-49f2-47de-abc3-0995b9d9bfd3" name="Active" x="2143.75" y="918.75" isInitial="false" />
+    </functionBlockModelHasStates>
+  </states>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="8d779143-6f26-46fc-b9a2-7a976e3dc0fe">
+      <functionBlockInterface Id="69093a4f-364e-408a-bbc3-27251c9e1f29" name="CSMA" x="1837.5" y="700">
+        <events>
+          <functionBlockHasEvents Id="5764d9c9-b170-44c9-82db-4860a0cdb349">
+            <event Id="6072dcd6-6fb4-454e-94b8-d38fdd432a63" name="SWITCH_CHANNEL" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="0f7cd66b-710c-4d63-b985-0b9d85c40960">
+            <event Id="cd16162a-72ba-45bc-ad1b-1438c1c87c3a" name="CCH_REQ" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="2d5b3d47-2c9a-4e73-9286-cf6b3551a42a">
+            <event Id="d176264a-37a7-4b3f-82f2-1381fb1e7185" name="SCH_REQ" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="1f8eb4e0-bf06-4fb3-887f-df27cc2f507a">
+            <event Id="9c5227c6-3e21-4c91-afda-bc99ca0eea97" name="MAC_WAVE_CCH_RCV" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="c715200b-b969-438d-9cd0-3fb92b2ce32e">
+            <event Id="078073c6-1037-45a3-9292-91cb39590106" name="MAC_WAVE_SCH_RCV" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="39e95d21-2fb5-4484-89f0-e527b068e204">
+            <event Id="108d8bd9-d5aa-48c6-a268-f8a38c71f4bc" name="CCH_CLR" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="6a39a4d8-1450-4c7d-9f45-344cc44a9992">
+            <event Id="79272d45-0b8b-4045-beda-2ad452404937" name="SCH_CLR" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="c541210d-4500-4b9e-a390-4f5a0faeba16">
+            <event Id="83c5dbc6-2c82-4cd0-a358-fdbbcace1004" name="MAC_CH_CCH" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="858806f6-b037-44a5-bb16-0beb9cab5b5f">
+            <event Id="2ba97c1b-dbc8-499e-9fb0-b74e978f0f32" name="MAC_CH_SCH" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="c9e855e7-7275-4f97-8c94-69cec5f73dce">
+            <variable Id="33f98b66-e12f-4f72-a67a-47c44b3f834c" name="mode" scope="Input" type="INT" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="a7233bf3-c313-4a4e-8e07-72051c760eb4">
+            <variable Id="155adbaf-251d-4f97-9814-cd7c2754ba8e" name="CCH_PACKET" scope="Output" type="INT" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="197a2723-fea9-4549-b0be-7f0174fa9985">
+            <variable Id="505f6a35-c2e1-4347-8895-07453bca37b2" name="SCH_PACKET" scope="Output" type="INT" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="879a53e2-2dee-49d6-b014-a79d3eb07ba8">
+            <inputEventPort Id="9f99b95d-04b6-4bb5-a789-88c6def02b69">
+              <targetPort>
+                <association Id="9ce3a397-5f20-404f-8479-0238e5496851">
+                  <inputVariablePortMoniker Id="0678198d-16c7-4a72-97c8-9ac56560c5a0" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="1995d032-8b8b-48cd-a4b4-b2213ddb0243">
+                  <eventMoniker name="/CSMA/CSMA/SWITCH_CHANNEL" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="60579fe9-e39c-434e-8342-fc284154aa2c">
+            <inputEventPort Id="d31e8308-5c89-4747-b437-c90534533503">
+              <event>
+                <inputEventPortReferencesEvent Id="c1916c09-1508-405e-b381-37c6700bf5cf">
+                  <eventMoniker name="/CSMA/CSMA/CCH_REQ" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="2a81e9e2-942c-4b55-b780-194d68676026">
+            <inputEventPort Id="23ce4289-861d-4a98-a595-706a8e3611af">
+              <event>
+                <inputEventPortReferencesEvent Id="10136a23-8b31-478a-9050-c3daefe42be3">
+                  <eventMoniker name="/CSMA/CSMA/SCH_REQ" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="5b149d6b-71b2-4c3a-a25f-c7301180054a">
+            <outputEventPort Id="b5b9f2f0-6db5-4010-99c3-1ef2994bab77">
+              <event>
+                <outputEventPortReferencesEvent Id="3e1de34f-db01-41d9-85ee-0a2655378dd1">
+                  <eventMoniker name="/CSMA/CSMA/MAC_WAVE_CCH_RCV" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="52537f2e-d10b-4d12-aa39-8ad290797d65">
+            <outputEventPort Id="956ab5d1-7bd0-4876-89b0-4e18a0f9e5ac">
+              <event>
+                <outputEventPortReferencesEvent Id="da49100f-f274-4c3c-b73f-b189f46e2d55">
+                  <eventMoniker name="/CSMA/CSMA/MAC_WAVE_SCH_RCV" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="a38b042b-071c-4eab-900d-d6fcdec33389">
+            <outputEventPort Id="ea4ef8f7-d4d5-41de-9194-ef4785ac0416">
+              <event>
+                <outputEventPortReferencesEvent Id="19bdeb41-2e37-41c6-a722-b72272119841">
+                  <eventMoniker name="/CSMA/CSMA/CCH_CLR" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="29ce1413-0f0e-4fe3-9245-9034f98b3c2d">
+            <outputEventPort Id="972627b4-5531-4ce8-aa94-f1fd54caa0c5">
+              <event>
+                <outputEventPortReferencesEvent Id="c6b3adea-1547-4e08-94a6-1edbc1ff9dd2">
+                  <eventMoniker name="/CSMA/CSMA/SCH_CLR" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="68065922-464c-4ce1-bd2d-c90ecf4b8f22">
+            <outputEventPort Id="5b8904d5-f678-4328-923e-2c0b632b513f">
+              <targetPort>
+                <association Id="420526ba-ae7b-40ea-8ac9-b2f0186fc3d5">
+                  <outputVariablePortMoniker Id="8d0adf32-1fcd-4f1d-a8df-482eb765f177" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="57293215-6c16-43ae-bf78-61260793b804">
+                  <eventMoniker name="/CSMA/CSMA/MAC_CH_CCH" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="4f7254f5-1545-4578-8c0f-9ba4de3d1708">
+            <outputEventPort Id="268a49c8-be86-49aa-89d2-cf26ea1130f3">
+              <targetPort>
+                <association Id="8fbb0fa6-6527-4fbd-8984-cd923f677582">
+                  <outputVariablePortMoniker Id="a78c8ab6-7259-4aed-88e0-4ba6dbb7a584" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="58d1e2c3-376e-4779-a7a2-d197f3f62b43">
+                  <eventMoniker name="/CSMA/CSMA/MAC_CH_SCH" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="f6871b5d-38be-4d7e-956e-f71342478d1d">
+            <inputVariablePort Id="0678198d-16c7-4a72-97c8-9ac56560c5a0">
+              <variable>
+                <inputVariablePortReferencesVariable Id="69f14222-13ac-4e6a-a908-685cf6b31c0b">
+                  <variableMoniker name="/CSMA/CSMA/mode" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="5dfeff20-9a5c-4812-8460-bff7e5c5ee98">
+            <outputVariablePort Id="8d0adf32-1fcd-4f1d-a8df-482eb765f177">
+              <variable>
+                <outputVariablePortReferencesVariable Id="2f1fcce3-4929-449e-b967-83c000904077">
+                  <variableMoniker name="/CSMA/CSMA/CCH_PACKET" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="2ac8e2cb-6dc0-4d67-9b36-9cf99fd02e54">
+            <outputVariablePort Id="a78c8ab6-7259-4aed-88e0-4ba6dbb7a584">
+              <variable>
+                <outputVariablePortReferencesVariable Id="37f181b5-e6bc-4562-a5cc-da118c0157b7">
+                  <variableMoniker name="/CSMA/CSMA/SCH_PACKET" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="3272b918-4498-4812-b556-2234a63accd4">
+      <transitionNode Id="2d29bc07-cf5b-4f7c-9e30-8e998e2bb3e5" x="1443.75" y="700" event="SWITCH_CHANNEL" expression="mode &gt;= 0">
+        <targetState>
+          <transitionNodeConnectsToStates Id="dfcd21bd-800b-448b-ab3d-14dcf3d9eee0">
+            <stateMoniker name="/CSMA/Active" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

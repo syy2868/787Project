@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="FollowingCar" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="SYY-PC" Version="0.1" Author="SYY" Date="2015-00-08" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+<EventInputs>
+  <Event Name="FrontLaserSensor" Comment="">
+    <With Var="distance" />
+  </Event>
+  <Event Name="ACC" Comment="">
+  </Event>
+  <Event Name="DEC" Comment="">
+  </Event>
+</EventInputs>
+<EventOutputs>
+  <Event Name="Update" Comment="">
+    <With Var="pos2" />
+    <With Var="speed2" />
+  </Event>
+</EventOutputs>
+<InputVars>
+  <VarDeclaration Name="distance" Type="LREAL" Comment="" />
+</InputVars>
+<OutputVars>
+  <VarDeclaration Name="pos2" Type="LREAL" InitialValue="0" Comment="" />
+  <VarDeclaration Name="speed2" Type="LREAL" InitialValue="13.8" Comment="" />
+</OutputVars>
+</InterfaceList>
+<BasicFB><InternalVars>
+  <VarDeclaration Name="x" Type="LREAL" Comment="" />
+  <VarDeclaration Name="v" Type="LREAL" Comment="" />
+  <VarDeclaration Name="d" Type="LREAL" Comment="" />
+  <VarDeclaration Name="k" Type="INT" Comment="" />
+  <VarDeclaration Name="isInitial" Type="BOOL" Comment="" />
+  <VarDeclaration Name="max" Type="BOOL" Comment="" />
+  <VarDeclaration Name="min" Type="BOOL" Comment="" />
+</InternalVars><ECC>
+  <ECState Name="Start" Comment="" x="1093.75" y="656.25">
+    <ECAction Algorithm="Init" />
+  </ECState>
+  <ECState Name="State3" Comment="" x="2756.25" y="1006.25">
+    <ECAction Algorithm="Accelerate" Output="Update" />
+  </ECState>
+  <ECState Name="State2" Comment="" x="2756.25" y="350">
+    <ECAction Algorithm="Decelerate" Output="Update" />
+  </ECState>
+  <ECState Name="State1" Comment="" x="1750" y="656.25">
+  </ECState>
+  <ECTransition Source="Start" Destination="State1" Condition="true" x="1400" y="656.25" />
+  <ECTransition Source="State3" Destination="State2" Condition="DEC" x="2406.25" y="656.25" />
+  <ECTransition Source="State2" Destination="State3" Condition="ACC" x="3150" y="656.25" />
+  <ECTransition Source="State1" Destination="State2" Condition="DEC" x="2187.5" y="437.5" />
+  <ECTransition Source="State1" Destination="State3" Condition="ACC" x="2187.5" y="875" />
+</ECC><Algorithm Name="Init" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;d = 0.01;&#xD;&#xA;//me-&gt;v = 13.8;&#xD;&#xA;me-&gt;speed2 = 7.33;&#xD;&#xA;me-&gt;x = 0;&#xD;&#xA;me-&gt;k = 366;&#xD;&#xA;me-&gt;isInitial = true;" />
+</Algorithm>
+<Algorithm Name="Decelerate" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;v = me-&gt;speed2;&#xD;&#xA;me-&gt;x = me-&gt;pos2;&#xD;&#xA;&#xD;&#xA;//me-&gt;v = CarFollow_ode_1(C1v, d, k, s, x);&#xD;&#xA;//me-&gt;speed2 = me-&gt;v + me-&gt;d * 0.85 * (6.75 + 7.91 * tanh(0.13 * (me-&gt;distance - 5) - 1.57) - me-&gt;v);&#xD;&#xA;me-&gt;speed2 = 3.37;&#xD;&#xA;//me-&gt;pos2 = me-&gt;x + me-&gt;d * me-&gt;v;&#xD;&#xA;me-&gt;pos2 = me-&gt;x + 21.24;&#xD;&#xA;&#xD;&#xA;printf(&quot;Following car decelerates (Position: %3.8f, Speed: %3.8f, Distance: %3.8f)\n&quot;, me-&gt;pos2, me-&gt;speed2, me-&gt;distance);" />
+</Algorithm>
+<Algorithm Name="Accelerate" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;v = me-&gt;speed2;&#xD;&#xA;me-&gt;x = me-&gt;pos2;&#xD;&#xA;&#xD;&#xA;//me-&gt;v = CarFollow_ode_1(C1v, d, k, s, x);&#xD;&#xA;//me-&gt;speed2 = me-&gt;v + me-&gt;d * 0.85 * (6.75 + 7.91 * tanh(0.13 * (me-&gt;distance - 5) - 1.57) - me-&gt;v);&#xD;&#xA;me-&gt;speed2 = 11.62;&#xD;&#xA;//me-&gt;pos2 = me-&gt;x + me-&gt;d * me-&gt;v;&#xD;&#xA;me-&gt;pos2 = me-&gt;pos2 + 13.8;&#xD;&#xA;&#xD;&#xA;printf(&quot;Following car accelerates (Position: %3.8f, Speed: %3.8f, Distance: %3.8f)\n&quot;, me-&gt;pos2, me-&gt;speed2, me-&gt;distance);" />
+</Algorithm>
+<Algorithm Name="Reset" Comment="">
+  <Other Language="C" Prototype="" Text="if(!me-&gt;isInitial){&#xD;&#xA;  me-&gt;k = 1;&#xD;&#xA;}" />
+</Algorithm>
+<Algorithm Name="Init_Acc" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;max=false;&#xD;&#xA;if(me-&gt;isInitial==false){&#xD;&#xA;me-&gt;k = 0;&#xD;&#xA;}" />
+</Algorithm>
+<Algorithm Name="Init_Dec" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;min=false;&#xD;&#xA;if(me-&gt;isInitial==false){&#xD;&#xA;me-&gt;k = 38;&#xD;&#xA;}" />
+</Algorithm></BasicFB>
+</FBType>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="diverter" Comment="" >
+<Identification Standard="61499-2" />
+<VersionInfo Organization="PC_THEO" Version="0.1" Author="Th?o" Date="2015-00-16" />
+<CompilerInfo header="" classdef="">
+</CompilerInfo>
+<InterfaceList>
+<EventInputs>
+  <Event Name="S2" Comment="">
+  </Event>
+  <Event Name="S3" Comment="">
+  </Event>
+</EventInputs>
+<EventOutputs>
+  <Event Name="update" Comment="">
+    <With Var="y" />
+  </Event>
+</EventOutputs>
+
+<OutputVars>
+  <VarDeclaration Name="y" Type="REAL" Comment="" />
+</OutputVars>
+</InterfaceList>
+<BasicFB><InternalVars>
+  <VarDeclaration Name="theta" Type="REAL" Comment="" />
+</InternalVars><ECC>
+  <ECState Name="Start" Comment="" x="393.75" y="612.5">
+    <ECAction Algorithm="init" Output="update" />
+  </ECState>
+  <ECState Name="State1" Comment="" x="1137.5" y="612.5">
+  </ECState>
+  <ECState Name="State2" Comment="" x="2056.25" y="262.5">
+    <ECAction Algorithm="toStorage1" Output="update" />
+  </ECState>
+  <ECState Name="State3" Comment="" x="2012.5" y="1050">
+    <ECAction Algorithm="toStorage2" Output="update" />
+  </ECState>
+  <ECTransition Source="Start" Destination="State1" Condition="true" x="809.625" y="612.5" />
+  <ECTransition Source="State1" Destination="State2" Condition="S2" x="1575" y="262.5" />
+  <ECTransition Source="State1" Destination="State3" Condition="S3" x="1531.25" y="962.5" />
+  <ECTransition Source="State2" Destination="State1" Condition="y&lt;=0" x="1706.25" y="568.75" />
+  <ECTransition Source="State2" Destination="State2" Condition="true" x="2100" y="525" />
+  <ECTransition Source="State3" Destination="State1" Condition="y&gt;=theta" x="1706.25" y="656.25" />
+  <ECTransition Source="State3" Destination="State3" Condition="true" x="2100" y="1268.75" />
+</ECC><Algorithm Name="init" Comment="">
+  <Other Language="C" Prototype="" Text="me-&gt;theta=6;&#xD;&#xA;me-&gt;y=0;" />
+</Algorithm>
+<Algorithm Name="toStorage1" Comment="">
+  <Other Language="C" Prototype="" Text="if (me-&gt;y == 0){&#xD;&#xA;	printf(&quot;diverter already in storage1, control error \n&quot;);&#xD;&#xA;	//exit(1);&#xD;&#xA;	}&#xD;&#xA;&#xD;&#xA;me-&gt;y=me-&gt;y-2;&#xD;&#xA;printf(&quot;diverter, %f\n&quot;,me-&gt;y);&#xD;&#xA;" />
+</Algorithm>
+<Algorithm Name="toStorage2" Comment="">
+  <Other Language="C" Prototype="" Text="if (me-&gt;y == me-&gt;theta){&#xD;&#xA;	printf(&quot;diverter already in storage2, control error \n&quot;);&#xD;&#xA;	//exit(1);&#xD;&#xA;	}&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;me-&gt;y=me-&gt;y+2;&#xD;&#xA;printf(&quot;diverter, %f\n&quot;,me-&gt;y);" />
+</Algorithm></BasicFB>
+</FBType>

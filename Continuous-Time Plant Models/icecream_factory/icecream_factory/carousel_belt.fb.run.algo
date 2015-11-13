@@ -1,0 +1,2 @@
+me->x=me->x+1;
+//printf("icecream, %f\n", me->x);

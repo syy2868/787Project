@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="f454e82c-38f8-43ba-9a49-a30e12885273" name="Controller" organization="PC_THEO" date="2015-07-16" author="Théo" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="154c872d-7ddb-4c63-88b5-49b26eed596a">
+      <functionBlockInterface Id="87f24bfb-a51a-4b34-8f4b-e8eb92079543" name="Controller" x="918.75" y="481.25" modelType="Composite">
+        <events>
+          <functionBlockHasEvents Id="ede8b8d5-1805-48fb-a318-f4ee2bdb4857">
+            <event Id="672cbc40-28ba-406a-ae6e-27b37d170171" name="S2" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="618452e4-074c-4013-9f62-63f015a33a39">
+            <event Id="0eff0bc2-aaf5-4f13-81cd-d72764637360" name="S3" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="0a882c4f-3604-4db9-b40d-cb30da615325">
+            <event Id="93857e52-5faf-4aec-be0e-0046a3aef8cf" name="update" scope="Input" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="23984cd0-e4a4-4cf9-b4ca-22decc46f508">
+            <variable Id="7d5aba54-2a4f-4677-a2c7-8d0bcf2f56c2" name="x" scope="Input" type="REAL" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="6ef5139c-56f1-4f47-984f-2538d8d9eb88">
+            <variable Id="d150ac53-bd8d-4ed6-a01b-f7fa9c67f4df" name="y" scope="Input" type="REAL" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="f903353a-def1-4b91-8a95-73d6a4618873">
+            <inputEventPort Id="32853d81-e146-4a14-b4bb-e86acd3d7853">
+              <proxyTargetPorts>
+                <proxyConnection Id="ad0c4819-8bd1-470e-aec7-9fecf205840f">
+                  <inputEventPortMoniker Id="5f9ffa10-7a83-4f62-b21c-4a55de7bd64a" />
+                </proxyConnection>
+                <proxyConnection Id="e1ef4800-fa8d-4a3f-b8ae-83dc5e43d0d1">
+                  <inputEventPortMoniker Id="cab777c6-2f56-42de-b575-3d48c61ccb02" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <inputEventPortReferencesEvent Id="7cb003b0-4270-44ac-b989-88e724cf65fe">
+                  <eventMoniker name="/Controller/Controller/update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="8e75e037-c28a-4f9a-83a5-422831fe961c">
+            <outputEventPort Id="dfc62fc4-a450-4194-a21d-fe4e89e63be8">
+              <proxyTargetPorts>
+                <proxyConnection Id="6d2ec07c-bab6-4cc4-b6de-a8390d85b493">
+                  <outputEventPortMoniker Id="42124074-b721-4bc4-a099-c922b332205c" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="1c30c02a-2c71-454d-8b29-43c23c7c73a0">
+                  <eventMoniker name="/Controller/Controller/S2" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="76cd3d72-d7b5-4dd2-a384-251a6eb9161d">
+            <outputEventPort Id="50f505ba-3d2d-412c-9c05-00d75da17364">
+              <proxyTargetPorts>
+                <proxyConnection Id="07249b93-a36b-4ee7-9372-825ad45e3e1d">
+                  <outputEventPortMoniker Id="5864eb62-e6ff-4c10-bcf4-7b88939f1a70" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="3002104f-dbd9-46cc-a9f4-bf6b8501e422">
+                  <eventMoniker name="/Controller/Controller/S3" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="80aefa3a-66ed-4ecc-908e-d005ea98b854">
+            <inputVariablePort Id="6e10bb83-dae5-427b-97a3-841a6b8020d3">
+              <proxyTargetPorts>
+                <proxyConnection Id="6d1ae94e-8139-4dac-b79b-cb481e76cc79">
+                  <inputVariablePortMoniker Id="837f9208-7ab5-4e05-9cc4-2ffe84281e66" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <inputVariablePortReferencesVariable Id="84d79378-668d-40fb-ae32-bddcd2a54919">
+                  <variableMoniker name="/Controller/Controller/x" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="8c451952-aa2c-44be-a9f4-2a1f286d4c44">
+            <inputVariablePort Id="cd6013e0-ba9a-4f43-a827-e5c4747cfac1">
+              <proxyTargetPorts>
+                <proxyConnection Id="0e5581af-8510-4127-826b-9e9531b0cc33">
+                  <inputVariablePortMoniker Id="ef146e7c-6cdc-473d-9373-483ed50797d0" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <inputVariablePortReferencesVariable Id="cf5f3350-43bd-4972-8ff2-b2155c427059">
+                  <variableMoniker name="/Controller/Controller/y" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockInterface>
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+  <functionBlockReferences>
+    <cFBModelHasFBReferences Id="f5b6d1cf-3a82-467c-baee-f3100fcf56e8">
+      <functionBlockReference Id="c435aa91-ced8-420d-952a-bab7aaedc7d4" name="detection" x="525" y="743.75" creationMode="Resource" referencedFile="detection.fb">
+        <events>
+          <functionBlockHasEvents Id="d5d17ec2-88d5-4908-89e9-4a2cd498234d">
+            <eventRef Id="8aac3be0-3aec-4108-968a-c1dd61eacc48" name="update" scope="Input" referencedID="9104084b-3de8-4758-a834-e58d0dfa541f" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="f1f42830-7929-46c8-9a66-d1be3062cfa3">
+            <eventRef Id="347a396d-3692-49f9-a4e1-9ab9edf3316e" name="S1" scope="Output" referencedID="bca1c987-362c-4712-b8eb-3a764f5e91ac" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="29d1f76a-eb77-4ff9-b4ed-74a54f465cfa">
+            <variableRef Id="de1967ab-adb6-4ce5-b799-e881e0dc2b5c" name="x" scope="Input" type="REAL" referencedID="bb19f19a-2004-448c-9782-042e2a665b87" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="b5fdb6a6-c062-4193-92a6-1339fe95580c">
+            <inputEventPort Id="5f9ffa10-7a83-4f62-b21c-4a55de7bd64a">
+              <event>
+                <inputEventPortReferencesEvent Id="323086f7-3885-4be5-8ebf-20f298f08419">
+                  <eventRefMoniker name="/Controller/detection/update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="82ed3f5a-2edf-4ae3-a9d3-0fcdd4326978">
+            <outputEventPort Id="facb9daa-e7bc-452e-924e-30d3a9223c85">
+              <wireTargetPorts>
+                <wireConnection Id="13e8d26d-1ce6-4a2a-a54b-98f13bde3d07" unitDelayed="false">
+                  <inputEventPortMoniker Id="62d4d777-0154-46b3-9a77-6f68379e4abc" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="41723a39-64dc-42ef-bfb2-8ca569320fcc">
+                  <eventRefMoniker name="/Controller/detection/S1" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="fa3a0a32-a5c2-4af9-91be-44f8d435a6aa">
+            <inputVariablePort Id="837f9208-7ab5-4e05-9cc4-2ffe84281e66">
+              <variable>
+                <inputVariablePortReferencesVariable Id="03d7fe27-98a0-429c-bf64-a2aac70ba6d0">
+                  <variableRefMoniker name="/Controller/detection/x" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="48d13d25-52dc-4a32-89ea-9626208f3ef6">
+      <functionBlockReference Id="eed2fd74-31bb-4d7e-af8f-d2721844aee3" name="TRDC" x="1575" y="743.75" creationMode="Resource" referencedFile="TRDC.fb">
+        <events>
+          <functionBlockHasEvents Id="b7971641-5c49-48b9-8604-171363adaac1">
+            <eventRef Id="f4e11f30-45db-4791-b566-5fdf283dfaa8" name="S1" scope="Input" referencedID="3fd2d97b-cf3d-4737-8048-9668cb549666" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="f71c845e-f4ad-4c50-8dce-aecdd7e40e9f">
+            <eventRef Id="af8c3bc1-35f4-4454-b51a-0892755769bc" name="S2" scope="Output" referencedID="acf7f53c-fde0-470b-a990-2801eb69ce8f" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="1c4ed81c-eced-4eaa-9c5b-7bbadb0dc6b9">
+            <eventRef Id="bb1ebe6f-9ff4-4d22-b125-705305694735" name="S3" scope="Output" referencedID="b7639b65-35a6-4eba-b524-e568e09fa50e" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="c1122b71-eebf-45ca-ae08-2a64c320c3d4">
+            <eventRef Id="de41c2ac-c1ad-429d-96ae-ef9ea14bdde2" name="update" scope="Input" referencedID="1caeff3d-2fdf-4f06-905a-6d267f7aaa04" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="2f64a5a4-cd1e-44c0-847c-2e481173d832">
+            <variableRef Id="30894410-eef2-4274-ae70-8694bba1652a" name="y" scope="Input" type="REAL" referencedID="95dedd72-b2c2-4caa-9b21-1c0d0ed6f9dd" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="c347dc60-052a-42df-9288-07de9d5d1cb3">
+            <inputEventPort Id="62d4d777-0154-46b3-9a77-6f68379e4abc">
+              <event>
+                <inputEventPortReferencesEvent Id="4443d356-a566-4079-a6bf-f36757587232">
+                  <eventRefMoniker name="/Controller/TRDC/S1" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="9e81ca13-6396-4b81-85ad-bc1196edcd65">
+            <inputEventPort Id="cab777c6-2f56-42de-b575-3d48c61ccb02">
+              <event>
+                <inputEventPortReferencesEvent Id="262e1973-5cd6-4b06-8e05-8b14b976145c">
+                  <eventRefMoniker name="/Controller/TRDC/update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="388a9aa5-00d0-4294-8340-545d80970cdd">
+            <outputEventPort Id="42124074-b721-4bc4-a099-c922b332205c">
+              <event>
+                <outputEventPortReferencesEvent Id="accc2c16-ef18-46fc-8644-6a6511017a28">
+                  <eventRefMoniker name="/Controller/TRDC/S2" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="d6335a41-ac46-41bf-8194-5084a0b01276">
+            <outputEventPort Id="5864eb62-e6ff-4c10-bcf4-7b88939f1a70">
+              <event>
+                <outputEventPortReferencesEvent Id="78c4c9a8-ca6f-4497-ab63-bcdf0da4dd0b">
+                  <eventRefMoniker name="/Controller/TRDC/S3" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="4e9106e7-5fce-4762-a1f5-096b95ba4335">
+            <inputVariablePort Id="ef146e7c-6cdc-473d-9373-483ed50797d0">
+              <variable>
+                <inputVariablePortReferencesVariable Id="344ff5e5-56b8-4871-92ed-806b2e7a1f83">
+                  <variableRefMoniker name="/Controller/TRDC/y" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+  </functionBlockReferences>
+</compositeFunctionBlockModel>

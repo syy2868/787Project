@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="e14eadc6-e2af-4958-bb89-dde4ee71438f" name="pH_control" organization="PC_THEO" date="2015-07-21" author="Théo">
+  <states>
+    <functionBlockModelHasStates Id="372a1cd4-769a-4ae1-beee-bf8c9c8d5f89">
+      <state Id="9386f9a9-8cf8-44bf-81fb-6c01bdc31c9f" name="Start" x="175" y="568.75" isInitial="true">
+        <actionSet>
+          <actionLink Id="ce1ad055-bda5-4494-baa7-b772323f685f">
+            <actionSetMoniker Id="e522fb9e-2803-4bac-9110-ba7beca2f7f5" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="bc16bb55-7425-40aa-b379-dfbd625573ba">
+            <transitionNodeMoniker Id="69774c9a-b80b-41ea-a033-0e8813e937bc" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="29d7a899-ecee-449e-aafc-7440e7bf986d">
+      <state Id="33da31ca-ce1d-4e95-8fe7-2b36cc5f85e3" name="State1" x="1006.25" y="568.75" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="9c8addb8-b040-4cbb-940f-718f2a908df7">
+            <transitionNodeMoniker Id="ed192169-84d5-4490-8179-52d55a4bbde9" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="d192d984-e416-4c76-af0b-abb5037d29e0">
+            <transitionNodeMoniker Id="1acd7a42-4162-424a-acce-47e09609360d" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="268d2cdb-158f-48fc-8bc8-0c267f8142ed">
+      <state Id="90b4704b-6627-4b27-b608-de5336dc6e13" name="State2" x="1607.8125" y="222.39584028720856" isInitial="false">
+        <actionSet>
+          <actionLink Id="4d44c4de-f642-44d3-9b96-b34f35d6b4fa">
+            <actionSetMoniker Id="cf56dc76-d9ed-4974-a856-86ed4800cff0" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="3ecabbe9-f06f-4bd5-972f-7efdf3f56ee5">
+            <transitionNodeMoniker Id="36e301d3-992b-4c43-8290-5c5aedbcc7fb" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="9060a6ed-b82d-43b6-baf9-fab2a2b72dc7">
+      <state Id="d1695db3-47f8-48fb-8a03-452c393fc38a" name="State3" x="2231.25" y="612.5" isInitial="false">
+        <actionSet>
+          <actionLink Id="fdb94a16-e2cb-40ca-ace3-15259314d8ac">
+            <actionSetMoniker Id="ec53fccb-5add-41d2-9d0d-ae2f6affe6ec" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="6b601175-1a96-4ef6-ba5e-72b462c54ebd">
+            <transitionNodeMoniker Id="52bb531b-711a-44d2-ab63-e019eea59d14" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="e16cd3e9-be5b-4f83-9a1f-1321e7cebae0">
+      <state Id="7fa4de21-4e9b-4089-b093-652735dc6a3e" name="State4" x="1618.75" y="962.5" isInitial="false">
+        <actionSet>
+          <actionLink Id="592380e4-372a-4d6d-ae6e-63ef01a2ffe2">
+            <actionSetMoniker Id="c9da3053-417c-439a-ad88-f3b2e776d2c3" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="e1522cd5-405b-411a-8868-eea265d55924">
+            <transitionNodeMoniker Id="f5be63af-be13-467d-a8f2-44320bc0eaab" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="370cfd0e-981e-4bd2-90fe-15d97c5a5ed6">
+      <actionSet Id="e522fb9e-2803-4bac-9110-ba7beca2f7f5" x="175" y="700">
+        <actionItems>
+          <actionSetHasActionItems Id="46d9c028-7b11-4435-9bee-b1179c4346af">
+            <actionAlgorithm Id="4d2fea5c-d211-46db-8a87-61dff425d9a6">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="de533c24-8411-4697-abf7-61e48c08ecb6">
+                  <algorithmMoniker name="/pH_control/init" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="3259b25a-4b3c-457d-b09c-a3c1f4ce60b4">
+      <actionSet Id="cf56dc76-d9ed-4974-a856-86ed4800cff0" x="1957.6643845438955" y="222.39584028720856">
+        <actionItems>
+          <actionSetHasActionItems Id="0b68669e-8e09-4394-bf59-6f04b2c14bba">
+            <actionAlgorithm Id="508f4e6d-1c38-4628-a5d4-2468f0f65777">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="339ec792-355c-4edc-a70d-3a04bbd1f5cf">
+                  <algorithmMoniker name="/pH_control/signal_base" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="06f64b95-2842-46de-b4cf-cf06ce310105">
+            <actionEvent Id="43f46140-67bd-41fb-b3f0-57a809d4ae17">
+              <event>
+                <actionEventReferencesEvent Id="d1d2da41-f90c-4a10-88ce-0020241f5687">
+                  <eventMoniker name="/pH_control/pH_control/pbase" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="dc5503a1-43d0-44ed-8e99-2ed43a45603b">
+      <actionSet Id="ec53fccb-5add-41d2-9d0d-ae2f6affe6ec" x="2581.1018845438957" y="612.5">
+        <actionItems>
+          <actionSetHasActionItems Id="3752d3f3-af9f-4278-add0-120ec2043471">
+            <actionAlgorithm Id="73d06b70-2570-4abd-8da5-b52aa4fd2de4">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="ba5ed2da-186e-4fec-bd3f-307c8f945087">
+                  <algorithmMoniker name="/pH_control/signal_neutral" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="d6a89722-3840-4187-b841-7254d3f298f9">
+            <actionEvent Id="b1148ab4-cb4c-43a1-86ee-a0c9e2259122">
+              <event>
+                <actionEventReferencesEvent Id="45a95fb4-435f-42af-b2b7-4c8510abef34">
+                  <eventMoniker name="/pH_control/pH_control/pneutral" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="68cf4dde-f7e2-4874-9144-b85197e84cdf">
+      <actionSet Id="c9da3053-417c-439a-ad88-f3b2e776d2c3" x="1575" y="1137.5">
+        <actionItems>
+          <actionSetHasActionItems Id="be6cc060-ae43-4c94-ac40-8c26ae56f256">
+            <actionAlgorithm Id="16de7f3a-0090-4abf-b392-ec7dc6e4e223">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="78f2d796-f16f-4369-98f5-beee945061e8">
+                  <algorithmMoniker name="/pH_control/signal_acid" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="6ac112a2-da21-4d2c-83af-f04b18dc57ef">
+            <actionEvent Id="fc07cd70-5c4e-46c1-9597-d42ab23eb15b">
+              <event>
+                <actionEventReferencesEvent Id="04ee1e5e-9eef-4f00-8794-62568c1e505e">
+                  <eventMoniker name="/pH_control/pH_control/pacid" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="ece1c31f-86dc-47b0-9fda-15776bb4985d">
+      <algorithm Id="70df8314-0c1f-4f1a-8613-dbf430ba4474" name="init" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="98daec65-50a4-4fce-bc90-da0753623ca3">
+      <algorithm Id="dd2e2c5e-fbdb-4cb8-b786-5b37fd664552" name="print1" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="572975e5-04c8-49c0-a0db-2d9e46f46a67">
+      <algorithm Id="fe587a55-2bf6-4595-a7b2-da72f3520f6f" name="print2" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="60cd86d8-7cfe-4128-a542-5876b53c5a33">
+      <algorithm Id="f1bac337-bde3-420d-9af4-c4127115f9bf" name="print3" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="5e267882-30ab-4d36-bf90-511f818ddf34">
+      <algorithm Id="5dad4e12-423f-4ad6-98f6-3b18ea11d133" name="print4" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="545770e8-82bc-4d9f-9997-c8dbdf708ed1">
+      <algorithm Id="128aab1c-b3af-436b-9607-b1002c4d8d0e" name="signal_base" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="61cdc4d0-a76e-4223-97a5-d0835882ebb5">
+      <algorithm Id="01cb5d07-75cb-4170-8048-a3ecc305e98e" name="signal_neutral" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="ab747af8-6b6b-430a-a8fe-a7cafa82fd5b">
+      <algorithm Id="bb0fb2b0-b2b0-463e-b08f-515fab3669f4" name="signal_acid" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="62e0baeb-74a1-4625-8f21-c50838efd39d">
+      <functionBlockInterface Id="90aa48a9-8140-4a2e-86b7-49bf668274bf" name="pH_control" x="1312.5" y="481.25">
+        <events>
+          <functionBlockHasEvents Id="12d7011f-1335-479b-8cf5-4406706ae599">
+            <event Id="79b0a5b5-c6a9-4d52-90b0-313e3d441dfa" name="pacid" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="47173932-6df1-4d41-ad92-2077d0aa88f9">
+            <event Id="c4ef7387-f410-4877-9a4f-8ec9777f5a47" name="pbase" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="e363efc5-107f-49d1-826f-0459c84c6d02">
+            <event Id="367a3727-ebc3-4322-ace1-317f6824d3f9" name="pneutral" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="2ab8b517-872b-433f-a70f-3c6b0649b430">
+            <event Id="5dbfd55d-794a-4e3b-b297-87c9c690dbd1" name="update" scope="Input" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="5324f320-d277-4545-9aa4-db172cd77ba8">
+            <variable Id="2950b28f-0480-4624-bdad-e9832f1d3e95" name="x2" scope="Input" type="REAL" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="643797e2-dd89-4798-9fbc-8267fe988113">
+            <inputEventPort Id="62758473-f45a-42c9-851a-2873c8addbbc">
+              <targetPort>
+                <association Id="b914cb94-c1a6-4d47-b604-5752c7637ac8">
+                  <inputVariablePortMoniker Id="2e968332-2e56-43ff-8629-b7ac685e7348" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="20273409-60ce-4dd1-9313-ef78a8ac340c">
+                  <eventMoniker name="/pH_control/pH_control/update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="11914654-9054-4e39-8073-cc9113e94dd2">
+            <outputEventPort Id="bd09ac3a-2207-4abb-86e0-40a5a8fb040e">
+              <event>
+                <outputEventPortReferencesEvent Id="20025727-c41d-411e-9518-0c0e9df07c2c">
+                  <eventMoniker name="/pH_control/pH_control/pacid" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="3909fd1c-881e-4708-a6c6-2529319a4cf1">
+            <outputEventPort Id="80e2012a-e29a-411f-9e20-d9eeb76d810a">
+              <event>
+                <outputEventPortReferencesEvent Id="0de707a4-fbf3-4b6e-8fee-3c322749c413">
+                  <eventMoniker name="/pH_control/pH_control/pbase" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="972c832c-8248-4383-96d9-f0bdc8306368">
+            <outputEventPort Id="a89d3132-468a-4d51-8d3b-f8e43c01ea03">
+              <event>
+                <outputEventPortReferencesEvent Id="5c6dc604-0534-40e2-b467-c3a21b6e06c0">
+                  <eventMoniker name="/pH_control/pH_control/pneutral" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="8a6f9e43-7ba5-41f2-8a26-5378504f1219">
+            <inputVariablePort Id="2e968332-2e56-43ff-8629-b7ac685e7348">
+              <variable>
+                <inputVariablePortReferencesVariable Id="d3e8ee65-845c-4254-b934-34b428e5c359">
+                  <variableMoniker name="/pH_control/pH_control/x2" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="6076bada-287e-4a3b-a7b9-f2cd033cdce8">
+      <transitionNode Id="69774c9a-b80b-41ea-a033-0e8813e937bc" x="581.625" y="568.75">
+        <targetState>
+          <transitionNodeConnectsToStates Id="99eb6709-289b-41a0-8918-a8474750647e">
+            <stateMoniker name="/pH_control/State1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="c7e69b52-b790-4c2a-af5b-ec92aea3497c">
+      <transitionNode Id="ed192169-84d5-4490-8179-52d55a4bbde9" x="1364.03125" y="384.57292014360428" event="true" expression="x2&lt;=6.8">
+        <targetState>
+          <transitionNodeConnectsToStates Id="ffed250a-1d8b-41f8-a683-43bef27ed5dd">
+            <stateMoniker name="/pH_control/State2" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="b87f9938-4d11-44fe-9bf1-00b1b6f0a077">
+      <transitionNode Id="36e301d3-992b-4c43-8290-5c5aedbcc7fb" x="2056.25" y="393.75" event="true" expression="x2&gt;=7">
+        <targetState>
+          <transitionNodeConnectsToStates Id="016316c7-31db-42af-be38-0c08425828b5">
+            <stateMoniker name="/pH_control/State3" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="ac077ff8-477f-4a86-affd-e1374fffb88d">
+      <transitionNode Id="1acd7a42-4162-424a-acce-47e09609360d" x="1277.5" y="755.625" event="true" expression="x2&gt;=7.2">
+        <targetState>
+          <transitionNodeConnectsToStates Id="664f38b1-fbc6-4346-a086-d844137eda05">
+            <stateMoniker name="/pH_control/State4" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="ebf2acdb-2950-470e-84fb-92cf4ff89816">
+      <transitionNode Id="f5be63af-be13-467d-a8f2-44320bc0eaab" x="2012.5" y="875" event="true" expression="x2&lt;=7">
+        <targetState>
+          <transitionNodeConnectsToStates Id="e9e300c9-2818-4219-9463-dbc6fa6272fa">
+            <stateMoniker name="/pH_control/State3" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="47c5de27-4871-4efb-a20f-e7e94340576c">
+      <transitionNode Id="52bb531b-711a-44d2-ab63-e019eea59d14" x="1750" y="612.5">
+        <targetState>
+          <transitionNodeConnectsToStates Id="232b1bbd-b222-4111-b4d0-f37cf41eb026">
+            <stateMoniker name="/pH_control/State1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>
