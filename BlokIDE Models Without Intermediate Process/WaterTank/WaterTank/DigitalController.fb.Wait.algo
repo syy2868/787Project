@@ -1,3 +1,0 @@
-//printf("signal sent\n");
-wait(10);
-//me->timer++;

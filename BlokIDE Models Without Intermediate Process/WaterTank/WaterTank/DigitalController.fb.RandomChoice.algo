@@ -1,7 +1,0 @@
-me->timer=0;
-
-/* Intializes random number generator */
-srand(time(NULL));
-
-me->control = rand() % 2 ;
-//printf("control : %d\n", me->control);

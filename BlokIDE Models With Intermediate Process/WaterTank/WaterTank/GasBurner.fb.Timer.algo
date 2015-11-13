@@ -1,2 +1,0 @@
-me->y=(float) me->y+me->d;
-//printf("timer : %f\n", me->y);

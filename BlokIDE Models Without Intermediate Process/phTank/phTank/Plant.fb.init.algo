@@ -1,3 +1,0 @@
-me->x1=0.05;me->x2=7.1;
-me->d=0.05;
-printf("Initial pH : %f, Initial Volume : %f\n",me->x2, me->x1);

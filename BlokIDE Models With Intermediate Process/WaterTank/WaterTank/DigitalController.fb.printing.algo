@@ -1,1 +1,0 @@
-printf("x=%f\n", me->x);

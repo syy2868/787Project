@@ -1,5 +1,0 @@
-//me->x1=me->x1+0.1*me->d;
-//me->x2=me->x2+0.1*me->d;
-me->x2=7.205;
-me->x1=me->x1+me->d;
-printf("Pouring neutral, pH : %f, Volume : %f\n",me->x2, me->x1);

@@ -1,1 +1,0 @@
-printf("Send signal: add2, Temperature : %f\n",me->x);

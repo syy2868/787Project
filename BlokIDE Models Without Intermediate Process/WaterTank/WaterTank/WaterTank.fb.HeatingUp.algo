@@ -1,4 +1,0 @@
-//me->x = (float) me->C1x*exp(-0.075*me->d*me->k) + 150.0;
-me->x = 100;
-me->k++;
-printf("Temperature : %f\n", me->x);

@@ -1,4 +1,0 @@
-//me->x = me->C1x*exp(0.1*me->d*me->k) + 560.0;
-me->x=510;
-me->k++;
-printf("Rod1, Temperature : %f\n",me->x);

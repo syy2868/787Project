@@ -1,2 +1,0 @@
-printf("Signal sent : turn on the burner |  Temperature : %f\n", me->x);
-wait(10);
